@@ -17,15 +17,21 @@
   display flex
   align-items center
   justify-content center
+  overflow hidden
 
 .logo
+  font-size $font-size-large
+  @media $mq-M_and_up
+    font-size $font-size-hero
   @extend $font-extrabold
   text-align center
+  
 
 .main
   @extend $background-rulers
   padding-top $space-huge
   padding-bottom $space-mega
+  overflow-x hidden
 
 .intro
   @extend $font-base

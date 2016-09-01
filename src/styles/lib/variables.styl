@@ -45,20 +45,25 @@ $font-extrabold
 
 $background-rulers
   position relative
+  margin-top -18px 
   &:before
   &:after
     content ''
     position absolute
-    top 0
+    top 18px
     left 0
     right 0
   &:before
-    height 4px
-    background-image repeating-linear-gradient(90deg, transparent 0, transparent 4px, currentColor 5px)
+    height 5px
+    background-image repeating-linear-gradient(88.5deg, transparent 0, transparent 4px, currentColor 5px)
     background-position center
+    display block 
+    transform rotate(-1.5deg)
   &:after
     height 8px
-    background-image repeating-linear-gradient(90deg, transparent 0, transparent 49px, currentColor 50px)
+    background-image repeating-linear-gradient(88.5deg, transparent 0, transparent 49px, currentColor 50px)
+    display block 
+    transform rotate(-1.5deg)
 
 mq_to($to)
   s("screen and (max-width: %s)", $to - 1)

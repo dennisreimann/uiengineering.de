@@ -18,6 +18,13 @@
   align-items center
   justify-content center
   overflow hidden
+  margin-top -40px
+  transform rotate(-1.5deg)
+  width calc(100% + 80px)
+  margin-left -40px
+  span
+    transform rotate(1.5deg)
+    display block 
 
 .logo
   font-size $font-size-large
@@ -37,6 +44,7 @@
   @extend $font-base
   color $color-brand-main
   line-height 1.6
+  padding-top 30px
   @media $mq-up_to_M
     font-size $font-size-large
   @media $mq-M_and_up
@@ -77,11 +85,22 @@
 
 .footer
   @extend $background-rulers
-  padding-top $space-huge
-  padding-bottom $space-huge
+  padding-top $space-huge * 2
+  padding-bottom $space-huge * 2
   color $color-white
   background $color-brand-seco
   font-size $font-size-small
+  transform rotate(-1.5deg)
+  width calc(100% + 80px)
+  margin-left -40px
+  margin-bottom -40px
+  .wrap
+    transform rotate(1.5deg)
+    display block
+  &:before,
+  &:after
+    transform rotate(0deg)
+    margin-top -18px
 
 .person
   h4

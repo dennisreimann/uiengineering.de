@@ -1,0 +1,66 @@
+$color-white = #FFF
+$color-blue = #253649
+$color-darkblue = #152639
+$color-highlight = #FB424A
+$color-text = #3c3b3b
+$color-light = lighten($color-text, 15)
+
+$font-size-huge = 2rem
+$font-size-large = 1.5rem
+$font-size-subhead = 1.125rem
+$font-size-head = 1.25rem
+$font-size-normal = 1rem
+$font-size-small = .9rem
+
+$space-tiny = .25em
+$space-small = .5em
+$space-normal = .75em
+$space-large = 1.5em
+$space-huge = 2.5em
+$space-mega = 3em
+
+$font-base
+  font-family Helvetica, Arial, Tahoma, Verdana, sans-serif
+
+$font-serif
+  font-family Georgia, Palatino, serif
+
+$font-light
+  font-family DINLight
+  font-weight normal
+  letter-spacing -.02em
+
+$font-bold
+  font-family DINCondBold
+  font-weight normal
+  letter-spacing .1em
+
+$background-rulers
+  position relative
+  &:before
+  &:after
+    content ''
+    position absolute
+    top 0
+    left 0
+    right 0
+  &:before
+    height 4px
+    background-image repeating-linear-gradient(90deg, transparent 0, transparent 4px, currentColor 5px)
+    background-position center
+  &:after
+    height 8px
+    background-image repeating-linear-gradient(90deg, transparent 0, transparent 49px, currentColor 50px)
+
+mq_to($to)
+  s("screen and (max-width: %s)", $to - 1)
+mq_from($from)
+  s("screen and (min-width: %s)", $from)
+mq_from_to($from, $to)
+  s("screen and (min-width: %s) and (max-width: %s)", $from, $to - 1)
+mq_from_and_print($from)
+  s("screen and (min-width: %s), print", $from)
+
+$mq-m-width   = 660px
+$mq-up_to_M = mq_to($mq-m-width)
+$mq-M_and_up = mq_from($mq-m-width)

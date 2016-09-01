@@ -1,0 +1,119 @@
+extends ../templates/layout
+    
+block main
+  .wrap
+    section.intro
+      :marked
+        Die Entwicklung von **User Interfaces** ist ein interdisziplinärer Vorgang.
+        <br>
+        Durch **Design** und **Entwicklung** wird **Fachliches** zu bedienbarer Software. 
+
+    section.copy
+      :marked
+        Erfolgreiche Software ist – wie der Name schon sagt – weich und flexibel:
+        Anpassbar und vorbereitet auf Wachstum und Veränderung. Sie entsteht durch
+        die Vereinigung fachlicher Anforderungen mit deren ästhetischer und funktionaler
+        Abbildung.
+
+        Um die fachlichen Anforderungen in funktionale und gut nutzbare Software
+        zu transformieren, ist eine enge Zusammenarbeit von Design und Entwicklung nötig.
+        Ein arbeitsteiliger Ansatz ist dabei nicht mehr zeitgemäß, dennoch leider
+        weiterhin oft praktiziert. Auch dort wo Begriffe wie _lean_ oder _agil_ mittlerweile 
+        als Selbstverständlichkeit angesehen werden, findet man oftmals Abläufe,
+        die ein Zurückrutschen in alte Muster erkennen lassen.
+        
+        [Wir](#wir) setzen uns dafür ein, Design und Entwicklung in der praktischen Arbeit zu verbinden – 
+        denn wir erleben in unserer täglichen Arbeit, dass diese enge Zusammenarbeit **schnellere,
+        bessere und nachhaltigere Ergebnisse** erzielt. Unsere Erfarhungen und Wissen dazu
+        möchten wir hier teilen.
+        
+    section.manifest
+      h2.deco: span Manifesto
+      
+      .container
+        article.block.manifest_item
+          :marked
+            ### Arbeitsteiliger Ansatz ist nicht mehr zeitgemäß und führt zu suboptimalen Ergebnissen
+            - Kommunikations- und Prozessoverhead
+            - Reibungsverluste und Stille Post-Effekte
+            - Gemeinsame Verantwortung für Projekterfolg
+        article.block.manifest_item
+          :marked
+            ### Design und Entwicklung verschmelzen zu interdisziplinärem UI Engineering
+            - Gewerk != Team: Design-Team und Dev-Team? Nein: Shop/CMS-Team
+        article.block.manifest_item
+          :marked
+            ### Überschneidungen identifizieren und Schnittmengen nutzen
+        article.block.manifest_item
+          :marked
+            ### Die Pattern Library ist der Ort, wo sich Design, Entwicklung und Fachlichkeit treffen
+
+    section
+      h2.deco: span Ein Beispiel: CSS
+      :marked
+        ### Vom Layout zur Umsetzung und zurück
+        
+        **CSS ist der Ort, an dem die gestalterischen Konzepte zu Code werden**. Insbesondere durch den
+        Einsatz von Präprozessoren ergibt sich die Möglichkeit, die der Gestaltung zugrundeliegenden Ideen
+        durch Variablen und Funktionen abzubilden: Breakpoints, Rastersysteme und Farb- sowie Abstandskonzepte
+        sind prädestiniert dafür.
+        
+        Sind solche grundlegenden Konzepte durch veränderbare Werte abgebildet, ergeben sich daraus nicht nur für den
+        Entwickler vielfache Einstellungsmöglichkeiten: Sie versetzen auch den Designer in die Lage, durch
+        vergleichsweise einfache Anpassungen Dinge umzustellen, auszuprobieren und selbst den finalen Schliff
+        vorzunehmen.
+          
+        Ist das Ergebnis direkt im Browser zu begutachten, reden wir nicht mehr nur über flache Vorlagen,
+        sondern von klick- und interagierbaren Oberflächen. Durch das Anpassen einzelner Werte sind in kürzester
+        Zeit verschiedene Varianten erstellt, die sich prototypisch ausrollen, herumzeigen, vergleichen und abnehmen
+        lassen. Die Möglichkeiten sind vielfältig, um dem Gestalter Mittel bereitzustellen, die seine Arbeit und
+        Einflußnahme in der Umsetzung erleichtern.
+        
+        **Gutes und flexibles Styling beginnt schon in der gemeinsamen Konzeption – und endet im Idealfall in einer
+        programmatischen Umsetzung der gestalterischen Grundideen.**
+
+
+    section
+      h2.deco: span UI UI UI
+      :marked
+        Ja, das klingt nach jeder Menge Arbeit auf beiden Seiten, daher darf man diese Zwischenüberschrift
+        auch gerne auf deutsch lesen und interpretieren. Das alles ist nicht möglich, ohne aufeinander
+        zuzugehen und aus der eigenen Komfortzone herauszutreten. 
+
+        **Die Anforderung ans Design lautet: Bitte nicht von Code abschrecken
+        lassen.** Diese Umstellung wird ohnehin zunehmend
+        unausweichlich, vor allem wenn man sich die dadurch hinzugewonnene
+        Flexibilität und die schnelleren Arbeitsabläufe vor Augen hält.
+        
+        **Vom Entwickler fordert dieser Ansatz ein sehr solides UI-Verständnis.**
+        Ebenso wird er mehr als bislang in die konzeptionelle Arbeit eingebunden:
+        Er muss die Vorlagen nicht nur umsetzen, sondern die ihnen zu Grunde
+        liegenden Konzepte verstehen, hinterfragen und abbilden können.
+        
+        Auch wenn dies anfänglich schwer und mit Reibung verbunden wirkt, ist es
+        unserer Meinung nach erforderlich, darauf hinzuarbeiten: Ein weitestgehend
+        arbeitsteiliger Ansatz funktioniert einfach nicht mehr und führt wie beschrieben
+        zu schlechten Ergebnissen!
+
+    section
+      h2.deco: span Better together
+      :marked
+        Der beste gemeinsame Einstiegspunkt ist unserer Meinung nach, das Ergebnis
+        als im Browser nutzbaren Vorbau bzw. Prototyp zu erstellen. Hier findest du
+        Werkzeuge und Ideen, die dich auf deinem Weg dorthin unterstützen können …
+        
+        ### Methoden und Tools
+        
+        - [Styletiles](http://styletil.es/)
+        - [Atomic Design](http://atomicdesign.bradfrost.com/)
+        - [Pattern Lab](http://patternlab.io/)
+        - [Styleguides](http://styleguides.io/)
+        - [Galen Framework](http://galenframework.com/)
+        - [Zeplin](https://zeplin.io/)
+        - [Good UI](http://goodui.org/)
+        
+        ### Weiterführende Links
+        
+        - [Why designers and frond-end developers should talk more often](http://janpersiel.com/why-designers-and-frond-end-developers-should-talk-more-often/) (Jan Persiel)
+        - [Developers “Own” The Code, So Shouldn’t Designers “Own” The Experience?](https://www.smashingmagazine.com/2016/08/developers-own-code-should-designers-own-experience/) (Andy Budd)
+        - [Designing Modular UI Systems Via Style Guide-Driven Development](https://www.smashingmagazine.com/2016/06/designing-modular-ui-systems-via-style-guide-driven-development/) (Adriana De La Cuadra)

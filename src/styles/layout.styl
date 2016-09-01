@@ -1,0 +1,84 @@
+.overall
+  display flex
+  flex-direction column
+
+.wrap
+  padding-left $space-large
+  padding-right $space-large
+  max-width 800px
+  margin 0 auto
+
+.header
+  padding-top $space-normal
+  padding-bottom $space-normal
+  color $color-white
+  background $color-blue
+
+.logo
+  @extend $font-light
+  text-align center
+
+.main
+  @extend $background-rulers
+  flex 1
+  padding-top $space-huge
+  padding-bottom $space-mega
+
+.intro
+  @extend $font-serif
+  color $color-light
+  font-style italic
+  line-height 1.6
+  @media $mq-up_to_M
+    font-size $font-size-subhead
+  @media $mq-M_and_up
+    font-size $font-size-head
+    text-align center
+
+.deco
+  display table
+  text-align center
+  padding-top .6em
+  span
+    display block
+    margin-top -.6em
+    padding 0 $space-normal
+    white-space nowrap
+  &:before,
+  &:after
+    content ''
+    display table-cell
+    width 50%
+    height 0
+    border-top 1px dashed currentColor
+
+.footer
+  @extend $background-rulers
+  padding-top $space-huge
+  padding-bottom $space-huge
+  color $color-white
+  background $color-darkblue
+  font-size $font-size-small
+
+.person
+  h4
+    color $color-highlight
+
+// responsive
+.container
+  display flex
+  flex-wrap wrap
+  @media $mq-M_and_up
+    margin-left $space-large * -1
+    margin-right $space-large * -1
+  .block
+    flex 1 1 100%
+    @media $mq-up_to_M
+      + .block
+        margin-top $space-large
+    @media $mq-M_and_up
+      flex-basis 50%
+      padding-left $space-large
+      padding-right $space-large
+      + .block:nth-child(n+3)
+        margin-top $space-large

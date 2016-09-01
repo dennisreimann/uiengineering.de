@@ -71,7 +71,6 @@ gulp.task "styles", ->
 
 gulp.task "browserSync", ->
   browserSync.init(
-    open: false
     server:
       baseDir: paths.dest
   )

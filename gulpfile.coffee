@@ -12,7 +12,7 @@ paths =
   src: "src"
   dest: "dist"
   rev: ["dist/**/*.{css,js,map,svg,jpg,png,gif,ttf,woff,woff2}"]
-  copy: ["src/{fonts,images,svgs}/**/*", "src/.htaccess"]
+  copy: ["src/{images,svgs}/**/*", "src/.htaccess"]
   pages: ["src/pages/**/*.jade"]
   styles: ["src/styles/**/*.styl"]
   templates: ["src/templates/*.jade"]

@@ -81,7 +81,7 @@ gulp.task "optimizeImages", ->
     .pipe(gulp.dest("src"))
 
 gulp.task "revAssets", ->
-  revAll = new p.revAll(prefix: assetHost)
+  revAll = new p.revAll()
   gulp.src(paths.rev)
     .pipe(revAll.revision())
     .pipe(dest())
@@ -97,4 +97,4 @@ gulp.task "watch", ->
 gulp.task "build", (cb) -> runSequence("styles", ["copy", "pages"], cb)
 gulp.task "develop", (cb) -> runSequence("build", ["watch", "browserSync"], cb)
 gulp.task "rev", (cb) -> runSequence("revAssets", ["pages"], cb)
-gulp.task "production", (cb) -> runSequence("build", "rev", "sitemap", cb)
+gulp.task "production", (cb) -> runSequence("build", "rev", cb)

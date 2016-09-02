@@ -36,8 +36,9 @@
   "scripts": {
     "dev": "npm run clean && gulp develop",
     "build": "npm run clean && gulp build",
-    "production": "gulp clean && gulp production",
+    "production": "npm run clean && gulp production",
     "clean": "rm -rf dist",
-    "build-and-deploy": "echo 'TODO: Implement!'"
+    "build-and-deploy": "npm run production && npm run deploy",
+    "deploy": "rsync -ravzulO --chmod=u=rwX,g=rX --exclude-from=.rsync-exclude dist/ dreimann@cassiopeia.uberspace.de:virtual/uiengineering"
   }
 }

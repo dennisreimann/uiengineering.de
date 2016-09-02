@@ -25,6 +25,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-resolve-dependencies": "^2.2.0",
     "gulp-rev-all": "^0.8.22",
+    "gulp-rev-delete-original": "^0.2.2",
     "gulp-stylus": "^2.1.1",
     "jstransformer-marked": "^1.0.1",
     "marked": "^0.3.6",
@@ -39,6 +40,6 @@
     "production": "npm run clean && gulp production",
     "clean": "rm -rf dist",
     "build-and-deploy": "npm run production && npm run deploy",
-    "deploy": "rsync -ravzulO --chmod=u=rwX,g=rX --exclude-from=.rsync-exclude dist/ dreimann@cassiopeia.uberspace.de:virtual/uiengineering"
+    "deploy": "rsync -ravzulO --chmod=u=rwX,g=rX --exclude-from=.rsync-exclude dist/ dreimann.cassiopeia.uberspace.de:virtual/uiengineering"
   }
 }

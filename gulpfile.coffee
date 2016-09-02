@@ -22,14 +22,14 @@ dest = (folder = "") -> gulp.dest("#{paths.dest}/#{folder}")
 
 revvedFile = (filePath) ->
   revs = try
-    require("#{paths.dest}/rev-manifest.json")
+    require("./#{paths.dest}/rev-manifest.json")
   catch
     undefined
   file = if revs then revs[filePath] else filePath
 
 templateData =
   h:
-    assetUrl: (filePath, includeHost = true) ->
+    assetUrl: (filePath) ->
       filePath = revvedFile(filePath)
       "/#{filePath}"
 
@@ -81,9 +81,10 @@ gulp.task "optimizeImages", ->
     .pipe(gulp.dest("src"))
 
 gulp.task "revAssets", ->
-  revAll = new p.revAll()
+  revAll = new p.revAll(prefix: "/")
   gulp.src(paths.rev)
     .pipe(revAll.revision())
+    .pipe(p.revDeleteOriginal())
     .pipe(dest())
     .pipe(revAll.manifestFile())
     .pipe(dest())

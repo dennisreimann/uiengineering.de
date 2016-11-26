@@ -21,7 +21,7 @@ html
 
 body
   color $color-text
-  background $color-white
+  background $color-dark-bg
   font-size $font-size-base
 
 h1
@@ -70,3 +70,36 @@ em
 b
 strong
   font-weight 800
+
+main
+  *
+    +
+      h2
+      h3
+      h4
+      h5
+      h6
+      .container
+        margin-top $space-large
+      ul
+        margin-top $space-normal
+      p
+      li
+        margin-top $space-tiny
+
+  h2
+    +
+      h3
+        margin-top 0
+
+  h3
+    +
+      p
+      ul
+        margin-top $space-normal
+
+  section + section
+    margin-top $space-mega
+
+  article + article
+    margin-top $space-large

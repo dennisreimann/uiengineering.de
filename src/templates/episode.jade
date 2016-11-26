@@ -1,0 +1,49 @@
+extends /layout
+include /_episodes
+
+block vars
+  - var episode = mvb.article
+
+block title
+  title
+    = episode.title
+    if episode.subtitle
+      = " – "
+      = episode.subtitle
+
+block meta
+  meta(name="description" content=h.article.description(episode))
+  if episode.tags
+    meta(name="keywords" content=h.article.keywords(episode))
+
+block header
+  header.header
+    h1.title= episode.title
+
+block main
+  section
+    .wrap
+      article.episode
+        header.episode__header
+          hgroup
+            h2.episode__title [#{episode.shortId}] #{episode.title}
+            if episode.subtitle
+              h3.episode__subtitle= episode.subtitle
+        .episode__content!= episode.content
+        footer.episode__footer
+          p.episode__meta
+            span Veröffentlicht am
+            | &nbsp;
+            time.episode__date= h.germanDate(episode)
+          .episode__nav
+            - prevEpisode = episode.previousArticle
+            - nextEpisode = episode.nextArticle
+            h3.episode__nav__title Weitere Episoden
+            ul
+              for e in [nextEpisode, prevEpisode]
+                if e
+                  li
+                    a.episode__link(href=e.permalink)
+                      span.episode__shortId [#{e.shortId}]
+                      | &nbsp;
+                      span.episode__title= e.title

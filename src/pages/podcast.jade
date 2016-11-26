@@ -1,0 +1,24 @@
+extends /layout
+include /_episodes
+
+block title
+  title UI engineering Podcast: Die Zusammenarbeit von Design und Entwicklung
+
+block meta
+  meta(name="description" content="Im UI engineering Podcast geht es um die Zusammenarbeit von Design und Entwicklung.")
+  meta(name="keywords" content="uiengineering,podcast,design,frontend,entwicklung,css,styleguide,patternlibrary,atomicdesign,styletiles")
+
+block header
+  header.header
+    h1.title Podcast
+
+block main
+  section
+    .wrap
+      each episodesByYear in mvb.groupedArticles.byYear
+        - episodes = episodesByYear.articles
+        section.episodes_group
+          h2.episodes_group__title
+            span.episodes_group__title__year= episodesByYear.year
+            small.episodes_group__title__count &nbsp;– #{episodes.length} #{episodes.length == 1 ? "Episode" : "Episoden"}
+          +episodes(episodes)

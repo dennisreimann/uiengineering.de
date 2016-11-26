@@ -1,4 +1,4 @@
-mixin navItem(type, url, title, current)
+mixin navItem(type, url, title)
   li(class="nav__item nav__item--#{type}#{h.isCurrentPage(type) ? ' nav__item--current' : ''}")
     a.nav__link(href=url)= title
 

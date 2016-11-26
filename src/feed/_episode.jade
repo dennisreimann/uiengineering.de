@@ -1,0 +1,33 @@
+mixin episode(a)
+  - var imageUrl = a.image ? h.baseUrl("/images/podcast/") + a.image : null
+  - var mp3Url = a.mp3 ? h.baseUrl("/mp3s/") + a.mp3 : null
+  - var mp3Length = "60135300"
+  - var duration = "2:04:43"
+  item
+    title [#{a.shortId}] #{a.title}
+    pubDate= h.dateFormat.rfc822(a.date)
+    link= h.baseUrl(a.permalink)
+    guid= mp3Url
+    itunes:author Jan Persiel und Dennis Reimann
+    category Technology
+    itunes:explicit no
+    itunes:duration= duration
+    if a.image
+      itunes:image(href=imageUrl)
+    if a.subtitle
+      itunes:subtitle= a.subtitle
+    itunes:summary
+      | <![CDATA[#{h.article.description(a)}]]>
+    itunes:keywords= h.article.keywords(a)
+    description
+      if a.description
+        = a.description
+      else
+        = a.content
+    enclosure(url=mp3Url length=mp3Length type="audio/mpeg")
+    media:content(url=mp3Url fileSize=mp3Length type="audio/mpeg" medium="audio")
+    media:thumbnail(url=imageUrl width="400" height="400")
+    media:rating(scheme="urn:simple") nonadult
+    media:rating(scheme="urn:v-chip") tv-g
+    media:credit(role="anchor person") Jan Persiel
+    media:credit(role="anchor person") Dennis Reimann

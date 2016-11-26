@@ -1,0 +1,52 @@
+include _episode
+
+- var episodes = mvb.articles
+- var feedUrl = h.baseUrl("/podcast.xml")
+- var podcastsUrl = h.baseUrl("/podcast")
+- var lastUpdate = h.articles.lastUpdate(episodes)
+- var title = "UI engineering Podcast"
+- var names = "Jan Persiel und Dennis Reimann"
+- var email = "mail@uiengineering.de"
+- var description = "Jan Persiel und Dennis Reimann setzen sich dafür ein, durch die enge Zusammenarbeit von Design und Entwicklung schneller bessere und nachhaltigere Ergebnisse zu erzielen. Im UI engineering Podcast geht es um Best Practices, Workflows und Tools die zu einem besseren Miteinander von Design und Entwicklung beitragen."
+
+doctype xml
+rss(xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" version="2.0")
+channel
+  title= title
+  link= feedUrl
+  atom:link(href=feedUrl type="application/rss+xml" rel="self")
+  generator UI engineering Podcast Feed Generator v1.0.0
+  docs http://blogs.law.harvard.edu/tech/rss
+  language de-DE
+  copyright Licensed under a Creative Commons License - Attribution-NonCommercial-NoDerivatives 4.0 International - http://creativecommons.org/licenses/by-nc-nd/4.0/
+  creativeCommons:license http://creativecommons.org/licenses/by-nc-nd/4.0/
+  ttl 720
+  sy:updatePeriod weekly
+  sy:updateFrequency 1
+  lastBuildDate= h.dateFormat.rfc822(lastUpdate)
+  pubDate= h.dateFormat.rfc822(lastUpdate)
+  description= description
+  author
+    name= names
+    email= email
+  itunes:author= names
+  itunes:summary= description
+  itunes:keywords UI engineering,Design,Development,Frontend,RWD,PatternLab,Pattern Library,Styleguide,Styletiles,Responsive,JavaScript,Elm,CSS,HTML,HTML5,Mobile
+  itunes:explicit no
+  itunes:block no
+  itunes:category(text="Technology")
+    itunes:category(text="Developers")
+  itunes:owner
+    itunes:name= names
+    itunes:email= email
+  managingEditor #{email} (#{name})
+  webMaster #{email} (#{name})
+  image
+    title= title
+    url= h.baseUrl("/images/podcast/cover/144.png")
+    link= podcastsUrl
+    width 144
+    height 144
+  itunes:image(href=h.baseUrl("/images/podcast/cover/3000.png"))
+  for e in episodes
+    +episode(e)

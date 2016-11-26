@@ -15,7 +15,7 @@ const paths = {
   src: 'src',
   dest: 'dist',
   rev: ['dist/**/*.{css,js,map,svg,jpg,png,gif,woff,woff2}'],
-  copy: ['src/{fonts,images,svgs}/**/*', 'src/{podcast}/mp3s/*.mp3', 'src/favicon.ico', 'src/.htaccess'],
+  copy: ['src/{fonts,images,svgs,mp3s}/**/*', 'src/favicon.ico', 'src/.htaccess'],
   pages: ['src/pages/**/*.jade'],
   styles: ['src/styles/**/*.styl'],
   scripts: ['src/scripts/**/*.js'],
@@ -23,6 +23,7 @@ const paths = {
   optimizeImages: ['src/{images,svgs}/**/*'],
   episodes: ['src/podcast/*.md'],
   templates: 'src/templates/*.jade',
+  feed: 'src/feed/*.jade',
   episodeTemplate: 'src/templates/episode.jade',
   episodesBasepath: 'podcast',
 };
@@ -160,11 +161,12 @@ gulp.task('watch', () => {
   gulp.watch(paths.scripts, ['scripts']);
   gulp.watch(paths.episodeTemplate, ['episodes']);
   gulp.watch(paths.templates, ['episodes', 'pages']);
+  gulp.watch(paths.feed, ['feed']);
   gulp.watch(paths.pages).on('change', file => buildHtml(file.path));
   gulp.watch(paths.episodes).on('change', file => buildHtml(file.path, paths.episodesBasepath));
 });
 
-gulp.task('build', cb => runSequence('styles', ['copy', 'pages', 'episodes', 'scripts'], cb));
+gulp.task('build', cb => runSequence('styles', ['copy', 'pages', 'episodes', 'scripts', 'feed'], cb));
 gulp.task('develop', cb => runSequence('build', ['watch', 'browserSync'], cb));
 gulp.task('rev', cb => runSequence('revAssets', ['pages', 'episodes'], cb));
 gulp.task('production', cb => runSequence('build', 'rev', 'sitemap', cb));

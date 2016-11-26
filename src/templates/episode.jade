@@ -16,6 +16,9 @@ block meta
   if episode.tags
     meta(name="keywords" content=h.article.keywords(episode))
 
+block alternate
+  link(href=h.assetUrl("podcast.xml") rel="alternate" type="application/rss+xml")
+
 block header
   header.header
     h1.title= episode.title
@@ -34,7 +37,7 @@ block main
           p.episode__meta
             span Veröffentlicht am
             | &nbsp;
-            time.episode__date= h.germanDate(episode)
+            time.episode__date= h.dateFormat.german(episode.date)
           .episode__nav
             - prevEpisode = episode.previousArticle
             - nextEpisode = episode.nextArticle

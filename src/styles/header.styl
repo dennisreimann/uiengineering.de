@@ -1,0 +1,56 @@
+.header
+  color $color-white
+  background $color-brand-main url(/images/hero.png) center center no-repeat
+  background-size cover
+  display flex
+  align-items center
+  justify-content center
+  overflow hidden
+  &--hero
+    @media $mq-up_to_XS
+      height 200px
+    @media $mq-XS_and_up
+      height 40vh
+    @media $mq-XS_to_S
+      min-height 240px
+      max-height 300px
+    @media $mq-S_to_M
+      min-height 280px
+      max-height 400px
+    @media $mq-M_and_up
+      min-height 340px
+      max-height 460px
+
+  &:not(.header--hero)
+    @media $mq-up_to_XS
+      height 100px
+    @media $mq-XS_to_S
+      height 120px
+    @media $mq-S_to_M
+      height 160px
+    @media $mq-M_and_up
+      height 200px
+
+.logo
+  font-weight 800
+  letter-spacing -.02em
+  text-align center
+  @media $mq-up_to_XS
+    font-size $font-size-huge
+  @media $mq-up_to_S
+    font-size $font-size-boss
+  @media $mq-S_to_M
+    font-size $font-size-mega
+  @media $mq-M_and_up
+    font-size $font-size-ultra
+
+.title
+  font-weight 800
+  letter-spacing -.02em
+  text-align center
+  @media $mq-up_to_XS
+    font-size $font-size-huge
+  @media $mq-up_to_S
+    font-size $font-size-boss
+  @media $mq-S_and_up
+    font-size $font-size-mega

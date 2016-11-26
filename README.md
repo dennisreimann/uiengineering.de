@@ -13,7 +13,7 @@ $ npm install
 Mit folgendem Task genutzt werden Änderungen kontinuierlich gebaut:
 
 ```bash
-$ npm run dev
+$ npm start
 ```
 
 Der Befehl startet außerdem einen lokalen Entwicklungs-Server unter [`http://localhost:3030/`](http://localhost:3030/)

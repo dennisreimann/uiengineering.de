@@ -1,0 +1,10 @@
+mixin navItem(type, url, title, current)
+  li(class="nav__item nav__item--#{type}#{h.isCurrentPage(type) ? ' nav__item--current' : ''}")
+    a.nav__link(href=url)= title
+
+.wrap
+  ul.nav
+    +navItem("index", "/", "Start")
+    +navItem("podcast", "/podcast.html", "Podcast")
+    +navItem("praxis", "/praxis.html", "Praxis")
+    +navItem("kontakt", "/kontakt.html", "Kontakt")

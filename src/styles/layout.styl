@@ -4,81 +4,6 @@
   max-width 960px
   margin 0 auto
 
-.header
-  color $color-white
-  background $color-brand-main url(/images/hero.png) center center no-repeat
-  background-size cover
-  display flex
-  align-items center
-  justify-content center
-  overflow hidden
-  @media $mq-up_to_XS
-    height 200px
-  @media $mq-XS_and_up
-    height 40vh
-  @media $mq-XS_to_S
-    min-height 240px
-    max-height 300px
-  @media $mq-S_to_M
-    min-height 280px
-    max-height 400px
-  @media $mq-M_and_up
-    min-height 340px
-    max-height 460px
-    height 140vh
-
-.logo
-  font-weight 800
-  letter-spacing -.02em
-  text-align center
-  @media $mq-up_to_XS
-    font-size $font-size-huge
-  @media $mq-up_to_S
-    font-size $font-size-boss
-  @media $mq-S_to_M
-    font-size $font-size-mega
-  @media $mq-M_and_up
-    font-size $font-size-ultra
-
-.main
-  @extend $background-rulers
-  padding-top $space-mega
-  padding-bottom $space-mega
-  overflow-x hidden
-
-.intro
-  margin-bottom $space-large
-  color $color-brand-main
-  line-height 1.6
-  @media $mq-up_to_M
-    font-size $font-size-subhead
-    hyphens manual
-  @media $mq-M_to_L
-    font-size $font-size-head
-  @media $mq-L_and_up
-    font-size $font-size-large
-  @media $mq-M_and_up
-    text-align center
-    span
-      display block
-      max-width 38em
-      margin 0 auto
-
-.angled
-  color $color-white
-  background $color-brand-main
-  width calc(100% + 80px)
-  margin-left -40px
-  padding 40px 40px 60px
-  &--up
-    transform rotate(-1.5deg)
-    > *
-      transform rotate(1.5deg)
-  &--down
-    transform rotate(1.5deg)
-    > *
-      transform rotate(-1.5deg)
-
 // responsive
 .container
   display flex
@@ -95,5 +20,7 @@
       flex-basis 50%
       padding-left $space-large
       padding-right $space-large
+      + .block:nth-child(n+2)
+        margin-top 0
       + .block:nth-child(n+3)
         margin-top $space-huge

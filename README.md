@@ -1,11 +1,17 @@
-# UI Engineering Website
+# UI engineering Website
 
 ## Setup
 
 Zunächst müssen die Abhängigkeiten installiert werden:
 
 ```bash
-$ npm install
+$ yarn install
+```
+
+Vorraussetzung dafür ist der Paketmanager [Yarn](https://yarnpkg.com/en/docs/install):
+
+```bash
+$ brew install yarn
 ```
 
 ## Entwicklung

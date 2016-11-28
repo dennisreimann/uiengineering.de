@@ -1,14 +1,17 @@
 mixin episodes(episodes)
   .episodes
     for e in episodes
-      article.episode
-        h4
-          a.episode__link(href=e.permalink)
-            span.episode__shortId [#{e.shortId}]
-            | &nbsp;
-            span.episode__title= e.title
-          if e.subtitle
-            span.episode__subtitle &nbsp;–&nbsp;#{e.subtitle}
-        if e.description
-          p.episode__description
-            != e.description
+      if e.mp3
+        article.episode
+          if e.image
+            img.episode__image(src=(h.baseUrl("/images/podcast/") + e.image))
+          h4.episode__heading
+            a.episode__link(href=e.permalink)
+              span.episode__shortId [#{e.shortId}]
+              | &nbsp;
+              span.episode__title= e.title
+            if e.subtitle
+              span.episode__subtitle= e.subtitle
+          if e.description
+            p.episode__description
+              != e.description

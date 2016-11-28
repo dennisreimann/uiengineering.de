@@ -25,13 +25,14 @@ block header
 
 block main
   section
-    .wrap
+    .wrap.single
       article.episode
         header.episode__header
           hgroup
             h2.episode__title [#{episode.shortId}] #{episode.title}
             if episode.subtitle
               h3.episode__subtitle= episode.subtitle
+          a.episode__play(href=(h.baseUrl("/mp3s/") + episode.mp3) target="uie-player") Abspielen
         .episode__content!= episode.content
         footer.episode__footer
           p.episode__meta

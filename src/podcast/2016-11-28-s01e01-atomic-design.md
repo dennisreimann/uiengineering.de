@@ -2,6 +2,7 @@
 title: Atomic Design
 subtitle: Die Chemie von Web Interfaces
 shortId: S01E01
+image: cover/144.png
 tags:
   - podcast
   - uiengineering
@@ -16,6 +17,6 @@ In der ersten Folge des UI engineering Podcast geht es um Atomic Design: Was ist
 
 ### Shownotes
 
-- [Atomic Design Intro](http://bradfrost.com/blog/post/atomic-web-design/ )
+- [Atomic Design Intro](http://bradfrost.com/blog/post/atomic-web-design/)
 - [Atomic Design Buch](http://atomicdesign.bradfrost.com/)
 - [Designing Modular UI Systems Via Style Guide-Driven Development](https://www.smashingmagazine.com/2016/06/designing-modular-ui-systems-via-style-guide-driven-development/)

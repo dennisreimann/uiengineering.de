@@ -19,15 +19,15 @@ const paths = {
   dest: 'dist',
   rev: ['dist/**/*.{css,js,map,svg,jpg,png,gif,woff,woff2}'],
   copy: ['src/{fonts,images,svgs,mp3s}/**/*', 'src/favicon.ico', 'src/.htaccess'],
-  pages: ['src/pages/**/*.jade'],
+  pages: ['src/pages/**/*.pug'],
   styles: ['src/styles/**/*.styl'],
   scripts: ['src/scripts/**/*.js'],
   sitemap: ['dist/**/*.html'],
   optimizeImages: ['src/{images,svgs}/**/*'],
   episodes: ['src/podcast/*.md'],
-  templates: 'src/templates/*.jade',
-  feed: 'src/feed/*.jade',
-  episodeTemplate: 'src/templates/episode.jade',
+  templates: 'src/templates/*.pug',
+  feed: 'src/feed/*.pug',
+  episodeTemplate: 'src/templates/episode.pug',
   episodesBasepath: 'podcast',
 };
 
@@ -70,7 +70,7 @@ const templateData = file => ({
   h: templateHelper.createHelper(file, baseUrl)
 });
 
-const jadeOpts = {
+const pugOpts = {
   basedir: 'src/templates/',
   pretty: true,
 };
@@ -80,17 +80,17 @@ const buildHtml = (src, dst) =>
     .pipe(p.plumber())
     .pipe(p.mvb(mvbConf))
     .pipe(p.data(templateData))
-    .pipe(p.jade(jadeOpts))
+    .pipe(p.pug(pugOpts))
     .pipe(p.minifyHtml({empty: true}))
     .pipe(dest(dst))
     .pipe(browserSync.stream())
 
 const feedWithTemplate = (template, folder) =>
-  gulp.src(`src/feed/${template}.jade`)
+  gulp.src(`src/feed/${template}.pug`)
     .pipe(p.plumber())
     .pipe(p.mvb(mvbConf))
     .pipe(p.data(templateData))
-    .pipe(p.jade(jadeOpts))
+    .pipe(p.pug(pugOpts))
     .pipe(p.rename({extname: '.xml'}))
     .pipe(dest(folder))
 

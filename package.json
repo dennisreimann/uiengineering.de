@@ -9,7 +9,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "start": "npm run clean && gulp develop",
+    "start": "npm run clean && gulp develop --dev",
     "build": "npm run clean && gulp build",
     "production": "npm run clean && gulp production",
     "build-and-deploy": "npm run production && npm run deploy",
@@ -34,7 +34,7 @@
     "gulp-jade": "^1.1.0",
     "gulp-load-plugins": "^1.1.0",
     "gulp-minify-html": "^1.0.6",
-    "gulp-mvb": "^0.5.1",
+    "gulp-mvb": "^0.5.2",
     "gulp-plumber": "^1.0.1",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
@@ -48,6 +48,7 @@
     "marked": "^0.3.6",
     "moment": "^2.17.0",
     "musicmetadata": "^2.0.5",
-    "run-sequence": "^1.1.5"
+    "run-sequence": "^1.1.5",
+    "yargs": "^6.4.0"
   }
 }

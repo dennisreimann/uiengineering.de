@@ -1,3 +1,5 @@
+import { argv } from 'yargs';
+import fs from 'fs';
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import runSequence from 'run-sequence';
@@ -9,7 +11,8 @@ import templateHelper from './lib/templateHelper';
 
 const p = gulpLoadPlugins();
 const browserSync = BrowserSync.create();
-const baseUrl = 'https://www.uiengineering.de';
+const isDev = (argv.dev != null);
+const baseUrl = isDev ? 'http://localhost:3000' : 'https://www.uiengineering.de';
 
 const paths = {
   src: 'src',
@@ -35,6 +38,13 @@ const mvbConf = {
   template: paths.episodeTemplate,
   permalink(article) {
     return `/${paths.episodesBasepath}/${article.id}.html`;
+  },
+  loaded(article) {
+    if (article.mp3) {
+      const mp3Path = `src/mp3s/${article.mp3}`;
+      const fileSize = fs.statSync(mp3Path).size;
+      article.mp3Bytes = fileSize;
+    }
   },
   grouping(articles) {
     const byYear = {};

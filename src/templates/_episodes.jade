@@ -3,8 +3,8 @@ mixin episodes(episodes)
     for e in episodes
       if e.mp3
         article.episode
-          if e.image
-            img.episode__image(src=(h.baseUrl("/images/podcast/") + e.image))
+          a(href=e.permalink)
+            img.episode__image(src=h.podcastImage(e.imageDir, 144))
           h4.episode__heading
             a.episode__link(href=e.permalink)
               span.episode__shortId [#{e.shortId}]

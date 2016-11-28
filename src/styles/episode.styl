@@ -6,12 +6,20 @@
     font-weight 300
     font-size $font-size-large
 
-  .episode__subtitle
-    margin $space-tiny 0
-    display block
-    font-style italic
-    font-weight 300
-    font-size $font-size-base
+  .episode
+    &__image
+      @media $mq-up_to_S
+        display none
+      @media $mq-S_and_up
+        float left
+        width 144px
+        margin-right $space-large
+    &__subtitle
+      margin $space-tiny 0
+      display block
+      font-style italic
+      font-weight 300
+      font-size $font-size-base
 
 .episode
   overflow hidden
@@ -23,19 +31,20 @@
   &__heading
     margin-top 0
 
-  &__image
-    @media $mq-up_to_S
-      display none
-    @media $mq-S_and_up
-      float left
-      margin-right $space-large
-
   &__title
     margin-bottom 0
 
-  &__play
-    @extend $button-look
-    margin-top $space-large
+  &__player
+    display block
+    width 320px
+    margin 0 auto $space-large
+
+  &__image
+    width 100%
+
+  &__audio
+    width 100%
+    margin-top -7px
 
   &__footer
     margin-top $space-large

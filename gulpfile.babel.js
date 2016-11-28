@@ -147,7 +147,7 @@ gulp.task('optimizeImages', () =>
 );
 
 gulp.task('revAssets', () => {
-  const revAll = new p.revAll({prefix: assetHost});
+  const revAll = new p.revAll();
   return gulp.src(paths.rev)
     .pipe(revAll.revision())
     .pipe(p.revDeleteOriginal())

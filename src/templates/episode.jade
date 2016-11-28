@@ -32,7 +32,10 @@ block main
             h2.episode__title [#{episode.shortId}] #{episode.title}
             if episode.subtitle
               h3.episode__subtitle= episode.subtitle
-          a.episode__play(href=(h.baseUrl("/mp3s/") + episode.mp3) target="uie-player") Abspielen
+        .episode__player
+          img.episode__image(src=h.podcastImage(episode.imageDir, 320))
+          audio.episode__audio(controls="controls")
+            source(src=mp3Url type="audio/mpeg")
         .episode__content!= episode.content
         footer.episode__footer
           p.episode__meta

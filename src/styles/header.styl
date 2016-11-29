@@ -1,6 +1,8 @@
 .header
   color $color-white
-  background $color-brand-main url(/images/heromain.png) center center no-repeat
+  background-color $color-brand-main
+  background-position center center
+  background-repeat no-repeat
   background-size contain
   display flex
   align-items center
@@ -30,6 +32,15 @@
       height 160px
     @media $mq-M_and_up
       height 200px
+
+  &--main
+    background-image url(/images/header/main.jpg)
+
+  &--podcast
+    background-image url(/images/header/podcast.jpg)
+
+  &--kontakt
+    background-image url(/images/header/kontakt.jpg)  
 
 .logo
   font-weight 800

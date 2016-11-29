@@ -2,7 +2,7 @@ extends /layout
 
 block vars
   - var episode = mvb.article
-  - var mp3Url = h.assetUrl("mp3s/" + episode.mp3)
+  - var mp3Url = h.assetPath("mp3s/" + episode.mp3)
 
 block title
   title
@@ -17,11 +17,11 @@ block meta
     meta(name="keywords" content=h.article.keywords(episode))
 
 block alternate
-  link(href=h.assetUrl("podcast.xml") rel="alternate" type="application/rss+xml")
+  link(href=h.assetPath("podcast.xml") rel="alternate" type="application/rss+xml")
 
 block header
-  header.header
-    h1.title= episode.title
+  header.header.header--podcast
+    h1.title Podcast
 
 block main
   section

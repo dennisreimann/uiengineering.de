@@ -95,15 +95,16 @@ const feedWithTemplate = (template, folder) =>
     .pipe(dest(folder))
 
 gulp.task('feed', () => feedWithTemplate('podcast'));
+gulp.task('pages', () => buildHtml(paths.pages));
+gulp.task('episodes', () => buildHtml(paths.episodes, paths.episodesBasepath));
+
+gulp.task('pug', ['pages', 'episodes', 'feed']);
 
 gulp.task('copy', cb =>
   gulp.src(paths.copy)
     .pipe(dest())
     .pipe(browserSync.stream())
 );
-
-gulp.task('pages', () => buildHtml(paths.pages));
-gulp.task('episodes', () => buildHtml(paths.episodes, paths.episodesBasepath));
 
 gulp.task('scripts', () =>
   gulp.src(paths.scripts)
@@ -176,7 +177,7 @@ gulp.task('watch', () => {
   gulp.watch(paths.episodes).on('change', file => buildHtml(file.path, paths.episodesBasepath));
 });
 
-gulp.task('build', cb => runSequence('styles', ['copy', 'pages', 'episodes', 'scripts', 'feed'], cb));
+gulp.task('build', cb => runSequence(['styles', 'copy', 'scripts', 'pug'], cb));
 gulp.task('develop', cb => runSequence('build', ['watch', 'browserSync'], cb));
-gulp.task('rev', cb => runSequence('revAssets', ['pages', 'episodes'], cb));
+gulp.task('rev', cb => runSequence('revAssets', 'pug', cb));
 gulp.task('production', cb => runSequence('build', 'rev', 'sitemap', cb));

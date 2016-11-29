@@ -1,6 +1,7 @@
 mixin episode(a)
-  - var imageUrl = a.imageDir ? h.baseUrl(h.podcastImage(a.imageDir, 2000), true) : null
-  - var mp3Url = a.mp3 ? h.baseUrl("/mp3s/" + a.mp3, true) : null
+  - var thumbnailUrl = a.imageDir ? h.baseUrl(h.podcastImage(a.imageDir, 320), true) : null
+  - var imageUrl = a.imageDir ? h.baseUrl(h.podcastImage(a.imageDir, 3000), true) : null
+  - var mp3Url = a.mp3 ? h.baseUrl(h.assetPath("mp3s/" + a.mp3), true) : null
   if mp3Url
     item
       guid(isPermaLink="false")= a.shortId
@@ -8,6 +9,8 @@ mixin episode(a)
       pubDate= h.dateFormat.rfc822(a.date)
       enclosure(url=mp3Url length=a.mp3Bytes type="audio/mpeg")
       description= a.description ? a.description : a.content
+      if thumbnailUrl
+        media:thumbnail(url=thumbnailUrl width=320 height=320)
       if imageUrl
         itunes:image(href=imageUrl)
       if a.duration

@@ -2,7 +2,9 @@
 title: Atomic Design
 subtitle: Die Chemie von Web Interfaces
 shortId: S01E01
-# imageDir: cover
+imageDir: s01e01
+mp3: s01e01-atomic_design.mp3
+duration: 00:33:47
 tags:
   - podcast
   - uiengineering

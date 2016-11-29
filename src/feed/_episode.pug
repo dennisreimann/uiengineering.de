@@ -1,5 +1,6 @@
 mixin episode(a)
-  - var thumbnailUrl = a.imageDir ? h.baseUrl(h.podcastImage(a.imageDir, 320), true) : null
+  - var thumbnailSize = 320
+  - var thumbnailUrl = a.imageDir ? h.baseUrl(h.podcastImage(a.imageDir, thumbnailSize), true) : null
   - var imageUrl = a.imageDir ? h.baseUrl(h.podcastImage(a.imageDir, 3000), true) : null
   - var mp3Url = a.mp3 ? h.baseUrl(h.assetPath("mp3s/" + a.mp3), true) : null
   if mp3Url
@@ -8,9 +9,11 @@ mixin episode(a)
       title [#{a.shortId}] #{a.title}
       pubDate= h.dateFormat.rfc822(a.date)
       enclosure(url=mp3Url length=a.mp3Bytes type="audio/mpeg")
-      description= a.description ? a.description : a.content
+      description <![CDATA[!{a.content}]]>
       if thumbnailUrl
-        media:thumbnail(url=thumbnailUrl width=320 height=320)
+        media:thumbnail(url=thumbnailUrl width=thumbnailSize height=thumbnailSize)
+      if a.content
+        itunes:summary <![CDATA[!{a.content}]]>
       if imageUrl
         itunes:image(href=imageUrl)
       if a.duration

@@ -9,6 +9,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
+    "images": "gulp images",
     "start": "npm run clean && gulp develop --dev",
     "build": "npm run clean && gulp build",
     "production": "npm run clean && gulp production",
@@ -30,6 +31,7 @@
     "gulp-concat-json": "^1.0.0",
     "gulp-data": "^1.2.1",
     "gulp-if": "^2.0.0",
+    "gulp-image-resize": "^0.11.0",
     "gulp-imagemin": "^3.1.1",
     "gulp-load-plugins": "^1.1.0",
     "gulp-minify-html": "^1.0.6",
@@ -46,6 +48,7 @@
     "gulp-uglify": "^2.0.0",
     "jstransformer-marked": "^1.0.1",
     "marked": "^0.3.6",
+    "merge-stream": "^1.0.1",
     "moment": "^2.17.0",
     "musicmetadata": "^2.0.5",
     "run-sequence": "^1.1.5",

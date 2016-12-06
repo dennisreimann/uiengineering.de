@@ -2,6 +2,7 @@ import { argv } from 'yargs';
 import fs from 'fs';
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
+import mergeStream from 'merge-stream';
 import runSequence from 'run-sequence';
 import autoprefixer from 'autoprefixer';
 import mqpacker from 'css-mqpacker';
@@ -24,7 +25,7 @@ const paths = {
   styles: ['src/styles/**/*.styl'],
   scripts: ['src/scripts/**/*.js'],
   html: ['dist/**/*.html'],
-  optimizeImages: ['src/{images,svgs}/**/*'],
+  optimizeImages: ['src/{images,svgs}/**/*', '!src/images/podcast/**/3000.png'],
   episodes: ['src/podcast/*.md'],
   templates: 'src/templates/*.pug',
   feed: 'src/feed/*.pug',
@@ -94,11 +95,27 @@ const feedWithTemplate = (template, folder) =>
     .pipe(p.rename({extname: '.xml'}))
     .pipe(dest(folder))
 
+const resizePodcastImages = (size) =>
+  gulp.src('src/images/podcast/**/3000.png')
+    .pipe(p.imageResize({ width: size }))
+    .pipe(p.rename({basename: size}))
+    .pipe(gulp.dest('src/images/podcast'))
+
 gulp.task('feed', () => feedWithTemplate('podcast'));
 gulp.task('pages', () => buildHtml(paths.pages));
 gulp.task('episodes', () => buildHtml(paths.episodes, paths.episodesBasepath));
 
 gulp.task('pug', ['pages', 'episodes', 'feed']);
+
+gulp.task('images:resize', cb =>
+  mergeStream([320, 144].map(resizePodcastImages))
+);
+
+gulp.task('images:optimize', () =>
+  gulp.src(paths.optimizeImages)
+    .pipe(p.imagemin())
+    .pipe(gulp.dest('src'))
+);
 
 gulp.task('copy', cb =>
   gulp.src(paths.copy)
@@ -141,12 +158,6 @@ gulp.task('browserSync', () =>
   })
 );
 
-gulp.task('optimizeImages', () =>
-  gulp.src(paths.optimizeImages)
-    .pipe(p.imagemin())
-    .pipe(gulp.dest('src'))
-);
-
 gulp.task('revAssets', () => {
   const revAll = new p.revAll();
   return gulp.src(paths.rev)
@@ -178,6 +189,8 @@ gulp.task('watch', () => {
   gulp.watch(paths.html).on('change', () => debounce('reload', browserSync.reload, 500));
 });
 
+
+gulp.task('images', cb => runSequence('images:resize', 'images:optimize', cb));
 gulp.task('build', cb => runSequence(['styles', 'copy', 'scripts', 'pug'], cb));
 gulp.task('develop', cb => runSequence('build', ['watch', 'browserSync'], cb));
 gulp.task('rev', cb => runSequence('revAssets', 'pug', cb));

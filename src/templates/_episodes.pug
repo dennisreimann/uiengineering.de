@@ -5,7 +5,7 @@ mixin episodes(episodes)
         article.episodes-list__item
           .episode__media
             a(href=e.permalink)
-              img.episode__image(src=h.podcastImage(e.imageDir, 144))
+              img.episode__image(src=h.podcastImage(e.imageDir, 320))
           .episode__content
             h4.episode__heading
               a.episode__link(href=e.permalink)

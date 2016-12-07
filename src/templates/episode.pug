@@ -2,16 +2,13 @@ extends /layout
 
 block vars
   - var episode = mvb.article
+  - var title = episode.title + (episode.subtitle ? ": " + episode.subtitle : "") + " • UI engineering Podcast"
   - var imageSize = 320
   - var imagePath = h.podcastImage(episode.imageDir, imageSize)
   - var mp3Path = h.assetPath("mp3s/" + episode.mp3)
 
 block title
-  title
-    = episode.title
-    if episode.subtitle
-      = " – "
-      = episode.subtitle
+  title= title
 
 block meta
   meta(name="description" content=h.article.description(episode))
@@ -40,7 +37,7 @@ block main
             if episode.subtitle
               h3.episode__subtitle= episode.subtitle
         .episode__player
-          img.episode__image(src=imagePath)
+          img.episode__image(alt=title src=imagePath srcset=`${h.podcastImage(episode.imageDir, 640)} 2x`)
           audio.episode__audio(controls="controls")
             source(src=mp3Path type="audio/mpeg")
         .episode__content!= episode.content

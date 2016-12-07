@@ -19,13 +19,12 @@ const baseUrl = isDev ? 'http://localhost:3000' : 'https://www.uiengineering.de'
 const paths = {
   src: 'src',
   dest: 'dist',
+  html: ['dist/**/*.html'],
   rev: ['dist/**/*.{css,js,map,svg,jpg,png,gif,woff,woff2}'],
   copy: ['src/{fonts,images,svgs,mp3s}/**/*', 'src/favicon.ico', 'src/.htaccess'],
   pages: ['src/pages/**/*.pug'],
   styles: ['src/styles/**/*.styl'],
   scripts: ['src/scripts/**/*.js'],
-  html: ['dist/**/*.html'],
-  optimizeImages: ['src/{images,svgs}/**/*', '!src/images/podcast/**/3000.png'],
   episodes: ['src/podcast/*.md'],
   templates: 'src/templates/*.pug',
   feed: 'src/feed/*.pug',
@@ -95,11 +94,14 @@ const feedWithTemplate = (template, folder) =>
     .pipe(p.rename({extname: '.xml'}))
     .pipe(dest(folder))
 
-const resizePodcastImages = (size) =>
-  gulp.src('src/images/podcast/**/3000.png')
-    .pipe(p.imageResize({ width: size }))
+const resizePodcastImages = (size) => {
+  const baseDir = 'src/images/podcast';
+  return gulp.src(`${baseDir}/**/3000.png`)
     .pipe(p.rename({basename: size}))
-    .pipe(gulp.dest('src/images/podcast'))
+    .pipe(p.newer(baseDir))
+    .pipe(p.imageResize({ width: size }))
+    .pipe(gulp.dest(baseDir));
+};
 
 gulp.task('feed', () => feedWithTemplate('podcast'));
 gulp.task('pages', () => buildHtml(paths.pages));
@@ -108,14 +110,16 @@ gulp.task('episodes', () => buildHtml(paths.episodes, paths.episodesBasepath));
 gulp.task('pug', ['pages', 'episodes', 'feed']);
 
 gulp.task('images:resize', cb =>
-  mergeStream([320, 144].map(resizePodcastImages))
+  mergeStream([640, 320, 160].map(resizePodcastImages))
 );
 
-gulp.task('images:optimize', () =>
-  gulp.src(paths.optimizeImages)
+gulp.task('images:optimize', () => {
+  const targetDir = 'src';
+  return gulp.src(['src/{images,svgs}/**/*', '!src/images/podcast/**/3000.png'])
+    .pipe(p.newer(targetDir))
     .pipe(p.imagemin())
-    .pipe(gulp.dest('src'))
-);
+    .pipe(gulp.dest(targetDir));
+});
 
 gulp.task('copy', cb =>
   gulp.src(paths.copy)

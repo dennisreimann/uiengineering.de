@@ -14,7 +14,10 @@ import templateHelper from './lib/templateHelper';
 const p = gulpLoadPlugins();
 const browserSync = BrowserSync.create();
 const isDev = (argv.dev != null);
-const baseUrl = isDev ? 'http://localhost:3000' : 'https://www.uiengineering.de';
+const assetHost = argv.assetHost;
+const assetUrl = assetHost ? `//${assetHost}` : null;
+const siteHost = isDev ? 'localhost:3000' : 'www.uiengineering.de';
+const siteUrl = `${isDev ? 'http' : 'https'}://${siteHost}`;
 
 const paths = {
   src: 'src',
@@ -68,7 +71,7 @@ const mvbConf = {
 };
 
 const templateData = file => ({
-  h: templateHelper.createHelper(file, baseUrl)
+  h: templateHelper.createHelper(file, siteHost, assetHost)
 });
 
 const pugOpts = {
@@ -82,7 +85,6 @@ const buildHtml = (src, dst) =>
     .pipe(p.mvb(mvbConf))
     .pipe(p.data(templateData))
     .pipe(p.pug(pugOpts))
-    .pipe(p.minifyHtml({empty: true}))
     .pipe(dest(dst))
 
 const feedWithTemplate = (template, folder) =>
@@ -107,11 +109,13 @@ gulp.task('feed', () => feedWithTemplate('podcast'));
 gulp.task('pages', () => buildHtml(paths.pages));
 gulp.task('episodes', () => buildHtml(paths.episodes, paths.episodesBasepath));
 
-gulp.task('pug', ['pages', 'episodes', 'feed']);
-
-gulp.task('images:resize', cb =>
-  mergeStream([640, 320, 160].map(resizePodcastImages))
+gulp.task('html:optimize', cb =>
+  gulp.src(paths.html)
+    .pipe(p.minifyHtml({empty: true}))
+    .pipe(dest())
 );
+
+gulp.task('images:resize', cb => mergeStream([640, 320, 160].map(resizePodcastImages)));
 
 gulp.task('images:optimize', () => {
   const targetDir = 'src';
@@ -163,7 +167,7 @@ gulp.task('browserSync', () =>
 );
 
 gulp.task('revAssets', () => {
-  const revAll = new p.revAll();
+  const revAll = new p.revAll({ prefix: assetUrl });
   return gulp.src(paths.rev)
     .pipe(revAll.revision())
     .pipe(p.revDeleteOriginal())
@@ -174,10 +178,7 @@ gulp.task('revAssets', () => {
 
 gulp.task('sitemap', () =>
   gulp.src(paths.html)
-    .pipe(p.sitemap({
-      siteUrl: baseUrl,
-      changefreq: 'weekly'
-    }))
+    .pipe(p.sitemap({ siteUrl, changefreq: 'weekly' }))
     .pipe(dest())
 );
 
@@ -194,8 +195,10 @@ gulp.task('watch', () => {
 });
 
 
+gulp.task('pug', ['pages', 'episodes', 'feed']);
+gulp.task('optimize', ['html:optimize']);
 gulp.task('images', cb => runSequence('images:resize', 'images:optimize', cb));
 gulp.task('build', cb => runSequence(['styles', 'copy', 'scripts', 'pug'], cb));
 gulp.task('develop', cb => runSequence('build', ['watch', 'browserSync'], cb));
 gulp.task('rev', cb => runSequence('revAssets', 'pug', cb));
-gulp.task('production', cb => runSequence('build', 'rev', 'sitemap', cb));
+gulp.task('production', cb => runSequence('build', 'rev', ['sitemap', 'optimize'], cb));

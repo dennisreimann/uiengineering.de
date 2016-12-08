@@ -1,7 +1,7 @@
 include _episode
 
 - var episodes = mvb.articles
-- var podcastsUrl = h.baseUrl(h.assetPath("podcast.html"), true)
+- var podcastsUrl = h.enforceScheme("http", h.siteUrl("podcast.html"))
 - var lastUpdate = h.articles.lastUpdate(episodes)
 - var title = "UI engineering Podcast"
 - var names = "Jan Persiel und Dennis Reimann"
@@ -11,7 +11,7 @@ include _episode
 doctype xml
 rss(xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" version="2.0")
   channel
-    atom:link(href=h.baseUrl(h.assetPath("podcast.xml")) type="application/rss+xml" rel="self")
+    atom:link(href=h.siteUrl("podcast.xml") type="application/rss+xml" rel="self")
     sy:updatePeriod weekly
     sy:updateFrequency 1
     ttl 720
@@ -28,7 +28,7 @@ rss(xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.co
     webMaster #{email} (#{names})
     image
       title= title
-      url= h.baseUrl(h.podcastImage("cover", 640), true)
+      url= h.enforceScheme("http", h.podcastImageUrl("cover", 640))
       link= podcastsUrl
     itunes:author= names
     itunes:summary= description
@@ -38,6 +38,6 @@ rss(xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.co
     itunes:owner
       itunes:name= names
       itunes:email= email
-    itunes:image(href=h.baseUrl(h.podcastImage("cover", 3000), true))
+    itunes:image(href=h.enforceScheme("http", h.podcastImageUrl("cover", 3000)))
     for e in episodes
       +episode(e, h)

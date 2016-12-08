@@ -4,8 +4,9 @@ block vars
   - var episode = mvb.article
   - var title = episode.title + (episode.subtitle ? ": " + episode.subtitle : "") + " • UI engineering Podcast"
   - var imageSize = 320
-  - var imagePath = h.podcastImage(episode.imageDir, imageSize)
-  - var mp3Path = h.assetPath("mp3s/" + episode.mp3)
+  - var imagePath = h.podcastImageUrl(episode.imageDir, imageSize)
+  - var mp3Path = h.assetUrl("mp3s/" + episode.mp3)
+  - var podcastFeedPath = "/podcast.xml"
 
 block title
   title= title
@@ -16,12 +17,12 @@ block meta
     meta(name="keywords" content=h.article.keywords(episode))
 
 block og
-  meta(property="og:image" content=h.baseUrl(imagePath))
+  meta(property="og:image" content=h.siteUrl(imagePath))
   meta(property="og:image:width" content=imageSize)
   meta(property="og:image:height" content=imageSize)
 
 block alternate
-  link(href=h.assetPath("podcast.xml") rel="alternate" type="application/rss+xml")
+  link(href=podcastFeedPath rel="alternate" type="application/rss+xml")
 
 block header
   header.header.header--podcast
@@ -37,7 +38,7 @@ block main
             if episode.subtitle
               h3.episode__subtitle= episode.subtitle
         .episode__player
-          img.episode__image(alt=title src=imagePath srcset=`${h.podcastImage(episode.imageDir, 640)} 2x`)
+          img.episode__image(alt=title src=imagePath srcset=`${h.podcastImageUrl(episode.imageDir, 640)} 2x`)
           audio.episode__audio(controls="controls")
             source(src=mp3Path type="audio/mpeg")
         .episode__content!= episode.content

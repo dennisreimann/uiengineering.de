@@ -12,7 +12,7 @@
     "images": "gulp images",
     "start": "npm run clean && gulp develop --dev",
     "build": "npm run clean && gulp build",
-    "production": "npm run clean && gulp production",
+    "production": "npm run clean && gulp production --assetHost=cdn.uiengineering.de",
     "build-and-deploy": "npm run production && npm run deploy",
     "deploy": "rsync -ravzulO --chmod=u=rwX,g=rX --exclude-from=.rsync-exclude dist/ uiengine.acamar.uberspace.de:html"
   },

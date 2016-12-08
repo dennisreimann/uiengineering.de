@@ -184,6 +184,7 @@ AddDefaultCharset utf-8
 
     # (6)
     # rewrite unknown hosts to www.uiengineering.de
+    RewriteCond %{HTTP_HOST} !^cdn.uiengineering.de$ [NC]
     RewriteCond %{HTTP_HOST} !^www.uiengineering.de$ [NC]
     RewriteRule (.*) http://www.uiengineering.de/$1 [R=301,L]
     #

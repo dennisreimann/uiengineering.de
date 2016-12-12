@@ -1,6 +1,6 @@
 ---
 title: Pattern Libraries
-subtitle: Kommt zusammen und 
+subtitle: Kommt zusammen und bauet
 shortId: S01E03
 imageDir: s01e03
 mp3: s01e03-patternlibraries.mp3

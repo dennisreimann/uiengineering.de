@@ -45,6 +45,7 @@ block main
         footer.episode__footer
           p.episode__meta
             span Veröffentlicht am
+            | &nbsp;
             time.episode__date= h.dateFormat.german(episode.date)
           .episode__nav
             - prevEpisode = episode.previousArticle

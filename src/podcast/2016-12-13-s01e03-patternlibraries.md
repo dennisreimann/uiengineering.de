@@ -24,9 +24,6 @@ Atomic Design ist eine Grundlage, die wir für eine solide Basis zum Entwickeln 
 
 ### Shownotes
 
-- [PatternLab Website](http://patternlab.io)
-- [Patternplate](https://github.com/sinnerschrader/patternplate)
-- [Stylegen](https://github.com/Galeria-Kaufhof/stylegen)
 - [Pattern Libraries: What They Are and Why You Need One](https://medium.com/@trydesignlab/pattern-libraries-what-they-are-and-why-you-need-one-2eb34ef33c1b#.u30b7mj9j)
 - [Pattern Libraries in Sketch + Zeplin Boards ⇒ Creative Team and Developers happy ever after](https://medium.com/@Kupferwerk_Creatives/pattern-libraries-in-sketch-zeplin-boards-creative-team-and-developers-happy-ever-after-86f6d8575a5a#.20ovmv3yf)
 - [Automated Pattern Libraries for Complex Web Design Projects](https://medium.com/creative-nights/automated-pattern-libraries-d4c89a113a27#.o9e3za42f)

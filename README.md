@@ -19,10 +19,10 @@ $ yarn install
 Mit folgendem Task genutzt werden Änderungen kontinuierlich gebaut:
 
 ```bash
-$ npm start
+$ yarn start
 ```
 
-Der Befehl startet einen lokalen Entwicklungs-Server unter [`http://localhost:3030/`](http://localhost:3030/)
+Der Befehl startet einen lokalen Entwicklungs-Server unter [`http://localhost:3000/`](http://localhost:3000/)
 
 ## 🎙 Wie füge ich eine neue Episode hinzu?
 
@@ -43,7 +43,7 @@ $ brew install graphicsmagick
 Damit kann man nun mit folgendem Task aus einem 3000er-Vorlagebild alle entsprechenden Größen generieren:
 
 ```bash
-$ npm run images
+$ yarn run images
 ```
 
 Dieser Task muss manuell ausgeführt werden und ist nicht Bestandteil des normalen Buildprozess, da die generierten Bilder im `src`-Verzeichnis abgelegt werden und dieser Schritt nur einmal erfolgen sollte.
@@ -55,5 +55,5 @@ Dieser Task muss manuell ausgeführt werden und ist nicht Bestandteil des normal
 Dieser Befehl erstellt einen neuen Production-Build und deployed diesen:
 
 ```bash
-$ npm run build-and-deploy
+$ yarn run build-and-deploy
 ```

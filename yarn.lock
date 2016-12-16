@@ -1373,10 +1373,6 @@ decompress@^3.0.0:
     vinyl-assign "^1.0.1"
     vinyl-fs "^2.2.0"
 
-deep-equal@0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-0.2.1.tgz#fad7a793224cbf0c3c7786f92ef780e4fc8cc878"
-
 deep-extend@~0.4.0:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.4.1.tgz#efe4113d08085f4e6f9687759810f807469e2253"
@@ -1812,12 +1808,6 @@ filenamify@^1.0.1:
     filename-reserved-regex "^1.0.0"
     strip-outer "^1.0.0"
     trim-repeated "^1.0.0"
-
-filereader-stream@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/filereader-stream/-/filereader-stream-0.2.0.tgz#16374a202715b640b666ecffd07089938e9ff11f"
-  dependencies:
-    inherits "1.0.0"
 
 fill-range@^2.1.0:
   version "2.2.3"
@@ -2727,7 +2717,7 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
-inherits@1, inherits@1.0.0:
+inherits@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-1.0.0.tgz#38e1975285bf1f7ba9c84da102bb12771322ac48"
 
@@ -3689,16 +3679,6 @@ multipipe@^0.1.0, multipipe@^0.1.2:
   resolved "https://registry.yarnpkg.com/multipipe/-/multipipe-0.1.2.tgz#2a8f2ddf70eed564dff2d57f1e1a137d9f05078b"
   dependencies:
     duplexer2 "0.0.2"
-
-musicmetadata@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/musicmetadata/-/musicmetadata-2.0.5.tgz#7ae910d99fbaee05f2bd543aef10b6fbe1f37bd4"
-  dependencies:
-    deep-equal "0.2.1"
-    filereader-stream "^0.2.0"
-    is-stream "^1.1.0"
-    strtok2 "~1.0.0"
-    through "~2.3.4"
 
 nan@^2.3.0:
   version "2.4.0"
@@ -4812,10 +4792,6 @@ strip-outer@^1.0.0:
   dependencies:
     escape-string-regexp "^1.0.2"
 
-strtok2@~1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/strtok2/-/strtok2-1.0.1.tgz#cec2ca202154c6e46ee04e1dbf55dd5b71152cfb"
-
 stylus@^0.54.0:
   version "0.54.5"
   resolved "https://registry.yarnpkg.com/stylus/-/stylus-0.54.5.tgz#42b9560931ca7090ce8515a798ba9e6aa3d6dc79"
@@ -4957,7 +4933,7 @@ through2@^2, through2@^2.0.0, through2@^2.0.1, through2@~2.0.0:
     readable-stream "~2.0.0"
     xtend "~4.0.0"
 
-through@*, through@~2.3.4:
+through@*:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 

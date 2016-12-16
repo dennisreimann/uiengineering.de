@@ -16,11 +16,17 @@ tags:
   - feedback
 ---
 
-In der dritten Folge des UI engineering Podcast geht es um Pattern Libraries. Wir besprechen die Grundlagen und die Aspekte für die Anforderer.
+In der dritten Folge des UI engineering Podcast geht es um Pattern Libraries.
+Wir besprechen die Grundlagen und die Aspekte für die Anforderer.
 
 <!-- more -->
 
-Atomic Design ist eine Grundlage, die wir für eine solide Basis zum Entwickeln von Webprojekten erachten. Pattern Libraries sind ein Tool diesem Design System Leben einzuhauchen und die Idee von Atomic Design in das Projekt zu bringen. Hierbei ist unserer Auffassung nach eine lebende und von allen genutzte Pattern Library notwendig. Diese und weitere Aspekte besprechen wir in dieser Folge. Das Thema Pattern Libraries wird in der nächsten Folge fortgesetzt.
+Atomic Design ist eine Grundlage, die wir für eine solide Basis zum Entwickeln von Webprojekten erachten.
+Pattern Libraries sind ein Tool diesem Design System Leben einzuhauchen und die Idee von Atomic Design in das Projekt zu bringen.
+Hierbei ist unserer Auffassung nach eine lebende und von allen genutzte Pattern Library notwendig.
+Diese und weitere Aspekte besprechen wir in dieser Folge.
+
+Das Thema Pattern Libraries wird in der nächsten Folge fortgesetzt.
 
 ### Shownotes
 

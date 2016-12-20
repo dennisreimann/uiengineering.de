@@ -1,5 +1,5 @@
 ---
-title: Pattern Libraries
+title: Pattern Libraries - Teil 2
 subtitle: Go with the Workflow(s)
 shortId: S01E04
 imageDir: s01e04

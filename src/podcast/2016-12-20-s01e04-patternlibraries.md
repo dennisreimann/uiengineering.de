@@ -3,8 +3,8 @@ title: Pattern Libraries
 subtitle: Go with the Workflow(s)
 shortId: S01E04
 imageDir: s01e04
-# mp3: s01e04-patternlibraries-2.mp3
-# duration: 00:36:01
+mp3: s01e04-patternlibraries-2.mp3
+duration: 00:36:01
 tags:
   - podcast
   - uiengineering

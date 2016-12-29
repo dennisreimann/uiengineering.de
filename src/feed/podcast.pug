@@ -1,7 +1,7 @@
 include _episode
 
 - var episodes = mvb.articles
-- var podcastsUrl = h.enforceScheme("http", h.siteUrl("podcast.html"))
+- var podcastsUrl = h.siteUrl("podcast.html", "http")
 - var lastUpdate = h.articles.lastUpdate(episodes)
 - var title = "UI engineering Podcast"
 - var names = "Jan Persiel und Dennis Reimann"

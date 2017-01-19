@@ -14,10 +14,11 @@ import templateHelper from './lib/templateHelper';
 const p = gulpLoadPlugins();
 const browserSync = BrowserSync.create();
 const isDev = (argv.dev != null);
+const defaultScheme = isDev ? 'http' : 'https';
 const assetHost = argv.assetHost;
 const assetUrl = assetHost ? `//${assetHost}` : null;
 const siteHost = isDev ? 'localhost:3000' : 'www.uiengineering.de';
-const siteUrl = `${isDev ? 'http' : 'https'}://${siteHost}`;
+const siteUrl = `${defaultScheme}://${siteHost}`;
 
 const paths = {
   src: 'src',
@@ -71,7 +72,7 @@ const mvbConf = {
 };
 
 const templateData = file => ({
-  h: templateHelper.createHelper(file, siteHost, assetHost)
+  h: templateHelper.createHelper(file, siteHost, assetHost, defaultScheme)
 });
 
 const pugOpts = {

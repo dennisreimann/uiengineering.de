@@ -23,6 +23,10 @@ html(lang="de" prefix="og: http://ogp.me/ns#")
     link(href=h.assetUrl("") rel="preconnect")
     block alternate
   body
+    script.
+      var isSafari = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && !window.chrome;
+      if (!!isSafari) document.body.className += " safari"
+
     nav.navigation: include nav
     block header
     main.main: block main

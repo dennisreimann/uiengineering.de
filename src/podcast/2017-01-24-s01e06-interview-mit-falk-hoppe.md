@@ -42,4 +42,3 @@ Auch sprechen wir über Tools und wer diese verwenden kann. Eine Reihe von Links
 - [Fractal.Build](http://fractal.build)
 - [RWD Pad](http://janpersiel.com/rwd-pad-the-fastest-way-to-sketch-web-and-app-interfaces/)
 - [Termine mit #uiengineering](https://uiengineering.de/)
-- []()

@@ -28,10 +28,12 @@ Pattern Libraries sind der große Hype, aber was kostet denn eigentlich eine sol
 Auch das Thema Dokumentation und das Einbeziehen von verschiedenen Gewerken ist ein Aspekt, der für uns in der Pattern Library Entwicklung eine wichtige Komponente ist. Hier diskutieren wir ebenfalls Beispiele und Anforderungen.
 
 ### Termine mit #UIengineering
+
 - 16.3.–18.3.2017 [E-Commerce Camp Jena](https://www.ecommerce-camp.de/redner-sessions/sessions-2017/)
 - 29.5.–2.6.2017 [webinale Berlin](https://webinale.de/session/design-development-und-dazwischen/)
 
 ### Shownotes
+
 - [Enterprise UI Design Patterns](http://articles.thoughtintodesign.com/2012/01/enterprise-ui-design-patterns-part-i.html#.WH4MkrGZPMU)
 - [How and why to create a pattern library?](https://boagworld.com/design/pattern-library/)
 - [How we use pattern libraries to deliver value](http://www.siteworx.com/latest/insights/pattern-library/)

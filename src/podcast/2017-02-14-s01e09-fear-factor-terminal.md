@@ -1,6 +1,6 @@
 ---
 title: Fear-Factor Terminal
-subtitle: Wenn das Fenster aus der Hölle sich öffnet!
+subtitle: Wenn sich das Fenster aus der Hölle öffnet!
 shortId: S01E09
 imageDir: s01e09
 mp3: s01e09-fear-factor-terminal.mp3

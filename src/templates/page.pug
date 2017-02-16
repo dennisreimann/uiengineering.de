@@ -1,5 +1,13 @@
 block vars
 
+include /navigation/navigation
+include /navigation/navItem
+include /footer/footer
+include /footer/footerLegal
+include /main/main
+include /section/block
+include /section/container
+
 doctype html
 html(lang="de" prefix="og: http://ogp.me/ns#")
   head
@@ -8,7 +16,6 @@ html(lang="de" prefix="og: http://ogp.me/ns#")
     block meta
       meta(name="keywords" content="UI engineering,Design,Development,Frontend,RWD,PatternLab,Pattern Library,Styleguide,Styletiles,Responsive,JavaScript,Elm,CSS,HTML,HTML5,Mobile")
       meta(name="description" content="Wir setzen uns dafür ein, durch die enge Zusammenarbeit von Design und Entwicklung schneller bessere und nachhaltigere Ergebnisse zu erzielen.")
-    block og
       meta(property="og:type" content="website")
     meta(property="og:locale" content="de_DE")
     meta(property="og:site_name" content="UI engineering")
@@ -21,13 +28,44 @@ html(lang="de" prefix="og: http://ogp.me/ns#")
     link(href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300i,400,800" rel="stylesheet")
     link(href=h.assetUrl("styles/main.css") rel="stylesheet")
     link(href=h.assetUrl("") rel="preconnect")
-    block alternate
   body
     script.
       var isSafari = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && !window.chrome;
       if (!!isSafari) document.body.className += " safari"
 
-    nav.navigation: include nav
-    block header
-    main.main: block main
-    footer.footer: include footer
+    +navigation()
+      +navItem("index", "/", "Start")
+      +navItem("podcast", "/podcast.html", "Podcast")
+      +navItem("praxis", "/praxis.html", "Praxis")
+      +navItem("kontakt", "/kontakt.html", "Kontakt")
+
+    +header(header)
+
+    +main()
+      block main
+
+    +footer()
+      +container()
+        +block()
+          :marked
+            [Jan Persiel](http://janpersiel.com/)<br>
+            Persiel Designstudio<br>
+            Falkenried 74a<br>
+            20251 Hamburg
+
+        +block()
+          :marked
+            [Dennis Reimann](https://dennisreimann.de/)<br>
+            Softwareentwickler<br>
+            Ottjen-Aldag-Str. 32<br>
+            28277 Bremen
+
+      +footerLegal()
+        :marked
+          Zusammen setzen wir uns für die enge Zusammenarbeit von Design und
+          Entwicklung ein. Wir betreiben kein gemeinsames Unternehmen und sind
+          auch im Rahmen dieser Initiative als Einzelunternehmer tätig.
+          Bei Anfragen für Workshop, Schulungen und Projekte
+          [erreichen Sie uns](/kontakt.html) gerne über unsere jeweiligen Websites.
+
+

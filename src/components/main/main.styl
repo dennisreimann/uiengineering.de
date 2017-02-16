@@ -1,0 +1,60 @@
+.main
+  @extend $background-rulers
+  padding-top $space-mega
+  padding-bottom $space-mega
+  background-color $color-white
+  overflow-x hidden
+
+  .safari &
+    padding-top $space-huge
+
+  *
+    +
+      h2
+      h3
+      h4
+      h5
+      h6
+      .container
+        margin-top $space-large
+      ul
+        margin-top $space-normal
+      p
+      li
+        margin-top $space-normal
+
+  h2
+    +
+      h3
+        margin-top 0
+
+  h3
+    +
+      p
+      ul
+        margin-top $space-normal
+
+  section + section
+    margin-top $space-mega
+
+  article + article
+    margin-top $space-large
+
+  ul
+    margin-left 16px
+
+  a
+    color $color-brand-main
+    text-decoration underline
+    &:hover
+    &:active
+      text-decoration none
+
+  i
+  em
+    font-weight 300
+
+  b
+  strong
+    font-weight 800
+

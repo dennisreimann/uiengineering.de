@@ -1,8 +1,12 @@
-extends /layout
+extends ../templates/page
+
+include /episode/episode
+include /header/header
+include /section/section
 
 block vars
   - var episode = mvb.article
-  - var title = episode.title + (episode.subtitle ? ": " + episode.subtitle : "") + " • UI engineering Podcast"
+  - var title = episode.title + (episode.subtitle ? `: ${episode.subtitle}` : '') + " • UI engineering Podcast"
   - var description = h.article.description(episode)
   - var publishDate = episode.date
   - var imageSize = 320
@@ -10,16 +14,12 @@ block vars
   - var mp3Path = h.assetUrl("mp3s/" + episode.mp3)
   - var podcastFeedPath = "/podcast.xml"
   - var htmlUrl = h.siteUrl(episode.permalink, "https")
+  - var header = { title: "Podcast", type: "podcast" }
 
 block title
   title= title
 
 block meta
-  meta(name="description" content=description)
-  if episode.tags
-    meta(name="keywords" content=h.article.keywords(episode))
-
-block og
   meta(property="og:type" content="article")
   meta(property="og:url" content=htmlUrl)
   meta(property="og:title" content=title)
@@ -35,45 +35,13 @@ block og
   meta(property="article:published_time" content=h.dateFormat.iso8601(publishDate))
   meta(property="article:author" content="https://www.facebook.com/janpersiel")
   meta(property="article:author" content="https://www.facebook.com/profile.php?id=100008783506280")
+  meta(name="description" content=description)
   if episode.tags
+    meta(name="keywords" content=h.article.keywords(episode))
     for tag in episode.tags
       meta(property="article:tag" content=tag)
-
-block alternate
   link(href=podcastFeedPath rel="alternate" type="application/rss+xml")
 
-block header
-  header.header.header--podcast
-    h1.title Podcast
-
 block main
-  section
-    .wrap.single
-      article.episode
-        header.episode__header
-          hgroup
-            h2.episode__title [#{episode.shortId}] #{episode.title}
-            if episode.subtitle
-              h3.episode__subtitle= episode.subtitle
-        .episode__player
-          img.episode__image(alt=title src=imagePath srcset=`${h.podcastImageUrl(episode.imageDir, 640)} 2x`)
-          audio.episode__audio(controls="controls")
-            source(src=mp3Path type="audio/mpeg")
-        .episode__content!= episode.content
-        footer.episode__footer
-          p.episode__meta
-            span Veröffentlicht am
-            | &nbsp;
-            time.episode__date= h.dateFormat.german(publishDate)
-          .episode__nav
-            - prevEpisode = episode.previousArticle
-            - nextEpisode = episode.nextArticle
-            h3.episode__nav__title Weitere Episoden
-            ul
-              for e in [nextEpisode, prevEpisode]
-                if e
-                  li
-                    a.episode__link(href=e.permalink)
-                      span.episode__shortId [#{e.shortId}]
-                      | &nbsp;
-                      span.episode__title= e.title
+  +section(true)
+    +episode(episode)

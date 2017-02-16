@@ -1,0 +1,14 @@
+.angled
+  color $color-white
+  background $color-brand-main
+  width calc(100% + 80px)
+  margin-left -40px
+  padding 40px 40px 60px
+  &--up
+    transform rotate(-1.5deg)
+    > *
+      transform rotate(1.5deg)
+  &--down
+    transform rotate(1.5deg)
+    > *
+      transform rotate(-1.5deg)

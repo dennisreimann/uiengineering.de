@@ -1,153 +1,155 @@
-extends /layout
+extends ../templates/page
 
-block header
-  header.header.header--main
-    h1.title In der Praxis
+include /header/header
+include /section/section
+
+block vars
+  - var header = { title: "In der Praxis", type: "main" }
 
 block main
-  section
-    .wrap.single
-      h2 Ein Beispiel: <span>Styling mit CSS</span>
-      :marked
-        Beide Seiten haben klassischerweise unterschiedliche Werkzeuge zur Realisierung ihres Outputs: Der Designer
-        erstellt die Vorlagen via [Photoshop](http://adobe.com) oder [Sketch](http://sketchapp.com), der Entwickler setzt diese mittels Editor oder IDE um. Beide
-        treffen sich in der Mitte, wo das große Ganze entsteht: Und mögen die Templates noch dem Entwickler gehören,
-        gibt es spätestens beim Styling mit CSS ein gemeinsames Interesse.
+  +section(true)
+    :marked
+      ## Ein Beispiel: <span>Styling mit CSS</span>
 
-        Es lässt sich feststellen, dass die programmatische Umsetzung des Stylings in vielen Projekten den Entwicklern
-        vorbehalten ist. Aber genau um solche Punkte geht es, und allein dieses Beispiel zeigt nicht nur auf, dass es zu
-        vielerlei Abstimungsproblemen kommen kann, sondern auch, wie viel Potential oft verschenkt wird. Bleibt die
-        Umsetzung des CSS den Entwicklern vorbehalten, so wird der Designer zum Anforder: Seine Rolle wird auf das
-        Dokumentieren und Briefen, sowie anschließende Überprüfung beschränkt.
+      Beide Seiten haben klassischerweise unterschiedliche Werkzeuge zur Realisierung ihres Outputs: Der Designer
+      erstellt die Vorlagen via [Photoshop](http://adobe.com) oder [Sketch](http://sketchapp.com), der Entwickler setzt diese mittels Editor oder IDE um. Beide
+      treffen sich in der Mitte, wo das große Ganze entsteht: Und mögen die Templates noch dem Entwickler gehören,
+      gibt es spätestens beim Styling mit CSS ein gemeinsames Interesse.
 
-        ### Vom Layout zur <span>Realisierung und zurück</span>
+      Es lässt sich feststellen, dass die programmatische Umsetzung des Stylings in vielen Projekten den Entwicklern
+      vorbehalten ist. Aber genau um solche Punkte geht es, und allein dieses Beispiel zeigt nicht nur auf, dass es zu
+      vielerlei Abstimungsproblemen kommen kann, sondern auch, wie viel Potential oft verschenkt wird. Bleibt die
+      Umsetzung des CSS den Entwicklern vorbehalten, so wird der Designer zum Anforder: Seine Rolle wird auf das
+      Dokumentieren und Briefen, sowie anschließende Überprüfung beschränkt.
 
-        Führen wir das Beispiel anders herum betrachtet weiter aus: **CSS ist der Ort, an dem die gestalterischen
-        Konzepte zu Code werden**. Insbesondere durch den Einsatz von Präprozessoren ergibt sich die Möglichkeit, die
-        der Gestaltung zugrundeliegenden Ideen durch Variablen und Funktionen abzubilden: Breakpoints, Rastersysteme
-        und Farb- sowie Abstandskonzepte sind prädestiniert dafür.
+      ### Vom Layout zur <span>Realisierung und zurück</span>
 
-        Sind solche grundlegenden Konzepte durch veränderbare Werte abgebildet, ergeben sich daraus nicht nur für den
-        Entwickler vielfache Einstellungsmöglichkeiten: Sie versetzen auch den Designer in die Lage, durch
-        vergleichsweise einfache Anpassungen Dinge umzustellen, auszuprobieren und selbst den finalen Schliff
-        vorzunehmen. Und das mitunter in Sekunden, nicht Stunden.
+      Führen wir das Beispiel anders herum betrachtet weiter aus: **CSS ist der Ort, an dem die gestalterischen
+      Konzepte zu Code werden**. Insbesondere durch den Einsatz von Präprozessoren ergibt sich die Möglichkeit, die
+      der Gestaltung zugrundeliegenden Ideen durch Variablen und Funktionen abzubilden: Breakpoints, Rastersysteme
+      und Farb- sowie Abstandskonzepte sind prädestiniert dafür.
 
-        Ist das Ergebnis direkt im Browser zu begutachten, reden wir nicht mehr nur über flache Vorlagen,
-        sondern von klick- und interagierbaren Oberflächen. Durch das Anpassen einzelner Werte sind in kürzester
-        Zeit verschiedene Varianten erstellt, die sich prototypisch ausrollen, herumzeigen, vergleichen und abnehmen
-        lassen. Die Möglichkeiten sind vielfältig, um sich gegenseitig Mittel bereitzustellen, welche die Arbeit und
-        Einflußnahme in der Umsetzung erleichtern.
+      Sind solche grundlegenden Konzepte durch veränderbare Werte abgebildet, ergeben sich daraus nicht nur für den
+      Entwickler vielfache Einstellungsmöglichkeiten: Sie versetzen auch den Designer in die Lage, durch
+      vergleichsweise einfache Anpassungen Dinge umzustellen, auszuprobieren und selbst den finalen Schliff
+      vorzunehmen. Und das mitunter in Sekunden, nicht Stunden.
 
-        **Gutes und flexibles Styling beginnt schon in der gemeinsamen Konzeption – und endet im Idealfall in einer
-        programmatischen Umsetzung der gestalterischen Grundideen.**
+      Ist das Ergebnis direkt im Browser zu begutachten, reden wir nicht mehr nur über flache Vorlagen,
+      sondern von klick- und interagierbaren Oberflächen. Durch das Anpassen einzelner Werte sind in kürzester
+      Zeit verschiedene Varianten erstellt, die sich prototypisch ausrollen, herumzeigen, vergleichen und abnehmen
+      lassen. Die Möglichkeiten sind vielfältig, um sich gegenseitig Mittel bereitzustellen, welche die Arbeit und
+      Einflußnahme in der Umsetzung erleichtern.
 
-        Eine weitere Idee dazu: Mit Tools wie dem [Galen Framework](http://galenframework.com/) lassen sich responsive
-        Designs nicht nur testen, sondern auch spezifizieren. Ähnlich wie ein Product Owner mit Akzeptanztests die
-        Anforderungen eines Features spezifiziert, kann Galen vom Designer genutzt werden, um das Layout zu beschreiben.
-        Daraus ergeben sich dann Spezifikationen, die sich nicht nur zur späteren Verifikation der Umsetzung nutzen
-        lassen, sondern auch schon als Vorlage dafür. Auch hier können mitunter zeitaufwändige manuelle Qualitätsprüfungen 
-        und Reviews auf ein Minimum reduziert werden, ohne dass die Qualität dabei Schaden nimmt.
+      **Gutes und flexibles Styling beginnt schon in der gemeinsamen Konzeption – und endet im Idealfall in einer
+      programmatischen Umsetzung der gestalterischen Grundideen.**
 
-  section.angled.angled--down
-    h2 UI UI UI …
-    .wrap.single
-      :marked
-        Ja, das klingt nach jeder Menge Arbeit auf beiden Seiten, daher darf man diese Zwischenüberschrift auch gerne
-        auf deutsch lesen und interpretieren. Das alles ist nicht möglich, ohne aufeinander zuzugehen und aus der eigenen
-        Komfortzone herauszutreten.
+      Eine weitere Idee dazu: Mit Tools wie dem [Galen Framework](http://galenframework.com/) lassen sich responsive
+      Designs nicht nur testen, sondern auch spezifizieren. Ähnlich wie ein Product Owner mit Akzeptanztests die
+      Anforderungen eines Features spezifiziert, kann Galen vom Designer genutzt werden, um das Layout zu beschreiben.
+      Daraus ergeben sich dann Spezifikationen, die sich nicht nur zur späteren Verifikation der Umsetzung nutzen
+      lassen, sondern auch schon als Vorlage dafür. Auch hier können mitunter zeitaufwändige manuelle Qualitätsprüfungen
+      und Reviews auf ein Minimum reduziert werden, ohne dass die Qualität dabei Schaden nimmt.
 
-        **Die Anforderung ans Design lautet: Bitte nicht von Code abschrecken lassen.** Diese Umstellung wird ohnehin
-        zunehmend unausweichlich, vor allem wenn man sich die dadurch hinzugewonnene Flexibilität und die schnelleren
-        Arbeitsabläufe vor Augen hält. Das Maß dessen, wie tief der Designer mit in die Entwicklung einsteigt, ist nicht
-        beschränkt: Über den offensichtlichen Einstiegspunkt CSS hinaus kann ebenso eine Mitarbeit im Bereich der Templates
-        und auch JavaScript erfolgen. Dadurch erweitern sich die Einflußmöglichkeiten im Bereich Interaktionsdesign und
-        Animation, was ebenfalls durchaus beidseitig als Gewinn gesehen werden dürfte.
+  +section(true, 'down')
+    :marked
+      ## UI UI UI …
 
-        **Vom Entwickler fordert dieser Ansatz ein sehr solides UI-Verständnis.** Ebenso wird er mehr als bislang in die
-        konzeptionelle Arbeit eingebunden: Er muss die Vorlagen nicht nur umsetzen, sondern die ihnen zu Grunde liegenden
-        Konzepte verstehen, hinterfragen und abbilden können. Gemeinsam mit dem Gestalter entwickelt er die Interaktionsabläufe,
-        ebenso schafft er für den Gestalter die Werkzeuge, um dessen Einflußnahme auszuweiten. Das Prinzip *Shared Code* wird
-        ausgeweitet: Die Entwickler teilen sich die Arbeit am Produktivcode nicht nur untereinader, sondern auch der Designer
-        wirkt daran mit.
+      Ja, das klingt nach jeder Menge Arbeit auf beiden Seiten, daher darf man diese Zwischenüberschrift auch gerne
+      auf deutsch lesen und interpretieren. Das alles ist nicht möglich, ohne aufeinander zuzugehen und aus der eigenen
+      Komfortzone herauszutreten.
 
-        Auch wenn dies anfänglich schwer und mit Reibung verbunden wirkt, ist es unserer Meinung nach erforderlich, darauf
-        hinzuarbeiten: Ein weitestgehend arbeitsteiliger Ansatz funktioniert einfach nicht mehr und führt wie beschrieben
-        zu schlechten oder zumindest teuren Ergebnissen! Der beste gemeinsame Einstiegspunkt kann unserer Meinung nach dabei sein, 
-        das Ergebnis als im Browser nutzbaren Vorbau bzw. Prototyp zu erstellen …
+      **Die Anforderung ans Design lautet: Bitte nicht von Code abschrecken lassen.** Diese Umstellung wird ohnehin
+      zunehmend unausweichlich, vor allem wenn man sich die dadurch hinzugewonnene Flexibilität und die schnelleren
+      Arbeitsabläufe vor Augen hält. Das Maß dessen, wie tief der Designer mit in die Entwicklung einsteigt, ist nicht
+      beschränkt: Über den offensichtlichen Einstiegspunkt CSS hinaus kann ebenso eine Mitarbeit im Bereich der Templates
+      und auch JavaScript erfolgen. Dadurch erweitern sich die Einflußmöglichkeiten im Bereich Interaktionsdesign und
+      Animation, was ebenfalls durchaus beidseitig als Gewinn gesehen werden dürfte.
 
-  section
-    h2 Tools und Methoden
-    .wrap.single
-      :marked
-        Unserer Erfahrung nach erleichtert es vieles, wenn man sich möglichst früh im Browser und somit nah am Endprodukt trifft.
-        Photoshop und Sketch haben weiterhin ihre Berechtigung, dennoch sind Vorlagen alleine nichts wert und bieten nicht die
-        erforderlichen Möglichkeiten, um weitreichendere Interaktionen darzustellen. Für den Designer bedeuten diese Art von
-        Vorlagen eh einen vergleichsweise hohen Aufwand bei Anpassungen.
+      **Vom Entwickler fordert dieser Ansatz ein sehr solides UI-Verständnis.** Ebenso wird er mehr als bislang in die
+      konzeptionelle Arbeit eingebunden: Er muss die Vorlagen nicht nur umsetzen, sondern die ihnen zu Grunde liegenden
+      Konzepte verstehen, hinterfragen und abbilden können. Gemeinsam mit dem Gestalter entwickelt er die Interaktionsabläufe,
+      ebenso schafft er für den Gestalter die Werkzeuge, um dessen Einflußnahme auszuweiten. Das Prinzip *Shared Code* wird
+      ausgeweitet: Die Entwickler teilen sich die Arbeit am Produktivcode nicht nur untereinader, sondern auch der Designer
+      wirkt daran mit.
 
-        Unserer Ansicht nach sollte der initiale gestalterische Fokus z.B. auf die Erstellung von [Styletiles](http://styletil.es/) gelegt
-        werden: Sie visualisieren im Gegensatz zu konkreten Layouts zwar eher eine abstrakte Anmutung, lassen aber den nötigen
-        Interpretations- und Anpassungsspielraum und enden daher nicht in einer von Layouts bekannten Updatehölle.
+      Auch wenn dies anfänglich schwer und mit Reibung verbunden wirkt, ist es unserer Meinung nach erforderlich, darauf
+      hinzuarbeiten: Ein weitestgehend arbeitsteiliger Ansatz funktioniert einfach nicht mehr und führt wie beschrieben
+      zu schlechten oder zumindest teuren Ergebnissen! Der beste gemeinsame Einstiegspunkt kann unserer Meinung nach dabei sein,
+      das Ergebnis als im Browser nutzbaren Vorbau bzw. Prototyp zu erstellen …
 
-        Die Umsetzung dieser Anmutung findet anschließend in einer Pattern Library statt. Sie wird der **zentrale Anlaufpunkt** für alle
-        im Team: **Die Pattern Library ist der Ort, wo sich Design, Entwicklung und Fachlichkeit treffen**. Das was vielerorts als
-        Styleguide bekannt ist und verwendet wird, ist mit in der Pattern Library enthalten – ihr Umfang geht aber darüber hinaus:
-        Sie enthält ebenso die fachlichen Anforderungen der in ihr enthaltenen Elemente, sowie deren Dokumentation, Tests, usw.
+  +section(true)
+    :marked
+      ## Tools und Methoden
 
-        Die Pattern Library funktioniert unserer Erfahrung nach am besten, wenn sie die in ihr enthaltenen Elemente als miteinander
-        kombinier- und verschachtelbare Komponenten versteht und abbildet. Eine sehr treffende Metapher dafür ist das
-        [Atomic Design](http://atomicdesign.bradfrost.com/)-Konzept von Brad Frost, welches mit [Pattern Lab](http://patternlab.io/)
-        auch direkt ein Grundgerüst für die Umsetzung bietet. Ob man dies nun direkt so um- und einsetzt ist sicherlich von den
-        Projektanforderungen abhängig, dennoch bietet es die unserer Meinung nach notwendige Struktur für eine gemeinsame Arbeitsbasis
-        von Design, Entwicklung und Fachbereich: Das **Abbilden der einzelnen Komponenten als überschaubare Einheiten, die aufeinander
-        aufbauen und miteinander kombinierbar sind**.
+      Unserer Erfahrung nach erleichtert es vieles, wenn man sich möglichst früh im Browser und somit nah am Endprodukt trifft.
+      Photoshop und Sketch haben weiterhin ihre Berechtigung, dennoch sind Vorlagen alleine nichts wert und bieten nicht die
+      erforderlichen Möglichkeiten, um weitreichendere Interaktionen darzustellen. Für den Designer bedeuten diese Art von
+      Vorlagen eh einen vergleichsweise hohen Aufwand bei Anpassungen.
 
-        Die gemeinsame Arbeit beginnt auch hier schon in der Konzeption: Fachbereich, Design und Entwicklung identifizieren und definieren
-        die Komponenten, aus denen im Projektverlauf das Gesamtbild entsteht. Auf dieser Ebene entstehen feingranulare Elemente, die
-        zusammengesetzt im weiteren Verlauf zu komplexeren Strukturen werden – jeweils mit Hinblick auf die fachlichen Anforderungen, die
-        gestalterische Anmutung und technische Umsetzung. So entsteht aus diesem Dreiergespann ein interdisziplinäres Team, dessen
-        Tätigkeit das *UI engineering* ist. Der Aufgabenbereich erstreckt sich von der Wireframe-Erstellung über die Umsetzung der
-        Komponenten bis zu deren Usability- und A/B-Tests.
+      Unserer Ansicht nach sollte der initiale gestalterische Fokus z.B. auf die Erstellung von [Styletiles](http://styletil.es/) gelegt
+      werden: Sie visualisieren im Gegensatz zu konkreten Layouts zwar eher eine abstrakte Anmutung, lassen aber den nötigen
+      Interpretations- und Anpassungsspielraum und enden daher nicht in einer von Layouts bekannten Updatehölle.
 
-  section.angled.angled--up
-    h2 Lohnt sich das denn?
-    .wrap.single
-      :marked
-        Das alles ist wie unschwer zu erkennen nicht trivial und somit nur mit ausreichend Einsatz zu erreichen. Hier stellt sich berechtigterweise die Frage nach den Vorteilen dieses Ansatzes, vor allem aus wirtschaftlicher Sicht. Unserer Erfahrung nach ist diese Bewertung insbesondere von der Projektgröße, der Dauer und damit verbundenen Pflege abhängig: Was sich in großen und langfristigen Projekten recht schnell amortisiert, kann hingegen für mittelgroße Projekte ohne weiteren Pflegebedarf unnötiger Overhead sein.
+      Die Umsetzung dieser Anmutung findet anschließend in einer Pattern Library statt. Sie wird der **zentrale Anlaufpunkt** für alle
+      im Team: **Die Pattern Library ist der Ort, wo sich Design, Entwicklung und Fachlichkeit treffen**. Das was vielerorts als
+      Styleguide bekannt ist und verwendet wird, ist mit in der Pattern Library enthalten – ihr Umfang geht aber darüber hinaus:
+      Sie enthält ebenso die fachlichen Anforderungen der in ihr enthaltenen Elemente, sowie deren Dokumentation, Tests, usw.
 
-        Ein gutes Beispiel geben hier die mittlerweile fast standardmäßig responsiven Webprojekte ab: Sobald der Komponentenumfang ein gewisses Mindestmaß überschreitet und es mehrere Breakpoints gibt, lohnt sich ein Blick auf diesen Ansatz. Denn mit der Zahl der Elemente, die in unterschiedlichen Szenarien anders dargestellt werden und sich ggf. abweichend verhalten, steigt auch die Möglichkeit für Fehler und nicht bedachte Fälle.
+      Die Pattern Library funktioniert unserer Erfahrung nach am besten, wenn sie die in ihr enthaltenen Elemente als miteinander
+      kombinier- und verschachtelbare Komponenten versteht und abbildet. Eine sehr treffende Metapher dafür ist das
+      [Atomic Design](http://atomicdesign.bradfrost.com/)-Konzept von Brad Frost, welches mit [Pattern Lab](http://patternlab.io/)
+      auch direkt ein Grundgerüst für die Umsetzung bietet. Ob man dies nun direkt so um- und einsetzt ist sicherlich von den
+      Projektanforderungen abhängig, dennoch bietet es die unserer Meinung nach notwendige Struktur für eine gemeinsame Arbeitsbasis
+      von Design, Entwicklung und Fachbereich: Das **Abbilden der einzelnen Komponenten als überschaubare Einheiten, die aufeinander
+      aufbauen und miteinander kombinierbar sind**.
 
-        Neben der reinen Größe des Projekts sind auch dessen Lebensdauer und etwaige Ausbaustufen ein wichtiger Faktor: Grade bei langlaufenden Projekten, die möglicherweise im Verlauf von mehreren Entwicklern gepflegt werden, macht sich ein gut und einfach nutzbarer Komponentenfundus schnell bezahlt. Ebenso verringert die Komponentisierung den Wartungs- und Pflegeaufwand, da sich dadurch Elemente isolierter anpassen und austauschen lassen.
+      Die gemeinsame Arbeit beginnt auch hier schon in der Konzeption: Fachbereich, Design und Entwicklung identifizieren und definieren
+      die Komponenten, aus denen im Projektverlauf das Gesamtbild entsteht. Auf dieser Ebene entstehen feingranulare Elemente, die
+      zusammengesetzt im weiteren Verlauf zu komplexeren Strukturen werden – jeweils mit Hinblick auf die fachlichen Anforderungen, die
+      gestalterische Anmutung und technische Umsetzung. So entsteht aus diesem Dreiergespann ein interdisziplinäres Team, dessen
+      Tätigkeit das *UI engineering* ist. Der Aufgabenbereich erstreckt sich von der Wireframe-Erstellung über die Umsetzung der
+      Komponenten bis zu deren Usability- und A/B-Tests.
 
-        Je eingespielter das Team ist und umso mehr es diesen Ansatz bereits gelebt und verinnerlicht hat, desto eher eignet er sich auch für kleinere Projekte. Neben der Erfahrung wächst mit den Projekten auch das Tooling, was diesen Ansatz insbesondere auch für Agenturen interessant macht.
+  +section(true, 'up')
+    :marked
+      ## Lohnt sich das denn?
 
-        A propos Tooling: Als Kostenfaktor einer Pattern Library ist auch der Entwicklungsaufwand zu sehen. Mittlerweile gibt es hier zwar einen vielfältigen Kosmos von bereits bestehenden Lösungen – dieser ist allerdings vor allem aus einem Grund so groß: Je weiter man den vorgestellten Ansatz treibt, desto größer werden auch die Anforderungen an das Tooling der Pattern Library. Eine Lösung von der Stange bietet hier wie auch in der Entwicklung des eigentlichen Produkts initial eine Basis, die sich nach hinten heraus oft als nicht flexibel genug entpuppt. Somit landen viele große Projekte hier früher oder später bei einer Eigenentwicklung, welche dann ggf. wiederum als Open Source Software ihren Beitrag zu den stetig wachsenden Auswahlmöglichkeiten an Pattern Libraries beiträgt.
+      Das alles ist wie unschwer zu erkennen nicht trivial und somit nur mit ausreichend Einsatz zu erreichen. Hier stellt sich berechtigterweise die Frage nach den Vorteilen dieses Ansatzes, vor allem aus wirtschaftlicher Sicht. Unserer Erfahrung nach ist diese Bewertung insbesondere von der Projektgröße, der Dauer und damit verbundenen Pflege abhängig: Was sich in großen und langfristigen Projekten recht schnell amortisiert, kann hingegen für mittelgroße Projekte ohne weiteren Pflegebedarf unnötiger Overhead sein.
 
-  section
-    h2 Better together
-    .wrap.single
-      :marked
-        ### Erste Schritte
+      Ein gutes Beispiel geben hier die mittlerweile fast standardmäßig responsiven Webprojekte ab: Sobald der Komponentenumfang ein gewisses Mindestmaß überschreitet und es mehrere Breakpoints gibt, lohnt sich ein Blick auf diesen Ansatz. Denn mit der Zahl der Elemente, die in unterschiedlichen Szenarien anders dargestellt werden und sich ggf. abweichend verhalten, steigt auch die Möglichkeit für Fehler und nicht bedachte Fälle.
 
-        Wir hoffen aufgezeigt zu haben, dass eine engere Zusammenarbeit von Design und Entwickung nicht
-        nur aus ablauftechnischen Notwendigkeiten nötig ist, sondern dadurch auch effektive Zugewinne
-        durch beidseitige Arbeitserleichterung erzielt werden können.
+      Neben der reinen Größe des Projekts sind auch dessen Lebensdauer und etwaige Ausbaustufen ein wichtiger Faktor: Grade bei langlaufenden Projekten, die möglicherweise im Verlauf von mehreren Entwicklern gepflegt werden, macht sich ein gut und einfach nutzbarer Komponentenfundus schnell bezahlt. Ebenso verringert die Komponentisierung den Wartungs- und Pflegeaufwand, da sich dadurch Elemente isolierter anpassen und austauschen lassen.
 
-        Der wohl wichtigste Punkt ist, die Gewerke auch auf persönlicher Ebene näher zusammenzurücken:
-        **Erklärt und trainiert Euch gegenseitig!** Ein gutes Mittel dazu kann das Pair Programming oder auch
-        Pair Designing – idealerweise Pair Engineering – sein. Wichtig ist, gegenseitiges Verständnis und ein
-        gemeinsames Produkt zu erzeugen. Und das bedeutet gemeinsam denken, designen, entwickeln und diesen
-        Ablauf kontinuierlich zu reflektieren.
+      Je eingespielter das Team ist und umso mehr es diesen Ansatz bereits gelebt und verinnerlicht hat, desto eher eignet er sich auch für kleinere Projekte. Neben der Erfahrung wächst mit den Projekten auch das Tooling, was diesen Ansatz insbesondere auch für Agenturen interessant macht.
 
-        Hier findest du Werkzeuge und Ideen, die dich auf deinem Weg dorthin unterstützen können …
+      A propos Tooling: Als Kostenfaktor einer Pattern Library ist auch der Entwicklungsaufwand zu sehen. Mittlerweile gibt es hier zwar einen vielfältigen Kosmos von bereits bestehenden Lösungen – dieser ist allerdings vor allem aus einem Grund so groß: Je weiter man den vorgestellten Ansatz treibt, desto größer werden auch die Anforderungen an das Tooling der Pattern Library. Eine Lösung von der Stange bietet hier wie auch in der Entwicklung des eigentlichen Produkts initial eine Basis, die sich nach hinten heraus oft als nicht flexibel genug entpuppt. Somit landen viele große Projekte hier früher oder später bei einer Eigenentwicklung, welche dann ggf. wiederum als Open Source Software ihren Beitrag zu den stetig wachsenden Auswahlmöglichkeiten an Pattern Libraries beiträgt.
 
-        #### Weiterführende Links, Methoden und Tools
+  +section(true)
+    :marked
+      ## Better together
 
-        - [Living Pattern Libraries: Wie man Styleguide Zombies killt](https://dennisreimann.de/articles/living-pattern-library.html) (Dennis Reimann)
-        - [Why designers and frond-end developers should talk more often](http://janpersiel.com/why-designers-and-frond-end-developers-should-talk-more-often/) (Jan Persiel)
-        - [Developers “Own” The Code, So Shouldn’t Designers “Own” The Experience?](https://www.smashingmagazine.com/2016/08/developers-own-code-should-designers-own-experience/) (Andy Budd)
-        - [Designing Modular UI Systems Via Style Guide-Driven Development](https://www.smashingmagazine.com/2016/06/designing-modular-ui-systems-via-style-guide-driven-development/) (Adriana De La Cuadra)
-        - [Atomic Design](http://atomicdesign.bradfrost.com/) und [Pattern Lab](http://patternlab.io/)
-        - [Styletiles](http://styletil.es/) und [Styleguides](http://styleguides.io/)
-        - [Galen Framework](http://galenframework.com/)
-        - [Good UI](http://goodui.org/)
-        - [Zeplin](https://zeplin.io/)
+      ### Erste Schritte
+
+      Wir hoffen aufgezeigt zu haben, dass eine engere Zusammenarbeit von Design und Entwickung nicht
+      nur aus ablauftechnischen Notwendigkeiten nötig ist, sondern dadurch auch effektive Zugewinne
+      durch beidseitige Arbeitserleichterung erzielt werden können.
+
+      Der wohl wichtigste Punkt ist, die Gewerke auch auf persönlicher Ebene näher zusammenzurücken:
+      **Erklärt und trainiert Euch gegenseitig!** Ein gutes Mittel dazu kann das Pair Programming oder auch
+      Pair Designing – idealerweise Pair Engineering – sein. Wichtig ist, gegenseitiges Verständnis und ein
+      gemeinsames Produkt zu erzeugen. Und das bedeutet gemeinsam denken, designen, entwickeln und diesen
+      Ablauf kontinuierlich zu reflektieren.
+
+      Hier findest du Werkzeuge und Ideen, die dich auf deinem Weg dorthin unterstützen können …
+
+      #### Weiterführende Links, Methoden und Tools
+
+      - [Living Pattern Libraries: Wie man Styleguide Zombies killt](https://dennisreimann.de/articles/living-pattern-library.html) (Dennis Reimann)
+      - [Why designers and frond-end developers should talk more often](http://janpersiel.com/why-designers-and-frond-end-developers-should-talk-more-often/) (Jan Persiel)
+      - [Developers “Own” The Code, So Shouldn’t Designers “Own” The Experience?](https://www.smashingmagazine.com/2016/08/developers-own-code-should-designers-own-experience/) (Andy Budd)
+      - [Designing Modular UI Systems Via Style Guide-Driven Development](https://www.smashingmagazine.com/2016/06/designing-modular-ui-systems-via-style-guide-driven-development/) (Adriana De La Cuadra)
+      - [Atomic Design](http://atomicdesign.bradfrost.com/) und [Pattern Lab](http://patternlab.io/)
+      - [Styletiles](http://styletil.es/) und [Styleguides](http://styleguides.io/)
+      - [Galen Framework](http://galenframework.com/)
+      - [Good UI](http://goodui.org/)
+      - [Zeplin](https://zeplin.io/)

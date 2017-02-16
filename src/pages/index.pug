@@ -1,90 +1,89 @@
-extends /layout
-include /_episodes
+extends ../templates/page
+
+include /cta/cta
+include /header/header
+include /intro/intro
+include /episodeList/episodeList
+include /section/block
+include /section/container
+include /section/section
 
 block vars
   - var episodes = mvb.articles.slice(0, 2)
-
-block header
-  header.header.header--hero.header--main
-    h1.logo UI engineering
+  - var header = { title: "UI engineering", type: "main", hero: true }
 
 block main
-  .intro
-    .wrap
-      :marked
-        <span>Die Entwicklung von **User Interfaces** ist ein inter&shy;disziplinärer Vorgang.</span>
-        <span>Durch **Design** und **Entwicklung** wird **Fachliches** zu bedienbarer Software.</span>
-        <span>Wir setzen uns dafür ein, durch enge Zusammenarbeit dieser Gewerke **schneller
-        bessere und nachhaltigere Ergebnisse** zu erzielen.</span>
+  +intro()
+    :marked
+      <span>Die Entwicklung von **User Interfaces** ist ein inter&shy;disziplinärer Vorgang.</span>
+      <span>Durch **Design** und **Entwicklung** wird **Fachliches** zu bedienbarer Software.</span>
+      <span>Wir setzen uns dafür ein, durch enge Zusammenarbeit dieser Gewerke **schneller
+      bessere und nachhaltigere Ergebnisse** zu erzielen.</span>
 
-  section.copy
-    .wrap.single
-      :marked
-        Erfolgreiche Software ist – wie der Name schon sagt – weich und flexibel:
-        Anpassbar und vorbereitet auf Wachstum und Veränderung. Sie entsteht durch
-        die Vereinigung fachlicher Anforderungen mit deren ästhetischer und funktionaler
-        Abbildung.
+  +section(true)
+    :marked
+      Erfolgreiche Software ist – wie der Name schon sagt – weich und flexibel:
+      Anpassbar und vorbereitet auf Wachstum und Veränderung. Sie entsteht durch
+      die Vereinigung fachlicher Anforderungen mit deren ästhetischer und funktionaler
+      Abbildung.
 
-        Um die fachlichen Anforderungen in funktionale und gut nutzbare Software
-        zu transformieren, ist eine enge Zusammenarbeit von Design und Entwicklung nötig.
-        Ein arbeitsteiliger Ansatz ist dabei nicht mehr zeitgemäß, dennoch leider
-        weiterhin oft praktiziert. Auch dort wo Begriffe wie _lean_ oder _agil_ als
-        Selbstverständlichkeit angesehen werden, findet man oftmals Abläufe,
-        die ein Zurückrutschen in alte Muster erkennen lassen.
+      Um die fachlichen Anforderungen in funktionale und gut nutzbare Software
+      zu transformieren, ist eine enge Zusammenarbeit von Design und Entwicklung nötig.
+      Ein arbeitsteiliger Ansatz ist dabei nicht mehr zeitgemäß, dennoch leider
+      weiterhin oft praktiziert. Auch dort wo Begriffe wie _lean_ oder _agil_ als
+      Selbstverständlichkeit angesehen werden, findet man oftmals Abläufe,
+      die ein Zurückrutschen in alte Muster erkennen lassen.
 
-        Wir setzen uns dafür ein, Design und Entwicklung in der praktischen Arbeit zu verbinden.
-        Denn wir erleben in unserer gemeinsamen Arbeit, dass diese enge Zusammenarbeit **schnellere,
-        bessere und nachhaltigere Ergebnisse** erzielt. Unsere Erfahrungen und Wissen dazu
-        möchten wir hier teilen.
+      Wir setzen uns dafür ein, Design und Entwicklung in der praktischen Arbeit zu verbinden.
+      Denn wir erleben in unserer gemeinsamen Arbeit, dass diese enge Zusammenarbeit **schnellere,
+      bessere und nachhaltigere Ergebnisse** erzielt. Unsere Erfahrungen und Wissen dazu
+      möchten wir hier teilen.
 
-  section.angled.angled--up
+  +section(false, 'up')
     h2 Manifesto
-    .wrap
-      .container
-        article.block.manifest_item
-          :marked
-            ### Arbeitsteilige Trennung führt zu <span>suboptimalen Ergebnissen</span>
+    +container()
+      +block()
+        :marked
+          ### Arbeitsteilige Trennung führt zu <span>suboptimalen Ergebnissen</span>
 
-            Die Schnittmenge von Design und Entwicklung in der Sotwareentwicklung ist so groß,
-            dass eine strikte Trennung der Gewerke keine Effizienzvorteile bietet. Sie führt
-            stattdessen zu Kommunikations- und Prozessoverhead, sowie Reibungsverlusten.
-        article.block.manifest_item
-          :marked
-            ### Die Gewerke verschmelzen zu <span>interdisziplinärem UI engineering</span>
+          Die Schnittmenge von Design und Entwicklung in der Sotwareentwicklung ist so groß,
+          dass eine strikte Trennung der Gewerke keine Effizienzvorteile bietet. Sie führt
+          stattdessen zu Kommunikations- und Prozessoverhead, sowie Reibungsverlusten.
 
-            Die gemeinsame Verantwortung für benutzerzentrierte Features und Systeme legt nah,
-            die Teams zu vereinen: Designer und Entwickler führen die Aufgaben von
-            der Konzeption über Realisierung bis zur Pflege zusammen durch und ergänzen sich.
-        article.block.manifest_item
-          :marked
-            ### Gemeinsamkeiten identifizieren und Schnittmengen nutzen
+      +block()
+        :marked
+          ### Die Gewerke verschmelzen zu <span>interdisziplinärem UI engineering</span>
 
-            Die Überschneidungen in den Tätigkeiten sollten nicht als beidseitige Abhängigkeiten
-            betrachtet werden, sondern bieten ein großes Potential für gegenseitige Arbeitserleichterung,
-            mehr Einflußnahme und bessere Projektsteuerung.
+          Die gemeinsame Verantwortung für benutzerzentrierte Features und Systeme legt nah,
+          die Teams zu vereinen: Designer und Entwickler führen die Aufgaben von
+          der Konzeption über Realisierung bis zur Pflege zusammen durch und ergänzen sich.
 
-        article.block.manifest_item
-          :marked
-            ### Das Produkt gemeinsam zerlegen <span>und wieder zusammensetzen</span>
+      +block()
+        :marked
+          ### Gemeinsamkeiten identifizieren und Schnittmengen nutzen
 
-            Die Arbeitsbasis sollten eigenständige und kombinierbare Komponenten sein. Sie
-            werden in einer Pattern Library, die alle betroffenen Aspekte vereint, zusammengefasst.
-            In der Pattern Library treffen sich Design, Entwicklung und Fachlichkeit.
+          Die Überschneidungen in den Tätigkeiten sollten nicht als beidseitige Abhängigkeiten
+          betrachtet werden, sondern bieten ein großes Potential für gegenseitige Arbeitserleichterung,
+          mehr Einflußnahme und bessere Projektsteuerung.
 
-  section
-    .wrap.single
-      h2 In the wild
+      +block()
+        :marked
+          ### Das Produkt gemeinsam zerlegen <span>und wieder zusammensetzen</span>
 
-      h3 Unser Podcast
-      +episodes(episodes)
+          Die Arbeitsbasis sollten eigenständige und kombinierbare Komponenten sein. Sie
+          werden in einer Pattern Library, die alle betroffenen Aspekte vereint, zusammengefasst.
+          In der Pattern Library treffen sich Design, Entwicklung und Fachlichkeit.
 
-      .cta
-        a.cta__button(href="/podcast.html") Weitere Episoden
+  +section(true)
+    h2 In the wild
+    h3 Unser Podcast
+    +episodes(episodes)
+    +cta("Weitere Episoden", "/podcast.html")
 
-      :marked
-        ### Termine und Konferenzen
+    :marked
+      ### Termine und Konferenzen
 
-        - [webinale 2017: Design, Development und Dazwischen](https://webinale.de/session/design-development-und-dazwischen/)
-        - [eCommerce Camp 2017: 7 Tricks für früheren Feierabend und Kunden, die Dich als Rockstar feiern](https://www.ecommerce-camp.de/redner-sessions/sessions-2017/)
-        - [Berlin Ops 2016: Design, Development und Dazwischen](http://www.berlinops.de/talk/design-development-und-dazwischen-gemeinsam-besser-schneller-und-nachhaltiger-sites-apps-und-shops-bauen/)
-        - [Webmontag Bremen III/2016: Design, Development und Dazwischen](http://webmontag-bremen.de/events/2016-03)
+      - [webinale 2017: Design, Development und Dazwischen](https://webinale.de/session/design-development-und-dazwischen/)
+      - [eCommerce Camp 2017: 7 Tricks für früheren Feierabend und Kunden, die Dich als Rockstar feiern](https://www.ecommerce-camp.de/redner-sessions/sessions-2017/)
+      - [Berlin Ops 2016: Design, Development und Dazwischen](http://www.berlinops.de/talk/design-development-und-dazwischen-gemeinsam-besser-schneller-und-nachhaltiger-sites-apps-und-shops-bauen/)
+      - [Webmontag Bremen III/2016: Design, Development und Dazwischen](http://webmontag-bremen.de/events/2016-03)

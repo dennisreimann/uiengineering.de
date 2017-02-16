@@ -26,13 +26,13 @@ const paths = {
   html: ['dist/**/*.html'],
   rev: ['dist/**/*.{css,js,map,svg,jpg,png,gif,woff,woff2}'],
   copy: ['src/{fonts,images,svgs,mp3s}/**/*', 'src/site/**/*', 'src/site/.htaccess'],
-  pages: ['src/pages/**/*.pug'],
-  styles: ['src/styles/**/*.styl'],
-  scripts: ['src/scripts/**/*.js'],
+  pages: ['src/pages/**/*.pug', '!src/pages/episode.pug'],
+  styles: ['src/styles/*.styl', 'src/components/**/*.styl'],
+  scripts: ['src/scripts/*.js', 'src/components/**/*.js'],
   episodes: ['src/podcast/*.md'],
-  templates: 'src/templates/*.pug',
-  feed: 'src/feed/*.pug',
-  episodeTemplate: 'src/templates/episode.pug',
+  templates: ['src/{components,templates}/**/*.pug'],
+  patterns: ['src/{components,templates}/**/*', 'pattern-library/**/*', './uiengineering.yml'],
+  feed: ['src/feed/*.pug'],
   episodesBasepath: 'podcast'
 }
 
@@ -40,7 +40,7 @@ const dest = (folder = '') => gulp.dest(`${paths.dest}/${folder}`)
 
 const mvbConf = {
   glob: paths.episodes,
-  template: paths.episodeTemplate,
+  template: './src/pages/episode.pug',
 
   permalink (article) {
     return `/${paths.episodesBasepath}/${article.id}.html`
@@ -80,7 +80,7 @@ const templateData = file => ({
 })
 
 const pugOpts = {
-  basedir: 'src/templates/',
+  basedir: './src/components',
   pretty: true
 }
 
@@ -190,11 +190,10 @@ gulp.task('sitemap', () =>
 
 gulp.task('watch', () => {
   gulp.watch(paths.copy, ['copy'])
-  gulp.watch(paths.styles, ['styles'])
   gulp.watch(paths.scripts, ['scripts'])
-  gulp.watch(paths.episodeTemplate, ['episodes'])
   gulp.watch(paths.templates, ['episodes', 'pages'])
   gulp.watch(paths.feed, ['feed'])
+  gulp.watch(paths.styles.concat(['src/styles/lib/*.styl']), ['styles'])
   gulp.watch(paths.pages).on('change', file => buildHtml(file.path))
   gulp.watch(paths.episodes).on('change', file => buildHtml(file.path, paths.episodesBasepath))
   gulp.watch(paths.html).on('change', () => debounce('reload', browserSync.reload, 500))

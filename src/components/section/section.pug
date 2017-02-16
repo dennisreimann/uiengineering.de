@@ -1,0 +1,6 @@
+mixin section(single = false, angled = false)
+  - sectionClasses = angled ? `angled angled--${angled}` : ''
+  - wrapClasses = single ? 'wrap--single' : ''
+  section(class=sectionClasses)
+    .wrap(class=wrapClasses)
+      block

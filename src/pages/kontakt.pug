@@ -1,45 +1,53 @@
-extends /layout
+extends ../templates/page
+
+include /header/header
+include /section/block
+include /section/container
+include /section/section
+
+block vars
+  - var episodes = mvb.articles.slice(0, 2)
+  - var header = { title: "Kontakt", type: "kontakt" }
 
 block title
   title UI engineering • Kontakt
 
-block header
-  header.header.header--kontakt
-    h1.title Kontakt
-
 block main
-  section.copy
-    .wrap.single
-      :marked
-        UI engineering ist keine Agentur, kein Softwarehaus, kein Designstudio. Mit dieser Website, dem Podcast und allen Inhalten möchten wir unsere Erfahrungen teilen, Interviews machen, Diskussionen führen, die eine Arbeitserleichterung für Designer, Entwickler und Fachlichkeitsrepräsentaten mit sich bringt. Wir sind:
-  section.people
-    .wrap
-      .container
-        .block.person
-          :marked
-            #### [Jan Persiel](http://janpersiel.com/)
+  +section(true)
+    :marked
+      UI engineering ist keine Agentur, kein Softwarehaus, kein Designstudio.
+      Mit dieser Website, dem Podcast und allen Inhalten möchten wir unsere
+      Erfahrungen teilen, Interviews machen, Diskussionen führen, die eine
+      Arbeitserleichterung für Designer, Entwickler und Fachlichkeitsrepräsentaten
+      mit sich bringt. Wir sind:
 
-            Jan Persiel betreibt in Hamburg das Designstudio Persiel. Weiter arbeitet
-            er auch freiberuflich als Designer und Trainer für Verlage, Agenturen sowie
-            Softwarehäuser.
+  +section(false)
+    +container()
+      +block()
+        :marked
+          #### [Jan Persiel](http://janpersiel.com/)
 
-            Sein Fokus ist neben medienadäquaten Umsetzungen und Entwicklungen von
-            Marken im digitalen Raum, die Konzeption und Gestaltung von Strukturen und
-            Interfaces für Websites, Shops und anderen Plattformen.
+          Jan Persiel betreibt in Hamburg das Designstudio Persiel. Weiter arbeitet
+          er auch freiberuflich als Designer und Trainer für Verlage, Agenturen sowie
+          Softwarehäuser.
 
-        .block.person
-          :marked
-            #### [Dennis Reimann](https://dennisreimann.de/)
+          Sein Fokus ist neben medienadäquaten Umsetzungen und Entwicklungen von
+          Marken im digitalen Raum, die Konzeption und Gestaltung von Strukturen und
+          Interfaces für Websites, Shops und anderen Plattformen.
 
-            Dennis Reimann ist freiberuflicher Software&shy;entwickler. Er unterstützt
-            Unternehmen und Teams bei der Realisierung von komplexen Webanwendungen –
-            und dabei, das harte Webwork-Business mit Humor zu nehmen.
+      +block()
+        :marked
+          #### [Dennis Reimann](https://dennisreimann.de/)
 
-            Sein Schwerpunkt liegt im Frontend: Styleguides sind seine Bett-Lektüre,
-            Performance und User Experience über den Standard hinaus sein Anspruch.
+          Dennis Reimann ist freiberuflicher Software&shy;entwickler. Er unterstützt
+          Unternehmen und Teams bei der Realisierung von komplexen Webanwendungen –
+          und dabei, das harte Webwork-Business mit Humor zu nehmen.
 
-  section.copy
-    .wrap.single
-      :marked
-        Wir freuen uns über Feedback, Hinweise, Beiträge und natürlich auch Unterstützung dabei dieses Thema voranzutreiben. Teilt Inhalte, abonniert den Podcast, twittert mit **#uiengineering**. Vielen Dank!
+          Sein Schwerpunkt liegt im Frontend: Styleguides sind seine Bett-Lektüre,
+          Performance und User Experience über den Standard hinaus sein Anspruch.
 
+  +section(true)
+    :marked
+      Wir freuen uns über Feedback, Hinweise, Beiträge und natürlich auch Unterstützung
+      dabei dieses Thema voranzutreiben. Teilt Inhalte, abonniert den Podcast, twittert
+      mit **#uiengineering**. Vielen Dank!

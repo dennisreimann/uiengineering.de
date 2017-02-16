@@ -1,0 +1,4 @@
+mixin header(data)
+  - var classes = 'header' + (data.type ? ` header--${data.type}` : '') + (data.hero ? ` header--hero` : '')
+  header.header(class=classes)
+    h1.header__title= data.title

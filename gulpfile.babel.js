@@ -8,6 +8,7 @@ import autoprefixer from 'autoprefixer'
 import mqpacker from 'css-mqpacker'
 import csswring from 'csswring'
 import BrowserSync from 'browser-sync'
+import UIengine from 'uiengine'
 import debounce from './lib/debounce'
 import templateHelper from './lib/templateHelper'
 
@@ -82,6 +83,10 @@ const templateData = file => ({
 const pugOpts = {
   basedir: './src/components',
   pretty: true
+}
+
+const uieOpts = {
+  config: './uiengineering.yml'
 }
 
 const buildHtml = (src, dst) =>
@@ -162,6 +167,12 @@ gulp.task('styles', () =>
     .pipe(browserSync.stream({match: '**/*.css'}))
 )
 
+gulp.task('patterns', (cb) => {
+  UIengine.generate(uieOpts)
+    .then(() => cb())
+    .catch(err => p.util.log('Error generating pattern library:', err.stack))
+})
+
 gulp.task('browserSync', () =>
   browserSync.init({
     open: false,
@@ -197,12 +208,17 @@ gulp.task('watch', () => {
   gulp.watch(paths.pages).on('change', file => buildHtml(file.path))
   gulp.watch(paths.episodes).on('change', file => buildHtml(file.path, paths.episodesBasepath))
   gulp.watch(paths.html).on('change', () => debounce('reload', browserSync.reload, 500))
+  gulp.watch(paths.patterns).on('change', (file) =>
+    UIengine.generateIncrementForChangedFile(uieOpts, file.path)
+      .then(change => p.util.log('Rebuilt', change.type, change.item, '(triggered by', change.file, ')'))
+      .catch(error => p.util.log('Error generating increment for changed file', file.path, ':', error))
+  )
 })
 
 gulp.task('pug', ['pages', 'episodes', 'feed'])
 gulp.task('optimize', ['html:optimize'])
 gulp.task('images', cb => runSequence('images:resize', 'images:optimize', cb))
 gulp.task('build', cb => runSequence(['styles', 'copy', 'scripts', 'pug'], cb))
-gulp.task('develop', cb => runSequence('build', ['watch', 'browserSync'], cb))
+gulp.task('develop', cb => runSequence(['build', 'patterns'], ['watch', 'browserSync'], cb))
 gulp.task('rev', cb => runSequence('revAssets', 'pug', cb))
 gulp.task('production', cb => runSequence('build', 'rev', ['sitemap', 'optimize'], cb))

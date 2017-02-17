@@ -17,7 +17,7 @@ target: ./dist/patterns
 # Adapters are used for templating/rendering. Each adapter is a module that gets required
 # and needs to provide functions for setup and rendering. For details see the adapters docs.
 adapters:
-  pug: ./lib/uiengineAdapterPug
+  pug: ./lib/uiengine/pug
 
 # Here you can configure the template that the variation preview gets embeded in.
 templates:

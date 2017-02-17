@@ -3,13 +3,14 @@ include /wrap/wrap
 mixin navigation()
   nav.navigation
     +wrap()
-      ul.nav
+      ul.navigation__tree
         +navItem('index', '/index.html', 'Start')
         +navItem('podcast', '/podcast.html', 'Podcast')
         +navItem('praxis', '/praxis.html', 'Praxis')
         +navItem('kontakt', '/kontakt.html','Kontakt')
+        +navItem('patterns', '/patterns', 'Patterns')
 
 mixin navItem(id, url, title)
-  - const classes = `nav__item--${id}${h.isCurrentPage(id) ? ' nav__item--current' : ''}`
-  li.nav__item(class=classes)
-    a.nav__link(href=url)= title
+  - const classes = h.isCurrentPage(id) ? 'navigation__item--current' : ''
+  li.navigation__item(class=classes)
+    a.navigation__link(href=url)= title

@@ -1,6 +1,7 @@
+include /wrap/wrap
+
 mixin section(single = false, angled = false)
-  - sectionClasses = angled ? `angled angled--${angled}` : ''
-  - wrapClasses = single ? 'wrap--single' : ''
-  section(class=sectionClasses)
-    .wrap(class=wrapClasses)
+  - classes = angled ? `angled angled--${angled}` : ''
+  section(class=classes)
+    +wrap(single)
       block

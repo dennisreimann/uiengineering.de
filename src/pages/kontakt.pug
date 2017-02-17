@@ -6,11 +6,9 @@ include /section/container
 include /section/section
 
 block vars
-  - var episodes = mvb.articles.slice(0, 2)
-  - var header = { title: "Kontakt", type: "kontakt" }
-
-block title
-  title UI engineering • Kontakt
+  - const title = "Kontakt"
+  - const episodes = mvb.articles.slice(0, 2)
+  - const header = { title: title, type: "kontakt" }
 
 block main
   +section(true)

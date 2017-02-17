@@ -6,11 +6,9 @@ include /episodeList/episodeList
 include /section/section
 
 block vars
-  - var podcastFeedPath = "/podcast.xml"
-  - var header = { title: "Podcast", type: "podcast" }
-
-block title
-  title UI engineering Podcast: Die Zusammenarbeit von Design und Entwicklung
+  - const title = "UI engineering Podcast: Die Zusammenarbeit von Design und Entwicklung"
+  - const podcastFeedPath = "/podcast.xml"
+  - const header = { title: "Podcast", type: "podcast" }
 
 block meta
   meta(name="description" content="Im UI engineering Podcast geht es um die Zusammenarbeit von Design und Entwicklung.")
@@ -33,7 +31,4 @@ block main
     each episodesBySeason in mvb.groupedArticles.bySeason
       - episodes = episodesBySeason.articles
       section
-        h2
-          span= h.shortIdToGerman(episodesBySeason.season)
-          small &nbsp;– #{episodes.length} #{episodes.length == 1 ? "Episode" : "Episoden"}
-        +episodes(episodes)
+        +episodeList(episodes, h.shortIdToGerman(episodesBySeason.season), `${episodes.length} ${episodes.length == 1 ? "Episode" : "Episoden"}`)

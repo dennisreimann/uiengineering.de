@@ -1,9 +1,11 @@
 .main
-  @extend $background-rulers
   padding-top $space-mega
   padding-bottom $space-mega
   background-color $color-white
   overflow-x hidden
+
+  .header + &
+    @extend $background-rulers
 
   .safari &
     padding-top $space-huge
@@ -12,9 +14,6 @@
     +
       h2
       h3
-      h4
-      h5
-      h6
       .container
         margin-top $space-large
       ul
@@ -33,12 +32,6 @@
       p
       ul
         margin-top $space-normal
-
-  section + section
-    margin-top $space-mega
-
-  article + article
-    margin-top $space-large
 
   ul
     margin-left 16px

@@ -1,0 +1,23 @@
+$background-rulers
+  position relative
+
+  &:before
+  &:after
+    content ''
+    position absolute
+    top 0
+    left 0
+    right 0
+
+    .safari &
+      display none
+
+  &:before
+    height 4px
+    background-image repeating-linear-gradient(90deg, transparent 0, transparent 4px, currentColor 4px, currentColor 5px)
+    display block
+
+  &:after
+    height 8px
+    background-image repeating-linear-gradient(90deg, transparent 0, transparent 49px, currentColor 49px, currentColor 50px)
+    display block

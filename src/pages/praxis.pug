@@ -4,7 +4,8 @@ include /header/header
 include /section/section
 
 block vars
-  - var header = { title: "In der Praxis", type: "main" }
+  - const title = "In der Praxis"
+  - const header = { title: title, type: "main" }
 
 block main
   +section(true)

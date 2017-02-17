@@ -9,8 +9,9 @@ include /section/container
 include /section/section
 
 block vars
-  - var episodes = mvb.articles.slice(0, 2)
-  - var header = { title: "UI engineering", type: "main", hero: true }
+  - const title = "Design und Entwicklung"
+  - const header = { title: "UI engineering", type: "main", hero: true }
+  - const episodes = mvb.articles.slice(0, 2)
 
 block main
   +intro()
@@ -77,7 +78,9 @@ block main
   +section(true)
     h2 In the wild
     h3 Unser Podcast
-    +episodes(episodes)
+
+    +episodeList(episodes)
+
     +cta("Weitere Episoden", "/podcast.html")
 
     :marked

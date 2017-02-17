@@ -1,0 +1,4 @@
+mixin wrap(single = false)
+  - classes = single ? 'wrap--single' : ''
+  .wrap(class=classes)
+    block

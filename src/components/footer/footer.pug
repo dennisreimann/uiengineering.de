@@ -1,4 +1,29 @@
+include /section/block
+include /section/container
+include /wrap/wrap
+
 mixin footer()
   footer.footer
-    .wrap
-      block
+    +wrap()
+      +container()
+        +block()
+          :marked
+            [Jan Persiel](http://janpersiel.com/)<br>
+            Persiel Designstudio<br>
+            Falkenried 74a<br>
+            20251 Hamburg
+
+        +block()
+          :marked
+            [Dennis Reimann](https://dennisreimann.de/)<br>
+            Softwareentwickler<br>
+            Ottjen-Aldag-Str. 32<br>
+            28277 Bremen
+
+      .footer__legal
+        :marked
+          Zusammen setzen wir uns für die enge Zusammenarbeit von Design und
+          Entwicklung ein. Wir betreiben kein gemeinsames Unternehmen und sind
+          auch im Rahmen dieser Initiative als Einzelunternehmer tätig.
+          Bei Anfragen für Workshop, Schulungen und Projekte
+          [erreichen Sie uns](/kontakt.html) gerne über unsere jeweiligen Websites.

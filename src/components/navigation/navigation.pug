@@ -1,5 +1,15 @@
+include /wrap/wrap
+
 mixin navigation()
   nav.navigation
-    .wrap
+    +wrap()
       ul.nav
-        block
+        +navItem('index', '/index.html', 'Start')
+        +navItem('podcast', '/podcast.html', 'Podcast')
+        +navItem('praxis', '/praxis.html', 'Praxis')
+        +navItem('kontakt', '/kontakt.html','Kontakt')
+
+mixin navItem(id, url, title)
+  - const classes = `nav__item--${id}${h.isCurrentPage(id) ? ' nav__item--current' : ''}`
+  li.nav__item(class=classes)
+    a.nav__link(href=url)= title

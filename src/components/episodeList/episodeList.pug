@@ -1,19 +1,26 @@
-mixin episodes(episodes)
-  .episodes-list
-    for e in episodes
-      if e.mp3
-        article.episodes-list__item
-          .episode__media
-            a(href=e.permalink)
-              img.episode__image(src=h.podcastImageUrl(e.imageDir, 160) srcset=`${h.podcastImageUrl(e.imageDir, 320)} 2x`)
-          .episode__content
-            h4.episode__heading
-              a.episode__link(href=e.permalink)
-                span.episode__shortId [#{e.shortId}]
-                | &nbsp;
-                span.episode__title= e.title
-              if e.subtitle
-                span.episode__subtitle= e.subtitle
-            if e.description
-              p.episode__description
-                != e.description
+mixin episodeList(episodes, title, subtitle)
+  .episode-list
+    if title
+      h2
+        span.episode-list__title= title
+        if subtitle
+          span.episode-list__subtitle= subtitle
+    for episode in episodes
+      if episode.mp3
+        +episodeListItem(episode)
+
+mixin episodeListItem(e)
+  article.episode-list-item
+    .episode-list-item__media
+      a(href=e.permalink)
+        img(src=h.podcastImageUrl(e.imageDir, 160) srcset=`${h.podcastImageUrl(e.imageDir, 320)} 2x`)
+    .episode-list-item__content
+      h4
+        a(href=e.permalink)
+          span [#{e.shortId}]
+          | &nbsp;
+          span= e.title
+        if e.subtitle
+          span.episode-list-item__subtitle= e.subtitle
+      if e.description
+        p!= e.description

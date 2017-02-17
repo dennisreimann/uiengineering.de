@@ -1,8 +1,11 @@
+include /section/section
+
 mixin episode(episode)
-  article.episode
-    +episodeHeader(episode)
-    +episodeMain(episode)
-    +episodeFooter(episode)
+  +section(true)
+    article.episode
+      +episodeHeader(episode)
+      +episodeMain(episode)
+      +episodeFooter(episode)
 
 mixin episodeHeader(episode)
   header.episode__header
@@ -12,10 +15,14 @@ mixin episodeHeader(episode)
         h3.episode__subtitle= episode.subtitle
 
 mixin episodeMain(episode)
+  - const title = episode.title + (episode.subtitle ? `: ${episode.subtitle}` : '') + " • UI engineering Podcast"
+  - const imgSize = 320
+  - const imgSmall = h.podcastImageUrl(episode.imageDir, imgSize)
+  - const imgLarge = h.podcastImageUrl(episode.imageDir, imgSize)
   .episode__player
-    img.episode__image(alt=title src=imagePath srcset=`${h.podcastImageUrl(episode.imageDir, 640)} 2x`)
+    img.episode__image(alt=title src=imgSmall srcset=`${imgLarge} 2x`)
     audio.episode__audio(controls="controls")
-      source(src=mp3Path type="audio/mpeg")
+      source(src=h.assetUrl(`mp3s/${episode.mp3}`) type="audio/mpeg")
   .episode__content!= episode.content
 
 mixin episodeFooter(episode)
@@ -23,10 +30,14 @@ mixin episodeFooter(episode)
     p.episode__meta
       span Veröffentlicht am
       | &nbsp;
-      time.episode__date= h.dateFormat.german(publishDate)
+      time.episode__date= h.dateFormat.german(episode.date)
+    +episodeNav(episode)
+
+mixin episodeNav(episode)
+  - const prevEpisode = episode.previousArticle
+  - const nextEpisode = episode.nextArticle
+  if prevEpisode || nextEpisode
     .episode__nav
-      - prevEpisode = episode.previousArticle
-      - nextEpisode = episode.nextArticle
       h3.episode__nav__title Weitere Episoden
       ul
         for e in [nextEpisode, prevEpisode]

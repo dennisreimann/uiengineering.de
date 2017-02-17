@@ -1,5 +1,6 @@
 import { argv } from 'yargs'
 import fs from 'fs'
+import path from 'path'
 import gulp from 'gulp'
 import gulpLoadPlugins from 'gulp-load-plugins'
 import mergeStream from 'merge-stream'
@@ -10,7 +11,7 @@ import csswring from 'csswring'
 import BrowserSync from 'browser-sync'
 import UIengine from 'uiengine'
 import debounce from './lib/debounce'
-import templateHelper from './lib/templateHelper'
+import createTemplateHelper from './lib/templateHelper'
 
 const p = gulpLoadPlugins()
 const browserSync = BrowserSync.create()
@@ -29,7 +30,6 @@ const paths = {
   copy: ['src/{fonts,images,svgs,mp3s}/**/*', 'src/site/**/*', 'src/site/.htaccess'],
   pages: ['src/pages/**/*.pug', '!src/pages/episode.pug'],
   styles: ['src/styles/*.styl', 'src/components/**/*.styl'],
-  scripts: ['src/scripts/*.js', 'src/components/**/*.js'],
   episodes: ['src/podcast/*.md'],
   templates: ['src/{components,templates}/**/*.pug'],
   patterns: ['src/{components,templates}/**/*', 'pattern-library/**/*', './uiengineering.yml'],
@@ -77,7 +77,7 @@ const mvbConf = {
 }
 
 const templateData = file => ({
-  h: templateHelper.createHelper(file, siteHost, assetHost, defaultScheme)
+  h: createTemplateHelper(file.path, siteHost, assetHost, defaultScheme)
 })
 
 const pugOpts = {
@@ -141,21 +141,12 @@ gulp.task('copy', cb =>
     .pipe(browserSync.stream())
 )
 
-gulp.task('scripts', () =>
-  gulp.src(paths.scripts)
-    .pipe(p.plumber())
-    .pipe(p.babel())
-    .pipe(p.uglify())
-    .pipe(dest('scripts'))
-    .pipe(browserSync.stream({match: '**/*.js'}))
-)
-
 gulp.task('styles', () =>
   gulp.src(paths.styles)
     .pipe(p.plumber())
     .pipe(p.stylus({
       paths: ['src/styles/lib'],
-      import: ['mediaQueries', 'variables']
+      import: ['variables', 'mediaQueries', 'extends']
     }))
     .pipe(p.concat('main.css'))
     .pipe(p.postcss([
@@ -170,7 +161,7 @@ gulp.task('styles', () =>
 gulp.task('patterns', (cb) => {
   UIengine.generate(uieOpts)
     .then(() => cb())
-    .catch(err => p.util.log('Error generating pattern library:', err.stack))
+    .catch(error => p.util.log('Error generating pattern library:', error))
 })
 
 gulp.task('browserSync', () =>
@@ -201,7 +192,6 @@ gulp.task('sitemap', () =>
 
 gulp.task('watch', () => {
   gulp.watch(paths.copy, ['copy'])
-  gulp.watch(paths.scripts, ['scripts'])
   gulp.watch(paths.templates, ['episodes', 'pages'])
   gulp.watch(paths.feed, ['feed'])
   gulp.watch(paths.styles.concat(['src/styles/lib/*.styl']), ['styles'])
@@ -210,15 +200,15 @@ gulp.task('watch', () => {
   gulp.watch(paths.html).on('change', () => debounce('reload', browserSync.reload, 500))
   gulp.watch(paths.patterns).on('change', (file) =>
     UIengine.generateIncrementForChangedFile(uieOpts, file.path)
-      .then(change => p.util.log('Rebuilt', change.type, change.item, '(triggered by', change.file, ')'))
-      .catch(error => p.util.log('Error generating increment for changed file', file.path, ':', error))
+      .then(change => p.util.log(`Rebuilt ${change.type} ${change.item} (triggered by ${change.file})`))
+      .catch(error => p.util.log(`Error generating increment for changed file ${path.relative(__dirname, file.path)}:`, error))
   )
 })
 
 gulp.task('pug', ['pages', 'episodes', 'feed'])
 gulp.task('optimize', ['html:optimize'])
 gulp.task('images', cb => runSequence('images:resize', 'images:optimize', cb))
-gulp.task('build', cb => runSequence(['styles', 'copy', 'scripts', 'pug'], cb))
+gulp.task('build', cb => runSequence(['styles', 'copy', 'pug'], cb))
 gulp.task('develop', cb => runSequence(['build', 'patterns'], ['watch', 'browserSync'], cb))
 gulp.task('rev', cb => runSequence('revAssets', 'pug', cb))
 gulp.task('production', cb => runSequence('build', 'rev', ['sitemap', 'optimize'], cb))

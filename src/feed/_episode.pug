@@ -1,8 +1,8 @@
 mixin episode(a)
-  - var thumbnailSize = 320
-  - var thumbnailUrl = a.imageDir ? h.enforceScheme("http", h.podcastImageUrl(a.imageDir, thumbnailSize)) : null
-  - var imageUrl = a.imageDir ? h.enforceScheme("http", h.podcastImageUrl(a.imageDir, 3000)) : null
-  - var mp3Url = a.mp3 ? h.enforceScheme("http", h.assetUrl("mp3s/" + a.mp3)) : null
+  - const thumbnailSize = 320
+  - const thumbnailUrl = a.imageDir ? h.enforceScheme("http", h.podcastImageUrl(a.imageDir, thumbnailSize)) : null
+  - const imageUrl = a.imageDir ? h.enforceScheme("http", h.podcastImageUrl(a.imageDir, 3000)) : null
+  - const mp3Url = a.mp3 ? h.enforceScheme("http", h.assetUrl("mp3s/" + a.mp3)) : null
   if mp3Url
     item
       guid(isPermaLink="false")= a.shortId

@@ -2,11 +2,9 @@
 title: Atome
 components:
 - heading
+- link
 - cta
+- image
+- quote
 ---
-Hier ist die Besxchreibung der Atome Seite – also das Preflight.
-
-Geht auch mit Markdown!
-
-- Item 1
-- Item 2
+Atome sind die kleinsten Bausteine in der Pattern Library nach Atomic Design-Prinzipien. Sie sind die kleinsten verwendbaren Komponenten, jenseits von einzelnen HTML-Tags. Sie finden Verwendung in Molekülen, Organisman oder auch alleinestehend.

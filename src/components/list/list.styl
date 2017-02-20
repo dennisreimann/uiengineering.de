@@ -1,0 +1,33 @@
+.episode-list
+  margin-top $space-large
+
+  &__subtitle
+    font-style italic
+    font-weight 300
+    font-size $font-size-large
+    &:before
+      content " – "
+
+.episode-list-item
+  display flex
+
+  &__media
+    @media $mq-up_to_S
+      display none
+    @media $mq-S_and_up
+      width 160px
+      margin-right $space-large
+
+  &__content
+    flex 1
+
+  &__subtitle
+    margin $space-tiny 0
+    display block
+    font-style italic
+    font-weight 300
+    font-size $font-size-base
+
+  + .episode-list-item
+    margin-top $space-huge
+

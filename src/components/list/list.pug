@@ -1,0 +1,26 @@
+mixin episodeList(episodes, title, subtitle)
+  .episode-list
+    if title
+      h2
+        span.episode-list__title= title
+        if subtitle
+          span.episode-list__subtitle= subtitle
+    for episode in episodes
+      if episode.mp3
+        +episodeListItem(episode)
+
+mixin episodeListItem(e)
+  article.episode-list-item
+    .episode-list-item__media
+      a(href=e.permalink)
+        img(src=h.podcastImageUrl(e.imageDir, 160) srcset=`${h.podcastImageUrl(e.imageDir, 320)} 2x`)
+    .episode-list-item__content
+      h4
+        a(href=e.permalink)
+          span [#{e.shortId}]
+          | &nbsp;
+          span= e.title
+        if e.subtitle
+          span.episode-list-item__subtitle= e.subtitle
+      if e.description
+        p!= e.description

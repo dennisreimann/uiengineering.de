@@ -6,6 +6,6 @@ html(lang="de")
     title #{variation.title} • #{config.name} (#{config.version})
     link(href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300i,400,800" rel="stylesheet")
     link(href=h.assetPath("styles/main.css") rel="stylesheet")
-  body
+  body.uiengine-preview
     include safari-sniffer
     block body

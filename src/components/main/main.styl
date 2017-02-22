@@ -1,11 +1,15 @@
 .main
-  padding-top $space-mega
-  padding-bottom $space-mega
   background-color $color-white
   overflow-x hidden
 
-  .header + &
+  .uiengine-preview &
+    padding-top $space-normal
+    padding-bottom $space-normal
+
+  body:not(.uiengine-preview) &
     @extend $background-rulers
+    padding-top $space-mega
+    padding-bottom $space-mega
 
   .safari &
     padding-top $space-huge

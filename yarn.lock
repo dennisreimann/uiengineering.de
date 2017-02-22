@@ -5653,15 +5653,15 @@ uid-number@~0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
 
-uiengine-theme-default@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/uiengine-theme-default/-/uiengine-theme-default-0.2.1.tgz#df6e6d60fc8ffde49fbeb9ee03a7a8ea2f076f92"
+uiengine-theme-default@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/uiengine-theme-default/-/uiengine-theme-default-0.2.2.tgz#6e1f60ea2d01b2a4e8307bb2a70b2792110cf32c"
   dependencies:
     pug "^2.0.0-beta10"
 
-uiengine@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/uiengine/-/uiengine-0.2.1.tgz#a263df6185b47902764c817e52e525e7a56929d5"
+uiengine@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/uiengine/-/uiengine-0.2.2.tgz#4f2a91ec9e0549279d1ae6544fe319906f99a40a"
   dependencies:
     deep-extend "^0.4.1"
     fastmatter "^1.1.1"
@@ -5671,7 +5671,7 @@ uiengine@^0.2.1:
     markdown-it "^8.2.2"
     markdown-it-anchor "^2.6.0"
     ramda "^0.23.0"
-    uiengine-theme-default "^0.2.1"
+    uiengine-theme-default "^0.2.2"
     yargs "^6.6.0"
 
 ultron@1.0.x:

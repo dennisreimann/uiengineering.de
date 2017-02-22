@@ -5,4 +5,5 @@ components:
 - list
 - datablock
 ---
-Die Organismen sind komplexe Zusammenstellungen, die sich aus den kleineren Komponententypen und -gruppen zusammensetzen und wiederholt verwendet werden. Eine Liste aus Episoden(teasern) ist ein solches Beispiel, weil diese pro Staffel verwendet wird und nicht nur einmal.
+Die Organismen sind komplexe Zusammenstellungen, die sich aus den kleineren Komponententypen und -gruppen zusammensetzen und wiederholt verwendet werden.
+Eine Liste aus Episoden(teasern) ist ein solches Beispiel, weil diese pro Staffel verwendet wird und nicht nur einmal.

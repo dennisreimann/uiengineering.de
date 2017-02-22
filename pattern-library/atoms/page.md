@@ -2,7 +2,6 @@
 title: Atome
 components:
 - heading
-- link
 - cta
 - image
 - quote

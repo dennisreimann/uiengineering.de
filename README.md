@@ -1,4 +1,6 @@
-# UI engineering Website
+# [UI engineering Website](https://www.uiengineering.de)
+
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## 📦 Wie setze ich das Projekt auf?
 

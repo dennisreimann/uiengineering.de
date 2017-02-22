@@ -27,10 +27,10 @@ block main
         a.cta__button(href=podcastFeedPath target="uie-feed") Abonnieren / XML
   section
     .wrap.single
-      each episodesByYear in mvb.groupedArticles.byYear
-        - episodes = episodesByYear.articles
+      each episodesBySeason in mvb.groupedArticles.bySeason
+        - episodes = episodesBySeason.articles
         section.episodes_group
           h2.episodes_group__title
-            span.episodes_group__title__year= episodesByYear.year
+            span.episodes_group__title__year= h.shortIdToGerman(episodesBySeason.season)
             small.episodes_group__title__count &nbsp;– #{episodes.length} #{episodes.length == 1 ? "Episode" : "Episoden"}
           +episodes(episodes)

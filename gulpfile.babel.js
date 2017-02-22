@@ -41,9 +41,11 @@ const dest = (folder = '') => gulp.dest(`${paths.dest}/${folder}`)
 const mvbConf = {
   glob: paths.episodes,
   template: paths.episodeTemplate,
+
   permalink (article) {
     return `/${paths.episodesBasepath}/${article.id}.html`
   },
+
   loaded (article) {
     if (article.mp3) {
       const mp3Path = `src/mp3s/${article.mp3}`
@@ -52,23 +54,23 @@ const mvbConf = {
     }
   },
   grouping (articles) {
-    const byYear = {}
+    const articlesBySeason = {}
 
     articles.forEach(article => {
-      const year = article.date.toISOString().replace(/-.*/, '')
-      if (!byYear[year]) { byYear[year] = [] }
-      byYear[year].push(article)
+      const season = article.shortId.substring(0, 3)
+      articlesBySeason[season] = articlesBySeason[season] || []
+      articlesBySeason[season].push(article)
     })
 
     // year
-    const articlesByYear = []
-    Object.keys(byYear).reverse().forEach(year =>
-      articlesByYear.push({year, articles: byYear[year]})
+    const bySeason = []
+    Object.keys(articlesBySeason).reverse().forEach(season =>
+      bySeason.push({season, articles: articlesBySeason[season]})
     )
 
     // groups
     return {
-      byYear: articlesByYear
+      bySeason
     }
   }
 }

@@ -1,9 +1,10 @@
 ---
 title: Moleküle
 components:
-- teaser
+- intro
 - list
-- datablock
+- main
+- quote
 ---
 Moleküle sind Komponentengruppen, die sich aus Atomen zusammensetzen.
 Zu den Bestandteilen der Atome kommen im jeweiligen Molekül noch spezifische Abstände, Anpassungen und Modifikationen und Variationen von einzelnen Atomen hinzu.

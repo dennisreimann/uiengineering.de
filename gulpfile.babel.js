@@ -205,7 +205,7 @@ gulp.task('watch', () => {
   gulp.watch(paths.html).on('change', () => debounce('reload', browserSync.reload, 500))
   gulp.watch(paths.patterns).on('change', (file) => debounce('patterns', () =>
     UIengine.generateIncrementForChangedFile(uieOpts, file.path)
-      .then(change => p.util.log(`Rebuilt ${change.type} (triggered by ${change.file})`))
+      .then(change => p.util.log(`Rebuilt ${change.type} ${change.item} (triggered by ${change.file})`))
       .catch(error => p.util.log(`Error generating increment for changed file ${path.relative(__dirname, file.path)}:`, error))
   , 500))
 })

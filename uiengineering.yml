@@ -1,6 +1,6 @@
 # Project config: Defaults to name and version from package.json.
 # Here you can overwrite it and add more custom properties.
-name: UIengineering Pattern Library
+name: UIengineering
 
 # Base directories for the input, your raw source files:
 # - components is the root of the directory containing the components

@@ -46,7 +46,7 @@ const dest = (folder = '') => gulp.dest(`${paths.dest}/${folder}`)
 
 const mvbConf = {
   glob: paths.episodes,
-  template: './src/pages/episode.pug',
+  template: './src/templates/episode.pug',
 
   permalink (article) {
     return `/${paths.episodesBasepath}/${article.id}.html`

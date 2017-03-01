@@ -1,6 +1,6 @@
 ---
 title: Home
-template: sitemap
+template: theme:sitemap
 children:
 - atoms
 - molecules

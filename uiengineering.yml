@@ -31,3 +31,9 @@ theme:
     look: uiengineering
     debug: false
     cache: false
+
+breakpoints:
+  XS: 360
+  S: 560
+  M: 760
+  L: 960

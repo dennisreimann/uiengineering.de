@@ -34,7 +34,8 @@ const paths = {
   templates: ['src/{components,templates}/**/*.pug'],
   patterns: [
     'uiengineering.yml',
-    'src/{components,templates}/**/*',
+    'src/components/**/*.{pug,md}',
+    'src/templates/**/*',
     'pattern-library/**/*',
     'node_modules/uiengine-theme-default/{lib,static}/**/*'
   ],
@@ -200,14 +201,14 @@ gulp.task('watch', () => {
   gulp.watch(paths.templates, ['episodes', 'pages'])
   gulp.watch(paths.feed, ['feed'])
   gulp.watch(paths.styles.concat(['src/styles/lib/*.styl']), ['styles'])
-  gulp.watch(paths.pages).on('change', file => buildHtml(file.path))
-  gulp.watch(paths.episodes).on('change', file => buildHtml(file.path, paths.episodesBasepath))
+  gulp.watch(paths.pages).on('change', event => buildHtml(event.path))
+  gulp.watch(paths.episodes).on('change', event => buildHtml(event.path, paths.episodesBasepath))
   gulp.watch(paths.html).on('change', () => debounce('reload', browserSync.reload, 500))
-  gulp.watch(paths.patterns).on('change', (file) => debounce('patterns', () =>
-    UIengine.generateIncrementForChangedFile(uieOpts, file.path)
-      .then(change => p.util.log(`Rebuilt ${change.type} ${change.item} (triggered by ${change.file})`))
-      .catch(error => p.util.log(`Error generating increment for changed file ${path.relative(__dirname, file.path)}:`, error))
-  , 500))
+  gulp.watch(paths.patterns).on('change', event => debounce('patterns', () => {
+    UIengine.generateIncrementForFileChange(uieOpts, event.path, event.type)
+      .then(change => p.util.log(`${change.action.charAt(0).toUpperCase() + change.action.substr(1)} ${change.type} ${change.item} (triggered by ${change.file})`))
+      .catch(error => p.util.log(`Error generating increment for changed file ${path.relative(__dirname, event.path)}:`, error))
+  }, 500))
 })
 
 gulp.task('pug', ['pages', 'episodes', 'feed'])

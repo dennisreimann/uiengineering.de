@@ -6,7 +6,7 @@ children:
 - molecules
 - organisms
 - sandbox
-- manual
+#- manual
 ---
 
 Die UIengineering.de Pattern Library.

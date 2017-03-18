@@ -28,7 +28,8 @@ templates:
 theme:
   module: uiengine-theme-default
   options:
-    look: uiengineering
+    look: default
+    hljs: atom-one-dark
     debug: false
     cache: false
 

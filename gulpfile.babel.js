@@ -91,10 +91,6 @@ const pugOpts = {
   pretty: true
 }
 
-const uieOpts = {
-  config: './uiengineering.yml'
-}
-
 const buildHtml = (src, dst) =>
   gulp.src(src)
     .pipe(p.plumber())
@@ -165,7 +161,7 @@ gulp.task('styles', () =>
 )
 
 gulp.task('patterns', (cb) => {
-  UIengine.generate(uieOpts)
+  UIengine.generate()
     .then(() => cb())
     .catch(error => p.util.log('Error generating pattern library:', error))
 })
@@ -205,8 +201,8 @@ gulp.task('watch', () => {
   gulp.watch(paths.episodes).on('change', event => buildHtml(event.path, paths.episodesBasepath))
   gulp.watch(paths.html).on('change', () => debounce('reload', browserSync.reload, 500))
   gulp.watch(paths.patterns).on('change', event => debounce('patterns', () => {
-    UIengine.generateIncrementForFileChange(uieOpts, event.path, event.type)
-      .then(change => p.util.log(`${change.action.charAt(0).toUpperCase() + change.action.substr(1)} ${change.type} ${change.item} (triggered by ${change.file})`))
+    UIengine.generateIncrementForFileChange(event.path, event.type)
+      .then(change => p.util.log(`Rebuilt ${change.type} ${change.item} (${change.action} ${change.file})`))
       .catch(error => p.util.log(`Error generating increment for changed file ${path.relative(__dirname, event.path)}:`, error))
   }, 500))
 })

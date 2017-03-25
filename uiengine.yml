@@ -9,7 +9,7 @@ name: UIengineering
 source:
   components: ./src/components
   templates: ./src/templates
-  pages: ./pattern-library
+  pages: ./src/patterns
 
 # Destination paths for the generated output.
 target: ./dist/patterns
@@ -28,7 +28,8 @@ templates:
 theme:
   module: uiengine-theme-default
   options:
-    look: default
+    lang: de
+    skin: uiengineering
     hljs: atom-one-dark
     debug: false
     cache: false
@@ -38,3 +39,5 @@ breakpoints:
   S: 560
   M: 760
   L: 960
+
+browserSync: !include /bs-config.js

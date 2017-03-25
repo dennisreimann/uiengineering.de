@@ -1,6 +1,5 @@
 import { argv } from 'yargs'
 import fs from 'fs'
-import path from 'path'
 import gulp from 'gulp'
 import gulpLoadPlugins from 'gulp-load-plugins'
 import mergeStream from 'merge-stream'
@@ -9,11 +8,13 @@ import autoprefixer from 'autoprefixer'
 import mqpacker from 'css-mqpacker'
 import csswring from 'csswring'
 import BrowserSync from 'browser-sync'
-import UIengine from 'uiengine'
+import { gulp as UIgulp } from 'uiengine'
 import debounce from './lib/debounce'
 import createTemplateHelper from './lib/templateHelper'
+import bsConfig from './bs-config'
 
 const p = gulpLoadPlugins()
+const uiGulp = UIgulp(gulp, { debug: true })
 const browserSync = BrowserSync.create()
 const isDev = (argv.dev != null)
 const defaultScheme = isDev ? 'http' : 'https'
@@ -32,13 +33,6 @@ const paths = {
   styles: ['src/styles/*.styl', 'src/components/**/*.styl'],
   episodes: ['src/podcast/*.md'],
   templates: ['src/{components,templates}/**/*.pug'],
-  patterns: [
-    'uiengineering.yml',
-    'src/components/**/*.{pug,md}',
-    'src/templates/**/*',
-    'pattern-library/**/*',
-    'node_modules/uiengine-theme-default/{lib,static}/**/*'
-  ],
   feed: ['src/feed/*.pug'],
   episodesBasepath: 'podcast'
 }
@@ -160,21 +154,6 @@ gulp.task('styles', () =>
     .pipe(browserSync.stream({match: '**/*.css'}))
 )
 
-gulp.task('patterns', (cb) => {
-  UIengine.generate()
-    .then(() => cb())
-    .catch(error => p.util.log('Error generating pattern library:', error))
-})
-
-gulp.task('browserSync', () =>
-  browserSync.init({
-    open: false,
-    server: {
-      baseDir: paths.dest
-    }
-  })
-)
-
 gulp.task('revAssets', () => {
   const RevAll = p.revAll
   const revAll = new RevAll({ prefix: assetUrl })
@@ -192,7 +171,10 @@ gulp.task('sitemap', () =>
     .pipe(dest())
 )
 
+uiGulp.task('patterns')
+
 gulp.task('watch', () => {
+  uiGulp.watch()
   gulp.watch(paths.copy, ['copy'])
   gulp.watch(paths.templates, ['episodes', 'pages'])
   gulp.watch(paths.feed, ['feed'])
@@ -200,15 +182,11 @@ gulp.task('watch', () => {
   gulp.watch(paths.pages).on('change', event => buildHtml(event.path))
   gulp.watch(paths.episodes).on('change', event => buildHtml(event.path, paths.episodesBasepath))
   gulp.watch(paths.html).on('change', () => debounce('reload', browserSync.reload, 500))
-  gulp.watch(paths.patterns).on('change', event => debounce('patterns', () => {
-    UIengine.generateIncrementForFileChange(event.path, event.type)
-      .then(change => p.util.log(`Rebuilt ${change.type} ${change.item} (${change.action} ${change.file})`))
-      .catch(error => p.util.log(`Error generating increment for changed file ${path.relative(__dirname, event.path)}:`, error))
-  }, 500))
 })
 
 gulp.task('pug', ['pages', 'episodes', 'feed'])
 gulp.task('optimize', ['html:optimize'])
+gulp.task('browserSync', cb => browserSync.init(bsConfig))
 gulp.task('images', cb => runSequence('images:resize', 'images:optimize', cb))
 gulp.task('build', cb => runSequence(['styles', 'copy', 'pug'], cb))
 gulp.task('develop', cb => runSequence(['build', 'patterns'], ['watch', 'browserSync'], cb))

@@ -1,9 +1,5 @@
 extends ../templates/page
 
-include /episode/episode
-include /header/header
-include /section/section
-
 block vars
   - const episode = mvb.article
   - const title = episode.title + (episode.subtitle ? `: ${episode.subtitle}` : '') + " • UI engineering Podcast"

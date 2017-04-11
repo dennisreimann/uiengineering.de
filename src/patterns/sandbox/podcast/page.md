@@ -8,8 +8,8 @@ context:
     title: Podcast
     type: podcast
   episodes:
-    - !include /src/patterns/_data/items/s01e08.yml
-    - !include /src/patterns/_data/items/s01e07.yml
-    - !include /src/patterns/_data/items/s01e06.yml
+    - !data items/s01e08.yml
+    - !data items/s01e07.yml
+    - !data items/s01e06.yml
 ---
 Die Podcast-Übersichtsseite

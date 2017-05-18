@@ -8,7 +8,7 @@ context:
     type: "main"
     hero: true
   episodes:
-    - !data items/s01e08.yml
-    - !data items/s01e07.yml
+    - !data episode/s01e08.yml
+    - !data episode/s01e07.yml
 ---
 Die Startseite

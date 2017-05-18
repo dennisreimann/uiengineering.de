@@ -1,18 +1,18 @@
 mixin episode(episode)
   +section(true)
     article.episode
-      +episodeHeader(episode)
-      +episodeMain(episode)
-      +episodeFooter(episode)
+      +__episodeHeader(episode)
+      +__episodeMain(episode)
+      +__episodeFooter(episode)
 
-mixin episodeHeader(episode)
+mixin __episodeHeader(episode)
   header.episode__header
     hgroup
       h2.episode__title [#{episode.shortId}] #{episode.title}
       if episode.subtitle
         h3.episode__subtitle= episode.subtitle
 
-mixin episodeMain(episode)
+mixin __episodeMain(episode)
   - const title = episode.title + (episode.subtitle ? `: ${episode.subtitle}` : '') + " • UI engineering Podcast"
   - const imgSize = 320
   - const imgSmall = h.podcastImageUrl(episode.imageDir, imgSize)
@@ -23,20 +23,20 @@ mixin episodeMain(episode)
       source(src=h.assetUrl(`mp3s/${episode.mp3}`) type="audio/mpeg")
   .episode__content!= episode.content
 
-mixin episodeFooter(episode)
+mixin __episodeFooter(episode)
   footer.episode__footer
     p.episode__meta
       span Veröffentlicht am
       | &nbsp;
       time.episode__date= h.dateFormat.german(episode.date)
-    +episodeNav(episode)
+    +__episodeNav(episode)
 
-mixin episodeNav(episode)
+mixin __episodeNav(episode)
   - const prevEpisode = episode.previousArticle
   - const nextEpisode = episode.nextArticle
   if prevEpisode || nextEpisode
     .episode__nav
-      h3.episode__nav__title Weitere Episoden
+      h3.episode__navtitle Weitere Episoden
       ul
         for e in [nextEpisode, prevEpisode]
           if e

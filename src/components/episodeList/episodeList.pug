@@ -5,11 +5,11 @@ mixin episodeList(episodes, title, subtitle)
         span.episode-list__title= title
         if subtitle
           span.episode-list__subtitle= subtitle
-    for episode in episodes
+    each episode in episodes
       if episode.mp3
-        +episodeListItem(episode)
+        +__episodeListItem(episode)
 
-mixin episodeListItem(e)
+mixin __episodeListItem(e)
   article.episode-list-item
     .episode-list-item__media
       a(href=e.permalink)

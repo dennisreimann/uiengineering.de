@@ -1,4 +1,9 @@
 ---
 title: Header
+schema:
+  +header(data):
+    data:
+      type: Header
 ---
-Je nach Bereich auf der Website wird der Header am Seitenkopf als kompakte Version oder Hero-Bild-Bereich abgebildet. Die Tonalität ist immer reduziert.
+Je nach Bereich auf der Website wird der Header am Seitenkopf als kompakte Version oder Hero-Bild-Bereich abgebildet.
+Die Tonalität ist immer reduziert.

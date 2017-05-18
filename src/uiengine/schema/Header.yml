@@ -1,0 +1,12 @@
+title:
+  type: String
+  description: Titel
+  required: true
+type:
+  type: String
+  description: !markdown Typ des Headers, entscheidet über das Hintergrundbild. Bspw. `main`, `podcast`, `kontakt`.
+  required: true
+hero:
+  type: Boolean
+  description: Große Darstellung
+  default: 'false'

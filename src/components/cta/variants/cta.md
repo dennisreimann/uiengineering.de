@@ -1,5 +1,6 @@
 ---
 title: Call To Action
-status: Ready to use
+status: Einsatzbereit
+label: A21
 ---
 Link, der als Call To Action Button dargestellt wird.

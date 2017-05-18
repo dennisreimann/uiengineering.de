@@ -3,6 +3,7 @@ title: Organismen
 components:
 - header
 - navigation
+- main
 - episode
 - episodeList
 - footer

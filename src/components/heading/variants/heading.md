@@ -1,6 +1,6 @@
 ---
 title: Heading
-status: Ready to use
-label: A 102
+status: Einsatzbereit
+label: A11
 ---
 Überschrift eines Seitenbereichs.

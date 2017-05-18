@@ -1,6 +1,6 @@
 ---
 title: Darstellung auf Episodendetailseite
-status: Ready to use
+status: Einsatzbereit
 context:
-  episode: !data items/s01e08.yml
+  episode: !data /episode/s01e08.yml
 ---

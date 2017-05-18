@@ -3,13 +3,15 @@ name: UIengineering
 source:
   components: ./src/components
   templates: ./src/templates
-  pages: ./src/patterns
-  data: ./src/patterns/_data
+  pages: ./src/uiengine/pages
+  data: ./src/uiengine/data
+  schema: ./src/uiengine/schema
 
 target: ./dist/patterns
 
 adapters:
   pug: ./lib/uiengine/pug
+  styl: ./lib/uiengine/styl
 
 templates:
   variant: variant-main.pug

@@ -28,7 +28,7 @@ const paths = {
   src: 'src',
   dest: 'dist',
   html: ['dist/**/*.html'],
-  rev: ['dist/**/*.{css,js,map,svg,jpg,png,gif,woff,woff2}'],
+  rev: ['dist/**/*.{css,js,map,svg,jpg,png,gif,woff,woff2}', '!dist/patterns/_uiengine-theme/**/**'],
   copy: ['src/{fonts,images,svgs,mp3s}/**/*', 'src/site/**/*', 'src/site/.htaccess'],
   pages: ['src/pages/**/*.pug', '!src/pages/episode.pug'],
   styles: ['src/styles/*.styl', 'src/components/**/*.styl'],
@@ -193,6 +193,6 @@ gulp.task('pug', ['pages', 'episodes', 'feed'])
 gulp.task('browserSync', cb => browserSync.init(bsConfig))
 gulp.task('images', cb => runSequence('images:resize', 'images:optimize', cb))
 gulp.task('build', cb => runSequence(['styles', 'copy', 'pug'], cb))
-gulp.task('develop', cb => runSequence('build', 'patterns', ['watch', 'browserSync'], cb))
+gulp.task('develop', cb => runSequence(['build', 'patterns'], ['watch', 'browserSync'], cb))
 gulp.task('rev', cb => runSequence('revAssets', 'pug', cb))
-gulp.task('production', cb => runSequence('build', 'rev', ['sitemap', 'optimize'], cb))
+gulp.task('production', cb => runSequence('build', 'rev', 'patterns', ['sitemap', 'optimize'], cb))

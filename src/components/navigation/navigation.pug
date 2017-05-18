@@ -1,14 +1,16 @@
+include /wrap/wrap.pug
+
 mixin navigation()
   nav.navigation
     +wrap()
       ul.navigation__tree
-        +navItem('index', '/index.html', 'Start')
-        +navItem('podcast', '/podcast.html', 'Podcast')
-        +navItem('praxis', '/praxis.html', 'Praxis')
-        +navItem('kontakt', '/kontakt.html','Kontakt')
-        +navItem('patterns', '/patterns', 'Patterns')
+        +__navItem('index', '/index.html', 'Start')
+        +__navItem('podcast', '/podcast.html', 'Podcast')
+        +__navItem('praxis', '/praxis.html', 'Praxis')
+        +__navItem('kontakt', '/kontakt.html','Kontakt')
+        +__navItem('patterns', '/patterns', 'Patterns')
 
-mixin navItem(id, url, title)
+mixin __navItem(id, url, title)
   - const classes = h.isCurrentPage(id) ? 'navigation__item--current' : ''
   li.navigation__item(class=classes)
     a.navigation__link(href=url)= title

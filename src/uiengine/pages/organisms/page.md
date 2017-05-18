@@ -5,7 +5,7 @@ components:
 - navigation
 - main
 - episode
-- episodeList
+- episodelist
 - footer
 ---
 Die Organismen sind komplexe Zusammenstellungen, die sich aus den kleineren Komponententypen und -gruppen zusammensetzen und wiederholt verwendet werden.

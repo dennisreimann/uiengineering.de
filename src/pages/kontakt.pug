@@ -1,5 +1,9 @@
 extends ../templates/page
 
+include /section/block.pug
+include /section/container.pug
+include /section/section.pug
+
 block vars
   - const title = "Kontakt"
   - const episodes = mvb.articles.slice(0, 2)

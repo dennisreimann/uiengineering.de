@@ -1,7 +1,6 @@
 .DS_Store*
 /.vscode
 /npm-debug*
-/src/templates/includes/mixins.pug
 *log
 dist
 node_modules

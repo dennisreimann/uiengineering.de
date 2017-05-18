@@ -55,7 +55,7 @@
     "moment": "^2.17.0",
     "run-sequence": "^1.1.5",
     "standard": "^8.6.0",
-    "uiengine": "^0.8.2",
+    "uiengine": "^0.8.3",
     "yargs": "^6.4.0"
   }
 }

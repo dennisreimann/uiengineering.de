@@ -6,6 +6,16 @@ $color-darkblue = #152639
 $color-text = $color-brand-seco
 $color-dark-bg = darken($color-brand-seco, 5)
 
+$space-tiny = .25em
+$space-small = .5em
+$space-normal = .75em
+$space-large = 1.5em
+$space-huge = 2.5em
+$space-mega = 4em
+
+// converts fonts defined in json file to variables:
+json(pathjoin('..', '..', 'lib', 'fonts.json'), null, '$font-')
+
 $font-size-ultra = 6rem
 $font-size-mega = 4.5rem
 $font-size-boss = 3rem
@@ -17,13 +27,6 @@ $font-size-base = 1rem
 $font-size-small = .9rem
 $font-size-tiny = .75rem
 
-$space-tiny = .25em
-$space-small = .5em
-$space-normal = .75em
-$space-large = 1.5em
-$space-huge = 2.5em
-$space-mega = 4em
-
-$font-family-base = merriweathersans-regular, 'Helvetica Neue', Arial, Tahoma, Verdana, sans-serif
-$font-family-bold = merriweathersans-bold, 'Helvetica Neue', Arial, Tahoma, Verdana, sans-serif
-$font-family-lightitalic = merriweathersans-lightitalic, 'Helvetica Neue', Arial, Tahoma, Verdana, sans-serif
+$font-family-base = $font-merriweathersans-regular, 'Helvetica Neue', Arial, Tahoma, Verdana, sans-serif
+$font-family-bold = $font-merriweathersans-bold, 'Helvetica Neue', Arial, Tahoma, Verdana, sans-serif
+$font-family-lightitalic = $font-merriweathersans-lightitalic, 'Helvetica Neue', Arial, Tahoma, Verdana, sans-serif

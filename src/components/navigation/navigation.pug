@@ -11,6 +11,6 @@ mixin navigation()
         +__navItem('patterns', '/patterns', 'Patterns')
 
 mixin __navItem(id, url, title)
-  - const classes = h.isCurrentPage(id) ? 'navigation__item--current' : ''
+  - const classes = `navigation__item--${id}` + (h.isCurrentPage(id) ? ' navigation__item--current' : '')
   li.navigation__item(class=classes)
     a.navigation__link(href=url)= title

@@ -25,10 +25,5 @@ theme:
     debug: false
     cache: false
 
-breakpoints:
-  XS: 360
-  S: 560
-  M: 760
-  L: 960
-
+breakpoints: !include src/lib/breakpoints.json
 browserSync: !include bs-config.js

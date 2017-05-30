@@ -1,9 +1,9 @@
 .navigation
   color $color-white
   background $color-brand-seco
-  @media $mq-up_to_XS
+  @media up_to_XS
     font-size $font-size-small
-  @media $mq-XS_and_up
+  @media XS_and_up
     font-size $font-size-base
 
   &__tree
@@ -17,6 +17,10 @@
     &--current
       background $color-dark-bg
       border-bottom 3px solid $color-white
+
+    @media up_to_M
+      &--patterns
+        display none
 
   &__link
     display block

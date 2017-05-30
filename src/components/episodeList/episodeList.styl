@@ -2,7 +2,7 @@
   margin-top $space-large
 
   &__subtitle
-    font-family $font-family-lightitalic
+    @extend $font-lightitalic
     font-size $font-size-large
     &:before
       content " – "
@@ -11,9 +11,9 @@
   display flex
 
   &__media
-    @media $mq-up_to_S
+    @media up_to_S
       display none
-    @media $mq-S_and_up
+    @media S_and_up
       width 160px
       margin-right $space-large
 
@@ -21,9 +21,9 @@
     flex 1
 
   &__subtitle
+    @extend $font-lightitalic
     margin $space-tiny 0
     display block
-    font-family $font-family-lightitalic
     font-size $font-size-base
 
   + .episode-list-item

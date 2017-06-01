@@ -7,10 +7,12 @@
     padding-top $space-mega
     padding-bottom $space-mega
 
-  .safari &
+  html:not(.uiengine-preview) .safari &
     padding-top $space-huge
-  .safari.uiengine-preview &
-    padding-top $space-normal
+
+    &:before
+    &:after
+      content none
 
   *
     +
@@ -30,10 +32,17 @@
         margin-top 0
 
   h3
+  h4
+  p
+  ul
     +
+      h3
+      h4
       p
       ul
         margin-top $space-normal
+
+
 
   ul
     margin-left 16px

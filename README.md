@@ -45,12 +45,10 @@ $ brew install graphicsmagick
 Damit kann man nun mit folgendem Task aus einem 3000er-Vorlagebild alle entsprechenden Größen generieren:
 
 ```bash
-$ yarn run images
+$ yarn images
 ```
 
 Dieser Task muss manuell ausgeführt werden und ist nicht Bestandteil des normalen Buildprozess, da die generierten Bilder im `src`-Verzeichnis abgelegt werden und dieser Schritt nur einmal erfolgen sollte.
-
-
 
 ## 🚀 Wie deploye ich das Projekt?
 

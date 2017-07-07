@@ -8,13 +8,14 @@
     "node": ">=7.1.0"
   },
   "scripts": {
-    "clean": "rm -rf dist",
+    "cleanup": "rm -rf dist",
     "images": "gulp images",
-    "start": "yarn run clean && gulp develop --dev",
-    "build": "yarn run clean && gulp build",
-    "prod": "yarn run clean && gulp production --assetHost=cdn.uiengineering.de",
-    "build-and-deploy": "yarn run prod && yarn run deploy",
-    "deploy": "rsync -ravzulO --chmod=u=rwX,g=rX --exclude-from=.rsync-exclude dist/ uiengine.acamar.uberspace.de:html"
+    "start": "yarn cleanup && gulp develop --dev",
+    "build": "yarn cleanup && gulp build",
+    "prod": "yarn cleanup && gulp production --assetHost=cdn.uiengineering.de",
+    "build-and-deploy": "yarn prod && yarn deploy:assets && yarn deploy:site",
+    "deploy:assets": "rsync -ravzulO --chmod=u=rwX,g=rX --exclude-from=.rsync-exclude-assets --delete-after dist/fonts dist/images dist/mp3s dist/styles uiengine.acamar.uberspace.de:html",
+    "deploy:site": "rsync -ravzulO --chmod=u=rwX,g=rX --exclude-from=.rsync-exclude-site --delete-after dist/ uiengine.acamar.uberspace.de:html"
   },
   "devDependencies": {
     "autoprefixer": "^6.1.2",

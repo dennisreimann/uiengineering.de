@@ -1,0 +1,48 @@
+extends ../templates/page
+
+include /section/block.pug
+include /section/container.pug
+include /section/section.pug
+
+block vars
+  - const title = "Impressum"
+  - const episodes = mvb.articles.slice(0, 2)
+  - const header = { title: title, type: "kontakt" }
+
+block main
+  +section(true)
+    :marked
+      ### Inhaltlich Verantwortliche gemäß TMG und § 55 Abs. 2 RStV
+
+      Dennis Reimann
+      <br>
+      Ottjen-Alldag-Str. 32
+      <br>
+      28277 Bremen
+
+      ### Urheber- und Kennzeichenrecht
+
+      Die vom Autor erstellten Inhalte des Blogs sind unter [Creative Commons](http://creativecommons.org/licenses/by-sa/3.0/de/) lizenziert.
+
+      Für alle weiteren Inhalte dieser Website gilt:
+      Der Autor ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Bilder, Grafiken, Tondokumente, Videosequenzen und Texte zu beachten, von ihm selbst erstellte Bilder, Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen oder auf lizenzfreie Grafiken, Tondokumente, Videosequenzen und Texte zurückzugreifen.
+
+      Das Copyright für veröffentlichte, vom Autor selbst erstellte Objekte bleibt allein beim Autor der Seiten. Eine Vervielfältigung oder Verwendung solcher Grafiken, Tondokumente, Videosequenzen und Texte in anderen elektronischen oder gedruckten Publikationen ist ohne ausdrückliche Zustimmung des Autors nicht gestattet.
+
+      Alle innerhalb des Internetangebotes genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass Markenzeichen nicht durch Rechte Dritter geschützt sind!
+
+      ### Haftungshinweis
+
+      Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+
+      ### Datenschutz
+
+      Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. („Google“).
+      Google Analytics verwendet sog. „Cookies“, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen.
+      Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website (einschließlich Ihrer IP-Adresse) wird an einen Server von Google in den USA übertragen und dort gespeichert.
+      Google wird diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen.
+      Auch wird Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten.
+      Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten von Google in Verbindung bringen.
+      Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser Software verhindern;
+      wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich nutzen können.
+      Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.

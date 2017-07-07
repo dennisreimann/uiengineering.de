@@ -6,15 +6,21 @@
   background $color-dark-bg
   font-size $font-size-small
   hyphens auto
-  text-align center
-
-  .safari &
-    padding-top $space-large
 
   a
     color inherit
 
-  &__legal
+  .safari &
+    padding-top $space-large
+
+  &__block,
+  &__imprint
+    text-align center
+
+  &__legal,
+  &__imprint
     margin-top $space-large
     font-size $font-size-tiny
     color desaturate(lighten(#331833, 60), 15)
+
+

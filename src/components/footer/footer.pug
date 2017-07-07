@@ -6,14 +6,14 @@ mixin footer()
   footer.footer
     +wrap()
       +container()
-        +block()
+        +block().footer__block
           :marked
             [Jan Persiel](http://janpersiel.com/)<br>
             Persiel Designstudio<br>
             Falkenried 74a<br>
             20251 Hamburg
 
-        +block()
+        +block().footer__block
           :marked
             [Dennis Reimann](https://dennisreimann.de/)<br>
             Softwareentwickler<br>
@@ -27,3 +27,6 @@ mixin footer()
           auch im Rahmen dieser Initiative als Einzelunternehmer tätig.
           Bei Anfragen für Workshop, Schulungen und Projekte
           [erreichen Sie uns](/kontakt.html) gerne über unsere jeweiligen Websites.
+
+      .footer__imprint
+        a(href="/impressum.html") Impressum &amp; Datenschutz

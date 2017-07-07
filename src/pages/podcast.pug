@@ -27,7 +27,8 @@ block main
     +cta("Abonnieren / XML", podcastFeedPath)(target="uie-feed")
 
   +section(true)
-    each episodesBySeason in mvb.groupedArticles.bySeason
+    - const seasons = mvb.groupedArticles.bySeason.reverse()
+    each episodesBySeason in seasons
       - episodes = episodesBySeason.articles
       section
         +episodeList(episodes, h.shortIdToGerman(episodesBySeason.season), `${episodes.length} ${episodes.length == 1 ? "Episode" : "Episoden"}`)

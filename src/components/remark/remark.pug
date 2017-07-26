@@ -4,3 +4,10 @@ mixin remark()
   .remark
     +wrap()
       block
+
+mixin quote(author)
+  blockquote
+    block
+    footer
+      |&mdash;&thinsp;
+      = author

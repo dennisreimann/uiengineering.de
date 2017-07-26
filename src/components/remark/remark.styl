@@ -1,5 +1,5 @@
-.remark
-  color $color-brand-main
+.remark,
+blockquote
   margin-bottom $space-l
   line-height 1.6
   @media up_to_L
@@ -7,6 +7,7 @@
     hyphens manual
   @media L_and_up
     font-size $font-size-xl
+
 .remark
   color $color-brand-main
   @media M_and_up
@@ -15,3 +16,17 @@
       display block
       max-width 38em
       margin 0 auto
+
+blockquote
+  @extend $font-lightitalic
+  p
+    &:before
+    &:after
+      font-size 1em
+    &:before
+      content "„"
+      margin-left -.9ch
+      margin-right .2ch
+    &:after
+      content "“"
+      margin-left .2ch

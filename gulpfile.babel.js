@@ -35,6 +35,7 @@ const paths = {
   episodes: ['src/podcast/*.md'],
   templates: ['src/{components,templates}/**/*.pug'],
   templateIncludes: 'src/templates/includes/**',
+  tokens: 'src/tokens/*.json',
   feed: ['src/feed/*.pug'],
   episodesBasepath: 'podcast'
 }
@@ -177,10 +178,11 @@ gulp.task('sitemap', () =>
 uiGulp.task('patterns')
 
 gulp.task('watch', () => {
-  uiGulp.watch([`!${path.resolve(paths.templateIncludes)}`])
+  uiGulp.watch([`!${path.resolve(paths.templateIncludes)}`, `!${path.resolve(paths.tokens)}`])
   gulp.watch(paths.copy, ['copy'])
   gulp.watch(paths.templates, ['episodes', 'pages'])
   gulp.watch(paths.feed, ['feed'])
+  gulp.watch(paths.tokens, ['styles', 'patterns'])
   gulp.watch(paths.styles.concat(['src/styles/lib/*.styl']), ['styles'])
   gulp.watch(paths.pages).on('change', event => buildHtml(event.path))
   gulp.watch(paths.episodes).on('change', event => buildHtml(event.path, paths.episodesBasepath))

@@ -26,5 +26,5 @@ theme:
     debug: false
     cache: false
 
-breakpoints: !include src/lib/breakpoints.json
+breakpoints: !include src/tokens/breakpoints.json
 browserSync: !include bs-config.js

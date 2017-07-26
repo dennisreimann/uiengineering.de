@@ -1,17 +1,16 @@
 .footer
   @extend $background-rulers
-  padding-top $space-huge
-  padding-bottom $space-mega
+  padding-top $space-xl
+  padding-bottom $space-xxl
   color $color-white
   background $color-dark-bg
-  font-size $font-size-small
-  hyphens auto
+  font-size $font-size-s
 
   a
     color inherit
 
   .safari &
-    padding-top $space-large
+    padding-top $space-l
 
   &__block,
   &__imprint
@@ -19,8 +18,8 @@
 
   &__legal,
   &__imprint
-    margin-top $space-large
-    font-size $font-size-tiny
-    color desaturate(lighten(#331833, 60), 15)
+    margin-top $space-l
+    font-size $font-size-s
+    color desaturate(lighten($color-brand-seco, 60), 15)
 
 

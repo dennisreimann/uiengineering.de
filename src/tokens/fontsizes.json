@@ -1,0 +1,10 @@
+{
+  "s": ".9rem",
+  "m": "1rem",
+  "l": "1.25rem",
+  "xl": "1.5rem",
+  "xxl": "2rem",
+  "boss": "3rem",
+  "mega": "4.5rem",
+  "ultra": "6rem"
+}

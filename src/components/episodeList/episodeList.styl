@@ -1,9 +1,9 @@
 .episode-list
-  margin-top $space-large
+  margin-top $space-l
 
   &__subtitle
     @extend $font-lightitalic
-    font-size $font-size-large
+    font-size $font-size-xl
     &:before
       content " – "
 
@@ -15,17 +15,17 @@
       display none
     @media S_and_up
       width 160px
-      margin-right $space-large
+      margin-right $space-l
 
   &__content
     flex 1
 
   &__subtitle
     @extend $font-lightitalic
-    margin $space-tiny 0
+    margin $space-xs 0
     display block
-    font-size $font-size-base
+    font-size $font-size-m
 
   + .episode-list-item
-    margin-top $space-huge
+    margin-top $space-xl
 

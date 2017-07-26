@@ -1,6 +1,5 @@
 ---
 title: Zitat
-status: Idee
 label: M22
 ---
 Zitate von Personen können mit dieser Komponente abgebildet werden. 

@@ -1,6 +1,5 @@
 ---
 title: Episodenliste
-status: Einsatzbereit
 schema:
   +episodeList(episodes, title, subtitle):
     episodes: 

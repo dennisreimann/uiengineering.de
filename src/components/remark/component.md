@@ -1,6 +1,5 @@
 ---
 title: Bemerkungstext
-status: Einsatzbereit
 label: M2
 schema:
   +remark():

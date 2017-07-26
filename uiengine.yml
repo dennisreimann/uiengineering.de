@@ -1,4 +1,5 @@
 name: UIengineering
+copyright: Copyright © Jan Persiel, Dennis Reimann.
 
 source:
   components: ./src/components

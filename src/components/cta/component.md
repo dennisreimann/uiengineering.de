@@ -1,6 +1,5 @@
 ---
 title: Call To Action
-status: Einsatzbereit
 label: A2
 schema:
   +cta(title, url):

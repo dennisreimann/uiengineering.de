@@ -1,6 +1,5 @@
 ---
 title: Heading
-status: Einsatzbereit
 label: A1
 variants:
 - heading.pug

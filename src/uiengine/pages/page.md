@@ -1,10 +1,9 @@
 ---
 title: Home
-template: theme:sitemap
 children:
 - elements
 - modules
 - prototype
 ---
 
-Die UIengineering.de Pattern Library.
+Die Component Library für UIengineering.de.

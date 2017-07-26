@@ -1,6 +1,5 @@
 ---
 title: Episode
-status: Einsatzbereit
 schema:
   +episode(episode):
     episode: 

@@ -6,4 +6,6 @@ components:
 - image
 - remark
 ---
-Elemente sind die kleinsten Bausteine in der Pattern Library nach Atomic Design-Prinzipien. Sie sind die kleinsten verwendbaren Komponenten, jenseits von einzelnen HTML-Tags. Sie finden Verwendung in Molekülen, Organisman oder auch alleinestehend.
+Elemente sind die kleinsten Bausteine, jenseits von einzelnen HTML-Tags. 
+Sie finden Verwendung in Modulen oder werden alleinestehend eingesetzt.
+Im *Atomic Design* entspricht dies den _Atomen_.

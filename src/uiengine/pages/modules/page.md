@@ -6,8 +6,10 @@ components:
 - main
 - wrap
 - episode
-- episodeList
+- episodelist
 - footer
 ---
-Die Organismen sind komplexe Zusammenstellungen, die sich aus den kleineren Komponententypen und -gruppen zusammensetzen und wiederholt verwendet werden.
-Eine Liste aus Episoden(teasern) ist ein solches Beispiel, weil diese pro Staffel verwendet wird und nicht nur einmal.
+Komplexere Komponenten, die sich aus der Zusammensetzung von Elementen und ggf. anderen Modulen ergeben. 
+Es gibt dabei keine streng definierte Komplexitätsgrenze.
+Der Unterschied zu Elementen ist, dass Module als Container für weitere Komponenten aggieren.
+Im *Atomic Design* entspricht dies der Zusammenfassung von _Molekülen_ und _Organismen_.

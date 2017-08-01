@@ -1,15 +1,13 @@
-.remark,
-blockquote
-  margin-bottom $space-l
+.remark
   line-height 1.6
   @media up_to_L
     font-size $font-size-l
-    hyphens manual
   @media L_and_up
     font-size $font-size-xl
 
 .remark
   color $color-brand-main
+  margin-bottom $space-l
   @media M_and_up
     text-align center
     span
@@ -19,6 +17,12 @@ blockquote
 
 blockquote
   @extend $font-lightitalic
+  line-height 1.6
+  hyphens manual
+  margin-top $space-l
+  margin-bottom $space-l
+  @media M_and_up
+    margin-left $space-xxl
   p
     &:before
     &:after

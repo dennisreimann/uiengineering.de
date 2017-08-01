@@ -2,12 +2,11 @@ include /wrap/wrap.pug
 
 mixin remark()
   .remark
-    +wrap()
-      block
+    block
 
 mixin quote(author)
   blockquote
     block
     footer
-      |&mdash;&thinsp;
+      |&mdash;
       = author

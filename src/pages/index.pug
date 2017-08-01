@@ -13,12 +13,13 @@ block vars
   - const episodes = mvb.articles.slice(0, 2)
 
 block main
-  +remark()
-    :marked
-      <span>Die Entwicklung von **User Interfaces** ist ein inter&shy;disziplinärer Vorgang.</span>
-      <span>Durch **Design** und **Entwicklung** wird **Fachliches** zu bedienbarer Software.</span>
-      <span>Wir setzen uns dafür ein, durch enge Zusammenarbeit dieser Gewerke **schneller
-      bessere und nachhaltigere Ergebnisse** zu erzielen.</span>
+  +wrap()
+    +remark()
+      :marked
+        <span>Die Entwicklung von **User Interfaces** ist ein inter&shy;disziplinärer Vorgang.</span>
+        <span>Durch **Design** und **Entwicklung** wird **Fachliches** zu bedienbarer Software.</span>
+        <span>Wir setzen uns dafür ein, durch enge Zusammenarbeit dieser Gewerke **schneller
+        bessere und nachhaltigere Ergebnisse** zu erzielen.</span>
 
   +section(true)
     :marked

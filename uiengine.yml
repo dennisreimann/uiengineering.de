@@ -1,5 +1,6 @@
 name: UIengineering
 copyright: Copyright © Jan Persiel, Dennis Reimann.
+debug: true
 
 source:
   components: ./src/components
@@ -23,7 +24,6 @@ theme:
     lang: de
     skin: deeplake
     hljs: atom-one-dark
-    debug: false
     cache: false
 
 breakpoints: !include src/tokens/breakpoints.json

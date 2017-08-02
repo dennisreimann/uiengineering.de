@@ -1,5 +1,5 @@
 mixin episode(a)
-  - const thumbnailSize = 320
+  - const thumbnailSize = 640
   - const thumbnailUrl = a.imageDir ? h.enforceScheme("http", h.podcastImageUrl(a.imageDir, thumbnailSize)) : null
   - const imageUrl = a.imageDir ? h.enforceScheme("http", h.podcastImageUrl(a.imageDir, 3000)) : null
   - const mp3Url = a.mp3 ? h.enforceScheme("http", h.assetUrl("mp3s/" + a.mp3)) : null

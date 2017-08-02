@@ -29,7 +29,6 @@ mixin __episodeFooter(episode)
   footer.episode__footer
     p.episode__meta
       span Veröffentlicht am
-      | &nbsp;
       time.episode__date= h.dateFormat.german(episode.date)
     +__episodeNav(episode)
 

@@ -121,7 +121,7 @@ gulp.task('episodes', () => buildHtml(paths.episodes, paths.episodesBasepath))
 
 gulp.task('html:optimize', cb =>
   gulp.src(paths.html)
-    .pipe(p.minifyHtml({empty: true}))
+    .pipe(p.htmlmin())
     .pipe(dest())
 )
 

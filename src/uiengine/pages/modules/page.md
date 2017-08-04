@@ -6,7 +6,7 @@ components:
 - main
 - wrap
 - episode
-- episodelist
+- episodeList
 - footer
 ---
 Komplexere Komponenten, die sich aus der Zusammensetzung von Elementen und ggf. anderen Modulen ergeben. 

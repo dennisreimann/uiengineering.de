@@ -1,5 +1,5 @@
 ---
 title: Heading
-label: A11
+label: H1
 ---
 Überschrift eines Seitenbereichs.

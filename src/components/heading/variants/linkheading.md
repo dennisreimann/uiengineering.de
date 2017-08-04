@@ -1,5 +1,5 @@
 ---
 title: Link-Heading
-label: A13
+label: H3
 ---
 Überschrift, die für die Verlinkung weiterer Inhalte verwendet wird.

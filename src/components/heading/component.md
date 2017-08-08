@@ -1,5 +1,6 @@
 ---
 title: Heading
+label: A1
 variants:
 - heading.pug
 - subheading.pug

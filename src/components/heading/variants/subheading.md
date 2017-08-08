@@ -1,5 +1,5 @@
 ---
 title: Subheading
-label: H2
+label: A12
 ---
 Überschrift für einen Teil eines Seitenbereichs.

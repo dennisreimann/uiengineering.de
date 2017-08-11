@@ -1,10 +1,16 @@
 // Browser-sync config file
 // http://www.browsersync.io/docs/options/
 
+const baseDir = './dist'
+
 module.exports = {
-  server: {
-    baseDir: './dist'
-  },
+  open: false,
   notify: false,
-  open: false
+  reloadThrottle: 1000,
+  files: [baseDir],
+  server: { baseDir },
+  watchOptions: {
+    ignoreInitial: true,
+    awaitWriteFinish: true
+  }
 }

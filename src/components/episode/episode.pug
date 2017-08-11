@@ -18,7 +18,7 @@ mixin __episodeMain(episode)
   - const title = episode.title + (episode.subtitle ? `: ${episode.subtitle}` : '') + " • UI engineering Podcast"
   - const imgSize = 320
   - const imgSmall = h.podcastImageUrl(episode.imageDir, imgSize)
-  - const imgLarge = h.podcastImageUrl(episode.imageDir, imgSize)
+  - const imgLarge = h.podcastImageUrl(episode.imageDir, imgSize * 2)
   .episode__player
     img.episode__image(alt=title src=imgSmall srcset=`${imgLarge} 2x`)
     audio.episode__audio(controls="controls")

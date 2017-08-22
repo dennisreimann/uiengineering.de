@@ -4,7 +4,7 @@ subtitle: Von Shopentwicklung und Wissenstransfer
 shortId: S02E04
 imageDir: s02e04
 mp3: s02e04-patrick-blom.mp3
-duration: 00:00:00
+duration: 00:54:38
 tags:
   - podcast
   - uiengineering

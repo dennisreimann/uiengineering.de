@@ -21,7 +21,7 @@ Was eigentlich nur als ein kleines Stimmungsbild beginnt, ist vielleicht der Anf
 
 ### Shownotes & Links
 
-- Buch: Remote, office not required by David Heinemeier Hansson/Jason Fried<br>[Amazon](http://amzn.to/2eL1qMU) oder [Amazon](http://www.amazon.de/dp/0091954673/ref=nosim?tag=vomrost-21) :)
-- [Basecamp](https://baecamp.com)
+- Buch: Remote, office not required by David Heinemeier Hansson/Jason Fried<br>[Amazon](http://amzn.to/2eL1qMU) :)
+- [Basecamp](https://basecamp.com)
 - [Slack](https://slack.com)
 - [Platz frei im Loft74](http://loft74.de)

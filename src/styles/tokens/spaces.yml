@@ -1,0 +1,17 @@
+global:
+  type: space
+  category: Abstände
+
+props:
+  - name: spaceXS
+    value: .25em
+  - name: spaceS
+    value: .5em
+  - name: spaceM
+    value: .75em
+  - name: spaceL
+    value: 1.5em
+  - name: spaceXL
+    value: 2.5em
+  - name: spaceXXL
+    value: 4em

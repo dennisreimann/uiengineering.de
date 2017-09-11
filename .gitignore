@@ -2,6 +2,7 @@
 /.vscode
 /deploy_rsa
 /npm-debug*
+/src/styles/tokens/*.styl
 *log
 dist
 node_modules

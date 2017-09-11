@@ -1,0 +1,13 @@
+global:
+  type: breakpoint
+  category: Breakpoints
+
+props:
+  - name: breakpointXS
+    value: 360px
+  - name: breakpointS
+    value: 560px
+  - name: breakpointM
+    value: 760px
+  - name: breakpointL
+    value: 960px

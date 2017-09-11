@@ -1,0 +1,16 @@
+categories:
+  merriweathersans: &merriweathersans Merriweather Sans
+
+global:
+  type: fontFamily
+  category: Schriftfamilien
+
+props:
+  - name: fontFamilyFallback
+    value: Helvetica, Arial, Tahoma, Verdana, sans-serif
+  - name: fontFamilyRegular
+    value: $font-face-merriweathersans-regular, $font-family-fallback
+  - name: fontFamilyLightitalic
+    value: $font-face-merriweathersans-lightitalic, $font-family-fallback
+  - name: fontFamilyBold
+    value: $font-face-merriweathersans-bold, $font-family-fallback

@@ -1,0 +1,14 @@
+categories:
+  merriweathersans: &merriweathersans Merriweather Sans
+
+global:
+  type: fontFace
+  category: *merriweathersans
+
+props:
+  - name: fontFaceMerriweathersansRegular
+    value: MerriweathersansRegular
+  - name: fontFaceMerriweathersansBold
+    value: MerriweathersansBold
+  - name: fontFaceMerriweathersansLightitalic
+    value: MerriweathersansLightitalic

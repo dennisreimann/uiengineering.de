@@ -9,13 +9,14 @@ import autoprefixer from 'autoprefixer'
 import mqpacker from 'css-mqpacker'
 import csswring from 'csswring'
 import BrowserSync from 'browser-sync'
-import { gulp as UIgulp } from 'uiengine'
+import { integrations as UIintegrations } from 'uiengine'
+import { stylFormat } from './lib/theo'
 import debounce from './lib/debounce'
 import createTemplateHelper from './lib/templateHelper'
 import bsConfig from './bs-config'
 
 const p = gulpLoadPlugins()
-const uiGulp = UIgulp(gulp, { debug: true })
+const uiGulp = UIintegrations.gulp(gulp, { debug: true })
 const browserSync = BrowserSync.create()
 const isDev = (argv.dev != null)
 const defaultScheme = isDev ? 'http' : 'https'
@@ -23,6 +24,7 @@ const assetHost = argv.assetHost
 const assetUrl = assetHost ? `//${assetHost}` : null
 const siteHost = isDev ? 'localhost:3000' : 'www.uiengineering.de'
 const siteUrl = `${defaultScheme}://${siteHost}`
+const { theo } = p
 
 const paths = {
   src: 'src',
@@ -33,9 +35,9 @@ const paths = {
   pages: ['src/pages/**/*.pug', '!src/pages/episode.pug'],
   styles: ['src/styles/*.styl', 'src/components/**/*.styl'],
   episodes: ['src/podcast/*.md'],
+  tokens: ['src/styles/tokens/*.yml'],
   templates: ['src/{components,templates}/**/*.pug'],
   templateIncludes: 'src/templates/includes/**',
-  tokens: 'src/tokens/*.json',
   feed: ['src/feed/*.pug'],
   episodesBasepath: 'podcast'
 }
@@ -119,6 +121,14 @@ gulp.task('feed', () => feedWithTemplate('podcast'))
 gulp.task('pages', () => buildHtml(paths.pages))
 gulp.task('episodes', () => buildHtml(paths.episodes, paths.episodesBasepath))
 
+theo.registerFormat('styl', stylFormat)
+
+gulp.task('tokens', () =>
+  gulp.src(paths.tokens)
+    .pipe(theo.plugin({ format: { type: 'styl' } }))
+    .pipe(gulp.dest('src/styles/tokens'))
+)
+
 gulp.task('html:optimize', cb =>
   gulp.src(paths.html)
     .pipe(p.htmlmin())
@@ -145,8 +155,8 @@ gulp.task('styles', () =>
   gulp.src(paths.styles)
     .pipe(p.plumber())
     .pipe(p.stylus({
-      paths: ['src/styles/lib'],
-      import: ['variables', 'mediaQueries', 'extends']
+      paths: ['src/styles/lib', 'src/styles/tokens'],
+      import: ['breakpoints', 'colors', 'font-faces', 'font-families', 'font-sizes', 'spaces', 'mediaQueries', 'extends']
     }))
     .pipe(p.concat('main.css'))
     .pipe(p.postcss([
@@ -178,23 +188,24 @@ gulp.task('sitemap', () =>
 uiGulp.task('patterns')
 
 gulp.task('watch', () => {
-  uiGulp.watch([`!${path.resolve(paths.templateIncludes)}`, `!${path.resolve(paths.tokens)}`])
+  uiGulp.watch([`!${path.resolve(paths.templateIncludes)}`])
   gulp.watch(paths.copy, ['copy'])
-  gulp.watch(paths.templates, ['episodes', 'pages'])
   gulp.watch(paths.feed, ['feed'])
-  gulp.watch(paths.tokens, ['styles', 'patterns'])
-  gulp.watch(paths.styles.concat(['src/styles/lib/*.styl']), ['styles'])
+  gulp.watch(paths.templates, ['episodes', 'pages'])
+  gulp.watch(paths.templateIncludes, ['patterns'])
   gulp.watch(paths.pages).on('change', event => buildHtml(event.path))
   gulp.watch(paths.episodes).on('change', event => buildHtml(event.path, paths.episodesBasepath))
   gulp.watch(paths.html).on('change', () => debounce('reload', browserSync.reload, 500))
-  gulp.watch(paths.templateIncludes, ['patterns'])
+  gulp.watch(paths.tokens, ['rebuild-tokens'])
+  gulp.watch('src/styles/lib/*', ['styles'])
 })
 
 gulp.task('optimize', ['html:optimize'])
 gulp.task('pug', ['pages', 'episodes', 'feed'])
 gulp.task('browserSync', cb => browserSync.init(bsConfig))
+gulp.task('rebuild-tokens', cb => runSequence('tokens', ['styles', 'patterns'], cb))
 gulp.task('images', cb => runSequence('images:resize', 'images:optimize', cb))
-gulp.task('build', cb => runSequence(['styles', 'copy', 'pug'], cb))
+gulp.task('build', cb => runSequence('tokens', ['styles', 'copy', 'pug'], cb))
 gulp.task('develop', cb => runSequence(['build', 'patterns'], ['watch', 'browserSync'], cb))
 gulp.task('rev', cb => runSequence('revAssets', 'pug', cb))
 gulp.task('production', cb => runSequence('build', 'rev', ['sitemap', 'optimize'], 'patterns', cb))

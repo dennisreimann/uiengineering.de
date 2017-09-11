@@ -1,0 +1,21 @@
+global:
+  type: fontSize
+  category: Schriftgrößen
+
+props:
+  - name: fontSizeS
+    value: .9rem
+  - name: fontSizeM
+    value: 1rem
+  - name: fontSizeL
+    value: 1.25rem
+  - name: fontSizeXL
+    value: 1.5rem
+  - name: fontSizeXXL
+    value: 2rem
+  - name: fontSizeBoss
+    value: 3rem
+  - name: fontSizeMega
+    value: 4.5rem
+  - name: fontSizeUltra
+    value: 6rem

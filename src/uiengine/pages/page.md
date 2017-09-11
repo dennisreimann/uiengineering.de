@@ -1,6 +1,7 @@
 ---
 title: Home
 children:
+- basics
 - elements
 - modules
 - prototype

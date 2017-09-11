@@ -1,10 +1,14 @@
-// converts fonts defined in json file to variables:
-fonts = json(pathjoin($tokens-path, 'fonts.json'), { hash: true })
+$font-families = {
+  MerriweathersansRegular: merriweathersans-regular,
+  MerriweathersansBold: merriweathersans-bold,
+  MerriweathersansLightitalic: merriweathersans-lightitalic
+}
 
-for $profile, $font-family in values(fonts)
+for $font-family in $font-families
+  $font-file = $font-families[$font-family]
   @font-face
     font-family $font-family
-    src s('url(../fonts/%s.woff2) format("woff2"), url(../fonts/%s.woff) format("woff")', $font-family, $font-family)
+    src s('url(../fonts/%s.woff2) format("woff2"), url(../fonts/%s.woff) format("woff")', $font-file, $font-file)
     font-weight normal
     font-style normal
     font-display optional

@@ -1,0 +1,39 @@
+categories:
+  brand: &brand Marke
+  neutral: &neutral Neutral
+  text: &text Text
+  background: &background Hintergrund
+
+global:
+  type: color
+
+aliases:
+  colorBrandPrimary: &colorBrandPrimary "#FF183E"
+  colorBrandSecondary: &colorBrandSecondary "#331833"
+
+props:
+  # brand
+  - name: colorBrandPrimary
+    value: *colorBrandPrimary
+    comment: Primäre Markenfarbe
+    category: *brand
+
+  - name: colorBrandSecondary
+    value: *colorBrandSecondary
+    comment: Sekundäre Markenfarbe
+    category: *brand
+
+  # neutral
+  - name: colorNeutralWhite
+    value: "#FFF"
+    category: *neutral
+
+  # text
+  - name: colorTextDefault
+    value: "{!colorBrandSecondary}"
+    category: *text
+
+  # background
+  - name: colorBackgroundDark
+    value: "#221022"
+    category: *background

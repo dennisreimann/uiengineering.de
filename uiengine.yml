@@ -26,5 +26,10 @@ theme:
     hljs: atom-one-dark
     cache: false
 
-breakpoints: !include src/tokens/breakpoints.json
+breakpoints:
+  XS: 360
+  S: 560
+  M: 760
+  L: 960
+
 browserSync: !include bs-config.js

@@ -13,7 +13,8 @@
     "start": "yarn cleanup && gulp develop --dev",
     "build": "yarn cleanup && gulp build",
     "prod": "yarn cleanup && gulp production --assetHost=cdn.uiengineering.de",
-    "build-and-deploy": "yarn prod && yarn deploy:assets && yarn deploy:site",
+    "build-and-deploy": "yarn prod && yarn deploy",
+    "deploy": "yarn deploy:assets && yarn deploy:site",
     "deploy:assets": "rsync -ravzulO --chmod=u=rwX,g=rX --exclude-from=.rsync-exclude-assets --delete-after dist/fonts dist/images dist/mp3s dist/styles uiengine.acamar.uberspace.de:html",
     "deploy:site": "rsync -ravzulO --chmod=u=rwX,g=rX --exclude-from=.rsync-exclude-site --delete-after dist/ uiengine.acamar.uberspace.de:html"
   },

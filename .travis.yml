@@ -27,7 +27,7 @@ before_deploy:
 # deployment via the travis build, see this for details:
 # https://oncletom.io/2016/travis-ssh-deploy/
 addons:
-  ssh_known_hosts: uiengine.acamar.uberspace.de
+  ssh_known_hosts: uiengineering.de
 deploy:
   skip_cleanup: true
   provider: script

@@ -7,6 +7,12 @@
   "engines": {
     "node": ">=7.1.0"
   },
+  "config": {
+    "deployment": {
+      "command": "rsync -ravzulO --chmod=u=rwX,g=rX --delete-after",
+      "target": "uiengine@uiengineering.de:html"
+    }
+  },
   "scripts": {
     "cleanup": "rm -rf dist",
     "images": "gulp images",
@@ -15,8 +21,8 @@
     "prod": "yarn cleanup && gulp production --assetHost=cdn.uiengineering.de",
     "build-and-deploy": "yarn prod && yarn deploy",
     "deploy": "yarn deploy:assets && yarn deploy:site",
-    "deploy:assets": "rsync -ravzulO --chmod=u=rwX,g=rX --exclude-from=.rsync-exclude-assets --delete-after dist/fonts dist/images dist/mp3s dist/styles uiengine@uiengine.acamar.uberspace.de:html",
-    "deploy:site": "rsync -ravzulO --chmod=u=rwX,g=rX --exclude-from=.rsync-exclude-site --delete-after dist/ uiengine@uiengineering.de:html"
+    "deploy:assets": "$npm_package_config_deployment_command --exclude-from=.rsync-exclude-assets dist/fonts dist/images dist/mp3s dist/styles $npm_package_config_deployment_target",
+    "deploy:site": "$npm_package_config_deployment_command --exclude-from=.rsync-exclude-site dist/ $npm_package_config_deployment_target"
   },
   "devDependencies": {
     "autoprefixer": "^6.1.2",

@@ -1,5 +1,6 @@
 name: UIengineering
-copyright: Copyright © Jan Persiel, Dennis Reimann.
+copyright: !markdown 'Copyright © Jan Persiel, Dennis Reimann. [![Generated with UIengine](https://img.shields.io/badge/Generated_with-UIengine-blue.svg)](https://github.com/dennisreimann/uiengine)'
+
 debug: true
 
 source:

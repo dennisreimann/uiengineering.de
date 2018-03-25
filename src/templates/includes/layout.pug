@@ -3,8 +3,8 @@ block vars
 doctype html
 html(lang="de" prefix="og: http://ogp.me/ns#")
   head
+    meta(charset="utf-8")
     meta(name="viewport" content="width=device-width,initial-scale=1")
-    meta(http-equiv="Content-Type" content="text/html;charset=UTF-8")
     block meta
       meta(name="keywords" content="UI engineering,Design,Development,Frontend,RWD,PatternLab,Pattern Library,Styleguide,Styletiles,Responsive,JavaScript,Elm,CSS,HTML,HTML5,Mobile")
       meta(name="description" content="Wir setzen uns dafür ein, durch die enge Zusammenarbeit von Design und Entwicklung schneller bessere und nachhaltigere Ergebnisse zu erzielen.")
@@ -18,6 +18,7 @@ html(lang="de" prefix="og: http://ogp.me/ns#")
     meta(property="og:site_name" content="UI engineering")
     title #{title} • UI engineering
     link(href=h.assetUrl("styles/main.css") rel="stylesheet")
+    link(href=h.assetUrl("images/apple-touch-icon.png") rel="apple-touch-icon")
     link(href=h.assetUrl("") rel="preconnect")
   body
     include safari-sniffer

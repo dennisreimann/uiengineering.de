@@ -1,6 +1,5 @@
 ---
-title: Podcast
-template: page
+template: page.pug
 context:
   title: "UI engineering Podcast: Die Zusammenarbeit von Design und Entwicklung"
   podcastFeedPath: "/podcast.xml"
@@ -12,4 +11,6 @@ context:
     - !data /episode/s01e07.yml
     - !data /episode/s01e06.yml
 ---
+# Podcast
+
 Die Podcast-Übersichtsseite

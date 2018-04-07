@@ -1,6 +1,6 @@
 import { argv } from 'yargs'
-import fs from 'fs'
-import path from 'path'
+import { resolve } from 'path'
+import { statSync } from 'fs'
 import gulp from 'gulp'
 import gulpLoadPlugins from 'gulp-load-plugins'
 import mergeStream from 'merge-stream'
@@ -9,14 +9,13 @@ import autoprefixer from 'autoprefixer'
 import mqpacker from 'css-mqpacker'
 import csswring from 'csswring'
 import BrowserSync from 'browser-sync'
-import { integrations as UIintegrations } from 'uiengine'
+import { build } from '@uiengine/core'
 import { stylFormat } from './lib/theo'
 import debounce from './lib/debounce'
 import createTemplateHelper from './lib/templateHelper'
 import bsConfig from './bs-config'
 
 const p = gulpLoadPlugins()
-const uiGulp = UIintegrations.gulp(gulp, { debug: true })
 const browserSync = BrowserSync.create()
 const isDev = (argv.dev != null)
 const defaultScheme = isDev ? 'http' : 'https'
@@ -55,7 +54,7 @@ const mvbConf = {
   loaded (article) {
     if (article.mp3) {
       const mp3Path = `src/mp3s/${article.mp3}`
-      const fileSize = fs.statSync(mp3Path).size
+      const fileSize = statSync(mp3Path).size
       article.mp3Bytes = fileSize
     }
   },
@@ -185,10 +184,19 @@ gulp.task('sitemap', () =>
     .pipe(dest())
 )
 
-uiGulp.task('patterns')
+gulp.task('patterns', done => {
+  const opts = {
+    debug: isDev,
+    serve: isDev,
+    watch: isDev ? [`!${resolve(paths.templateIncludes)}`] : false
+  }
+
+  build(opts)
+    .then(() => { done() })
+    .catch(done)
+})
 
 gulp.task('watch', () => {
-  uiGulp.watch([`!${path.resolve(paths.templateIncludes)}`])
   gulp.watch(paths.copy, ['copy'])
   gulp.watch(paths.feed, ['feed'])
   gulp.watch(paths.templates, ['episodes', 'pages'])
@@ -202,10 +210,9 @@ gulp.task('watch', () => {
 
 gulp.task('optimize', ['html:optimize'])
 gulp.task('pug', ['pages', 'episodes', 'feed'])
-gulp.task('browserSync', cb => browserSync.init(bsConfig))
 gulp.task('rebuild-tokens', cb => runSequence('tokens', ['styles', 'patterns'], cb))
 gulp.task('images', cb => runSequence('images:resize', 'images:optimize', cb))
 gulp.task('build', cb => runSequence('tokens', ['styles', 'copy', 'pug'], cb))
-gulp.task('develop', cb => runSequence(['build', 'patterns'], ['watch', 'browserSync'], cb))
+gulp.task('develop', cb => runSequence(['build', 'patterns'], 'watch', cb))
 gulp.task('rev', cb => runSequence('revAssets', 'pug', cb))
 gulp.task('production', cb => runSequence('build', 'rev', ['sitemap', 'optimize'], 'patterns', cb))

@@ -1,17 +1,29 @@
 ---
-title: Episodenliste
 schema:
   +episodeList(episodes, title, subtitle):
-    episodes: 
+    episodes:
       type: '[Episode]'
       required: true
-    title: 
+    title:
       type: 'String'
       description: Titel, bspw. der Staffelname
-    subtitle: 
+    subtitle:
       type: 'String'
       description: Untertitel, nutzbar für Anzahl der Episoden
+
+context:
+  episodes:
+    - !data /episode/s01e07.yml
+    - !data /episode/s01e06.yml
+
+variants:
+- file: list-with-title.pug
+  title: Episodenliste mit Titelzeile
+- file: list-without-title.pug
+  title: Episodenliste ohne Titelzeile
 ---
-In dieser Liste werden die Teaser der Episoden dargestellt. 
-Die Sortierung ist chronologisch und erfolgt nach Staffeln sortiert. 
+# Episodenliste
+
+In dieser Liste werden die Teaser der Episoden dargestellt.
+Die Sortierung ist chronologisch und erfolgt nach Staffeln sortiert.
 Das Blättern ist pro Staffel möglich.

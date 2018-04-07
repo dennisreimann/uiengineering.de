@@ -8,7 +8,7 @@ mixin navigation()
         +__navItem('podcast', '/podcast.html', 'Podcast')
         +__navItem('praxis', '/praxis.html', 'Praxis')
         +__navItem('kontakt', '/kontakt.html','Kontakt')
-        +__navItem('patterns', '/patterns', 'Patterns')
+        +__navItem('patterns', '/patterns/', 'Patterns')
 
 mixin __navItem(id, url, title)
   - const classes = `navigation__item--${id}` + (h.isCurrentPage(id) ? ' navigation__item--current' : '')

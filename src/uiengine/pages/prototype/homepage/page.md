@@ -1,6 +1,6 @@
 ---
-title: Homepage
-template: page
+template: page.pug
+
 context:
   title: "Design und Entwicklung"
   header:
@@ -11,4 +11,6 @@ context:
     - !data /episode/s01e08.yml
     - !data /episode/s01e07.yml
 ---
+# Homepage
+
 Die Startseite

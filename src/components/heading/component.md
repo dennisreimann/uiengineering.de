@@ -1,9 +1,18 @@
 ---
-title: Heading
 label: A1
+
 variants:
-- heading.pug
-- subheading.pug
-- linkheading.pug
+- file: heading.pug
+  title: Heading
+  label: A11
+  description: Überschrift eines Seitenbereichs.
+- file: subheading.pug
+  title: Subheading
+  label: A12
+  description: Überschrift für einen Teil eines Seitenbereichs.
+- file: linkheading.pug
+  title: Link-Heading
+  label: A13
+  description: Überschrift, die für die Verlinkung weiterer Inhalte verwendet wird.
 ---
 Headings werden zur Strukturierung von Inhalten und Seiten immer nach dem jeweilgen Kontext ausgewählt, nicht nach Optik. Semantik geht vor Erscheinung.

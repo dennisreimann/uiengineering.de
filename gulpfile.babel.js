@@ -13,7 +13,6 @@ import { build } from '@uiengine/core'
 import { stylFormat } from './lib/theo'
 import debounce from './lib/debounce'
 import createTemplateHelper from './lib/templateHelper'
-import bsConfig from './bs-config'
 
 const p = gulpLoadPlugins()
 const browserSync = BrowserSync.create()

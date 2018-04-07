@@ -9,6 +9,7 @@ import autoprefixer from 'autoprefixer'
 import mqpacker from 'css-mqpacker'
 import csswring from 'csswring'
 import BrowserSync from 'browser-sync'
+import theo from 'theo'
 import { build } from '@uiengine/core'
 import { stylFormat } from './lib/theo'
 import debounce from './lib/debounce'
@@ -22,7 +23,6 @@ const assetHost = argv.assetHost
 const assetUrl = assetHost ? `//${assetHost}` : null
 const siteHost = isDev ? 'localhost:3000' : 'www.uiengineering.de'
 const siteUrl = `${defaultScheme}://${siteHost}`
-const { theo } = p
 
 const paths = {
   src: 'src',
@@ -123,7 +123,7 @@ theo.registerFormat('styl', stylFormat)
 
 gulp.task('tokens', () =>
   gulp.src(paths.tokens)
-    .pipe(theo.plugin({ format: { type: 'styl' } }))
+    .pipe(p.theo({ format: { type: 'styl' } }))
     .pipe(gulp.dest('src/styles/tokens'))
 )
 

@@ -32,6 +32,7 @@ const paths = {
   copy: ['src/{fonts,images,svgs,mp3s}/**/*', 'src/site/**/*', 'src/site/.htaccess'],
   pages: ['src/pages/**/*.pug', '!src/pages/episode.pug'],
   styles: ['src/styles/*.styl', 'src/components/**/*.styl'],
+  scripts: ['node_modules/amplitudejs/dist/amplitude.min.js', 'src/scripts/*.js'],
   episodes: ['src/podcast/*.md'],
   tokens: ['src/styles/tokens/*.yml'],
   templates: ['src/{components,templates}/**/*.pug'],
@@ -166,6 +167,14 @@ gulp.task('styles', () =>
     .pipe(browserSync.stream({match: '**/*.css'}))
 )
 
+gulp.task('scripts', () =>
+  gulp.src(paths.scripts)
+    .pipe(p.plumber())
+    .pipe(p.concat('main.js'))
+    .pipe(dest('scripts'))
+    .pipe(browserSync.stream({match: '**/*.jss'}))
+)
+
 gulp.task('revAssets', () => {
   const RevAll = p.revAll
   const revAll = new RevAll({ prefix: assetUrl })
@@ -198,6 +207,8 @@ gulp.task('patterns', done => {
 gulp.task('watch', () => {
   gulp.watch(paths.copy, ['copy'])
   gulp.watch(paths.feed, ['feed'])
+  gulp.watch(paths.styles, ['styles'])
+  gulp.watch(paths.scripts, ['scripts'])
   gulp.watch(paths.templates, ['episodes', 'pages'])
   gulp.watch(paths.templateIncludes, ['patterns'])
   gulp.watch(paths.pages).on('change', event => buildHtml(event.path))
@@ -211,7 +222,7 @@ gulp.task('optimize', ['html:optimize'])
 gulp.task('pug', ['pages', 'episodes', 'feed'])
 gulp.task('rebuild-tokens', cb => runSequence('tokens', ['styles', 'patterns'], cb))
 gulp.task('images', cb => runSequence('images:resize', 'images:optimize', cb))
-gulp.task('build', cb => runSequence('tokens', ['styles', 'copy', 'pug'], cb))
+gulp.task('build', cb => runSequence('tokens', ['styles', 'scripts', 'copy', 'pug'], cb))
 gulp.task('develop', cb => runSequence(['build', 'patterns'], 'watch', cb))
 gulp.task('rev', cb => runSequence('revAssets', 'pug', cb))
 gulp.task('production', cb => runSequence('build', 'rev', ['sitemap', 'optimize'], 'patterns', cb))

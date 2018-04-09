@@ -10,9 +10,12 @@
     margin-bottom 0
 
   &__player
-    display block
-    width 320px
-    margin 0 auto $space-l
+    margin 0 auto $space-xl
+
+    @media up_to_S
+      width 100%
+    @media S_and_up
+      width 480px
 
   &__image
     width 100%
@@ -26,4 +29,3 @@
 
   &__navtitle
     margin-top $space-l
-

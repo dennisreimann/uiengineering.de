@@ -1,0 +1,76 @@
+$player-button-size = 70px
+
+.player
+  border-radius 10px
+  overflow hidden
+  min-width 300px
+  max-width 480px
+
+  &__cover
+    display block
+    width 100%
+
+  &__bottom
+    color $color-neutral-white
+    background-color $color-background-dark
+    padding-bottom $space-m
+
+  &__progress
+    display block
+    background-color rgba(255, 255, 255, .25)
+    appearance none
+    width 100%
+    height $space-m
+    margin-bottom $space-s
+    cursor pointer
+    border none
+
+    &::-webkit-progress-bar
+      background-color #313252
+    &::-moz-progress-bar,
+    &::-webkit-progress-value
+      background-color #00a0ff
+
+  &__time
+    display flex
+    justify-content space-between
+    margin $space-s 0 $space-m
+    padding 0 $space-s
+    opacity .5
+    font-size $font-size-s
+
+  &__current-time
+    margin-left 5px
+
+  &__duration
+    margin-right 5px
+
+  &__controls
+    display flex
+    margin $space-m 0 0 0
+    padding 0 $space-m
+
+  &__button
+    width $player-button-size
+    height $player-button-size
+    margin-right $space-l
+    background-size cover
+    background-repeat no-repeat
+    cursor pointer
+
+    &.amplitude-paused
+      background-image embedurl('play.svg')
+
+    &.amplitude-playing
+      background-image embedurl('pause.svg')
+
+  &__info
+    flex 1
+
+  &__name,
+  &__album,
+  &__artist
+    margin-bottom $space-s
+
+  &__album
+    opacity .5

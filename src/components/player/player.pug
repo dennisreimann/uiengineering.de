@@ -1,0 +1,47 @@
+mixin player(episode)
+  - const name = episode.title + (episode.subtitle ? `: ${episode.subtitle}` : '')
+  - const title = `${name} • UI engineering Podcast`
+  - const album = h.shortIdToGerman(episode.shortId)
+  - const imgSize = 320
+  - const imgSmall = h.podcastImageUrl(episode.imageDir, imgSize)
+  - const imgLarge = h.podcastImageUrl(episode.imageDir, imgSize * 2)
+  - const src = h.assetUrl(`mp3s/${episode.mp3}`)
+
+  .player.player--single&attributes(attributes)
+    img.player__cover(src=imgLarge amplitude-song-info="cover_art_url" amplitude-main-song-info="true")
+    .player__bottom
+      progress.player__progress.amplitude-song-played-progress(amplitude-main-song-played-progress="true")
+
+      .player__time
+        span.player__current-time
+          span.player__current-minutes.amplitude-current-minutes(amplitude-main-current-minutes="true")
+          = ':'
+          span.player__current-seconds.amplitude-current-seconds(amplitude-main-current-seconds="true")
+
+        span.player__duration
+          span.player__duration-minutes.amplitude-duration-minutes(amplitude-main-duration-minutes="true")
+          = ':'
+          span.player__duration-seconds.amplitude-duration-seconds(amplitude-main-duration-seconds="true")
+
+      .player__controls
+        .player__button(amplitude-main-play-pause="true" id="play-pause" class="amplitude-play-pause")
+        .player__info
+          .player__name(amplitude-song-info="name" amplitude-main-song-info="true")
+          .player__album(amplitude-song-info="album" amplitude-main-song-info="true")
+          //- .player__artist(amplitude-song-info="artist" amplitude-main-song-info="true")
+
+  script.
+    window.UIengineering = {
+      amplitude: {
+        songs: [
+          {
+            "name": "#{name}",
+            "artist": "Jan Persiel & Dennis Reimann",
+            "album": "#{album}",
+            "url": "#{src}",
+            "cover_art_url": "#{imgLarge}"
+          }
+        ]
+      }
+    };
+  script(src=h.assetUrl("scripts/main.js") defer)

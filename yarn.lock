@@ -132,6 +132,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+amplitudejs@^3.2.3:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/amplitudejs/-/amplitudejs-3.2.3.tgz#c2a2e060f472ac8f67959c4fdc345d1aa460a899"
+
 ansi-bgblack@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/ansi-bgblack/-/ansi-bgblack-0.1.1.tgz#a68ba5007887701b6aafbe3fa0dadfdfa8ee3ca2"

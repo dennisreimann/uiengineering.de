@@ -68,5 +68,8 @@
     "standard": "^11.0.1",
     "theo": "^7.0.1",
     "yargs": "^11.0.0"
+  },
+  "dependencies": {
+    "amplitudejs": "^3.2.3"
   }
 }

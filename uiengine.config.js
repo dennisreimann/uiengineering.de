@@ -21,12 +21,9 @@ module.exports = {
 
   template: 'variant-main.pug',
 
-  theme: {
-    module: '@uiengine/theme',
-    options: {
-      lang: 'de',
-      base: '/patterns/'
-    }
+  ui: {
+    lang: 'de',
+    base: '/patterns/'
   },
 
   breakpoints: {

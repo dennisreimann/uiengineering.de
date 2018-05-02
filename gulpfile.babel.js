@@ -8,15 +8,12 @@ import runSequence from 'run-sequence'
 import autoprefixer from 'autoprefixer'
 import mqpacker from 'css-mqpacker'
 import csswring from 'csswring'
-import BrowserSync from 'browser-sync'
 import theo from 'theo'
 import { build } from '@uiengine/core'
 import { stylFormat } from './lib/theo'
-import debounce from './lib/debounce'
 import createTemplateHelper from './lib/templateHelper'
 
 const p = gulpLoadPlugins()
-const browserSync = BrowserSync.create()
 const isDev = (argv.dev != null)
 const defaultScheme = isDev ? 'http' : 'https'
 const assetHost = argv.assetHost
@@ -147,7 +144,6 @@ gulp.task('images:optimize', () => {
 gulp.task('copy', cb =>
   gulp.src(paths.copy)
     .pipe(dest())
-    .pipe(browserSync.stream())
 )
 
 gulp.task('styles', () =>
@@ -164,7 +160,6 @@ gulp.task('styles', () =>
       csswring
     ]))
     .pipe(dest('styles'))
-    .pipe(browserSync.stream({match: '**/*.css'}))
 )
 
 gulp.task('scripts', () =>
@@ -172,7 +167,6 @@ gulp.task('scripts', () =>
     .pipe(p.plumber())
     .pipe(p.concat('main.js'))
     .pipe(dest('scripts'))
-    .pipe(browserSync.stream({match: '**/*.jss'}))
 )
 
 gulp.task('revAssets', () => {
@@ -213,7 +207,6 @@ gulp.task('watch', () => {
   gulp.watch(paths.templateIncludes, ['patterns'])
   gulp.watch(paths.pages).on('change', event => buildHtml(event.path))
   gulp.watch(paths.episodes).on('change', event => buildHtml(event.path, paths.episodesBasepath))
-  gulp.watch(paths.html).on('change', () => debounce('reload', browserSync.reload, 500))
   gulp.watch(paths.tokens, ['rebuild-tokens'])
   gulp.watch('src/styles/lib/*', ['styles'])
 })

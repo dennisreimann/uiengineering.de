@@ -4,16 +4,10 @@
 
 ## 📦 Wie setze ich das Projekt auf?
 
-Vorraussetzung ist der Paketmanager [Yarn](https://yarnpkg.com/en/docs/install):
+Abhängigkeiten installieren:
 
 ```bash
-$ brew install yarn
-```
-
-Mit diesem werden die Abhängigkeiten installiert:
-
-```bash
-$ yarn install
+$ npm install
 ```
 
 ## 👷 Wie baue ich das Projekt?
@@ -21,7 +15,7 @@ $ yarn install
 Mit folgendem Task genutzt werden Änderungen kontinuierlich gebaut:
 
 ```bash
-$ yarn start
+$ npm start
 ```
 
 Der Befehl startet einen lokalen Entwicklungs-Server unter [`http://localhost:3000/`](http://localhost:3000/)
@@ -45,7 +39,7 @@ $ brew install graphicsmagick
 Damit kann man nun mit folgendem Task aus einem 3000er-Vorlagebild alle entsprechenden Größen generieren:
 
 ```bash
-$ yarn images
+$ npm run images
 ```
 
 Dieser Task muss manuell ausgeführt werden und ist nicht Bestandteil des normalen Buildprozess, da die generierten Bilder im `src`-Verzeichnis abgelegt werden und dieser Schritt nur einmal erfolgen sollte.
@@ -55,5 +49,5 @@ Dieser Task muss manuell ausgeführt werden und ist nicht Bestandteil des normal
 Dieser Befehl erstellt einen neuen Production-Build und deployed diesen:
 
 ```bash
-$ yarn run build-and-deploy
+$ npm run build-and-deploy
 ```

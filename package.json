@@ -16,11 +16,11 @@
   "scripts": {
     "cleanup": "rm -rf dist",
     "images": "gulp images",
-    "start": "yarn cleanup && gulp develop --dev",
-    "build": "yarn cleanup && gulp build",
-    "prod": "yarn cleanup && gulp production --assetHost=cdn.uiengineering.de",
-    "build-and-deploy": "yarn prod && yarn deploy",
-    "deploy": "yarn deploy:assets && yarn deploy:site",
+    "start": "npm run cleanup && gulp develop --dev",
+    "build": "npm run cleanup && gulp build",
+    "prod": "npm run cleanup && gulp production --assetHost=cdn.uiengineering.de",
+    "build-and-deploy": "npm run prod && npm run deploy",
+    "deploy": "npm run deploy:assets && npm run deploy:site",
     "deploy:assets": "$npm_package_config_deployment_command --exclude-from=.rsync-exclude-assets dist/fonts dist/images dist/mp3s dist/styles $npm_package_config_deployment_target",
     "deploy:site": "$npm_package_config_deployment_command --exclude-from=.rsync-exclude-site dist/ $npm_package_config_deployment_target"
   },

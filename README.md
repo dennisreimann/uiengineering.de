@@ -44,6 +44,16 @@ $ npm run images
 
 Dieser Task muss manuell ausgeführt werden und ist nicht Bestandteil des normalen Buildprozess, da die generierten Bilder im `src`-Verzeichnis abgelegt werden und dieser Schritt nur einmal erfolgen sollte.
 
+## 🖼 Wie exportiere ich die Komponenten für Sketch?
+
+Der Sketch Library Export kann mit foilgendem Befehl generiert werden:
+
+```bash
+$ npm run sketch
+```
+
+Daraufhin liegen im Ordner `sketch` die Dateien, die in Sketch über das [asketch-Plugin](https://github.com/brainly/html-sketchapp#create-asketch-files) importiert werden können.
+
 ## 🚀 Wie deploye ich das Projekt?
 
 Dieser Befehl erstellt einen neuen Production-Build und deployed diesen:

@@ -1,10 +1,12 @@
 include /wrap/wrap.pug
+include /main/main.pug
 
-+wrap(false)
-  :marked
-    Um die fachlichen Anforderungen in funktionale und gut nutzbare Software
-    zu transformieren, ist eine enge Zusammenarbeit von Design und Entwicklung nötig.
-    Ein arbeitsteiliger Ansatz ist dabei nicht mehr zeitgemäß, dennoch leider
-    weiterhin oft praktiziert. Auch dort wo Begriffe wie _lean_ oder _agil_ als
-    Selbstverständlichkeit angesehen werden, findet man oftmals Abläufe,
-    die ein Zurückrutschen in alte Muster erkennen lassen.
++main()
+  +wrap(false)
+    :marked
+      Um die fachlichen Anforderungen in funktionale und gut nutzbare Software
+      zu transformieren, ist eine enge Zusammenarbeit von Design und Entwicklung nötig.
+      Ein arbeitsteiliger Ansatz ist dabei nicht mehr zeitgemäß, dennoch leider
+      weiterhin oft praktiziert. Auch dort wo Begriffe wie _lean_ oder _agil_ als
+      Selbstverständlichkeit angesehen werden, findet man oftmals Abläufe,
+      die ein Zurückrutschen in alte Muster erkennen lassen.

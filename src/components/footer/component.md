@@ -1,6 +1,5 @@
 ---
 variants:
-- file: footer.pug
-  template: variant-body.pug
+- footer.pug
 ---
 Im Footer werden relevante Absenderdaten und rechtliche Hinweise abgebildet.

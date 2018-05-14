@@ -19,7 +19,7 @@ module.exports = {
     styl: './lib/uiengine/styl'
   },
 
-  template: 'variant-main.pug',
+  template: 'uiengine.pug',
 
   ui: {
     lang: 'de',

@@ -1,6 +1,7 @@
 ---
 title: Home
 children:
+- documentation
 - basics
 - elements
 - modules

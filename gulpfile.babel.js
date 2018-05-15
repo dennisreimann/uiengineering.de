@@ -26,7 +26,7 @@ const paths = {
   dest: 'dist',
   html: ['dist/**/*.html'],
   rev: ['dist/**/*.{css,js,map,svg,jpg,png,gif,woff,woff2}', '!dist/patterns/_uiengine-theme/**/**'],
-  copy: ['src/{fonts,images,svgs,mp3s}/**/*', 'src/site/**/*', 'src/site/.htaccess'],
+  copy: ['src/{fonts,images,svgs,mp3s}/**/*', 'src/site/**/*', 'src/site/**/.htaccess'],
   pages: ['src/pages/**/*.pug', '!src/pages/episode.pug'],
   styles: ['src/styles/*.styl', 'src/components/**/*.styl'],
   scripts: ['node_modules/amplitudejs/dist/amplitude.min.js', 'src/scripts/*.js'],

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /datenschutz.html
+Disallow: /impressum.html
+
+Sitemap: https://www.uiengineering.de/sitemap.xml

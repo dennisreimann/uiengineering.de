@@ -9,6 +9,9 @@ block vars
   - const episodes = mvb.articles.slice(0, 2)
   - const header = { title: title, type: "kontakt" }
 
+block meta
+  meta(name="robots" content="noindex")
+
 block main
   +section(true)
     :marked

@@ -42,6 +42,5 @@ Auch sprechen wir über Tools und wer diese verwenden kann. Eine Reihe von Links
 - [Frontify](https://frontify.com)
 - [Fabricator](https://fbrctr.github.io)
 - [Fractal.Build](http://fractal.build)
-- [RWD Pad](http://janpersiel.com/rwd-pad-the-fastest-way-to-sketch-web-and-app-interfaces/)
 - [Living Pattern Libraries: Wie man Styleguide Zombies killt](https://dennisreimann.de/articles/living-pattern-library.html)
 - [Termine mit #uiengineering](https://uiengineering.de/)

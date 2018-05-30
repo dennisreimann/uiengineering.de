@@ -23,14 +23,13 @@ module.exports = {
 
   ui: {
     lang: 'de',
-    base: '/patterns/'
-  },
-
-  breakpoints: {
-    XS: 360,
-    S: 560,
-    M: 760,
-    L: 960
+    base: '/patterns/',
+    breakpoints: {
+      XS: 360,
+      S: 560,
+      M: 760,
+      L: 960
+    }
   },
 
   browserSync

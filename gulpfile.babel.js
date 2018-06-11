@@ -1,5 +1,4 @@
 import { argv } from 'yargs'
-import { resolve } from 'path'
 import { statSync } from 'fs'
 import gulp from 'gulp'
 import gulpLoadPlugins from 'gulp-load-plugins'
@@ -27,7 +26,7 @@ const paths = {
   html: ['dist/**/*.html'],
   rev: ['dist/**/*.{css,js,map,svg,jpg,png,gif,woff,woff2}', '!dist/patterns/_uiengine-theme/**/**'],
   copy: ['src/{fonts,images,svgs,mp3s}/**/*', 'src/site/**/*', 'src/site/**/.htaccess'],
-  pages: ['src/pages/**/*.pug', '!src/pages/episode.pug'],
+  pages: ['src/templates/{datenschutz,impressum,index,kontakt,podcast,praxis}.pug'],
   styles: ['src/styles/*.styl', 'src/components/**/*.styl'],
   scripts: ['node_modules/amplitudejs/dist/amplitude.min.js', 'src/scripts/*.js'],
   episodes: ['src/podcast/*.md'],
@@ -190,7 +189,7 @@ gulp.task('patterns', done => {
   const opts = {
     debug: isDev,
     serve: isDev,
-    watch: isDev ? [`!${resolve(paths.templateIncludes)}`] : false
+    watch: isDev // ? [`!${resolve(paths.templateIncludes)}`] : false
   }
 
   build(opts)

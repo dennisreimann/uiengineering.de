@@ -16,7 +16,7 @@
   "scripts": {
     "cleanup": "rm -rf dist sketch",
     "images": "gulp images",
-    "sketch": "rm -rf sketch && html-sketchapp --config html-sketchapp.config.js && open -a Sketch",
+    "sketch": "rm -rf sketch && html-sketchapp --config lib/html-sketchapp.js && open -a Sketch",
     "start": "npm run cleanup && gulp develop --dev",
     "build": "npm run cleanup && gulp build",
     "prod": "npm run cleanup && gulp production --assetHost=cdn.uiengineering.de",
@@ -26,8 +26,8 @@
     "deploy:site": "$npm_package_config_deployment_command --exclude-from=.rsync-exclude-site dist/ $npm_package_config_deployment_target"
   },
   "devDependencies": {
-    "@uiengine/core": "^0.19.5",
-    "autoprefixer": "^8.5.0",
+    "@uiengine/core": "^0.21.0",
+    "autoprefixer": "^8.6.2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
@@ -61,7 +61,7 @@
     "jstransformer-marked": "^1.0.3",
     "marked": "^0.4.0",
     "merge-stream": "^1.0.1",
-    "moment": "^2.22.1",
+    "moment": "^2.22.2",
     "pug": "^2.0.3",
     "run-sequence": "^2.2.1",
     "standard": "^11.0.1",

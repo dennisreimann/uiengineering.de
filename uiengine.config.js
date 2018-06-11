@@ -1,4 +1,6 @@
-const browserSync = require('./bs-config')
+const browserSync = require('./lib/browsersync')
+const breakpoints = require('./lib/breakpoints')
+const viewports = require('./lib/viewports')
 
 module.exports = {
   name: 'UIengineering',
@@ -24,12 +26,8 @@ module.exports = {
   ui: {
     lang: 'de',
     base: '/patterns/',
-    breakpoints: {
-      XS: 360,
-      S: 560,
-      M: 760,
-      L: 960
-    }
+    breakpoints,
+    viewports
   },
 
   browserSync

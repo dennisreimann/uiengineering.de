@@ -1,6 +1,7 @@
 $player-button-size = 70px
 
 .player
+  margin 0 auto $space-xl
   border-radius 10px
   overflow hidden
   min-width 300px
@@ -12,7 +13,7 @@ $player-button-size = 70px
 
   &__bottom
     color $color-neutral-white
-    background-color $color-background-dark
+    background-color $color-brand-secondary
     padding-bottom $space-m
 
   &__progress
@@ -26,7 +27,7 @@ $player-button-size = 70px
     border none
 
     &::-webkit-progress-bar
-      background-color #313252
+      background-color rgba(255, 255, 255, .5)
     &::-moz-progress-bar,
     &::-webkit-progress-value
       background-color #00a0ff

@@ -6,6 +6,10 @@ shortId: S01E08
 imageDir: s01e08
 mp3: s01e08-bem-atomic-css-und-co.mp3
 duration: 00:27:57
+description: |
+  <p>
+    CSS ist eine Schnittmenge der Gewerke Design und Entwicklung. In der achten Folge des UIengineering Podcasts sprechen wir heute darüber wie wir CSS schreiben, welche Tools wir nutzen und welche Architekturen es gibt.
+  </p>
 tags:
   - podcast
   - uiengineering

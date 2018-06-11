@@ -8,6 +8,17 @@ global:
   type: color
 
 aliases:
+  # Season 1
+  colorBrandPrimarySeason1: &colorBrandPrimarySeason1 "#FF183E"
+  colorBrandSecondarySeason1: &colorBrandSecondarySeason1 "#331833"
+  # Season 2
+  colorBrandPrimarySeason2: &colorBrandPrimarySeason2 "#FF7736"
+  colorBrandSecondarySeason2: &colorBrandSecondarySeason2 "#13283A"
+  # Quick 'n dirty
+  colorBrandPrimaryQnD: &colorBrandPrimaryQnD "#4FB327"
+  colorBrandSecondaryQnD: &colorBrandSecondaryQnD "#131D2C"
+
+  # Current brand colors
   colorBrandPrimary: &colorBrandPrimary "#FF183E"
   colorBrandSecondary: &colorBrandSecondary "#331833"
 
@@ -35,5 +46,9 @@ props:
 
   # background
   - name: colorBackgroundDark
-    value: "#221022"
     category: *background
+    value: "{!colorBrandSecondary}"
+
+  - name: colorBackgroundBrand
+    category: *background
+    value: "{!colorBrandPrimary}"

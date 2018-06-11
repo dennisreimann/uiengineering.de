@@ -1,6 +1,7 @@
 ---
 title: Prototyp
 children:
+- podcast
 - episode
 ---
 Prototypische Seiten, aufgebaut aus Beispieldaten.

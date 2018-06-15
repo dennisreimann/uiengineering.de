@@ -1,6 +1,6 @@
 ---
 title: Section
-schema:
+properties:
   +block():
     block:
       type: Block
@@ -25,5 +25,5 @@ schema:
       description: Inhalt des Containers als Mixin-Block
       required: true
 ---
-Einzelne Bereiche auf Seiten können durch Sektionen (Sections) in überschaubarere Einheiten zerlegt werden. 
+Einzelne Bereiche auf Seiten können durch Sektionen (Sections) in überschaubarere Einheiten zerlegt werden.
 Eine farbliche Hinterlegung kann hierbei die einzelnen Zonen noch besser sichtbar machen und Struktur geben.

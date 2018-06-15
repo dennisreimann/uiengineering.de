@@ -1,5 +1,5 @@
 ---
-schema:
+properties:
   +episodeList(episodes, title, subtitle):
     episodes:
       type: '[Episode]'

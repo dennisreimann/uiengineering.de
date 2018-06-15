@@ -11,7 +11,7 @@ module.exports = {
     templates: './src/templates',
     pages: './src/uiengine/pages',
     data: './src/uiengine/data',
-    schema: './src/uiengine/schema'
+    entities: './src/uiengine/entities'
   },
 
   target: './dist/patterns',

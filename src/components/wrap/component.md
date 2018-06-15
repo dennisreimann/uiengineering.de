@@ -1,7 +1,7 @@
 ---
 title: Wrap
 
-schema:
+properties:
   +wrap(single):
     single:
       type: Boolean

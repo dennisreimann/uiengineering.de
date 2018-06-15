@@ -1,6 +1,6 @@
 ---
 title: Main
-schema:
+properties:
   +main():
     block:
       type: Block

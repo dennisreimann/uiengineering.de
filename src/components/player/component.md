@@ -1,5 +1,5 @@
 ---
-schema:
+properties:
   +player(episode):
     episode:
       type: Episode

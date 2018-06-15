@@ -2,7 +2,7 @@
 title: Bemerkungstext
 label: M2
 
-schema:
+properties:
   +remark():
     block:
       type: Block

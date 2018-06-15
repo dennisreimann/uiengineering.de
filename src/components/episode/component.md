@@ -1,5 +1,5 @@
 ---
-schema:
+properties:
   +episode(episode):
     episode:
       type: Episode

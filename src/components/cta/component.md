@@ -1,7 +1,7 @@
 ---
 label: A2
 
-schema:
+properties:
   +cta(title, url):
     title:
       type: String

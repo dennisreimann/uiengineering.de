@@ -1,5 +1,5 @@
 ---
-schema:
+properties:
   +header(data):
     data:
       type: Header

@@ -1,18 +1,31 @@
 import { argv } from 'yargs'
 import { statSync } from 'fs'
-import gulp from 'gulp'
-import gulpLoadPlugins from 'gulp-load-plugins'
+import { src, dest, series, parallel, task, watch } from 'gulp'
 import mergeStream from 'merge-stream'
-import runSequence from 'run-sequence'
 import autoprefixer from 'autoprefixer'
 import mqpacker from 'css-mqpacker'
 import csswring from 'csswring'
-import theo from 'theo'
+import data from 'gulp-data'
+import concat from 'gulp-concat'
+import htmlmin from 'gulp-htmlmin'
+import imagemin from 'gulp-imagemin'
+import imageResize from 'gulp-image-resize'
+import newer from 'gulp-newer'
+import mvb from 'gulp-mvb'
+import pug from 'gulp-pug'
+import postcss from 'gulp-postcss'
+import rename from 'gulp-rename'
+import rev from 'gulp-rev'
+import revCssUrl from 'gulp-rev-css-url'
+import revDeleteOriginal from 'gulp-rev-delete-original'
+import sitemap from 'gulp-sitemap'
+import stylus from 'gulp-stylus'
+import theo from 'gulp-theo'
+import Theo from 'theo'
 import { build } from '@uiengine/core'
 import { stylFormat } from './lib/theo'
 import createTemplateHelper from './lib/templateHelper'
 
-const p = gulpLoadPlugins()
 const isDev = (argv.dev != null)
 const defaultScheme = isDev ? 'http' : 'https'
 const assetHost = argv.assetHost
@@ -37,7 +50,7 @@ const paths = {
   episodesBasepath: 'podcast'
 }
 
-const dest = (folder = '') => gulp.dest(`${paths.dest}/${folder}`)
+const dist = (folder = '') => dest(`${paths.dest}/${folder}`)
 
 const mvbConf = {
   glob: paths.episodes,
@@ -67,7 +80,7 @@ const mvbConf = {
     // year
     const bySeason = []
     Object.keys(articlesBySeason).reverse().forEach(season =>
-      bySeason.push({season, articles: articlesBySeason[season]})
+      bySeason.push({ season, articles: articlesBySeason[season] })
     )
 
     // groups
@@ -86,106 +99,101 @@ const pugOpts = {
   pretty: true
 }
 
-const buildHtml = (src, dst) =>
-  gulp.src(src)
-    .pipe(p.plumber())
-    .pipe(p.mvb(mvbConf))
-    .pipe(p.data(templateData))
-    .pipe(p.pug(pugOpts))
-    .pipe(dest(dst))
+const buildHtml = (org, dst) =>
+  src(org)
+    .pipe(mvb(mvbConf))
+    .pipe(data(templateData))
+    .pipe(pug(pugOpts))
+    .pipe(dist(dst))
 
 const feedWithTemplate = (template, folder) =>
-  gulp.src(`src/feed/${template}.pug`)
-    .pipe(p.plumber())
-    .pipe(p.mvb(mvbConf))
-    .pipe(p.data(templateData))
-    .pipe(p.pug(pugOpts))
-    .pipe(p.rename({extname: '.xml'}))
-    .pipe(dest(folder))
+  src(`src/feed/${template}.pug`)
+    .pipe(mvb(mvbConf))
+    .pipe(data(templateData))
+    .pipe(pug(pugOpts))
+    .pipe(rename({ extname: '.xml' }))
+    .pipe(dist(folder))
 
 const resizePodcastImages = (size) => {
   const baseDir = 'src/images/podcast'
-  return gulp.src(`${baseDir}/**/3000.png`)
-    .pipe(p.rename({basename: size}))
-    .pipe(p.newer(baseDir))
-    .pipe(p.imageResize({ width: size }))
-    .pipe(gulp.dest(baseDir))
+  return src(`${baseDir}/**/3000.png`)
+    .pipe(rename({ basename: size }))
+    .pipe(newer(baseDir))
+    .pipe(imageResize({ width: size }))
+    .pipe(dist(baseDir))
 }
 
-gulp.task('feed', () => feedWithTemplate('podcast'))
-gulp.task('pages', () => buildHtml(paths.pages))
-gulp.task('episodes', () => buildHtml(paths.episodes, paths.episodesBasepath))
+task('feed', () => feedWithTemplate('podcast'))
+task('pages', () => buildHtml(paths.pages))
+task('episodes', () => buildHtml(paths.episodes, paths.episodesBasepath))
 
-theo.registerFormat('styl', stylFormat)
+Theo.registerFormat('styl', stylFormat)
 
-gulp.task('tokens', () =>
-  gulp.src(paths.tokens)
-    .pipe(p.theo({ format: { type: 'styl' } }))
-    .pipe(gulp.dest('src/styles/tokens'))
+task('tokens', () =>
+  src(paths.tokens)
+    .pipe(theo({ format: { type: 'styl' } }))
+    .pipe(dest('src/styles/tokens'))
 )
 
-gulp.task('html:optimize', cb =>
-  gulp.src(paths.html)
-    .pipe(p.htmlmin())
-    .pipe(dest())
+task('html:optimize', () =>
+  src(paths.html)
+    .pipe(htmlmin())
+    .pipe(dist())
 )
 
-gulp.task('images:resize', cb => mergeStream([640, 320, 160].map(resizePodcastImages)))
+task('images:resize', () => mergeStream([640, 320, 160].map(resizePodcastImages)))
 
-gulp.task('images:optimize', () => {
+task('images:optimize', () => {
   const targetDir = 'src'
-  return gulp.src(['src/{images,svgs}/**/*', '!src/images/podcast/**/3000.png'])
-    .pipe(p.newer(targetDir))
-    .pipe(p.imagemin())
-    .pipe(gulp.dest(targetDir))
+  return src(['src/{images,svgs}/**/*', '!src/images/podcast/**/3000.png'])
+    .pipe(newer(targetDir))
+    .pipe(imagemin())
+    .pipe(dest(targetDir))
 })
 
-gulp.task('copy', cb =>
-  gulp.src(paths.copy)
-    .pipe(dest())
+task('copy', () =>
+  src(paths.copy)
+    .pipe(dist())
 )
 
-gulp.task('styles', () =>
-  gulp.src(paths.styles)
-    .pipe(p.plumber())
-    .pipe(p.stylus({
+task('styles', () =>
+  src(paths.styles)
+    .pipe(stylus({
       paths: ['src/styles/lib', 'src/styles/tokens'],
       import: ['breakpoints', 'colors', 'font-faces', 'font-families', 'font-sizes', 'spaces', 'mediaQueries', 'extends']
     }))
-    .pipe(p.concat('main.css'))
-    .pipe(p.postcss([
+    .pipe(concat('main.css'))
+    .pipe(postcss([
       mqpacker,
-      autoprefixer({browsers: ['last 2 versions']}),
+      autoprefixer(),
       csswring
     ]))
-    .pipe(dest('styles'))
+    .pipe(dist('styles'))
 )
 
-gulp.task('scripts', () =>
-  gulp.src(paths.scripts)
-    .pipe(p.plumber())
-    .pipe(p.concat('main.js'))
-    .pipe(dest('scripts'))
+task('scripts', () =>
+  src(paths.scripts)
+    .pipe(concat('main.js'))
+    .pipe(dist('scripts'))
 )
 
-gulp.task('revAssets', () => {
-  const RevAll = p.revAll
-  const revAll = new RevAll({ prefix: assetUrl })
-  return gulp.src(paths.rev)
-    .pipe(revAll.revision())
-    .pipe(p.revDeleteOriginal())
-    .pipe(dest())
-    .pipe(revAll.manifestFile())
-    .pipe(dest())
-})
-
-gulp.task('sitemap', () =>
-  gulp.src(paths.html)
-    .pipe(p.sitemap({ siteUrl, changefreq: 'weekly' }))
-    .pipe(dest())
+task('revAssets', () =>
+  src(paths.rev)
+    .pipe(rev({ prefix: assetUrl }))
+    .pipe(revCssUrl())
+    .pipe(revDeleteOriginal())
+    .pipe(dist())
+    .pipe(rev.manifest())
+    .pipe(dist())
 )
 
-gulp.task('patterns', done => {
+task('sitemap', () =>
+  src(paths.html)
+    .pipe(sitemap({ siteUrl, changefreq: 'weekly' }))
+    .pipe(dist())
+)
+
+task('patterns', done => {
   const opts = {
     debug: isDev,
     serve: isDev,
@@ -197,24 +205,26 @@ gulp.task('patterns', done => {
     .catch(done)
 })
 
-gulp.task('watch', () => {
-  gulp.watch(paths.copy, ['copy'])
-  gulp.watch(paths.feed, ['feed'])
-  gulp.watch(paths.styles, ['styles'])
-  gulp.watch(paths.scripts, ['scripts'])
-  gulp.watch(paths.templates, ['episodes', 'pages'])
-  gulp.watch(paths.templateIncludes, ['patterns'])
-  gulp.watch(paths.pages).on('change', event => buildHtml(event.path))
-  gulp.watch(paths.episodes).on('change', event => buildHtml(event.path, paths.episodesBasepath))
-  gulp.watch(paths.tokens, ['rebuild-tokens'])
-  gulp.watch('src/styles/lib/*', ['styles'])
+task('incremental', () => {
+  watch(paths.copy, parallel('copy'))
+  watch(paths.feed, parallel('feed'))
+  watch(paths.styles, parallel('styles'))
+  watch(paths.scripts, parallel('scripts'))
+  watch(paths.templates, parallel('episodes', 'pages'))
+  watch(paths.templateIncludes, parallel('patterns'))
+  watch(paths.pages).on('change', filePath => task(buildHtml(filePath)))
+  watch(paths.episodes).on('change', filePath => task(buildHtml(filePath, paths.episodesBasepath)))
+  watch(paths.tokens, parallel('rebuild-tokens'))
+  watch('src/styles/lib/*', parallel('styles'))
 })
 
-gulp.task('optimize', ['html:optimize'])
-gulp.task('pug', ['pages', 'episodes', 'feed'])
-gulp.task('rebuild-tokens', cb => runSequence('tokens', ['styles', 'patterns'], cb))
-gulp.task('images', cb => runSequence('images:resize', 'images:optimize', cb))
-gulp.task('build', cb => runSequence('tokens', ['styles', 'scripts', 'copy', 'pug'], cb))
-gulp.task('develop', cb => runSequence(['build', 'patterns'], 'watch', cb))
-gulp.task('rev', cb => runSequence('revAssets', 'pug', cb))
-gulp.task('production', cb => runSequence('build', 'rev', ['sitemap', 'optimize'], 'patterns', cb))
+task('optimize', parallel('html:optimize'))
+task('pug', parallel('pages', 'episodes', 'feed'))
+task('rebuild-tokens', series('tokens', parallel('styles', 'patterns')))
+task('build', series('tokens', ['styles', 'scripts', 'copy', 'pug']))
+task('rev', series('revAssets', 'pug'))
+
+// ----- PUBLIC TASKS -----
+task('images', series('images:resize', 'images:optimize'))
+task('develop', series(parallel('build', 'patterns'), 'incremental'))
+task('production', series('build', 'rev', parallel('sitemap', 'optimize'), 'patterns'))

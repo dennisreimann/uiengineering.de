@@ -120,7 +120,7 @@ const resizePodcastImages = (size) => {
     .pipe(rename({ basename: size }))
     .pipe(newer(baseDir))
     .pipe(imageResize({ width: size }))
-    .pipe(dist(baseDir))
+    .pipe(dest(baseDir))
 }
 
 task('feed', () => feedWithTemplate('podcast'))
@@ -146,7 +146,6 @@ task('images:resize', () => mergeStream([640, 320, 160].map(resizePodcastImages)
 task('images:optimize', () => {
   const targetDir = 'src'
   return src(['src/{images,svgs}/**/*', '!src/images/podcast/**/3000.png'])
-    .pipe(newer(targetDir))
     .pipe(imagemin())
     .pipe(dest(targetDir))
 })

@@ -5,25 +5,16 @@
   "repository": "git@github.com:dennisreimann/uiengineering.git",
   "description": "www.uiengineering.de",
   "engines": {
-    "node": ">=7.1.0"
-  },
-  "config": {
-    "deployment": {
-      "command": "rsync -ravzulO --chmod=u=rwX,g=rX --delete-after",
-      "target": "uiengine@uiengineering.de:html"
-    }
+    "node": ">=12.13.1"
   },
   "scripts": {
     "cleanup": "rm -rf dist sketch",
     "images": "gulp images",
+    "lint": "standard",
+    "test": "npm run lint",
     "sketch": "rm -rf sketch && html-sketchapp --config lib/html-sketchapp.js && open -a Sketch",
     "start": "npm run cleanup && gulp develop --dev",
-    "build": "npm run cleanup && gulp build",
-    "prod": "npm run cleanup && gulp production --assetHost=cdn.uiengineering.de",
-    "build-and-deploy": "npm run prod && npm run deploy",
-    "deploy": "npm run deploy:assets && npm run deploy:site",
-    "deploy:assets": "$npm_package_config_deployment_command --exclude-from=.rsync-exclude-assets dist/fonts dist/images dist/mp3s dist/styles $npm_package_config_deployment_target",
-    "deploy:site": "$npm_package_config_deployment_command --exclude-from=.rsync-exclude-site dist/ $npm_package_config_deployment_target"
+    "prod": "npm run cleanup && gulp production --assetHost=cdn.uiengineering.de"
   },
   "devDependencies": {
     "@babel/core": "7.7.7",

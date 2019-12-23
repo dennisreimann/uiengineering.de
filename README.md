@@ -1,4 +1,4 @@
-# [UI engineering Website](https://www.uiengineering.de)
+# UIengineering Website
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
@@ -56,8 +56,4 @@ Daraufhin liegen im Ordner `sketch` die Dateien, die in Sketch über das [asketc
 
 ## 🚀 Wie deploye ich das Projekt?
 
-Dieser Befehl erstellt einen neuen Production-Build und deployed diesen:
-
-```bash
-$ npm run build-and-deploy
-```
+Einfach zu GitHub pushen :)

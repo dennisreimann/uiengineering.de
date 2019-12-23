@@ -1,6 +1,5 @@
 .DS_Store*
 /.vscode
-/deploy_rsa
 /npm-debug*
 /src/styles/tokens/*.styl
 *log

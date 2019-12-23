@@ -9,9 +9,7 @@ module.exports = {
   source: {
     components: './src/components',
     templates: './src/templates',
-    pages: './src/uiengine/pages',
-    data: './src/uiengine/data',
-    entities: './src/uiengine/entities'
+    pages: './src/uiengine/pages'
   },
 
   target: './dist/patterns',

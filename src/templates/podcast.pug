@@ -18,7 +18,7 @@ block meta
 block main
   - const seasons = mvb.groupedArticles.bySeason.reverse()
   +section(true)
-    :marked
+    :markdown-it(html linkify typographer)
       ## Der UI engineering Podcast
 
       Wir, das sind Dennis Reimann und Jan Persiel, setzen uns dafür ein, durch die enge Zusammenarbeit

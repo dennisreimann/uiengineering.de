@@ -7,21 +7,21 @@ mixin footer()
     +wrap()
       +container()
         +block().footer__block
-          :marked
+          :markdown-it(html linkify typographer)
             [Jan Persiel](https://persiel.com/)<br>
             Persiel Designstudio<br>
             Falkenried 74a<br>
             20251 Hamburg
 
         +block().footer__block
-          :marked
+          :markdown-it(html linkify typographer)
             [Dennis Reimann](https://dennisreimann.de/)<br>
             Softwareentwickler<br>
             Ottjen-Aldag-Str. 32<br>
             28277 Bremen
 
       .footer__legal
-        :marked
+        :markdown-it(html linkify typographer)
           Zusammen setzen wir uns für die enge Zusammenarbeit von Design und
           Entwicklung ein. Wir betreiben kein gemeinsames Unternehmen und sind
           auch im Rahmen dieser Initiative als Einzelunternehmer tätig.

@@ -25,6 +25,9 @@ jobs:
     - name: Build
       run: |
         npm run prod
+        # gh-pages-spa
+        sed '7i\'$'\n''<script src="/gh-pages-spa.js"></script>'$'\n' dist/patterns/index.html > dist/patterns/index-modified.html
+        mv dist/patterns/index{-modified,}.html
         # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
         touch dist/.nojekyll
         # https://help.github.com/en/articles/managing-a-custom-domain-for-your-github-pages-site

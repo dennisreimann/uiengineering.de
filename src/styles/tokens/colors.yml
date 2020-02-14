@@ -17,6 +17,9 @@ aliases:
   # Quick 'n dirty
   colorBrandPrimaryQnD: &colorBrandPrimaryQnD "#4FB327"
   colorBrandSecondaryQnD: &colorBrandSecondaryQnD "#131D2C"
+  # Season 3
+  colorBrandPrimarySeason3: &colorBrandPrimarySeason3 "#F4429B"
+  colorBrandSecondarySeason3: &colorBrandSecondarySeason3 "#122237"
 
   # Current brand colors
   colorBrandPrimary: &colorBrandPrimary "#FF183E"

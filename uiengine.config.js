@@ -4,7 +4,7 @@ const viewports = require('./lib/viewports')
 
 module.exports = {
   name: 'UIengineering',
-  copyright: 'Copyright © Jan Persiel, Dennis Reimann. <a href="https://github.com/dennisreimann/uiengine">Generated with UIengine</a>.',
+  copyright: 'Copyright © Jan Persiel, Dennis Reimann. Generiert mit der <a href="https://github.com/dennisreimann/uiengine">UIengine</a>.',
 
   source: {
     components: './src/components',

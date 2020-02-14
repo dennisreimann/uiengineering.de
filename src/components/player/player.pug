@@ -19,6 +19,8 @@ mixin player(episode)
           span.player__current-seconds.amplitude-current-seconds(data-amplitude-main-current-seconds="true")
 
         span.player__duration
+          span.player__duration-hours.amplitude-duration-hours(data-amplitude-main-duration-hours="true")
+          = ':'
           span.player__duration-minutes.amplitude-duration-minutes(data-amplitude-main-duration-minutes="true")
           = ':'
           span.player__duration-seconds.amplitude-duration-seconds(data-amplitude-main-duration-seconds="true")

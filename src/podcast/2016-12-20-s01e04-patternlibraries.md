@@ -23,7 +23,7 @@ Es geht um Arbeitsabläufe, wo fängt man an und wie setzt man Dinge um.
 
 <!-- more -->
 
-Wir sprechen über die Workflows, die es für den Einsatz von Pattern Libraries gibt. Wir greifen dabei auch Themen der vorherigen Episoden – [Atomic Design](https://www.uiengineering.de/podcast/s01e01-atomic-design.html) und [Styletiles](https://www.uiengineering.de/podcast/s01e02-styletiles.html) – wieder auf und sehen uns ihren praktischen Einsatz an. Außerdem sprechen wir über die Zusammenarbeit von Design und Entwicklung an der Pattern Library: Was dadurch ermöglicht wird und welche Herausforderungen dabei auf das Team zukommen.
+Wir sprechen über die Workflows, die es für den Einsatz von Pattern Libraries gibt. Wir greifen dabei auch Themen der vorherigen Episoden – [Atomic Design](https://uiengineering.de/podcast/s01e01-atomic-design.html) und [Styletiles](https://uiengineering.de/podcast/s01e02-styletiles.html) – wieder auf und sehen uns ihren praktischen Einsatz an. Außerdem sprechen wir über die Zusammenarbeit von Design und Entwicklung an der Pattern Library: Was dadurch ermöglicht wird und welche Herausforderungen dabei auf das Team zukommen.
 
 In der kommenden Episode weichen wir vom bisherigen Format ab und haben uns einen Interviewgast besorgt.
 Wir werden tiefer in das Thema Pattern Library einsteigen und ein Open Source Projekt dazu vorstellen.

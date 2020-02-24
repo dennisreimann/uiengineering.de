@@ -33,8 +33,14 @@ block og
   meta(property="og:audio:type" content="audio/mpeg")
   meta(property="article:section" content="Technology")
   meta(property="article:published_time" content=h.dateFormat.iso8601(episode.date))
-  meta(property="article:author" content="https://www.facebook.com/janpersiel")
-  meta(property="article:author" content="https://www.facebook.com/profile.php?id=100008783506280")
+  meta(property="article:author" content="https://twitter.com/janpersiel")
+  meta(property="article:author" content="https://twitter.com/dennisreimann")
+  meta(property="twitter:creator" content="@janpersiel")
+  meta(property="twitter:creator" content="@dennisreimann")
+  meta(property="twitter:card" content="summary_large_image")
+  meta(property="twitter:title" content=title)
+  meta(property="twitter:description" content=description)
+  meta(property="twitter:image" content=h.enforceScheme("http", imagePath))
 
 block main
   +episode(episode)

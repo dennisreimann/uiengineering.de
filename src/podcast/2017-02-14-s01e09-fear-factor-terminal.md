@@ -29,9 +29,10 @@ Wie so oft in unseren letzten Gesprächen stellt sich heraus, dass es gar nicht 
 Außerdem sprechen wir über die Arbeitsweise mit Build-Scripts und über die Arbeit an der uiengineering.de. Warum am Ende auch ganz kleine erste Schritte ein Weg in das mysteriöse Fenster Sinn machen haben wir auch als Punkt für diese Episode auf der Agenda gehabt.
 
 ### Termine mit #UIengineering
+
 - 16.3.–18.3.2017 [E-Commerce Camp Jena](https://www.ecommerce-camp.de/redner-sessions/sessions-2017/)
 - 29.5.–2.6.2017 [webinale Berlin](https://webinale.de/session/design-development-und-dazwischen/)
 
 ### Shownotes & Links
-- [Das uiengineering.de-Projekt auf Github](https://github.com/dennisreimann/uiengineering)
 
+- [Das uiengineering.de-Projekt auf Github](https://github.com/dennisreimann/uiengineering.de)

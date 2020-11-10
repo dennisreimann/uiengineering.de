@@ -18,7 +18,7 @@ tags:
 ---
 
 Bart Simpson musste schon als Strafarbeit an der Tafel Dinge schreiben:
-Ist die moderne Form der Strafarbeit die Dokumentation? 
+Ist die moderne Form der Strafarbeit die Dokumentation?
 Im Nachgang Dinge von anderen so aufschreiben, dass es passt. Nervt.
 Aber es gibt einen Weg aus der Motivationsfalle Doku: Die Dokumentation selber.
 
@@ -36,11 +36,13 @@ Wenn Ihr einen Interviewpartner vorschlagen mögt, auch Euch selber, [immer her 
 Wir nehmen eine kleine Pause und sind dann schon bald wieder in einem Podcatcher in Eurer Nähe oder Tasche.
 
 ### Termine mit #UIengineering
+
 - 16.3.–18.3.2017 [E-Commerce Camp Jena](https://www.ecommerce-camp.de/redner-sessions/sessions-2017/)
 - 29.5.–2.6.2017 [webinale Berlin](https://webinale.de/session/design-development-und-dazwischen/)
 
 ### Shownotes & Links
+
 - [Pattern patter](https://ethanmarcotte.com/wrote/pattern-patter/)
 - [Five tips for improving your technical writing and documentation](https://medium.com/@limedaring/five-tips-for-improving-your-technical-writing-and-documentation-47353723c8a7#.du1cl4uem)
 - [Write The Docs: Documentation Guide](http://www.writethedocs.org/guide/)
-- [Das uiengineering.de-Projekt auf Github](https://github.com/dennisreimann/uiengineering)
+- [Das uiengineering.de-Projekt auf Github](https://github.com/dennisreimann/uiengineering.de)

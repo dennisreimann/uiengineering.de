@@ -37,6 +37,7 @@ const paths = {
   src: 'src',
   dest: 'dist',
   html: ['dist/**/*.html'],
+  sitemap: ['dist/**/*.html', '!dist/**/{datenschutz,kontakt,impressum,googlec89518206bcce710}.html'],
   rev: ['dist/**/*.{css,js,map,svg,jpg,png,gif,woff,woff2}', '!dist/gh-pages-spa.js', '!dist/patterns/_uiengine-theme/**/**'],
   copy: ['src/{fonts,images,svgs,mp3s}/**/*', 'src/site/**/*'],
   pages: ['src/templates/{datenschutz,impressum,index,kontakt,podcast,praxis}.pug'],
@@ -187,7 +188,7 @@ task('revAssets', () =>
 )
 
 task('sitemap', () =>
-  src(paths.html)
+  src(paths.sitemap)
     .pipe(sitemap({ siteUrl, changefreq: 'weekly' }))
     .pipe(dist())
 )

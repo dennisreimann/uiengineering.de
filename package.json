@@ -17,12 +17,12 @@
     "prod": "npm run cleanup && gulp production"
   },
   "devDependencies": {
-    "@babel/core": "7.12.3",
-    "@babel/preset-env": "7.12.1",
-    "@babel/register": "7.12.1",
+    "@babel/core": "7.13.14",
+    "@babel/preset-env": "7.13.12",
+    "@babel/register": "7.13.14",
     "@uiengine/bridge-theo": "2.6.1",
-    "@uiengine/core": "3.1.4",
-    "autoprefixer": "10.0.1",
+    "@uiengine/core": "3.1.8",
+    "autoprefixer": "10.2.5",
     "css-mqpacker": "7.0.0",
     "csswring": "7.0.0",
     "gulp": "4.0.2",
@@ -35,8 +35,8 @@
     "gulp-if": "3.0.0",
     "gulp-image-resize": "0.13.1",
     "gulp-imagemin": "7.1.0",
-    "gulp-load-plugins": "2.0.5",
-    "gulp-mvb": "0.7.4",
+    "gulp-load-plugins": "2.0.6",
+    "gulp-mvb": "0.8.0",
     "gulp-newer": "1.4.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.0",
@@ -46,23 +46,23 @@
     "gulp-rev": "9.0.0",
     "gulp-rev-css-url": "0.1.0",
     "gulp-rev-delete-original": "0.2.3",
-    "gulp-sitemap": "7.6.0",
+    "gulp-sitemap": "8.0.0",
     "gulp-stylus": "2.7.0",
     "gulp-theo": "2.0.1",
     "gulp-uglify": "3.0.2",
     "html-sketchapp-cli": "0.6.2",
     "jstransformer-markdown-it": "2.1.0",
-    "markdown-it": "12.0.2",
+    "markdown-it": "12.0.4",
     "merge-stream": "2.0.0",
     "moment": "2.29.1",
-    "postcss": "8.1.6",
-    "pug": "3.0.0",
+    "postcss": "8.2.9",
+    "pug": "3.0.2",
     "run-sequence": "2.2.1",
-    "standard": "16.0.1",
+    "standard": "16.0.3",
     "theo": "8.1.5",
-    "yargs": "16.1.0"
+    "yargs": "16.2.0"
   },
   "dependencies": {
-    "amplitudejs": "5.2.0"
+    "amplitudejs": "5.3.0"
   }
 }

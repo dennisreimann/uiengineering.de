@@ -5,7 +5,7 @@
   "repository": "git@github.com:dennisreimann/uiengineering.de.git",
   "description": "uiengineering.de",
   "engines": {
-    "node": ">=14.15.0"
+    "node": ">=14.16.0"
   },
   "scripts": {
     "cleanup": "rm -rf dist sketch",

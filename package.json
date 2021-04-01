@@ -14,7 +14,7 @@
     "test": "npm run lint",
     "sketch": "rm -rf sketch && html-sketchapp --config lib/html-sketchapp.js && open -a Sketch",
     "start": "npm run cleanup && gulp develop --dev",
-    "prod": "npm run cleanup && gulp production --assetHost=cdn.uiengineering.de"
+    "prod": "npm run cleanup && gulp production"
   },
   "devDependencies": {
     "@babel/core": "7.12.3",

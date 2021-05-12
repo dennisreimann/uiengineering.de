@@ -55,7 +55,7 @@
     "markdown-it": "12.0.4",
     "merge-stream": "2.0.0",
     "moment": "2.29.1",
-    "postcss": "8.2.9",
+    "postcss": "8.2.10",
     "pug": "3.0.2",
     "run-sequence": "2.2.1",
     "standard": "16.0.3",

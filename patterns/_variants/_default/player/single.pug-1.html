@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="uiengine-preview uie-variant uie-variant--player uie-variant--player-single-pug-1" lang="de">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Player: Single • UIengineering (1.0.0)</title>
+    <link href="/styles/main-7367da6315.css" rel="stylesheet">
+    <link href="/images/apple-touch-icon-7a231f25b0.png" rel="apple-touch-icon">
+  </head>
+  <body>
+    <script>
+      var isSafari = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && !window.chrome;
+      if (!!isSafari) document.body.className += " safari"
+    </script>
+<!-- uiengine:preview:start -->
+
+<div class="player player--single"><img class="player__cover" src="/images/podcast/s01e08/640-21617a648a.png" data-amplitude-song-info="cover_art_url" data-amplitude-main-song-info="true"/>
+  <div class="player__bottom">
+    <progress class="player__progress amplitude-song-played-progress" data-amplitude-main-song-played-progress="true"></progress>
+    <div class="player__time"><span class="player__current-time"><span class="player__current-minutes amplitude-current-minutes" data-amplitude-main-current-minutes="true"></span>:<span class="player__current-seconds amplitude-current-seconds" data-amplitude-main-current-seconds="true"></span></span><span class="player__duration"><span class="player__duration-hours amplitude-duration-hours" data-amplitude-main-duration-hours="true"></span>:<span class="player__duration-minutes amplitude-duration-minutes" data-amplitude-main-duration-minutes="true"></span>:<span class="player__duration-seconds amplitude-duration-seconds" data-amplitude-main-duration-seconds="true"></span></span></div>
+    <div class="player__controls">
+      <div class="player__button amplitude-play-pause" data-amplitude-main-play-pause="true" id="play-pause"></div>
+      <div class="player__info">
+        <div class="player__name" data-amplitude-song-info="name" data-amplitude-main-song-info="true"></div>
+        <div class="player__album" data-amplitude-song-info="album" data-amplitude-main-song-info="true"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  window.UIengineering = {
+    amplitude: {
+      songs: [
+        {
+          "name": "BEMbule! SMACSS my bitch up!: CSS-Architektur und Preprozessoren im Einsatz",
+          "artist": "Jan Persiel & Dennis Reimann",
+          "album": "Staffel 1, Episode 8",
+          "url": "/mp3s/s01e08-bem-atomic-css-und-co.mp3",
+          "cover_art_url": "/images/podcast/s01e08/640-21617a648a.png"
+        }
+      ]
+    }
+  };
+</script>
+<script src="/scripts/main-1a6cc705a6.js" defer="defer"></script>
+<!-- uiengine:preview:end -->
+
+  </body>
+</html>

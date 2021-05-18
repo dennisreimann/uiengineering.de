@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="&lt;p&gt;
+  CSS ist eine Schnittmenge der Gewerke Design und Entwicklung. In der achten Folge des UIengineering Podcasts sprechen wir heute darüber wie wir CSS schreiben, welche Tools wir nutzen und welche Architekturen es gibt.
+&lt;/p&gt;
+">
+    <meta name="keywords" content="podcast,uiengineering">
+    <meta property="article:tag" content="podcast">
+    <meta property="article:tag" content="uiengineering">
+    <link href="/podcast.xml" rel="alternate" type="application/rss+xml">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://undefined/podcast/s01e08-bem-atomic-css-und-co.html">
+    <meta property="og:title" content="BEMbule! SMACSS my bitch up!: CSS-Architektur und Preprozessoren im Einsatz • UI engineering Podcast">
+    <meta property="og:description" content="&lt;p&gt;
+  CSS ist eine Schnittmenge der Gewerke Design und Entwicklung. In der achten Folge des UIengineering Podcasts sprechen wir heute darüber wie wir CSS schreiben, welche Tools wir nutzen und welche Architekturen es gibt.
+&lt;/p&gt;
+">
+    <meta property="og:image" content="/images/podcast/s01e08/320-9b0f6ed186.png">
+    <meta property="og:image:secure_url" content="/images/podcast/s01e08/320-9b0f6ed186.png">
+    <meta property="og:image:width" content="320">
+    <meta property="og:image:height" content="320">
+    <meta property="og:audio" content="/mp3s/s01e08-bem-atomic-css-und-co.mp3">
+    <meta property="og:audio:secure_url" content="/mp3s/s01e08-bem-atomic-css-und-co.mp3">
+    <meta property="og:audio:type" content="audio/mpeg">
+    <meta property="article:section" content="Technology">
+    <meta property="article:published_time" content="2017-02-07T00:00:00.000Z">
+    <meta property="article:author" content="https://twitter.com/janpersiel">
+    <meta property="article:author" content="https://twitter.com/dennisreimann">
+    <meta property="twitter:creator" content="@janpersiel">
+    <meta property="twitter:creator" content="@dennisreimann">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="BEMbule! SMACSS my bitch up!: CSS-Architektur und Preprozessoren im Einsatz • UI engineering Podcast">
+    <meta property="twitter:description" content="&lt;p&gt;
+  CSS ist eine Schnittmenge der Gewerke Design und Entwicklung. In der achten Folge des UIengineering Podcasts sprechen wir heute darüber wie wir CSS schreiben, welche Tools wir nutzen und welche Architekturen es gibt.
+&lt;/p&gt;
+">
+    <meta property="twitter:image" content="/images/podcast/s01e08/320-9b0f6ed186.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="UI engineering">
+    <title>BEMbule! SMACSS my bitch up!: CSS-Architektur und Preprozessoren im Einsatz • UI engineering Podcast • UI engineering</title>
+    <link href="/styles/main-7367da6315.css" rel="stylesheet">
+    <link href="/images/apple-touch-icon-7a231f25b0.png" rel="apple-touch-icon">
+  </head>
+  <body>
+    <script>
+      var isSafari = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && !window.chrome;
+      if (!!isSafari) document.body.className += " safari"
+    </script>
+    <nav class="navigation">
+      <div class="wrap">
+        <ul class="navigation__tree">
+          <li class="navigation__item navigation__item--index"><a class="navigation__link" href="/index.html">Start</a></li>
+          <li class="navigation__item navigation__item--podcast"><a class="navigation__link" href="/podcast.html">Podcast</a></li>
+          <li class="navigation__item navigation__item--praxis"><a class="navigation__link" href="/praxis.html">Praxis</a></li>
+          <li class="navigation__item navigation__item--kontakt"><a class="navigation__link" href="/kontakt.html">Kontakt</a></li>
+          <li class="navigation__item navigation__item--patterns"><a class="navigation__link" href="/patterns/">Patterns</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header class="header  header--podcast">
+      <h1 class="header__title">Podcast</h1>
+    </header>
+    <main class="main">
+      <section>
+        <div class="wrap wrap--single">
+          <article class="episode">
+            <header class="episode__header">
+              <hgroup>
+                <h2 class="episode__title">[S01E08] BEMbule! SMACSS my bitch up!</h2>
+                <h3 class="episode__subtitle">CSS-Architektur und Preprozessoren im Einsatz</h3>
+              </hgroup>
+            </header>
+            <div class="episode__player">
+              <div class="player player--single"><img class="player__cover" src="/images/podcast/s01e08/640-21617a648a.png" data-amplitude-song-info="cover_art_url" data-amplitude-main-song-info="true"/>
+                <div class="player__bottom">
+                  <progress class="player__progress amplitude-song-played-progress" data-amplitude-main-song-played-progress="true"></progress>
+                  <div class="player__time"><span class="player__current-time"><span class="player__current-minutes amplitude-current-minutes" data-amplitude-main-current-minutes="true"></span>:<span class="player__current-seconds amplitude-current-seconds" data-amplitude-main-current-seconds="true"></span></span><span class="player__duration"><span class="player__duration-hours amplitude-duration-hours" data-amplitude-main-duration-hours="true"></span>:<span class="player__duration-minutes amplitude-duration-minutes" data-amplitude-main-duration-minutes="true"></span>:<span class="player__duration-seconds amplitude-duration-seconds" data-amplitude-main-duration-seconds="true"></span></span></div>
+                  <div class="player__controls">
+                    <div class="player__button amplitude-play-pause" data-amplitude-main-play-pause="true" id="play-pause"></div>
+                    <div class="player__info">
+                      <div class="player__name" data-amplitude-song-info="name" data-amplitude-main-song-info="true"></div>
+                      <div class="player__album" data-amplitude-song-info="album" data-amplitude-main-song-info="true"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script>
+                window.UIengineering = {
+                  amplitude: {
+                    songs: [
+                      {
+                        "name": "BEMbule! SMACSS my bitch up!: CSS-Architektur und Preprozessoren im Einsatz",
+                        "artist": "Jan Persiel & Dennis Reimann",
+                        "album": "Staffel 1, Episode 8",
+                        "url": "/mp3s/s01e08-bem-atomic-css-und-co.mp3",
+                        "cover_art_url": "/images/podcast/s01e08/640-21617a648a.png"
+                      }
+                    ]
+                  }
+                };
+              </script>
+              <script src="/scripts/main-1a6cc705a6.js" defer="defer"></script>
+            </div>
+            <div class="episode__content"><p>CSS ist eine Schnittmenge der Gewerke Design und Entwicklung. In der achten Folge des UIengineering Podcasts sprechen wir heute darüber wie wir CSS schreiben, welche Tools wir nutzen und welche Architekturen es gibt.</p>
+<!-- more -->
+<p>CSS ist nicht CSS ist CSS … heute schreibt kaum noch ein Frontend-Entwickler direkt CSS. Wer sich viel Arbeit und Zeit sparen will, der nutzt einen Preprozessor. Welchen aber nutzt man am besten? Was steckt hinter diesen Tools? Und ist das schon wieder etwas, was ein Designer lernen muss, der womöglich gerade seine ersten Schritte in CSS gemacht hat?</p>
+<p>Wir berichten über unsere Erfahrungen mit BEM, auch ausserhalb der Design-und-Entwickler-Schnittmenge, warum das Konzept gut zu Atomic Design passt und was man sonst noch so beachten kann und sollte. Keine reine Entwicklerfolge, im Gegenteil.</p>
+<h3 id="termine-mit-%23uiengineering">Termine mit #UIengineering</h3>
+<ul>
+<li>16.3.–18.3.2017 <a href="https://www.ecommerce-camp.de/redner-sessions/sessions-2017/">E-Commerce Camp Jena</a></li>
+<li>29.5.–2.6.2017 <a href="https://webinale.de/session/design-development-und-dazwischen/">webinale Berlin</a></li>
+</ul>
+<h3 id="shownotes-%26-links">Shownotes &amp; Links</h3>
+<h4 id="preprozessoren-%2F-architekturen">Preprozessoren / Architekturen</h4>
+<ul>
+<li><a href="http://getbem.com">BEM</a></li>
+<li><a href="http://sass-lang.com">SASS</a></li>
+<li><a href="http://stylus-lang.com">Stylus</a></li>
+<li><a href="http://lesscss.org">LESS</a></li>
+<li><a href="https://acss.io">Atomic CSS</a></li>
+<li><a href="https://smacss.com">SMACSS</a></li>
+</ul>
+<h4 id="tools-zum-kompilieren">Tools zum Kompilieren</h4>
+<ul>
+<li><a href="http://koala-app.com">Koala (Win, Mac, Linux)</a></li>
+<li><a href="https://codekitapp.com">CodeKit (Mac)</a></li>
+<li><a href="https://prepros.io">Prepros (Win, Mac, Linux)</a></li>
+</ul></div>
+            <footer class="episode__footer">
+              <p class="episode__meta"><span>Veröffentlicht am</span>
+                <time class="episode__date">07.02.2017</time>
+              </p>
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <div class="container">
+          <div class="block footer__block"><p><a href="https://persiel.com/">Jan Persiel</a><br>
+Persiel Designstudio<br>
+c/- Ribbon, 3.OG<br>
+Johannisbollwerk 19<br>
+20459 Hamburg</p>
+
+          </div>
+          <div class="block footer__block"><p><a href="https://dennisreimann.de/">Dennis Reimann</a><br>
+Softwareentwickler<br>
+Ottjen-Aldag-Str. 32<br>
+28277 Bremen</p>
+
+          </div>
+        </div>
+        <div class="footer__legal"><p>Zusammen setzen wir uns für die enge Zusammenarbeit von Design und
+Entwicklung ein. Wir betreiben kein gemeinsames Unternehmen und sind
+auch im Rahmen dieser Initiative als Einzelunternehmer tätig.
+Bei Anfragen für Workshop, Schulungen und Projekte
+<a href="/kontakt.html">erreichen Sie uns</a> gerne über unsere jeweiligen Websites.</p>
+
+        </div>
+        <div class="footer__imprint"><a href="/impressum.html">Impressum</a> und <a href="/datenschutz.html">Datenschutzerklärung</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

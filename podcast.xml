@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" version="2.0">
+  <channel>
+    <atom:link href="https://uiengineering.de/podcast.xml" type="application/rss+xml" rel="self"></atom:link>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <ttl>720</ttl>
+    <title>UI engineering Podcast</title>
+    <link>http://uiengineering.de/podcast.html</link>
+    <generator>UI engineering Podcast Feed Generator v1.0.0</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <language>de-DE</language>
+    <copyright>Jan Persiel und Dennis Reimann</copyright>
+    <lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+    <description>Wir, das sind Dennis Reimann und Jan Persiel, setzen uns dafür ein, durch die enge Zusammenarbeit von Design und Entwicklung schneller bessere und nachhaltigere Ergebnisse zu erzielen. Im UI engineering Podcast geht es um Best Practices, Workflows und Tools die zu einem besseren Miteinander von Design und Entwicklung beitragen. Impressum: https://uiengineering.de/kontakt.html</description>
+    <managingEditor>mail@uiengineering.de (Jan Persiel und Dennis Reimann)</managingEditor>
+    <webMaster>mail@uiengineering.de (Jan Persiel und Dennis Reimann)</webMaster>
+    <image>
+      <title>UI engineering Podcast</title>
+      <url>/images/podcast/cover/3000-98b1a293dc.png</url>
+      <link>http://uiengineering.de/podcast.html</link>
+    </image>
+    <itunes:author>Jan Persiel und Dennis Reimann</itunes:author>
+    <itunes:summary>Wir, das sind Dennis Reimann und Jan Persiel, setzen uns dafür ein, durch die enge Zusammenarbeit von Design und Entwicklung schneller bessere und nachhaltigere Ergebnisse zu erzielen. Im UI engineering Podcast geht es um Best Practices, Workflows und Tools die zu einem besseren Miteinander von Design und Entwicklung beitragen. Impressum: https://uiengineering.de/kontakt.html</itunes:summary>
+    <itunes:keywords>uiengineering,UI engineering,Design,Development,Software,Entwicklung,Gestaltung,Interface,Web,Frontend,Responsive,JavaScript,JS,Elm,CSS,HTML,Mobile,PatternLab,Pattern Library,Styleguide,Styletiles</itunes:keywords>
+    <itunes:explicit>clean</itunes:explicit>
+    <itunes:category text="Technology"></itunes:category>
+    <itunes:owner>
+      <itunes:name>Jan Persiel und Dennis Reimann</itunes:name>
+      <itunes:email>mail@uiengineering.de</itunes:email>
+    </itunes:owner>
+    <itunes:image href="/images/podcast/cover/3000-98b1a293dc.png"></itunes:image>
+    <item>
+      <guid isPermaLink="false">S03E03</guid>
+      <title>[S03E03] Micro Frontends</title>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s03e03-micro-frontends.mp3" length="50238288" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Michael Geers treibt seit mehreren Jahren das Thema <a href="https://micro-frontends.org">Micro Frontends</a> mit an.
+Wir unterhalten uns mit Michael darüber, wie Design Systeme und Pattern Libraries auch bei den nicht-technischen Herausforderungen in diesem Bereich helfen können.</p>
+<div id="more"></div>
+<p>Das Interview wurde am 03.03.2020 aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://twitter.com/naltatis">Michael Geers auf Twitter</a></li>
+<li><a href="https://micro-frontends.org">Micro Frontends Webseite</a></li>
+<li>Michael’s Vortrag auf der MicroCPH Konferenz: <a href="https://noti.st/naltatis/zQb2m5">Micro Frontends the nitty gritty details</a></li>
+<li><a href="https://www.duetds.com">Duet Design System</a> (auf Web-Component Basis)</li>
+<li>Das Buch: <a href="https://www.manning.com/books/micro-frontends-in-action?a_aid=mfia&amp;a_bid=5f09fdeb">Micro Frontends in Action</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s03e03/640-b57e92a112.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Michael Geers treibt seit mehreren Jahren das Thema <a href="https://micro-frontends.org">Micro Frontends</a> mit an.
+Wir unterhalten uns mit Michael darüber, wie Design Systeme und Pattern Libraries auch bei den nicht-technischen Herausforderungen in diesem Bereich helfen können.</p>
+<div id="more"></div>
+<p>Das Interview wurde am 03.03.2020 aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://twitter.com/naltatis">Michael Geers auf Twitter</a></li>
+<li><a href="https://micro-frontends.org">Micro Frontends Webseite</a></li>
+<li>Michael’s Vortrag auf der MicroCPH Konferenz: <a href="https://noti.st/naltatis/zQb2m5">Micro Frontends the nitty gritty details</a></li>
+<li><a href="https://www.duetds.com">Duet Design System</a> (auf Web-Component Basis)</li>
+<li>Das Buch: <a href="https://www.manning.com/books/micro-frontends-in-action?a_aid=mfia&amp;a_bid=5f09fdeb">Micro Frontends in Action</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s03e03/3000-a1fd2f823c.png"></itunes:image>
+      <itunes:duration>00:48:31</itunes:duration>
+      <itunes:subtitle>Wie aus vielen kleinen Websites eine große wird</itunes:subtitle>
+      <itunes:keywords>podcast,micro frontends,pattern library,styleguide,design systeme,frontend,entwicklung,uiengineering</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S03E02</guid>
+      <title>[S03E02] Warhol</title>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s03e02-warhol.mp3" length="50613771" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Hans und Peter bauen <a href="https://warhol.io/">Warhol</a>:
+Eine App mit der man seine Pattern Library für Tests der Design-Konsistenz des eigentlichen Produkts nutzen kann.
+Die beiden stellen Design Testing generell vor und erklären, warum Warhol eine gute Lösung dafür ist.</p>
+<div id="more"></div>
+<p>Das Interview wurde am 21.02.2020 aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://twitter.com/wearewarhol">Warhol auf Twitter</a></li>
+<li><a href="https://drublic.de/">Hans-Christian Reinl</a></li>
+<li><a href="https://www.peterkroener.de/">Peter Kröner</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s03e02/640-124981c622.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Hans und Peter bauen <a href="https://warhol.io/">Warhol</a>:
+Eine App mit der man seine Pattern Library für Tests der Design-Konsistenz des eigentlichen Produkts nutzen kann.
+Die beiden stellen Design Testing generell vor und erklären, warum Warhol eine gute Lösung dafür ist.</p>
+<div id="more"></div>
+<p>Das Interview wurde am 21.02.2020 aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://twitter.com/wearewarhol">Warhol auf Twitter</a></li>
+<li><a href="https://drublic.de/">Hans-Christian Reinl</a></li>
+<li><a href="https://www.peterkroener.de/">Peter Kröner</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s03e02/3000-14b58999dd.png"></itunes:image>
+      <itunes:duration>00:51:43</itunes:duration>
+      <itunes:subtitle>Pattern Libraries als Test Suites</itunes:subtitle>
+      <itunes:keywords>podcast,warhol,visual regression,testing,pattern library,styleguide,design systeme,frontend,entwicklung,uiengineering</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S03E01</guid>
+      <title>[S03E01] Die UIengine</title>
+      <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s03e01-uiengine.mp3" length="66596683" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Wir sind zurück! Kaum zu glauben, aber es gibt uns immer noch.
+Die letzten zwei Jahre über ist viel passiert.
+Wir resümieren etwas und stellen die UIengine vor, welche in unseren Projekten als Werkbank für UIengineering dient.</p>
+<div id="more"></div>
+<p>Das Interview wurde am 14.02.2020 aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://github.com/dennisreimann/uiengine">UIengine auf Github</a></li>
+<li><a href="https://uiengine.uix.space/">UIengine Dokumentation</a></li>
+<li><a href="http://thonet.realized.es/">Thonet Brand Manual</a></li>
+<li><a href="/patterns/">UIengineering Pattern Library Beispiel</a></li>
+<li><a href="https://www.h2d2.de/de/projekte/designsystem-hoch-15/">Klingel: Designsystem hoch 15</a></li>
+<li><a href="https://dennisreimann.de">Dennis Reimann</a></li>
+<li><a href="https://persiel.com/">Jan Persiel</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s03e01/640-db4a560b31.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Wir sind zurück! Kaum zu glauben, aber es gibt uns immer noch.
+Die letzten zwei Jahre über ist viel passiert.
+Wir resümieren etwas und stellen die UIengine vor, welche in unseren Projekten als Werkbank für UIengineering dient.</p>
+<div id="more"></div>
+<p>Das Interview wurde am 14.02.2020 aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://github.com/dennisreimann/uiengine">UIengine auf Github</a></li>
+<li><a href="https://uiengine.uix.space/">UIengine Dokumentation</a></li>
+<li><a href="http://thonet.realized.es/">Thonet Brand Manual</a></li>
+<li><a href="/patterns/">UIengineering Pattern Library Beispiel</a></li>
+<li><a href="https://www.h2d2.de/de/projekte/designsystem-hoch-15/">Klingel: Designsystem hoch 15</a></li>
+<li><a href="https://dennisreimann.de">Dennis Reimann</a></li>
+<li><a href="https://persiel.com/">Jan Persiel</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s03e01/3000-4624937f2f.png"></itunes:image>
+      <itunes:duration>01:08:36</itunes:duration>
+      <itunes:subtitle>Werkbank für UIengineering</itunes:subtitle>
+      <itunes:keywords>podcast,uiengine,pattern library,uiengineering,styleguide,design systeme,frontend,entwicklung</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S02E08</guid>
+      <title>[S02E08] Interview mit Antje Kroon und Ralph Schumann</title>
+      <pubDate>Fri, 06 Apr 2018 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s02e08-zwhy.mp3" length="48894410" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p><a href="https://www.ministrygroup.de/people/antje-kroon">Antje Kroon</a> und <a href="https://www.ministrygroup.de/people/ralph-schumann">Ralph Schumann</a> von der <a href="https://www.zwhy.de">zwhy GmbH</a> berichten über die Entscheidung eine Agentur Anfang 2017 in zwei Firmen zu trennen, um diese dann wieder zusammenzubringen, um Dinge aus einer Hand machen zu können. Glaubwürdig.</p>
+<div id="more"></div>
+<p>Wir horchen mal rein wie es zu dieser Trennung gekommen ist und was das eigentlich bedeutet. Wie macht trennt man so eine Firma auf? Welchen Einfluss hat das auf die Kultur? Was hat das mit New Work und einer Konferenz dazu zu tun?</p>
+<blockquote>
+<p>Die Teams in denen die Hardcore-Entwickler und die Super-Kreativen saßen gab es irgendwie immer Gerangel …</p>
+<footer>&mdash;Antje Kroon</footer>
+</blockquote>
+<blockquote>
+<p>Wir versuchen gerade herauszufinden wo die Schnittmengen sind: Ist ein Websitenprojekt ein Software- oder ein Kommunikationsprojekt? Es ist beides.</p>
+<footer>&mdash;Ralph Schumann</footer>
+</blockquote>
+<blockquote>
+<p>Wenn wir (d.h. Entwicklung und Kommunikation/Design) zusammenarbeiten … müssen wir nichts wegdiskutieren, weil wir es vielleicht als eine Partei nicht können.</p>
+<footer>&mdash;Ralph Schumann</footer>
+</blockquote>
+<p>Die <a href="https://www.newworkfuture.de">New Work Future Konferenz</a> findet am 14. und 15. Juni 2018 in Hamburg statt. Infos und Tickets auf der Konferenz-Website.</p>
+<p>Das Interview wurde am 20.10.2017 bei der Ministry Group / zwhy live aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://www.blog.ministrygroup.de/ministry-group-neu-definiert/">Trennung oder Neugründung? Wie die Ministry Group sich neu definiert hat!</a></li>
+<li><a href="https://www.ministrygroup.de">Ministry Group</a></li>
+<li><a href="https://www.zwhy.de">zwhy</a></li>
+<li><a href="https://www.ministrygroup.de/jobs">Jobs</a></li>
+<li><a href="https://www.newworkfuture.de">New Work Future Konferenz</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s02e08/640-cd6f898d1f.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p><a href="https://www.ministrygroup.de/people/antje-kroon">Antje Kroon</a> und <a href="https://www.ministrygroup.de/people/ralph-schumann">Ralph Schumann</a> von der <a href="https://www.zwhy.de">zwhy GmbH</a> berichten über die Entscheidung eine Agentur Anfang 2017 in zwei Firmen zu trennen, um diese dann wieder zusammenzubringen, um Dinge aus einer Hand machen zu können. Glaubwürdig.</p>
+<div id="more"></div>
+<p>Wir horchen mal rein wie es zu dieser Trennung gekommen ist und was das eigentlich bedeutet. Wie macht trennt man so eine Firma auf? Welchen Einfluss hat das auf die Kultur? Was hat das mit New Work und einer Konferenz dazu zu tun?</p>
+<blockquote>
+<p>Die Teams in denen die Hardcore-Entwickler und die Super-Kreativen saßen gab es irgendwie immer Gerangel …</p>
+<footer>&mdash;Antje Kroon</footer>
+</blockquote>
+<blockquote>
+<p>Wir versuchen gerade herauszufinden wo die Schnittmengen sind: Ist ein Websitenprojekt ein Software- oder ein Kommunikationsprojekt? Es ist beides.</p>
+<footer>&mdash;Ralph Schumann</footer>
+</blockquote>
+<blockquote>
+<p>Wenn wir (d.h. Entwicklung und Kommunikation/Design) zusammenarbeiten … müssen wir nichts wegdiskutieren, weil wir es vielleicht als eine Partei nicht können.</p>
+<footer>&mdash;Ralph Schumann</footer>
+</blockquote>
+<p>Die <a href="https://www.newworkfuture.de">New Work Future Konferenz</a> findet am 14. und 15. Juni 2018 in Hamburg statt. Infos und Tickets auf der Konferenz-Website.</p>
+<p>Das Interview wurde am 20.10.2017 bei der Ministry Group / zwhy live aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://www.blog.ministrygroup.de/ministry-group-neu-definiert/">Trennung oder Neugründung? Wie die Ministry Group sich neu definiert hat!</a></li>
+<li><a href="https://www.ministrygroup.de">Ministry Group</a></li>
+<li><a href="https://www.zwhy.de">zwhy</a></li>
+<li><a href="https://www.ministrygroup.de/jobs">Jobs</a></li>
+<li><a href="https://www.newworkfuture.de">New Work Future Konferenz</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s02e08/3000-04b023b26e.png"></itunes:image>
+      <itunes:duration>00:48:46</itunes:duration>
+      <itunes:subtitle>Von Agenturspaltung, Zusammenwachsen und New Work</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,styleguide,design systeme,frontend,entwicklung,teams,produktentwicklung,konferenz,kommunikation,new work,kultur</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S02E07</guid>
+      <title>[S02E07] Interview mit Susanne Kaiser</title>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s02e07-susanne-kaiser.mp3" length="68415658" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p><a href="https://twitter.com/suksr">Susanne Kaiser</a> ist Technischer Vorstand bei der <a href="https://just.social">Just Software</a> AG in Hamburg.
+In unserem Interview spricht Jan mit ihr über die Historie des Unternehmens und die der Software. Welche Auswirkungen hat die Entwicklung der Software auf die Teams und umgekehrt? Aber auch die Anforderungen an Produkt und Unternehmen von außen sind Thema.</p>
+<div id="more"></div>
+<blockquote>
+<p>Team und Softwarearchitektur waren bei uns monolithisch und mit dem Wachstum wurden wir langsamer. Daraufhin haben wir unsere Teams aufgeteilt und auch die Software auf Mikroservices umgestellt, um wieder schneller agieren zu können.</p>
+<footer>&mdash;Susanne Kaiser</footer>
+</blockquote>
+<p>Die Teams können autonom arbeiten und entscheiden, aber …</p>
+<blockquote>
+<p>Es ist so, dass wir schon eine gemeinsame Basis benötigen, … hinsichtlich Styleguides z.B. Es soll sich ja noch aus einem Guss anfühlen. Und wir haben Standards, so dass sich nicht jedes Team seine eigene React-Library einführt.</p>
+<footer>&mdash;Susanne Kaiser</footer>
+</blockquote>
+<p>Wissenstransfer und Dokumentation ist ein weiterer Punkt im Gespräch:</p>
+<blockquote>
+<p>Wir haben erkannt, dass Dokumentation in der Sekunde der Erstellung veraltet ist. Wir dokumentieren durch wartbaren Clean-Code. Wir schreiben aber viele Read-Mes, die wir auch mit dem Code einchecken.</p>
+<footer>&mdash;Susanne Kaiser</footer>
+</blockquote>
+<p>Das Interview wurde am 22.09.2017 bei der Just Software AG live aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://www.just.social">Die Just.Social Suite</a></li>
+<li><a href="https://www.just.social/de/jobs">Jobs</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s02e07/640-8063d67c82.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p><a href="https://twitter.com/suksr">Susanne Kaiser</a> ist Technischer Vorstand bei der <a href="https://just.social">Just Software</a> AG in Hamburg.
+In unserem Interview spricht Jan mit ihr über die Historie des Unternehmens und die der Software. Welche Auswirkungen hat die Entwicklung der Software auf die Teams und umgekehrt? Aber auch die Anforderungen an Produkt und Unternehmen von außen sind Thema.</p>
+<div id="more"></div>
+<blockquote>
+<p>Team und Softwarearchitektur waren bei uns monolithisch und mit dem Wachstum wurden wir langsamer. Daraufhin haben wir unsere Teams aufgeteilt und auch die Software auf Mikroservices umgestellt, um wieder schneller agieren zu können.</p>
+<footer>&mdash;Susanne Kaiser</footer>
+</blockquote>
+<p>Die Teams können autonom arbeiten und entscheiden, aber …</p>
+<blockquote>
+<p>Es ist so, dass wir schon eine gemeinsame Basis benötigen, … hinsichtlich Styleguides z.B. Es soll sich ja noch aus einem Guss anfühlen. Und wir haben Standards, so dass sich nicht jedes Team seine eigene React-Library einführt.</p>
+<footer>&mdash;Susanne Kaiser</footer>
+</blockquote>
+<p>Wissenstransfer und Dokumentation ist ein weiterer Punkt im Gespräch:</p>
+<blockquote>
+<p>Wir haben erkannt, dass Dokumentation in der Sekunde der Erstellung veraltet ist. Wir dokumentieren durch wartbaren Clean-Code. Wir schreiben aber viele Read-Mes, die wir auch mit dem Code einchecken.</p>
+<footer>&mdash;Susanne Kaiser</footer>
+</blockquote>
+<p>Das Interview wurde am 22.09.2017 bei der Just Software AG live aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://www.just.social">Die Just.Social Suite</a></li>
+<li><a href="https://www.just.social/de/jobs">Jobs</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s02e07/3000-9ccea5ed22.png"></itunes:image>
+      <itunes:duration>00:54:10</itunes:duration>
+      <itunes:subtitle>Software- und Teamentwicklung im Wechselspiel</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,styleguide,design systeme,frontend,entwicklung,teams,produktentwicklung,kommunikation,designops,amazon,wachstum</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S02E06</guid>
+      <title>[S02E06] Interview mit Thomas Lobinger</title>
+      <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s02e06-thomas-lobinger.mp3" length="84428839" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p><a href="https://twitter.com/tlobinger">Thomas Lobinger</a> ist Software Development Manager bei <a href="https://aws.amazon.com">Amazon Web Services</a> in Berlin.
+In unserem Interview mit ihm sprechen wir ein wenig über seinen Werdegang, über Design Systeme, wie bei Amazon Web Services Teams funktionieren und was er für Erfahrungen in den letzten Jahren in einem ständig wachsenden Unternehmen gemacht hat.</p>
+<div id="more"></div>
+<blockquote>
+<p>Unser Team kümmert sich um das Design System, Tools und Automating … um das Leben von Frontend-Entwicklern und Designern besser zu machen und deren Produktivität zu erhöhen.</p>
+<footer>&mdash;Thomas Lobinger</footer>
+</blockquote>
+<p>Das Design System ist über eine längere Phase entstanden.</p>
+<blockquote>
+<p>Die Genesis des AWS Design Systems liegt darin begründet, dass das zentrale Frontend-Entwicklungsteam der großen Menge an Projekten nicht nachkommen konnte.
+Alleine 2016 sind 1017 Features und Services gelauncht worden, um dies mal in einen Kontext zu setzen. Deshalb ist das durch ein Team auch nicht machbar gewesen.</p>
+<footer>&mdash;Thomas Lobinger</footer>
+</blockquote>
+<p>Wir sprechen über Granularität und Feinteilgkeit in Designsystemen und was die Basis für Komponenten ist:</p>
+<blockquote>
+<p>Was ist der richtige Grad an Vorschriften vs. Einschränkung der Kreativität? Für uns sind HTML-Tags/Webstandards diese Basis.
+Wir haben uns dann auf web components fokussiert, haben deren API aktuell noch über Klassen abstrahiert, können diese dann aber (wenn web components native verfügbar sind) ablösen.</p>
+<footer>&mdash;Thomas Lobinger</footer>
+</blockquote>
+<p>Standardisierung ist für das Team um Thomas bei AWS auf allen Ebenen und in allen Gewerken Thema:</p>
+<blockquote>
+<p>Wir haben einen Prozess angestoßen, der nicht nur im Frontend standardisiert ist sondern auch im Design. Wir stecken z.B. Research in solche Standards, denn wenn wir standardisieren dann auch richtig.</p>
+<footer>&mdash;Thomas Lobinger</footer>
+</blockquote>
+<p>Open Source für Design Systeme ist Thema für uns und Thomas sagt dazu:</p>
+<blockquote>
+<p>Wir glauben, dass es ein Benefit ist für die Community (unser Design System open source zu stellen), … um zu sehen wie es gelöst worden ist.</p>
+<footer>&mdash;Thomas Lobinger</footer>
+</blockquote>
+<p>Uns am Ende noch ein Aufruf:</p>
+<blockquote>
+<p>Sucht Euch eine Firma wo ihr das (Design Systeme/UIengineering) umsetzen könnt. Seid nicht der frustrierte Einzelkämpfer. Lasst Euch nicht aufhalten!</p>
+<footer>&mdash;Thomas Lobinger</footer>
+</blockquote>
+<p>Das Interview wurde am 15.09.2017 per Skype aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="http://www.allthingsdistributed.com/2006/11/working_backwards.html">Working backwards (Blogpost)</a></li>
+<li><a href="https://www.youtube.com/watch?v=fGQd2i7TOHY">Working Backwards (Video)</a></li>
+<li><a href="https://www.youtube.com/watch?v=cRTko6m6U4A">Olga Madejska: Breaking Bad - Web Components in production, what worked for us | JSConf EU 2015</a></li>
+<li><a href="https://2016.codefest.ru/lecture/1088">(Web?) Components in production</a></li>
+<li><a href="https://github.com/TheLarkInn/unity-component-specification">Draft of the Unity (Single File Web Component) Specification</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s02e06/640-aaf27fbb6f.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p><a href="https://twitter.com/tlobinger">Thomas Lobinger</a> ist Software Development Manager bei <a href="https://aws.amazon.com">Amazon Web Services</a> in Berlin.
+In unserem Interview mit ihm sprechen wir ein wenig über seinen Werdegang, über Design Systeme, wie bei Amazon Web Services Teams funktionieren und was er für Erfahrungen in den letzten Jahren in einem ständig wachsenden Unternehmen gemacht hat.</p>
+<div id="more"></div>
+<blockquote>
+<p>Unser Team kümmert sich um das Design System, Tools und Automating … um das Leben von Frontend-Entwicklern und Designern besser zu machen und deren Produktivität zu erhöhen.</p>
+<footer>&mdash;Thomas Lobinger</footer>
+</blockquote>
+<p>Das Design System ist über eine längere Phase entstanden.</p>
+<blockquote>
+<p>Die Genesis des AWS Design Systems liegt darin begründet, dass das zentrale Frontend-Entwicklungsteam der großen Menge an Projekten nicht nachkommen konnte.
+Alleine 2016 sind 1017 Features und Services gelauncht worden, um dies mal in einen Kontext zu setzen. Deshalb ist das durch ein Team auch nicht machbar gewesen.</p>
+<footer>&mdash;Thomas Lobinger</footer>
+</blockquote>
+<p>Wir sprechen über Granularität und Feinteilgkeit in Designsystemen und was die Basis für Komponenten ist:</p>
+<blockquote>
+<p>Was ist der richtige Grad an Vorschriften vs. Einschränkung der Kreativität? Für uns sind HTML-Tags/Webstandards diese Basis.
+Wir haben uns dann auf web components fokussiert, haben deren API aktuell noch über Klassen abstrahiert, können diese dann aber (wenn web components native verfügbar sind) ablösen.</p>
+<footer>&mdash;Thomas Lobinger</footer>
+</blockquote>
+<p>Standardisierung ist für das Team um Thomas bei AWS auf allen Ebenen und in allen Gewerken Thema:</p>
+<blockquote>
+<p>Wir haben einen Prozess angestoßen, der nicht nur im Frontend standardisiert ist sondern auch im Design. Wir stecken z.B. Research in solche Standards, denn wenn wir standardisieren dann auch richtig.</p>
+<footer>&mdash;Thomas Lobinger</footer>
+</blockquote>
+<p>Open Source für Design Systeme ist Thema für uns und Thomas sagt dazu:</p>
+<blockquote>
+<p>Wir glauben, dass es ein Benefit ist für die Community (unser Design System open source zu stellen), … um zu sehen wie es gelöst worden ist.</p>
+<footer>&mdash;Thomas Lobinger</footer>
+</blockquote>
+<p>Uns am Ende noch ein Aufruf:</p>
+<blockquote>
+<p>Sucht Euch eine Firma wo ihr das (Design Systeme/UIengineering) umsetzen könnt. Seid nicht der frustrierte Einzelkämpfer. Lasst Euch nicht aufhalten!</p>
+<footer>&mdash;Thomas Lobinger</footer>
+</blockquote>
+<p>Das Interview wurde am 15.09.2017 per Skype aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="http://www.allthingsdistributed.com/2006/11/working_backwards.html">Working backwards (Blogpost)</a></li>
+<li><a href="https://www.youtube.com/watch?v=fGQd2i7TOHY">Working Backwards (Video)</a></li>
+<li><a href="https://www.youtube.com/watch?v=cRTko6m6U4A">Olga Madejska: Breaking Bad - Web Components in production, what worked for us | JSConf EU 2015</a></li>
+<li><a href="https://2016.codefest.ru/lecture/1088">(Web?) Components in production</a></li>
+<li><a href="https://github.com/TheLarkInn/unity-component-specification">Draft of the Unity (Single File Web Component) Specification</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s02e06/3000-1f8653d21d.png"></itunes:image>
+      <itunes:duration>01:07:31</itunes:duration>
+      <itunes:subtitle>DesignOps und Systeme bei AWS (Amazon Web Services)</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,styleguide,design systeme,frontend,entwicklung,teams,produktentwicklung,kommunikation,designops,amazon,wachstum</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S02E05</guid>
+      <title>[S02E05] Interview mit Christoph Reinartz</title>
+      <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s02e05-christoph-reinartz.mp3" length="45635006" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p><a href="https://twitter.com/pistenprinz">Christoph Reinartz</a> ist UI/UX Engineer und Fullstack Developer bei <a href="https://www.trivago.de/">Trivago</a>.
+Wir sprechen in unserem Interview mit ihm über das bei Trivago eingeführte Design System und die Kultur der Produktteams.</p>
+<div id="more"></div>
+<blockquote>
+<p>Um die Designer und Product Owner mit an Bord zu holen geht es ja auch darum, eine gemeinsame Sprache zu entwickeln.
+Damit die Leute ein gemeinsames Verständnis haben, von dem was man macht.</p>
+<footer>&mdash;Christoph Reinartz</footer>
+</blockquote>
+<p>Das Design System unterstützt dabei das Finden und Kommunizieren der gemeinsamen Sprache.</p>
+<blockquote>
+<p>Das [Design System] ist kein rein technisches Thema, es ist auch nicht ein reines Design-Thema.
+Das ist eigentlich ein Thema, was die Organisation im Gesamten betrifft.</p>
+<footer>&mdash;Christoph Reinartz</footer>
+</blockquote>
+<p>Wir sprechen über die Idee des Design Sprints und wie sie bei Trivago in der Produktentwicklung eingesetzt werden:</p>
+<blockquote>
+<p>Ideen werden getimeboxed erarbeitet.
+Es geht relativ schnell in Skribbles, die werden wieder diskutiert, es wird gevotet auf die verschiedenen Lösungen.
+So kann man auch durch das Timeboxing schnell eine Idee konkretisieren.</p>
+<footer>&mdash;Christoph Reinartz</footer>
+</blockquote>
+<p>Trivago sieht sich als “data-informed” und testet insbesondere Neuentwicklungen über Metriken und A/B-Tests.
+Nichtsdestotrotz verlässt man sich nicht allein auf Zahlen, sondern testet auch intensiv mit richtigen Nutzern:</p>
+<blockquote>
+<p>Man kann nicht immer alles im A/B-Testing sehen.
+Du siehst in der Regel die Zahlen, es hilft aber auch mal einen User die Website testen zu lassen.
+Und das dann zu kombinieren… damit hast du gute Möglichkeitebn, dein Produkt weiterzuentwickeln.</p>
+<footer>&mdash;Christoph Reinartz</footer>
+</blockquote>
+<p>Das Interview wurde am 08.09.2017 per Skype aufgenommen und am 12.09.2017 veröffentlicht.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://speakerdeck.com/creinartz/rebuilding-an-aircraft-on-the-fly-2">Rebuilding an aircraft on the fly</a></li>
+<li><a href="https://blog.producthive.org/anatomy-of-a-design-system-7a6b0677bf5">Anatomy of a Design Sytem</a></li>
+<li><a href="http://amzn.to/2gV0qtI">Sprint: Wie man in nur fünf Tagen neue Ideen testet und Probleme löst</a></li>
+<li><a href="https://lernajs.io/">Lerna: A tool for managing JavaScript projects with multiple packages</a></li>
+<li><a href="https://stylelint.io/">Stylelint: A mighty, modern CSS linter</a></li>
+<li><a href="http://company.trivago.com/jobs/">Jobs bei Trivago</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s02e05/640-ea4561a7a5.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p><a href="https://twitter.com/pistenprinz">Christoph Reinartz</a> ist UI/UX Engineer und Fullstack Developer bei <a href="https://www.trivago.de/">Trivago</a>.
+Wir sprechen in unserem Interview mit ihm über das bei Trivago eingeführte Design System und die Kultur der Produktteams.</p>
+<div id="more"></div>
+<blockquote>
+<p>Um die Designer und Product Owner mit an Bord zu holen geht es ja auch darum, eine gemeinsame Sprache zu entwickeln.
+Damit die Leute ein gemeinsames Verständnis haben, von dem was man macht.</p>
+<footer>&mdash;Christoph Reinartz</footer>
+</blockquote>
+<p>Das Design System unterstützt dabei das Finden und Kommunizieren der gemeinsamen Sprache.</p>
+<blockquote>
+<p>Das [Design System] ist kein rein technisches Thema, es ist auch nicht ein reines Design-Thema.
+Das ist eigentlich ein Thema, was die Organisation im Gesamten betrifft.</p>
+<footer>&mdash;Christoph Reinartz</footer>
+</blockquote>
+<p>Wir sprechen über die Idee des Design Sprints und wie sie bei Trivago in der Produktentwicklung eingesetzt werden:</p>
+<blockquote>
+<p>Ideen werden getimeboxed erarbeitet.
+Es geht relativ schnell in Skribbles, die werden wieder diskutiert, es wird gevotet auf die verschiedenen Lösungen.
+So kann man auch durch das Timeboxing schnell eine Idee konkretisieren.</p>
+<footer>&mdash;Christoph Reinartz</footer>
+</blockquote>
+<p>Trivago sieht sich als “data-informed” und testet insbesondere Neuentwicklungen über Metriken und A/B-Tests.
+Nichtsdestotrotz verlässt man sich nicht allein auf Zahlen, sondern testet auch intensiv mit richtigen Nutzern:</p>
+<blockquote>
+<p>Man kann nicht immer alles im A/B-Testing sehen.
+Du siehst in der Regel die Zahlen, es hilft aber auch mal einen User die Website testen zu lassen.
+Und das dann zu kombinieren… damit hast du gute Möglichkeitebn, dein Produkt weiterzuentwickeln.</p>
+<footer>&mdash;Christoph Reinartz</footer>
+</blockquote>
+<p>Das Interview wurde am 08.09.2017 per Skype aufgenommen und am 12.09.2017 veröffentlicht.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://speakerdeck.com/creinartz/rebuilding-an-aircraft-on-the-fly-2">Rebuilding an aircraft on the fly</a></li>
+<li><a href="https://blog.producthive.org/anatomy-of-a-design-system-7a6b0677bf5">Anatomy of a Design Sytem</a></li>
+<li><a href="http://amzn.to/2gV0qtI">Sprint: Wie man in nur fünf Tagen neue Ideen testet und Probleme löst</a></li>
+<li><a href="https://lernajs.io/">Lerna: A tool for managing JavaScript projects with multiple packages</a></li>
+<li><a href="https://stylelint.io/">Stylelint: A mighty, modern CSS linter</a></li>
+<li><a href="http://company.trivago.com/jobs/">Jobs bei Trivago</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s02e05/3000-17763fb950.png"></itunes:image>
+      <itunes:duration>00:47:45</itunes:duration>
+      <itunes:subtitle>Design System und Kultur bei Trivago</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,styleguide,design systeme,frontend,entwicklung,teams,produktentwicklung,kommunikation,testing,kultur</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">QND008</guid>
+      <title>[QND008] Remote Work</title>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/qnd-008.mp3" length="31518028" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Was eigentlich nur als ein kleines Stimmungsbild beginnt, ist vielleicht der Anfang eines ganzen Staffelthemas. Heute geht es kurz um Remote-Arbeit, die Vorurteile und ein paar Anmerkungen.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li>Buch: Remote, office not required by David Heinemeier Hansson/Jason Fried<br><a href="http://amzn.to/2eL1qMU">Amazon</a> :)</li>
+<li><a href="https://basecamp.com">Basecamp</a></li>
+<li><a href="https://slack.com">Slack</a></li>
+<li><a href="http://loft74.de">Platz frei im Loft74</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/qnd/640-2ff6b0082e.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Was eigentlich nur als ein kleines Stimmungsbild beginnt, ist vielleicht der Anfang eines ganzen Staffelthemas. Heute geht es kurz um Remote-Arbeit, die Vorurteile und ein paar Anmerkungen.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li>Buch: Remote, office not required by David Heinemeier Hansson/Jason Fried<br><a href="http://amzn.to/2eL1qMU">Amazon</a> :)</li>
+<li><a href="https://basecamp.com">Basecamp</a></li>
+<li><a href="https://slack.com">Slack</a></li>
+<li><a href="http://loft74.de">Platz frei im Loft74</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/qnd/3000-4ce7c44117.png"></itunes:image>
+      <itunes:duration>00:25:57</itunes:duration>
+      <itunes:subtitle>Der Beginn einer Diskussion …</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,quick-n-dirty,new work,idee,remote,arbeiten,</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">QND007</guid>
+      <title>[QND007] Best Practise Project</title>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/qnd-007.mp3" length="11978745" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Heute sprechen wir kurz über die Idee wie man sich in einem Projekt seine Vorgehensweisen dokumentieren kann und Best Practises festhalten kann. Ausserdem kurz etwas zum UI Pairing mit Dennis.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://dennisreimann.de/pairing.html">Pairing</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/qnd/640-2ff6b0082e.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Heute sprechen wir kurz über die Idee wie man sich in einem Projekt seine Vorgehensweisen dokumentieren kann und Best Practises festhalten kann. Ausserdem kurz etwas zum UI Pairing mit Dennis.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://dennisreimann.de/pairing.html">Pairing</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/qnd/3000-4ce7c44117.png"></itunes:image>
+      <itunes:duration>00:09:39</itunes:duration>
+      <itunes:subtitle>Wiederkehrendes ordentlich ablegen und aktuell halten</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,quick-n-dirty,codekit,prepros,best practise,idee,konzept</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S02E04</guid>
+      <title>[S02E04] Interview mit Patrick Blom</title>
+      <pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s02e04-patrick-blom.mp3" length="72920617" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p><a href="https://twitter.com/pbl0m">Patrick Blom</a> ist Senior Backend Entwickler bei <a href="http://shopmacher.de/">SHOPMACHER</a>.
+In unserem Interview mit ihm berichtet Patrick von typischen Prozessen bei der Entwicklung von Shops und dem Shopmacher eigenen Produkt CommerceCockpit.</p>
+<div id="more"></div>
+<p>Wiederverwenden und Synergien nutzen ist bei SHOPMACHER ein tagtägliches Thema:</p>
+<blockquote>
+<p>Der Grundgedanke der Wiederverwendbarkeit (von Komponenten) ist da. … Natürlich schauen wir auch, ob man Komponenten aus einen Basisportfolio, das wir mal entwickelt haben, verwenden kann und diese dann )für den Kunden) angepasst werden.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<p>Technologien, die verwendet werden:</p>
+<blockquote>
+<p>Wir nutzen gängige Technologien wie HTML5, <a href="http://lesscss.org">LESS</a>, (gehen) weg von jQuery hin zu nativem JavaScript und die Basis unseres Produktes ist <a href="https://symfony.com">Symfony</a> bzw. <a href="https://twig.symfony.com">TWIG</a>.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<p>Patrick spricht auch über die verschiedenen Arten von Zulieferungen aus Richtung der Kunden und Designagenturen. Oft ist der Designprozess vorgelagert, aber manchmal geht SHOPMACHER in den Lead aus einer beratenden Rolle:</p>
+<blockquote>
+<p>Wenn die Sachen (Designs) zu uns kommen setzen wir uns zusammen … und schauen uns an … wie wir das umsetzen können. Wir klären dann auch wo die User Experience leiden könnte, weil z.B. ein Gutscheincode an einer Stelle technisch Probleme mit sich bringt.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<blockquote>
+<p>Die Qualität der zugelieferten Designs ist sehr unterschiedlich. Wir versuchen in einem Briefing vorab genau zu klären was wir genau in den Designs sehen müssen, um mit diesen schnell arbeiten zu können.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<blockquote>
+<p>Wir bieten dem Kunden an schon früh die ersten Komponenten abzunehmen ohne dabei von allen anderen Shop-Seiten (wo diese verwendet werden) abhängig zu sein.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<blockquote>
+<p>Wir versuchen die Grenzen zwischen Design und Entwicklung so weich wie möglich zu halten.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<blockquote>
+<p>Wenn wir früh in den Designprozess als Berater einbezogen werden, so arbeiten wir eher auf Mockup-Ebene und gehen dann schrittweise vor und verfeinern.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<p>Das Team bei SHOPMACHER arbeitet nicht nur in Gescher bei Münster, sondern auch mit 15 Personen in Vietnam:</p>
+<blockquote>
+<p>Unsere Teams sind interdisziplinär zusammengestellt … und die Reviews der Sprints sind offen. Jeder kann so schauen was die anderen Teams gemacht haben, was wir durch total offene Prozesse unterstützen. Die Teamleiter tauschen sich zusätzlich aus … und bei wichtigen Themen machen wir eben ein internes Barcamp.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<blockquote>
+<p>Bei uns sind Teams für sowohl Setup als auch Betreuung der Shops zuständig. … Der Vorteil ist, dass man die Shops dann auch so baut, dass die Betreuung gut funktionieren kann, was eine potentielle Fire-and-Forget-Attitude eines reinen Setupauftrags verhindert.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<p>Das Interview wurde am 18.08.2017 per Skype aufgenommen und am 21.08.2017 veröffentlicht.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="http://shopmacher.de/">SHOPMACHER</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s02e04/640-e0c567e659.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p><a href="https://twitter.com/pbl0m">Patrick Blom</a> ist Senior Backend Entwickler bei <a href="http://shopmacher.de/">SHOPMACHER</a>.
+In unserem Interview mit ihm berichtet Patrick von typischen Prozessen bei der Entwicklung von Shops und dem Shopmacher eigenen Produkt CommerceCockpit.</p>
+<div id="more"></div>
+<p>Wiederverwenden und Synergien nutzen ist bei SHOPMACHER ein tagtägliches Thema:</p>
+<blockquote>
+<p>Der Grundgedanke der Wiederverwendbarkeit (von Komponenten) ist da. … Natürlich schauen wir auch, ob man Komponenten aus einen Basisportfolio, das wir mal entwickelt haben, verwenden kann und diese dann )für den Kunden) angepasst werden.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<p>Technologien, die verwendet werden:</p>
+<blockquote>
+<p>Wir nutzen gängige Technologien wie HTML5, <a href="http://lesscss.org">LESS</a>, (gehen) weg von jQuery hin zu nativem JavaScript und die Basis unseres Produktes ist <a href="https://symfony.com">Symfony</a> bzw. <a href="https://twig.symfony.com">TWIG</a>.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<p>Patrick spricht auch über die verschiedenen Arten von Zulieferungen aus Richtung der Kunden und Designagenturen. Oft ist der Designprozess vorgelagert, aber manchmal geht SHOPMACHER in den Lead aus einer beratenden Rolle:</p>
+<blockquote>
+<p>Wenn die Sachen (Designs) zu uns kommen setzen wir uns zusammen … und schauen uns an … wie wir das umsetzen können. Wir klären dann auch wo die User Experience leiden könnte, weil z.B. ein Gutscheincode an einer Stelle technisch Probleme mit sich bringt.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<blockquote>
+<p>Die Qualität der zugelieferten Designs ist sehr unterschiedlich. Wir versuchen in einem Briefing vorab genau zu klären was wir genau in den Designs sehen müssen, um mit diesen schnell arbeiten zu können.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<blockquote>
+<p>Wir bieten dem Kunden an schon früh die ersten Komponenten abzunehmen ohne dabei von allen anderen Shop-Seiten (wo diese verwendet werden) abhängig zu sein.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<blockquote>
+<p>Wir versuchen die Grenzen zwischen Design und Entwicklung so weich wie möglich zu halten.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<blockquote>
+<p>Wenn wir früh in den Designprozess als Berater einbezogen werden, so arbeiten wir eher auf Mockup-Ebene und gehen dann schrittweise vor und verfeinern.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<p>Das Team bei SHOPMACHER arbeitet nicht nur in Gescher bei Münster, sondern auch mit 15 Personen in Vietnam:</p>
+<blockquote>
+<p>Unsere Teams sind interdisziplinär zusammengestellt … und die Reviews der Sprints sind offen. Jeder kann so schauen was die anderen Teams gemacht haben, was wir durch total offene Prozesse unterstützen. Die Teamleiter tauschen sich zusätzlich aus … und bei wichtigen Themen machen wir eben ein internes Barcamp.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<blockquote>
+<p>Bei uns sind Teams für sowohl Setup als auch Betreuung der Shops zuständig. … Der Vorteil ist, dass man die Shops dann auch so baut, dass die Betreuung gut funktionieren kann, was eine potentielle Fire-and-Forget-Attitude eines reinen Setupauftrags verhindert.</p>
+<footer>&mdash;Patrick Blom</footer>
+</blockquote>
+<p>Das Interview wurde am 18.08.2017 per Skype aufgenommen und am 21.08.2017 veröffentlicht.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="http://shopmacher.de/">SHOPMACHER</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s02e04/3000-0171af9673.png"></itunes:image>
+      <itunes:duration>00:54:38</itunes:duration>
+      <itunes:subtitle>Von Shopentwicklung und Wissenstransfer</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,styleguide,design systeme,frontend,backend,entwicklung,teams,kunden,produktentwicklung,ecommerce,kommunikation</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">QND006</guid>
+      <title>[QND006] Design im Browser</title>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/qnd-006.mp3" length="11498314" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Heute sprechen wir über ein kleines Tool, welches das im Code designen ein wenig einfacher macht: <a href="https://codekitapp.com">Codekit</a>. Alternativen gibt es einige (s.u.) und es ist ein guter Einstieg ins Arbeiten mit Dingen wie Preprozessoren und <a href="https://www.browsersync.io">Browsersync</a>, ohne dies als Designer alles von einem Entwickler aufsetzten lassen zu müssen.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://codekitapp.com">Codekit</a></li>
+<li><a href="https://prepros.io">Prepros</a></li>
+<li><a href="http://koala-app.com">Koala</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/qnd/640-2ff6b0082e.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Heute sprechen wir über ein kleines Tool, welches das im Code designen ein wenig einfacher macht: <a href="https://codekitapp.com">Codekit</a>. Alternativen gibt es einige (s.u.) und es ist ein guter Einstieg ins Arbeiten mit Dingen wie Preprozessoren und <a href="https://www.browsersync.io">Browsersync</a>, ohne dies als Designer alles von einem Entwickler aufsetzten lassen zu müssen.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://codekitapp.com">Codekit</a></li>
+<li><a href="https://prepros.io">Prepros</a></li>
+<li><a href="http://koala-app.com">Koala</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/qnd/3000-4ce7c44117.png"></itunes:image>
+      <itunes:duration>00:09:15</itunes:duration>
+      <itunes:subtitle>Codekit und andere Tools, mit denen ein Designer schnell in den Browser kommt</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,quick-n-dirty,codekit,prepros,build pipeline,mac,tool</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S02E03</guid>
+      <title>[S02E03] Interview mit Benjamin Rabe</title>
+      <pubDate>Mon, 14 Aug 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s02e03-benjamin-rabe.mp3" length="67610350" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p><a href="https://twitter.com/benjaminrabe">Benjamin Rabe</a> ist User Experience Designer bei <a href="http://mindmatters.de/">mindmatters</a>.
+Er berichtet in diesem Interview von der Zusammenarbeit mit Kunden und den größeren Aufgaben, denen man mit Design begegnen kann und unsere Verantwortung als Produktentwickler.</p>
+<div id="more"></div>
+<blockquote>
+<p>Ich glaube die größere Aufgabe ist tatsächlich, dieses Toolset das man als Designer hat soweit zu öffnen, dass sie zum einen verfügbar sind für alle und zum anderen auch das Mindset so zu schärfen, das jeder weiß, wann man sie anwenden kann.</p>
+<footer>&mdash;Benjamin Rabe</footer>
+</blockquote>
+<p>Es geht darum, wie wir im Zusammenspiel mit Kunden auch grundsätzlich auf das Projekt einwirken und größere Fragen klären können:</p>
+<blockquote>
+<p>Das was Design grade im frühen Prozess leisten kann, ist diesen Ideationsprozess gut zu begleiten, Möglichkeiten sichtbar zu machen und Wege auszuleuchten.</p>
+<footer>&mdash;Benjamin Rabe</footer>
+</blockquote>
+<p>Außerdem sprechen wir auch über die Verantwortung, die in der Produktentwicklung liegt und welche kulturstiftenden Aspekte unsere Arbeit haben kann:</p>
+<blockquote>
+<p>Ich finde das ist in gleichem Maße der schwere wie auch spannendste Auftrag den wir haben:
+Empathie möglichst früh aufzubauen, sie über ein Projekt aufrechtzuerhalten, immer anzupassen und sie aber auch wiederum im Projekt zu verteilen.</p>
+<footer>&mdash;Benjamin Rabe</footer>
+</blockquote>
+<p>Das Interview wurde am 11.08.2017 per Skype aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="http://jobstobedone.org/">Jobs To Be Done</a></li>
+<li><a href="https://www.lightningdesignsystem.com/">Salesforce Lightning Design System</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s02e03/640-ff288bb705.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p><a href="https://twitter.com/benjaminrabe">Benjamin Rabe</a> ist User Experience Designer bei <a href="http://mindmatters.de/">mindmatters</a>.
+Er berichtet in diesem Interview von der Zusammenarbeit mit Kunden und den größeren Aufgaben, denen man mit Design begegnen kann und unsere Verantwortung als Produktentwickler.</p>
+<div id="more"></div>
+<blockquote>
+<p>Ich glaube die größere Aufgabe ist tatsächlich, dieses Toolset das man als Designer hat soweit zu öffnen, dass sie zum einen verfügbar sind für alle und zum anderen auch das Mindset so zu schärfen, das jeder weiß, wann man sie anwenden kann.</p>
+<footer>&mdash;Benjamin Rabe</footer>
+</blockquote>
+<p>Es geht darum, wie wir im Zusammenspiel mit Kunden auch grundsätzlich auf das Projekt einwirken und größere Fragen klären können:</p>
+<blockquote>
+<p>Das was Design grade im frühen Prozess leisten kann, ist diesen Ideationsprozess gut zu begleiten, Möglichkeiten sichtbar zu machen und Wege auszuleuchten.</p>
+<footer>&mdash;Benjamin Rabe</footer>
+</blockquote>
+<p>Außerdem sprechen wir auch über die Verantwortung, die in der Produktentwicklung liegt und welche kulturstiftenden Aspekte unsere Arbeit haben kann:</p>
+<blockquote>
+<p>Ich finde das ist in gleichem Maße der schwere wie auch spannendste Auftrag den wir haben:
+Empathie möglichst früh aufzubauen, sie über ein Projekt aufrechtzuerhalten, immer anzupassen und sie aber auch wiederum im Projekt zu verteilen.</p>
+<footer>&mdash;Benjamin Rabe</footer>
+</blockquote>
+<p>Das Interview wurde am 11.08.2017 per Skype aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="http://jobstobedone.org/">Jobs To Be Done</a></li>
+<li><a href="https://www.lightningdesignsystem.com/">Salesforce Lightning Design System</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s02e03/3000-877667a138.png"></itunes:image>
+      <itunes:duration>00:53:35</itunes:duration>
+      <itunes:subtitle>Zusammenarbeit mit Kunden, Ideation und Kultur</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,styleguide,pattern libraries,design systeme,frontend,entwicklung,teams,kultur,ideation,kunden</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">QND005</guid>
+      <title>[QND005] Pairing und Barcamps</title>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/qnd-005.mp3" length="13210289" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Ein kleines Update zu Dennis’ <a href="https://dennisreimann.de/pairing.html">UI Pairing Sessions</a> und bevorstehenden Konferenzen:
+Die <a href="https://weuceu.org/">Web Engineering Unconference</a> auf Mallorca und das <a href="https://hamburg.ecommerce-camp.de/">eCommerce Camp Hamburg</a>.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=D4hhQhnljUI">Quick 'n dirty Episode 4 bei YouTube</a></li>
+<li><a href="https://deardesignstudent.com/a-designers-code-of-ethics-f4a88aca9e95">A Designer’s Code of Ethics</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/qnd/640-2ff6b0082e.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Ein kleines Update zu Dennis’ <a href="https://dennisreimann.de/pairing.html">UI Pairing Sessions</a> und bevorstehenden Konferenzen:
+Die <a href="https://weuceu.org/">Web Engineering Unconference</a> auf Mallorca und das <a href="https://hamburg.ecommerce-camp.de/">eCommerce Camp Hamburg</a>.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=D4hhQhnljUI">Quick 'n dirty Episode 4 bei YouTube</a></li>
+<li><a href="https://deardesignstudent.com/a-designers-code-of-ethics-f4a88aca9e95">A Designer’s Code of Ethics</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/qnd/3000-4ce7c44117.png"></itunes:image>
+      <itunes:duration>00:26:40</itunes:duration>
+      <itunes:subtitle>Experimente und Konferenzen</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,quick-n-dirty,pairing,ecommercecamp,barcamp</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S02E02</guid>
+      <title>[S02E02] Interview mit Rico Pfaus</title>
+      <pubDate>Tue, 08 Aug 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s02e02-rico-pfaus-offline.mp3" length="7729567" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Unser Interviewgast <a href="https://github.com/ryx">Rico Pfaus</a> ist Frontend-Architekt bei <a href="https://www.galeria-kaufhof.de/">Galeria Kaufhof</a>.
+Vor drei Jahren haben wir gemeinsam mit Rico am <a href="https://galeria-kaufhof.github.io/general/2014/09/20/jump-ein-technologiesprung-bei-galeria-kaufhof">Relaunch der Galeria Kaufhof Platform</a> gearbeitet und sprechen mit ihm über die Entwicklungen seit dieser Zeit.</p>
+<div id="more"></div>
+<p>Das Interview wurde am 04.08.2017 per Skype aufgenommen.</p>
+<p>Die Episode wurde am 14.08.2017 offline gestellt.</p>
+]]></description>
+      <media:thumbnail url="/images/podcast/s02e02/640-0cc00ba591.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Unser Interviewgast <a href="https://github.com/ryx">Rico Pfaus</a> ist Frontend-Architekt bei <a href="https://www.galeria-kaufhof.de/">Galeria Kaufhof</a>.
+Vor drei Jahren haben wir gemeinsam mit Rico am <a href="https://galeria-kaufhof.github.io/general/2014/09/20/jump-ein-technologiesprung-bei-galeria-kaufhof">Relaunch der Galeria Kaufhof Platform</a> gearbeitet und sprechen mit ihm über die Entwicklungen seit dieser Zeit.</p>
+<div id="more"></div>
+<p>Das Interview wurde am 04.08.2017 per Skype aufgenommen.</p>
+<p>Die Episode wurde am 14.08.2017 offline gestellt.</p>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s02e02/3000-dffde8c9a2.png"></itunes:image>
+      <itunes:duration>00:00:59</itunes:duration>
+      <itunes:subtitle>Galeria Kaufhof Relaunch und Frontend Architektur</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,styleguide,pattern libraries,design systeme,frontend,entwicklung,architektur,sketch,react</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S02E01</guid>
+      <title>[S02E01] Interview mit Mario Nebl</title>
+      <pubDate>Thu, 27 Jul 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s02e01-mario-nebl.mp3" length="99509192" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Unser Interviewgast <a href="https://github.com/marionebl">Mario Nebl</a> arbeitet als <a href="https://sinnerschrader.github.io/free-radical-specification/">Freies Radikal</a> bei der SinnerSchrader Deutschland GmbH.
+Wir unterhalten uns mit Mario über den von ihm entwickelten Pattern Library Generator <a href="https://github.com/sinnerschrader/patternplate">patternplate</a> und Design Systeme.</p>
+<div id="more"></div>
+<blockquote>
+<p>Allein dadurch dass alle über die selbe Sache sprechen, spart man viel Zeit und erreicht eine andere Durchdringungstiefe in allen Gewerken.</p>
+<footer>&mdash;Mario Nebl</footer>
+</blockquote>
+<p>Ebenso sprechen wir über Teamkonstellationen bei SinnerSchrader:</p>
+<blockquote>
+<p>Wir strukturieren unsere Teams anders:
+Es gibt kein Team in dem nur Technik oder nur Designer sitzen.
+Es wird immer gemeinsam in relativ kleinen Teams an einem Feature gearbeitet.
+Das führt dazu, dass man gemeinsam Verantwortung für das Ergebnis übernimmt.</p>
+<footer>&mdash;Mario Nebl</footer>
+</blockquote>
+<p>Das Interview wurde am 17.07.2017 in Hamburg aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://github.com/sinnerschrader/patternplate">patternplate</a></li>
+<li><a href="https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62">Space in Design Systems – Nathan Curtis</a></li>
+<li><a href="http://airbnb.io/react-sketchapp/">React Sketch.app</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s02e01/640-5dfacef08e.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Unser Interviewgast <a href="https://github.com/marionebl">Mario Nebl</a> arbeitet als <a href="https://sinnerschrader.github.io/free-radical-specification/">Freies Radikal</a> bei der SinnerSchrader Deutschland GmbH.
+Wir unterhalten uns mit Mario über den von ihm entwickelten Pattern Library Generator <a href="https://github.com/sinnerschrader/patternplate">patternplate</a> und Design Systeme.</p>
+<div id="more"></div>
+<blockquote>
+<p>Allein dadurch dass alle über die selbe Sache sprechen, spart man viel Zeit und erreicht eine andere Durchdringungstiefe in allen Gewerken.</p>
+<footer>&mdash;Mario Nebl</footer>
+</blockquote>
+<p>Ebenso sprechen wir über Teamkonstellationen bei SinnerSchrader:</p>
+<blockquote>
+<p>Wir strukturieren unsere Teams anders:
+Es gibt kein Team in dem nur Technik oder nur Designer sitzen.
+Es wird immer gemeinsam in relativ kleinen Teams an einem Feature gearbeitet.
+Das führt dazu, dass man gemeinsam Verantwortung für das Ergebnis übernimmt.</p>
+<footer>&mdash;Mario Nebl</footer>
+</blockquote>
+<p>Das Interview wurde am 17.07.2017 in Hamburg aufgenommen.</p>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://github.com/sinnerschrader/patternplate">patternplate</a></li>
+<li><a href="https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62">Space in Design Systems – Nathan Curtis</a></li>
+<li><a href="http://airbnb.io/react-sketchapp/">React Sketch.app</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s02e01/3000-93f5137044.png"></itunes:image>
+      <itunes:duration>00:40:25</itunes:duration>
+      <itunes:subtitle>Design Systeme und patternplate</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,patternplate,pattern libraries,design systeme,frontend,entwicklung,tools,design,prozess,dokumentation</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">QND003</guid>
+      <title>[QND003] Chocolate White Iconset</title>
+      <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/qnd-003.mp3" length="43419635" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Heute sprechen wir quick &amp; dirty über die <a href="https://github.com/janpersiel/chocolate-icons">Chocolate White Icons</a>, welche wir im Rahmen der <a href="https://github.com/dennisreimann/uiengine">UIengine</a> und in anderen Projekten einsetzen. Was nervt bei der Iconerstellung, worauf musste man achten, welche Tools können dabei helfen.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://github.com/janpersiel/chocolate-icons">Chocolate White Icons</a></li>
+<li><a href="https://github.com/dennisreimann/uiengine">UIengine</a></li>
+<li><a href="http://gapplin.wolfrosch.com/">Gapplin – SVG Viewer for Mac</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/qnd/640-2ff6b0082e.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Heute sprechen wir quick &amp; dirty über die <a href="https://github.com/janpersiel/chocolate-icons">Chocolate White Icons</a>, welche wir im Rahmen der <a href="https://github.com/dennisreimann/uiengine">UIengine</a> und in anderen Projekten einsetzen. Was nervt bei der Iconerstellung, worauf musste man achten, welche Tools können dabei helfen.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://github.com/janpersiel/chocolate-icons">Chocolate White Icons</a></li>
+<li><a href="https://github.com/dennisreimann/uiengine">UIengine</a></li>
+<li><a href="http://gapplin.wolfrosch.com/">Gapplin – SVG Viewer for Mac</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/qnd/3000-4ce7c44117.png"></itunes:image>
+      <itunes:duration>00:26:40</itunes:duration>
+      <itunes:subtitle>Vom Erstellen eines Iconsets und den Hürden</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,quick-n-dirty,icons,iconset</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">QND002</guid>
+      <title>[QND002] Die UIengine!</title>
+      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/qnd-002.mp3" length="49954657" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Heute sprechen wir quick &amp; dirty über die <a href="https://github.com/dennisreimann/uiengine">UIengine</a>, welche wir als Pattern Library Generator in aktuellen Projekten einsetzen.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://github.com/dennisreimann/uiengine">UIengine</a></li>
+<li><a href="https://uiengineering.de/patterns/">Die UIengineering.de Pattern Library</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/qnd/640-2ff6b0082e.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Heute sprechen wir quick &amp; dirty über die <a href="https://github.com/dennisreimann/uiengine">UIengine</a>, welche wir als Pattern Library Generator in aktuellen Projekten einsetzen.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://github.com/dennisreimann/uiengine">UIengine</a></li>
+<li><a href="https://uiengineering.de/patterns/">Die UIengineering.de Pattern Library</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/qnd/3000-4ce7c44117.png"></itunes:image>
+      <itunes:duration>00:20:40</itunes:duration>
+      <itunes:subtitle>Ein paar Worte zu unserem Tool für das Erstellen von Pattern Libraries</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,quick-n-dirty,uiengine</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">QND001</guid>
+      <title>[QND001] How is life?</title>
+      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/qnd-001.mp3" length="21775207" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Ein kleines Update aus dem Off:
+Im quick &amp; dirty Style melden wir uns zwischen den Staffel zurück und sprechen über das was uns aktuell bewegt.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://github.com/dennisreimann/uiengine">UIengine</a></li>
+<li><a href="https://uiengineering.de/patterns/">Die UIengineering.de Pattern Library</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/qnd/640-2ff6b0082e.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Ein kleines Update aus dem Off:
+Im quick &amp; dirty Style melden wir uns zwischen den Staffel zurück und sprechen über das was uns aktuell bewegt.</p>
+<div id="more"></div>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://github.com/dennisreimann/uiengine">UIengine</a></li>
+<li><a href="https://uiengineering.de/patterns/">Die UIengineering.de Pattern Library</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/qnd/3000-4ce7c44117.png"></itunes:image>
+      <itunes:duration>00:18:18</itunes:duration>
+      <itunes:subtitle>Back again: Quick and dirty!</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,quick-n-dirty</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S01E10</guid>
+      <title>[S01E10] The Power of Doku</title>
+      <pubDate>Tue, 21 Feb 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s01e10-dokumentation.mp3" length="45508896" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Bart Simpson musste schon als Strafarbeit an der Tafel Dinge schreiben:
+Ist die moderne Form der Strafarbeit die Dokumentation?
+Im Nachgang Dinge von anderen so aufschreiben, dass es passt. Nervt.
+Aber es gibt einen Weg aus der Motivationsfalle Doku: Die Dokumentation selber.</p>
+<div id="more"></div>
+<p>In dieser Episode sprechen wir über die Art und Weise wie es Spaß machen kann eine Doku zu haben und nicht daran zu verzweifeln.
+Wir reden über Beispiele aus unserer Arbeit und Prinzipien, die andere verwenden, um aus Dokumentation das zu machen, was sie leider nicht immer ist: Ein wertvolles Extra.</p>
+<p>Welche Tools wir verwenden und wie man Dokumentationen zu einer integrierten Sache machen kann, die auch noch das Team besser zusammenbringt, ein paar Tipps für mehr Selbstpromotion und besseres Projektinvolvement sowie Ideen für die Zukunft in unseren Arbeiten diskutieren wir ebenfalls.</p>
+<p>Und noch etwas in eigener Sache: Wir kommen wieder!
+Das Ende der ersten Staffel des UIengineering Podcast ist mit Folge 10 erreicht.
+Ab der zweiten Staffel kommen wir mit einem angepassten Format zu Euch und werden mehr Gäste haben.
+Wenn Ihr einen Interviewpartner vorschlagen mögt, auch Euch selber, <a href="/kontakt.html">immer her mit den Kontakten</a>.
+Wir nehmen eine kleine Pause und sind dann schon bald wieder in einem Podcatcher in Eurer Nähe oder Tasche.</p>
+<h3>Termine mit #UIengineering</h3>
+<ul>
+<li>16.3.–18.3.2017 <a href="https://www.ecommerce-camp.de/redner-sessions/sessions-2017/">E-Commerce Camp Jena</a></li>
+<li>29.5.–2.6.2017 <a href="https://webinale.de/session/design-development-und-dazwischen/">webinale Berlin</a></li>
+</ul>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://ethanmarcotte.com/wrote/pattern-patter/">Pattern patter</a></li>
+<li><a href="https://medium.com/@limedaring/five-tips-for-improving-your-technical-writing-and-documentation-47353723c8a7#.du1cl4uem">Five tips for improving your technical writing and documentation</a></li>
+<li><a href="http://www.writethedocs.org/guide/">Write The Docs: Documentation Guide</a></li>
+<li><a href="https://github.com/dennisreimann/uiengineering.de">Das uiengineering.de-Projekt auf Github</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s01e10/640-c316d8768a.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Bart Simpson musste schon als Strafarbeit an der Tafel Dinge schreiben:
+Ist die moderne Form der Strafarbeit die Dokumentation?
+Im Nachgang Dinge von anderen so aufschreiben, dass es passt. Nervt.
+Aber es gibt einen Weg aus der Motivationsfalle Doku: Die Dokumentation selber.</p>
+<div id="more"></div>
+<p>In dieser Episode sprechen wir über die Art und Weise wie es Spaß machen kann eine Doku zu haben und nicht daran zu verzweifeln.
+Wir reden über Beispiele aus unserer Arbeit und Prinzipien, die andere verwenden, um aus Dokumentation das zu machen, was sie leider nicht immer ist: Ein wertvolles Extra.</p>
+<p>Welche Tools wir verwenden und wie man Dokumentationen zu einer integrierten Sache machen kann, die auch noch das Team besser zusammenbringt, ein paar Tipps für mehr Selbstpromotion und besseres Projektinvolvement sowie Ideen für die Zukunft in unseren Arbeiten diskutieren wir ebenfalls.</p>
+<p>Und noch etwas in eigener Sache: Wir kommen wieder!
+Das Ende der ersten Staffel des UIengineering Podcast ist mit Folge 10 erreicht.
+Ab der zweiten Staffel kommen wir mit einem angepassten Format zu Euch und werden mehr Gäste haben.
+Wenn Ihr einen Interviewpartner vorschlagen mögt, auch Euch selber, <a href="/kontakt.html">immer her mit den Kontakten</a>.
+Wir nehmen eine kleine Pause und sind dann schon bald wieder in einem Podcatcher in Eurer Nähe oder Tasche.</p>
+<h3>Termine mit #UIengineering</h3>
+<ul>
+<li>16.3.–18.3.2017 <a href="https://www.ecommerce-camp.de/redner-sessions/sessions-2017/">E-Commerce Camp Jena</a></li>
+<li>29.5.–2.6.2017 <a href="https://webinale.de/session/design-development-und-dazwischen/">webinale Berlin</a></li>
+</ul>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://ethanmarcotte.com/wrote/pattern-patter/">Pattern patter</a></li>
+<li><a href="https://medium.com/@limedaring/five-tips-for-improving-your-technical-writing-and-documentation-47353723c8a7#.du1cl4uem">Five tips for improving your technical writing and documentation</a></li>
+<li><a href="http://www.writethedocs.org/guide/">Write The Docs: Documentation Guide</a></li>
+<li><a href="https://github.com/dennisreimann/uiengineering.de">Das uiengineering.de-Projekt auf Github</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s01e10/3000-f7a1086bf6.png"></itunes:image>
+      <itunes:duration>00:42:25</itunes:duration>
+      <itunes:subtitle>Möge die Macht der Erklärung mit Dir sein!</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,entwicklung,tools,design,prozess,dokumentation,schreiben,pairing</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S01E09</guid>
+      <title>[S01E09] Fear-Factor Terminal</title>
+      <pubDate>Tue, 14 Feb 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s01e09-fear-factor-terminal.mp3" length="44494237" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Es ist bekannt aus vielen Hollywoodstreifen, kein Agentenfilm oder moderner Thriller kommt ohne es aus: Das schwarze Fenster mit der weissen oder grünen Schrift, die superkryptisch aussieht. Aber ist das denn wirklich alles nur für den Obernerd zu verstehen und zu bedienen?</p>
+<div id="more"></div>
+<p>Wie so oft in unseren letzten Gesprächen stellt sich heraus, dass es gar nicht so schlimm ist wie man denken kann. “With the helping hand of a friend” kann man auch als Designer eine Menge Freude am Terminal entwickeln, nämlich dann wenn man merkt, dass einem dieses Fensterchen ganz viel Arbeit abnehmen kann. Wer weiterhin 345 JPEGs von Hand speichern und umbenennen und optimieren will kann das gerne tun. Aber wer schlau ist, noch ein Leben nach dem Job hat, der  hört genau hin und sammelt Ideen wie man früher Feierabend machen kann.</p>
+<p>Außerdem sprechen wir über die Arbeitsweise mit Build-Scripts und über die Arbeit an der <a href="http://uiengineering.de">uiengineering.de</a>. Warum am Ende auch ganz kleine erste Schritte ein Weg in das mysteriöse Fenster Sinn machen haben wir auch als Punkt für diese Episode auf der Agenda gehabt.</p>
+<h3>Termine mit #UIengineering</h3>
+<ul>
+<li>16.3.–18.3.2017 <a href="https://www.ecommerce-camp.de/redner-sessions/sessions-2017/">E-Commerce Camp Jena</a></li>
+<li>29.5.–2.6.2017 <a href="https://webinale.de/session/design-development-und-dazwischen/">webinale Berlin</a></li>
+</ul>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://github.com/dennisreimann/uiengineering.de">Das uiengineering.de-Projekt auf Github</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s01e09/640-017995fa4d.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Es ist bekannt aus vielen Hollywoodstreifen, kein Agentenfilm oder moderner Thriller kommt ohne es aus: Das schwarze Fenster mit der weissen oder grünen Schrift, die superkryptisch aussieht. Aber ist das denn wirklich alles nur für den Obernerd zu verstehen und zu bedienen?</p>
+<div id="more"></div>
+<p>Wie so oft in unseren letzten Gesprächen stellt sich heraus, dass es gar nicht so schlimm ist wie man denken kann. “With the helping hand of a friend” kann man auch als Designer eine Menge Freude am Terminal entwickeln, nämlich dann wenn man merkt, dass einem dieses Fensterchen ganz viel Arbeit abnehmen kann. Wer weiterhin 345 JPEGs von Hand speichern und umbenennen und optimieren will kann das gerne tun. Aber wer schlau ist, noch ein Leben nach dem Job hat, der  hört genau hin und sammelt Ideen wie man früher Feierabend machen kann.</p>
+<p>Außerdem sprechen wir über die Arbeitsweise mit Build-Scripts und über die Arbeit an der <a href="http://uiengineering.de">uiengineering.de</a>. Warum am Ende auch ganz kleine erste Schritte ein Weg in das mysteriöse Fenster Sinn machen haben wir auch als Punkt für diese Episode auf der Agenda gehabt.</p>
+<h3>Termine mit #UIengineering</h3>
+<ul>
+<li>16.3.–18.3.2017 <a href="https://www.ecommerce-camp.de/redner-sessions/sessions-2017/">E-Commerce Camp Jena</a></li>
+<li>29.5.–2.6.2017 <a href="https://webinale.de/session/design-development-und-dazwischen/">webinale Berlin</a></li>
+</ul>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://github.com/dennisreimann/uiengineering.de">Das uiengineering.de-Projekt auf Github</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s01e09/3000-ee6352b071.png"></itunes:image>
+      <itunes:duration>00:34:47</itunes:duration>
+      <itunes:subtitle>Wenn sich das Fenster aus der Hölle öffnet!</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,preprozessoren,sass,less,stylus,entwicklung,tools,kommandozeile,terminal,build script,automatisierung</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S01E08</guid>
+      <title>[S01E08] BEMbule! SMACSS my bitch up!</title>
+      <pubDate>Tue, 07 Feb 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s01e08-bem-atomic-css-und-co.mp3" length="41158094" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>CSS ist eine Schnittmenge der Gewerke Design und Entwicklung. In der achten Folge des UIengineering Podcasts sprechen wir heute darüber wie wir CSS schreiben, welche Tools wir nutzen und welche Architekturen es gibt.</p>
+<div id="more"></div>
+<p>CSS ist nicht CSS ist CSS … heute schreibt kaum noch ein Frontend-Entwickler direkt CSS. Wer sich viel Arbeit und Zeit sparen will, der nutzt einen Preprozessor. Welchen aber nutzt man am besten? Was steckt hinter diesen Tools? Und ist das schon wieder etwas, was ein Designer lernen muss, der womöglich gerade seine ersten Schritte in CSS gemacht hat?</p>
+<p>Wir berichten über unsere Erfahrungen mit BEM, auch ausserhalb der Design-und-Entwickler-Schnittmenge, warum das Konzept gut zu Atomic Design passt und was man sonst noch so beachten kann und sollte. Keine reine Entwicklerfolge, im Gegenteil.</p>
+<h3>Termine mit #UIengineering</h3>
+<ul>
+<li>16.3.–18.3.2017 <a href="https://www.ecommerce-camp.de/redner-sessions/sessions-2017/">E-Commerce Camp Jena</a></li>
+<li>29.5.–2.6.2017 <a href="https://webinale.de/session/design-development-und-dazwischen/">webinale Berlin</a></li>
+</ul>
+<h3>Shownotes &amp; Links</h3>
+<h4>Preprozessoren / Architekturen</h4>
+<ul>
+<li><a href="http://getbem.com">BEM</a></li>
+<li><a href="http://sass-lang.com">SASS</a></li>
+<li><a href="http://stylus-lang.com">Stylus</a></li>
+<li><a href="http://lesscss.org">LESS</a></li>
+<li><a href="https://acss.io">Atomic CSS</a></li>
+<li><a href="https://smacss.com">SMACSS</a></li>
+</ul>
+<h4>Tools zum Kompilieren</h4>
+<ul>
+<li><a href="http://koala-app.com">Koala (Win, Mac, Linux)</a></li>
+<li><a href="https://codekitapp.com">CodeKit (Mac)</a></li>
+<li><a href="https://prepros.io">Prepros (Win, Mac, Linux)</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s01e08/640-21617a648a.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>CSS ist eine Schnittmenge der Gewerke Design und Entwicklung. In der achten Folge des UIengineering Podcasts sprechen wir heute darüber wie wir CSS schreiben, welche Tools wir nutzen und welche Architekturen es gibt.</p>
+<div id="more"></div>
+<p>CSS ist nicht CSS ist CSS … heute schreibt kaum noch ein Frontend-Entwickler direkt CSS. Wer sich viel Arbeit und Zeit sparen will, der nutzt einen Preprozessor. Welchen aber nutzt man am besten? Was steckt hinter diesen Tools? Und ist das schon wieder etwas, was ein Designer lernen muss, der womöglich gerade seine ersten Schritte in CSS gemacht hat?</p>
+<p>Wir berichten über unsere Erfahrungen mit BEM, auch ausserhalb der Design-und-Entwickler-Schnittmenge, warum das Konzept gut zu Atomic Design passt und was man sonst noch so beachten kann und sollte. Keine reine Entwicklerfolge, im Gegenteil.</p>
+<h3>Termine mit #UIengineering</h3>
+<ul>
+<li>16.3.–18.3.2017 <a href="https://www.ecommerce-camp.de/redner-sessions/sessions-2017/">E-Commerce Camp Jena</a></li>
+<li>29.5.–2.6.2017 <a href="https://webinale.de/session/design-development-und-dazwischen/">webinale Berlin</a></li>
+</ul>
+<h3>Shownotes &amp; Links</h3>
+<h4>Preprozessoren / Architekturen</h4>
+<ul>
+<li><a href="http://getbem.com">BEM</a></li>
+<li><a href="http://sass-lang.com">SASS</a></li>
+<li><a href="http://stylus-lang.com">Stylus</a></li>
+<li><a href="http://lesscss.org">LESS</a></li>
+<li><a href="https://acss.io">Atomic CSS</a></li>
+<li><a href="https://smacss.com">SMACSS</a></li>
+</ul>
+<h4>Tools zum Kompilieren</h4>
+<ul>
+<li><a href="http://koala-app.com">Koala (Win, Mac, Linux)</a></li>
+<li><a href="https://codekitapp.com">CodeKit (Mac)</a></li>
+<li><a href="https://prepros.io">Prepros (Win, Mac, Linux)</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s01e08/3000-f4edddf099.png"></itunes:image>
+      <itunes:duration>00:27:57</itunes:duration>
+      <itunes:subtitle>CSS-Architektur und Preprozessoren im Einsatz</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,css,preprozessoren,sass,less,stylus,bem,atomiccss,prototyp,pattern libraries,entwicklung,tools</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S01E07</guid>
+      <title>[S01E07] Layouten mit Sandboxen</title>
+      <pubDate>Tue, 31 Jan 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s01e07-layouten-mit-sandboxen.mp3" length="44019812" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Layouten in Sandboxen: Was? Nicht in Photoshop oder Sketch? Und was sind überhaupt Sandboxen? Sandkisten? Wir sprechen in dieser Episode über den Prozess des Layoutens, und wie und wann welche Tools für die Designarbeit sinnvoll sind.</p>
+<div id="more"></div>
+<p>UIengineering ist nicht nur wenn ein Designer mit dem Entwickler spricht bevor er sein Layout “über den Zaun wirft”. In dieser Episode sprechen wir über die Methode in einer Sandbox, einem Bereich innerhalb einer Pattern Library, zu gestalten. Layouten mit Code (Markup/HTML und CSS, vielleicht sogar JavaScript). Manchmal kann das eine extrem effektive Art und Weise der Arbeit sein. Manchmal kann es auch langsamer sein und die Ergebnisse viel schlechter. Wann also sollte man wie vorgehen?</p>
+<p>Neben der Herausforderung mit Tools, die man nicht so gut beherrscht wie andere, zum perfekten Ergebnis zu kommen, kann man aber auch viel Zeit sparen. Mitunter auch den einzigen wirtschaftlichen Weg beschreiten, um ans Ziel zu gelangen. Wir beleuchten diese Aspekte heute aus der Perspektive des Designgewerks.</p>
+<h3>Termine mit #UIengineering</h3>
+<ul>
+<li>16.3.–18.3.2017 <a href="https://www.ecommerce-camp.de/redner-sessions/sessions-2017/">E-Commerce Camp Jena</a></li>
+<li>29.5.–2.6.2017 <a href="https://webinale.de/session/design-development-und-dazwischen/">webinale Berlin</a></li>
+</ul>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="http://blog.teamtreehouse.com/5-good-reasons-why-designers-should-code">Alt aber wahr - Warum Designer coden sollten (EN)</a></li>
+<li><a href="https://uiengineering.de/">Termine mit #uiengineering</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s01e07/640-a141193ab1.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Layouten in Sandboxen: Was? Nicht in Photoshop oder Sketch? Und was sind überhaupt Sandboxen? Sandkisten? Wir sprechen in dieser Episode über den Prozess des Layoutens, und wie und wann welche Tools für die Designarbeit sinnvoll sind.</p>
+<div id="more"></div>
+<p>UIengineering ist nicht nur wenn ein Designer mit dem Entwickler spricht bevor er sein Layout “über den Zaun wirft”. In dieser Episode sprechen wir über die Methode in einer Sandbox, einem Bereich innerhalb einer Pattern Library, zu gestalten. Layouten mit Code (Markup/HTML und CSS, vielleicht sogar JavaScript). Manchmal kann das eine extrem effektive Art und Weise der Arbeit sein. Manchmal kann es auch langsamer sein und die Ergebnisse viel schlechter. Wann also sollte man wie vorgehen?</p>
+<p>Neben der Herausforderung mit Tools, die man nicht so gut beherrscht wie andere, zum perfekten Ergebnis zu kommen, kann man aber auch viel Zeit sparen. Mitunter auch den einzigen wirtschaftlichen Weg beschreiten, um ans Ziel zu gelangen. Wir beleuchten diese Aspekte heute aus der Perspektive des Designgewerks.</p>
+<h3>Termine mit #UIengineering</h3>
+<ul>
+<li>16.3.–18.3.2017 <a href="https://www.ecommerce-camp.de/redner-sessions/sessions-2017/">E-Commerce Camp Jena</a></li>
+<li>29.5.–2.6.2017 <a href="https://webinale.de/session/design-development-und-dazwischen/">webinale Berlin</a></li>
+</ul>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="http://blog.teamtreehouse.com/5-good-reasons-why-designers-should-code">Alt aber wahr - Warum Designer coden sollten (EN)</a></li>
+<li><a href="https://uiengineering.de/">Termine mit #uiengineering</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s01e07/3000-1d8efcbc8e.png"></itunes:image>
+      <itunes:duration>00:34:19</itunes:duration>
+      <itunes:subtitle>Die Qual der Wahl der Tools</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,pattern libraries,ui systeme,entwicklung,design,erfahrungen,tools,styleguides,agile</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S01E06</guid>
+      <title>[S01E06] Interview mit Falk Hoppe</title>
+      <pubDate>Tue, 24 Jan 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s01e06-interview-mit-falk-hoppe.mp3" length="73125635" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Folge Sechs unseres Podcasts ist ein Interview mit Falk Hoppe <a href="https://twitter.com/nothing_box">(@nothing_box)</a>, Senior Berater bei <a href="http://www.innoq.com">innoQ</a> aus Monheim am Rhein. Falk arbeitet bereits seit vielen Jahren im Umfeld von Frontend und Pattern Libraries und teilt seine Eindrücke und Ideen mit uns.</p>
+<div id="more"></div>
+<p>Die Arbeitsweise mit einer Pattern Library ist für Falk die Grundlage für funktionierendes UIengineering. Hier kommen Designer und Entwickler, aber auch Vertreter verschiedener Fachbereiche zusammen. Dabei sollte Kommunikation als Basis für eine gute Zusammenarbeit dienen und natürlich ist ein konstanter Austausch zu den Themen, die alle Gewerke beschäftigen essentiell.</p>
+<p>Aber wie deutlich wird, geht es auch für Falk nicht nur darum die Gewerke in einen Austausch zu bringen, sondern die Rollen per se zu betrachten und die Bindung einer Rolle an eine Person zu hinterfragen. Hier sieht er auch Herausforderungen, die bis zum Management einer Agentur oder eines Unternehmens hinauf gehen. Aber gleichzeitig ist ein Einverständnis nicht zwingend notwendig.</p>
+<p>Auch sprechen wir über Tools und wer diese verwenden kann. Eine Reihe von Links sind in den Shownotes zu finden. Je nach Konzeption und Anforderungen sind hier eventuell schon erste Tipps dabei, die einen Einstieg in die Welt von Styleguides und Pattern Libraries ermöglichen.</p>
+<h3>Termine mit #UIengineering</h3>
+<ul>
+<li>16.3.–18.3.2017 <a href="https://www.ecommerce-camp.de/redner-sessions/sessions-2017/">E-Commerce Camp Jena</a></li>
+<li>29.5.–2.6.2017 <a href="https://webinale.de/session/design-development-und-dazwischen/">webinale Berlin</a></li>
+</ul>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://twitter.com/nothing_box">Falk Hoppe auf twitter: nothing_box</a></li>
+<li><a href="https://innoq.com">innoQ</a></li>
+<li><a href="http://styletil.es">Stiletiles</a></li>
+<li><a href="https://github.com/Galeria-Kaufhof/stylegen">Stylegen von GALERIA Kaufhof</a></li>
+<li><a href="https://frontify.com">Frontify</a></li>
+<li><a href="https://fbrctr.github.io">Fabricator</a></li>
+<li><a href="http://fractal.build">Fractal.Build</a></li>
+<li><a href="https://dennisreimann.de/articles/living-pattern-library.html">Living Pattern Libraries: Wie man Styleguide Zombies killt</a></li>
+<li><a href="https://uiengineering.de/">Termine mit #uiengineering</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s01e06/640-e47b57c264.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Folge Sechs unseres Podcasts ist ein Interview mit Falk Hoppe <a href="https://twitter.com/nothing_box">(@nothing_box)</a>, Senior Berater bei <a href="http://www.innoq.com">innoQ</a> aus Monheim am Rhein. Falk arbeitet bereits seit vielen Jahren im Umfeld von Frontend und Pattern Libraries und teilt seine Eindrücke und Ideen mit uns.</p>
+<div id="more"></div>
+<p>Die Arbeitsweise mit einer Pattern Library ist für Falk die Grundlage für funktionierendes UIengineering. Hier kommen Designer und Entwickler, aber auch Vertreter verschiedener Fachbereiche zusammen. Dabei sollte Kommunikation als Basis für eine gute Zusammenarbeit dienen und natürlich ist ein konstanter Austausch zu den Themen, die alle Gewerke beschäftigen essentiell.</p>
+<p>Aber wie deutlich wird, geht es auch für Falk nicht nur darum die Gewerke in einen Austausch zu bringen, sondern die Rollen per se zu betrachten und die Bindung einer Rolle an eine Person zu hinterfragen. Hier sieht er auch Herausforderungen, die bis zum Management einer Agentur oder eines Unternehmens hinauf gehen. Aber gleichzeitig ist ein Einverständnis nicht zwingend notwendig.</p>
+<p>Auch sprechen wir über Tools und wer diese verwenden kann. Eine Reihe von Links sind in den Shownotes zu finden. Je nach Konzeption und Anforderungen sind hier eventuell schon erste Tipps dabei, die einen Einstieg in die Welt von Styleguides und Pattern Libraries ermöglichen.</p>
+<h3>Termine mit #UIengineering</h3>
+<ul>
+<li>16.3.–18.3.2017 <a href="https://www.ecommerce-camp.de/redner-sessions/sessions-2017/">E-Commerce Camp Jena</a></li>
+<li>29.5.–2.6.2017 <a href="https://webinale.de/session/design-development-und-dazwischen/">webinale Berlin</a></li>
+</ul>
+<h3>Shownotes &amp; Links</h3>
+<ul>
+<li><a href="https://twitter.com/nothing_box">Falk Hoppe auf twitter: nothing_box</a></li>
+<li><a href="https://innoq.com">innoQ</a></li>
+<li><a href="http://styletil.es">Stiletiles</a></li>
+<li><a href="https://github.com/Galeria-Kaufhof/stylegen">Stylegen von GALERIA Kaufhof</a></li>
+<li><a href="https://frontify.com">Frontify</a></li>
+<li><a href="https://fbrctr.github.io">Fabricator</a></li>
+<li><a href="http://fractal.build">Fractal.Build</a></li>
+<li><a href="https://dennisreimann.de/articles/living-pattern-library.html">Living Pattern Libraries: Wie man Styleguide Zombies killt</a></li>
+<li><a href="https://uiengineering.de/">Termine mit #uiengineering</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s01e06/3000-ff541f144f.png"></itunes:image>
+      <itunes:duration>01:01:47</itunes:duration>
+      <itunes:subtitle>Erfahrungen, Tipps und Tools</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,pattern libraries,ui systeme,entwicklung,design,erfahrungen,tools,styleguides,agile</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S01E05</guid>
+      <title>[S01E05] Pattern Libraries - Teil 3</title>
+      <pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s01e05-patternlibraries-3.mp3" length="68765936" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>In Folge Fünf des UI engineering Podcast unterhalten wir uns über die Kosten und Nutzen von Pattern Libraries.
+Wann macht es Sinn eine Pattern Library zu verwenden und wann nicht. Wer zahlt was? Wie ist mit Budgets pro Gewerk zu rechnen?</p>
+<div id="more"></div>
+<p>Pattern Libraries sind der große Hype, aber was kostet denn eigentlich eine solche Pattern Library Entwicklung? Was sind die  Dinge, die man sinnvollerweise einbaut? Wir sprechen über Beispiele, die wir in einigen Tools gesehen haben, die wir selber entwickelt haben und die wir uns noch gut vorstellen können für ein gutes Tool.</p>
+<p>Auch das Thema Dokumentation und das Einbeziehen von verschiedenen Gewerken ist ein Aspekt, der für uns in der Pattern Library Entwicklung eine wichtige Komponente ist. Hier diskutieren wir ebenfalls Beispiele und Anforderungen.</p>
+<h3>Termine mit #UIengineering</h3>
+<ul>
+<li>16.3.–18.3.2017 <a href="https://www.ecommerce-camp.de/redner-sessions/sessions-2017/">E-Commerce Camp Jena</a></li>
+<li>29.5.–2.6.2017 <a href="https://webinale.de/session/design-development-und-dazwischen/">webinale Berlin</a></li>
+</ul>
+<h3>Shownotes</h3>
+<ul>
+<li><a href="http://articles.thoughtintodesign.com/2012/01/enterprise-ui-design-patterns-part-i.html#.WH4MkrGZPMU">Enterprise UI Design Patterns</a></li>
+<li><a href="https://boagworld.com/design/pattern-library/">How and why to create a pattern library?</a></li>
+<li><a href="http://www.siteworx.com/latest/insights/pattern-library/">How we use pattern libraries to deliver value</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s01e05/640-a648286927.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>In Folge Fünf des UI engineering Podcast unterhalten wir uns über die Kosten und Nutzen von Pattern Libraries.
+Wann macht es Sinn eine Pattern Library zu verwenden und wann nicht. Wer zahlt was? Wie ist mit Budgets pro Gewerk zu rechnen?</p>
+<div id="more"></div>
+<p>Pattern Libraries sind der große Hype, aber was kostet denn eigentlich eine solche Pattern Library Entwicklung? Was sind die  Dinge, die man sinnvollerweise einbaut? Wir sprechen über Beispiele, die wir in einigen Tools gesehen haben, die wir selber entwickelt haben und die wir uns noch gut vorstellen können für ein gutes Tool.</p>
+<p>Auch das Thema Dokumentation und das Einbeziehen von verschiedenen Gewerken ist ein Aspekt, der für uns in der Pattern Library Entwicklung eine wichtige Komponente ist. Hier diskutieren wir ebenfalls Beispiele und Anforderungen.</p>
+<h3>Termine mit #UIengineering</h3>
+<ul>
+<li>16.3.–18.3.2017 <a href="https://www.ecommerce-camp.de/redner-sessions/sessions-2017/">E-Commerce Camp Jena</a></li>
+<li>29.5.–2.6.2017 <a href="https://webinale.de/session/design-development-und-dazwischen/">webinale Berlin</a></li>
+</ul>
+<h3>Shownotes</h3>
+<ul>
+<li><a href="http://articles.thoughtintodesign.com/2012/01/enterprise-ui-design-patterns-part-i.html#.WH4MkrGZPMU">Enterprise UI Design Patterns</a></li>
+<li><a href="https://boagworld.com/design/pattern-library/">How and why to create a pattern library?</a></li>
+<li><a href="http://www.siteworx.com/latest/insights/pattern-library/">How we use pattern libraries to deliver value</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s01e05/3000-9dc556b858.png"></itunes:image>
+      <itunes:duration>00:42:52</itunes:duration>
+      <itunes:subtitle>Ist es das denn wert?</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,pattern libraries,ui systeme,atomic design,entwicklung,design,feedback,kosten,nutzen</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S01E04</guid>
+      <title>[S01E04] Pattern Libraries - Teil 2</title>
+      <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s01e04-patternlibraries-2.mp3" length="49159922" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Folge Vier des UI engineering Podcast stellt die praktische Arbeit mit Pattern Libraries vor.
+Es geht um Arbeitsabläufe, wo fängt man an und wie setzt man Dinge um.</p>
+<div id="more"></div>
+<p>Wir sprechen über die Workflows, die es für den Einsatz von Pattern Libraries gibt. Wir greifen dabei auch Themen der vorherigen Episoden – <a href="https://uiengineering.de/podcast/s01e01-atomic-design.html">Atomic Design</a> und <a href="https://uiengineering.de/podcast/s01e02-styletiles.html">Styletiles</a> – wieder auf und sehen uns ihren praktischen Einsatz an. Außerdem sprechen wir über die Zusammenarbeit von Design und Entwicklung an der Pattern Library: Was dadurch ermöglicht wird und welche Herausforderungen dabei auf das Team zukommen.</p>
+<p>In der kommenden Episode weichen wir vom bisherigen Format ab und haben uns einen Interviewgast besorgt.
+Wir werden tiefer in das Thema Pattern Library einsteigen und ein Open Source Projekt dazu vorstellen.
+Seid gespannt!</p>
+<h3>Shownotes</h3>
+<ul>
+<li><a href="https://24ways.org/2016/designing-imaginative-style-guides/">Designing Imaginative Style Guides</a></li>
+<li><a href="https://medium.com/@jasonjulien/are-pattern-libraries-good-for-design-e344c6ba0057#.rjn2yvel0">Are Pattern Libraries Good for Design?</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s01e04/640-9e46a2344b.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Folge Vier des UI engineering Podcast stellt die praktische Arbeit mit Pattern Libraries vor.
+Es geht um Arbeitsabläufe, wo fängt man an und wie setzt man Dinge um.</p>
+<div id="more"></div>
+<p>Wir sprechen über die Workflows, die es für den Einsatz von Pattern Libraries gibt. Wir greifen dabei auch Themen der vorherigen Episoden – <a href="https://uiengineering.de/podcast/s01e01-atomic-design.html">Atomic Design</a> und <a href="https://uiengineering.de/podcast/s01e02-styletiles.html">Styletiles</a> – wieder auf und sehen uns ihren praktischen Einsatz an. Außerdem sprechen wir über die Zusammenarbeit von Design und Entwicklung an der Pattern Library: Was dadurch ermöglicht wird und welche Herausforderungen dabei auf das Team zukommen.</p>
+<p>In der kommenden Episode weichen wir vom bisherigen Format ab und haben uns einen Interviewgast besorgt.
+Wir werden tiefer in das Thema Pattern Library einsteigen und ein Open Source Projekt dazu vorstellen.
+Seid gespannt!</p>
+<h3>Shownotes</h3>
+<ul>
+<li><a href="https://24ways.org/2016/designing-imaginative-style-guides/">Designing Imaginative Style Guides</a></li>
+<li><a href="https://medium.com/@jasonjulien/are-pattern-libraries-good-for-design-e344c6ba0057#.rjn2yvel0">Are Pattern Libraries Good for Design?</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s01e04/3000-adbec2a2f1.png"></itunes:image>
+      <itunes:duration>00:36:01</itunes:duration>
+      <itunes:subtitle>Go with the Workflow(s)</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,pattern libraries,ui systeme,atomic design,entwicklung,design,feedback,workflow,arbeitsablauf</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S01E03</guid>
+      <title>[S01E03] Pattern Libraries</title>
+      <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s01e03-patternlibraries.mp3" length="44034201" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>In der dritten Folge des UI engineering Podcast geht es um Pattern Libraries.
+Wir besprechen die Grundlagen und die Aspekte für die Anforderer.</p>
+<div id="more"></div>
+<p>Atomic Design ist eine Grundlage, die wir für eine solide Basis zum Entwickeln von Webprojekten erachten.
+Pattern Libraries sind ein Tool diesem Design System Leben einzuhauchen und die Idee von Atomic Design in das Projekt zu bringen.
+Hierbei ist unserer Auffassung nach eine lebende und von allen genutzte Pattern Library notwendig.
+Diese und weitere Aspekte besprechen wir in dieser Folge.</p>
+<p>Das Thema Pattern Libraries wird in der nächsten Folge fortgesetzt.</p>
+<h3>Shownotes</h3>
+<ul>
+<li><a href="https://medium.com/@trydesignlab/pattern-libraries-what-they-are-and-why-you-need-one-2eb34ef33c1b#.u30b7mj9j">Pattern Libraries: What They Are and Why You Need One</a></li>
+<li><a href="https://medium.com/@Kupferwerk_Creatives/pattern-libraries-in-sketch-zeplin-boards-creative-team-and-developers-happy-ever-after-86f6d8575a5a#.20ovmv3yf">Pattern Libraries in Sketch + Zeplin Boards ⇒ Creative Team and Developers happy ever after</a></li>
+<li><a href="https://medium.com/creative-nights/automated-pattern-libraries-d4c89a113a27#.o9e3za42f">Automated Pattern Libraries for Complex Web Design Projects</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s01e03/640-92b127a519.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>In der dritten Folge des UI engineering Podcast geht es um Pattern Libraries.
+Wir besprechen die Grundlagen und die Aspekte für die Anforderer.</p>
+<div id="more"></div>
+<p>Atomic Design ist eine Grundlage, die wir für eine solide Basis zum Entwickeln von Webprojekten erachten.
+Pattern Libraries sind ein Tool diesem Design System Leben einzuhauchen und die Idee von Atomic Design in das Projekt zu bringen.
+Hierbei ist unserer Auffassung nach eine lebende und von allen genutzte Pattern Library notwendig.
+Diese und weitere Aspekte besprechen wir in dieser Folge.</p>
+<p>Das Thema Pattern Libraries wird in der nächsten Folge fortgesetzt.</p>
+<h3>Shownotes</h3>
+<ul>
+<li><a href="https://medium.com/@trydesignlab/pattern-libraries-what-they-are-and-why-you-need-one-2eb34ef33c1b#.u30b7mj9j">Pattern Libraries: What They Are and Why You Need One</a></li>
+<li><a href="https://medium.com/@Kupferwerk_Creatives/pattern-libraries-in-sketch-zeplin-boards-creative-team-and-developers-happy-ever-after-86f6d8575a5a#.20ovmv3yf">Pattern Libraries in Sketch + Zeplin Boards ⇒ Creative Team and Developers happy ever after</a></li>
+<li><a href="https://medium.com/creative-nights/automated-pattern-libraries-d4c89a113a27#.o9e3za42f">Automated Pattern Libraries for Complex Web Design Projects</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s01e03/3000-4f6190d470.png"></itunes:image>
+      <itunes:duration>00:30:22</itunes:duration>
+      <itunes:subtitle>Kommt zusammen und bauet</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,pattern libraries,ui systeme,atomic design,entwicklung,design,feedback</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S01E02</guid>
+      <title>[S01E02] Styletiles</title>
+      <pubDate>Tue, 06 Dec 2016 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s01e02-styletiles.mp3" length="40419621" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>In der zweiten Folge des UI engineering Podcast geht es um Style Tiles, Stil-Kacheln sozusagen:
+Styletiles sind ein Tool, welches bei der Findung von Designrichtungen und auch der Entwicklung von konkreten Interface-Anmutungen hilfreich sein können.</p>
+<div id="more"></div>
+<p>Spitzer und klarer als Moodboards, aber nicht so “Detail-belastet” wie ein Layout können Sie zu sehr viel Hilfe und Tempo in der Zusammenarbeit mit Kunden, Entwicklern und Designern bringen.
+Wir berichten über Grundlagen und Anwendungsbeispiele, damit Ihr dieses Tool für Euch entdecken könnt.</p>
+<h3>Shownotes</h3>
+<ul>
+<li><a href="http://styletil.es">Styletiles Website</a></li>
+<li><a href="https://medium.com/@chuckborowicz/communicating-with-style-tiles-19711bbea51f">Communicating With Style Tiles</a></li>
+<li><a href="https://medium.com/@atomicobject/getter-better-visual-design-feedback-with-style-tiles-859e539d9fd">Getter Better Visual Design Feedback with Style Tiles</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s01e02/640-fb6eec944c.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>In der zweiten Folge des UI engineering Podcast geht es um Style Tiles, Stil-Kacheln sozusagen:
+Styletiles sind ein Tool, welches bei der Findung von Designrichtungen und auch der Entwicklung von konkreten Interface-Anmutungen hilfreich sein können.</p>
+<div id="more"></div>
+<p>Spitzer und klarer als Moodboards, aber nicht so “Detail-belastet” wie ein Layout können Sie zu sehr viel Hilfe und Tempo in der Zusammenarbeit mit Kunden, Entwicklern und Designern bringen.
+Wir berichten über Grundlagen und Anwendungsbeispiele, damit Ihr dieses Tool für Euch entdecken könnt.</p>
+<h3>Shownotes</h3>
+<ul>
+<li><a href="http://styletil.es">Styletiles Website</a></li>
+<li><a href="https://medium.com/@chuckborowicz/communicating-with-style-tiles-19711bbea51f">Communicating With Style Tiles</a></li>
+<li><a href="https://medium.com/@atomicobject/getter-better-visual-design-feedback-with-style-tiles-859e539d9fd">Getter Better Visual Design Feedback with Style Tiles</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s01e02/3000-52509bb4d0.png"></itunes:image>
+      <itunes:duration>00:28:02</itunes:duration>
+      <itunes:subtitle>Darf es etwas weniger Layout sein?</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,styletiles,ui systeme,atomic design,farben,design,feedback</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S01E01</guid>
+      <title>[S01E01] Atomic Design</title>
+      <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s01e01-atomic_design.mp3" length="34141630" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>In der ersten Folge des UI engineering Podcast geht es um Atomic Design: Was ist das genau und warum eignet es sich für die Konzeption von Web Interfaces? Wir sprechen über die Grundlagen, Komponentisierung, Wiederverwendbarkeit und Dinge, die zu beachten sind.</p>
+<div id="more"></div>
+<h3>Shownotes</h3>
+<ul>
+<li><a href="http://bradfrost.com/blog/post/atomic-web-design/">Atomic Design Intro</a></li>
+<li><a href="http://atomicdesign.bradfrost.com/">Atomic Design Buch</a></li>
+<li><a href="https://www.smashingmagazine.com/2016/06/designing-modular-ui-systems-via-style-guide-driven-development/">Designing Modular UI Systems Via Style Guide-Driven Development</a></li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/s01e01/640-f795bb6699.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>In der ersten Folge des UI engineering Podcast geht es um Atomic Design: Was ist das genau und warum eignet es sich für die Konzeption von Web Interfaces? Wir sprechen über die Grundlagen, Komponentisierung, Wiederverwendbarkeit und Dinge, die zu beachten sind.</p>
+<div id="more"></div>
+<h3>Shownotes</h3>
+<ul>
+<li><a href="http://bradfrost.com/blog/post/atomic-web-design/">Atomic Design Intro</a></li>
+<li><a href="http://atomicdesign.bradfrost.com/">Atomic Design Buch</a></li>
+<li><a href="https://www.smashingmagazine.com/2016/06/designing-modular-ui-systems-via-style-guide-driven-development/">Designing Modular UI Systems Via Style Guide-Driven Development</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/s01e01/3000-000cd85731.png"></itunes:image>
+      <itunes:duration>00:33:47</itunes:duration>
+      <itunes:subtitle>Die Chemie von Web Interfaces</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering,atomic design,ui systeme,patternlab</itunes:keywords>
+    </item>
+    <item>
+      <guid isPermaLink="false">S01E00</guid>
+      <title>[S01E00] Über uns</title>
+      <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/s01e00-ueber_uns.mp3" length="13392172" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Jan und Dennis erzählen ein wenig rund um den UI engineering Podcast: Die Motivation hinter dem Thema und warum wir den Podcast machen. Wir geben einen Ausblick auf die Themen der ersten Staffel und erzählen, an wen sich der Podcast richtet.</p>
+<div id="more"></div>
+<h3>Shownotes</h3>
+<ul>
+<li><a href="https://uiengineering.de/">UIengineering Website</a></li>
+<li><a href="http://www.persiel.com/">Jan Persiel</a> / <a href="https://twitter.com/janpersiel">@janpersiel</a></li>
+<li><a href="https://dennisreimann.de/">Dennis Reimann</a> / <a href="https://twitter.com/dennisreimann">@dennisreimann</a></li>
+<li>Nutzt gerne das <strong>#uiengineering</strong> Hashtag</li>
+</ul>
+]]></description>
+      <media:thumbnail url="/images/podcast/cover/640-15e9d1b884.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Jan und Dennis erzählen ein wenig rund um den UI engineering Podcast: Die Motivation hinter dem Thema und warum wir den Podcast machen. Wir geben einen Ausblick auf die Themen der ersten Staffel und erzählen, an wen sich der Podcast richtet.</p>
+<div id="more"></div>
+<h3>Shownotes</h3>
+<ul>
+<li><a href="https://uiengineering.de/">UIengineering Website</a></li>
+<li><a href="http://www.persiel.com/">Jan Persiel</a> / <a href="https://twitter.com/janpersiel">@janpersiel</a></li>
+<li><a href="https://dennisreimann.de/">Dennis Reimann</a> / <a href="https://twitter.com/dennisreimann">@dennisreimann</a></li>
+<li>Nutzt gerne das <strong>#uiengineering</strong> Hashtag</li>
+</ul>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/cover/3000-98b1a293dc.png"></itunes:image>
+      <itunes:duration>00:09:01</itunes:duration>
+      <itunes:subtitle>Wer, Wie, Was</itunes:subtitle>
+      <itunes:keywords>podcast,uiengineering</itunes:keywords>
+    </item>
+  </channel>
+</rss>

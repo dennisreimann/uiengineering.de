@@ -2,7 +2,7 @@
   "config": {
     "name": "UIengineering",
     "version": "1.0.0",
-    "update": 1621348952441,
+    "update": 1624117276883,
     "copyright": "Copyright © Jan Persiel, Dennis Reimann. Generiert mit der <a href=\"https://github.com/dennisreimann/uiengine\">UIengine</a>.",
     "source": {
       "components": [
@@ -551,6 +551,56 @@
       "type": "template",
       "content": "<h1 id=\"episode\">Episode</h1>\n<p>Die Detailseite einer einzelnen Podcast-Episode.</p>"
     },
+    "prototype/homepage": {
+      "childIds": [],
+      "template": "page.pug",
+      "context": {
+        "title": "Design und Entwicklung",
+        "header": {
+          "title": "UI engineering",
+          "type": "main",
+          "hero": true
+        },
+        "episodes": [
+          {
+            "permalink": "/podcast/s01e08-bem-atomic-css-und-co.html",
+            "date": "2017-02-07T00:00:00.000Z",
+            "title": "BEMbule! SMACSS my bitch up!",
+            "subtitle": "CSS-Architektur und Preprozessoren im Einsatz",
+            "shortId": "S01E08",
+            "imageDir": "s01e08",
+            "mp3": "s01e08-bem-atomic-css-und-co.mp3",
+            "duration": "00:27:57",
+            "description": "<p>\n  CSS ist eine Schnittmenge der Gewerke Design und Entwicklung. In der achten Folge des UIengineering Podcasts sprechen wir heute darüber wie wir CSS schreiben, welche Tools wir nutzen und welche Architekturen es gibt.\n</p>\n",
+            "tags": [
+              "podcast",
+              "uiengineering"
+            ],
+            "content": "<p>CSS ist eine Schnittmenge der Gewerke Design und Entwicklung. In der achten Folge des UIengineering Podcasts sprechen wir heute darüber wie wir CSS schreiben, welche Tools wir nutzen und welche Architekturen es gibt.</p>\n<!-- more -->\n<p>CSS ist nicht CSS ist CSS … heute schreibt kaum noch ein Frontend-Entwickler direkt CSS. Wer sich viel Arbeit und Zeit sparen will, der nutzt einen Preprozessor. Welchen aber nutzt man am besten? Was steckt hinter diesen Tools? Und ist das schon wieder etwas, was ein Designer lernen muss, der womöglich gerade seine ersten Schritte in CSS gemacht hat?</p>\n<p>Wir berichten über unsere Erfahrungen mit BEM, auch ausserhalb der Design-und-Entwickler-Schnittmenge, warum das Konzept gut zu Atomic Design passt und was man sonst noch so beachten kann und sollte. Keine reine Entwicklerfolge, im Gegenteil.</p>\n<h3 id=\"termine-mit-%23uiengineering\">Termine mit #UIengineering</h3>\n<ul>\n<li>16.3.–18.3.2017 <a href=\"https://www.ecommerce-camp.de/redner-sessions/sessions-2017/\">E-Commerce Camp Jena</a></li>\n<li>29.5.–2.6.2017 <a href=\"https://webinale.de/session/design-development-und-dazwischen/\">webinale Berlin</a></li>\n</ul>\n<h3 id=\"shownotes-%26-links\">Shownotes &amp; Links</h3>\n<h4 id=\"preprozessoren-%2F-architekturen\">Preprozessoren / Architekturen</h4>\n<ul>\n<li><a href=\"http://getbem.com\">BEM</a></li>\n<li><a href=\"http://sass-lang.com\">SASS</a></li>\n<li><a href=\"http://stylus-lang.com\">Stylus</a></li>\n<li><a href=\"http://lesscss.org\">LESS</a></li>\n<li><a href=\"https://acss.io\">Atomic CSS</a></li>\n<li><a href=\"https://smacss.com\">SMACSS</a></li>\n</ul>\n<h4 id=\"tools-zum-kompilieren\">Tools zum Kompilieren</h4>\n<ul>\n<li><a href=\"http://koala-app.com\">Koala (Win, Mac, Linux)</a></li>\n<li><a href=\"https://codekitapp.com\">CodeKit (Mac)</a></li>\n<li><a href=\"https://prepros.io\">Prepros (Win, Mac, Linux)</a></li>\n</ul>"
+          },
+          {
+            "permalink": "/podcast/s01e07-layouten-mit-sandboxen.html",
+            "date": "2017-01-31T00:00:00.000Z",
+            "title": "Layouten mit Sandboxen",
+            "subtitle": "Die Qual der Wahl der Tools",
+            "shortId": "S01E07",
+            "imageDir": "s01e07",
+            "mp3": "s01e07-layouten-mit-sandboxen.mp3",
+            "duration": "00:34:19",
+            "description": "<p>\n  Layouten in Sandboxen: Was? Nicht in Photoshop oder Sketch? Und was sind überhaupt Sandboxen?\n  Sandkisten? Wir sprechen in dieser Episode über den Prozess des Layoutens, und wie und wann\n  welche Tools für die Designarbeit sinnvoll sind.\n</p>\n"
+          }
+        ]
+      },
+      "id": "prototype/homepage",
+      "title": "Homepage",
+      "isTitleFromHeading": true,
+      "path": "prototype/homepage",
+      "sourcePath": "src/uiengine/pages/prototype/homepage",
+      "sourceFile": "src/uiengine/pages/prototype/homepage/page.config.js",
+      "readmeFile": "src/uiengine/pages/prototype/homepage/README.md",
+      "type": "template",
+      "content": "<h1 id=\"homepage\">Homepage</h1>\n<p>Die Startseite</p>"
+    },
     "prototype/podcast": {
       "childIds": [],
       "template": "podcast.pug",
@@ -620,56 +670,6 @@
       "readmeFile": "src/uiengine/pages/prototype/podcast/README.md",
       "type": "template",
       "content": "<h1 id=\"podcast\">Podcast</h1>\n<p>Die Podcast-Übersichtsseite.</p>"
-    },
-    "prototype/homepage": {
-      "childIds": [],
-      "template": "page.pug",
-      "context": {
-        "title": "Design und Entwicklung",
-        "header": {
-          "title": "UI engineering",
-          "type": "main",
-          "hero": true
-        },
-        "episodes": [
-          {
-            "permalink": "/podcast/s01e08-bem-atomic-css-und-co.html",
-            "date": "2017-02-07T00:00:00.000Z",
-            "title": "BEMbule! SMACSS my bitch up!",
-            "subtitle": "CSS-Architektur und Preprozessoren im Einsatz",
-            "shortId": "S01E08",
-            "imageDir": "s01e08",
-            "mp3": "s01e08-bem-atomic-css-und-co.mp3",
-            "duration": "00:27:57",
-            "description": "<p>\n  CSS ist eine Schnittmenge der Gewerke Design und Entwicklung. In der achten Folge des UIengineering Podcasts sprechen wir heute darüber wie wir CSS schreiben, welche Tools wir nutzen und welche Architekturen es gibt.\n</p>\n",
-            "tags": [
-              "podcast",
-              "uiengineering"
-            ],
-            "content": "<p>CSS ist eine Schnittmenge der Gewerke Design und Entwicklung. In der achten Folge des UIengineering Podcasts sprechen wir heute darüber wie wir CSS schreiben, welche Tools wir nutzen und welche Architekturen es gibt.</p>\n<!-- more -->\n<p>CSS ist nicht CSS ist CSS … heute schreibt kaum noch ein Frontend-Entwickler direkt CSS. Wer sich viel Arbeit und Zeit sparen will, der nutzt einen Preprozessor. Welchen aber nutzt man am besten? Was steckt hinter diesen Tools? Und ist das schon wieder etwas, was ein Designer lernen muss, der womöglich gerade seine ersten Schritte in CSS gemacht hat?</p>\n<p>Wir berichten über unsere Erfahrungen mit BEM, auch ausserhalb der Design-und-Entwickler-Schnittmenge, warum das Konzept gut zu Atomic Design passt und was man sonst noch so beachten kann und sollte. Keine reine Entwicklerfolge, im Gegenteil.</p>\n<h3 id=\"termine-mit-%23uiengineering\">Termine mit #UIengineering</h3>\n<ul>\n<li>16.3.–18.3.2017 <a href=\"https://www.ecommerce-camp.de/redner-sessions/sessions-2017/\">E-Commerce Camp Jena</a></li>\n<li>29.5.–2.6.2017 <a href=\"https://webinale.de/session/design-development-und-dazwischen/\">webinale Berlin</a></li>\n</ul>\n<h3 id=\"shownotes-%26-links\">Shownotes &amp; Links</h3>\n<h4 id=\"preprozessoren-%2F-architekturen\">Preprozessoren / Architekturen</h4>\n<ul>\n<li><a href=\"http://getbem.com\">BEM</a></li>\n<li><a href=\"http://sass-lang.com\">SASS</a></li>\n<li><a href=\"http://stylus-lang.com\">Stylus</a></li>\n<li><a href=\"http://lesscss.org\">LESS</a></li>\n<li><a href=\"https://acss.io\">Atomic CSS</a></li>\n<li><a href=\"https://smacss.com\">SMACSS</a></li>\n</ul>\n<h4 id=\"tools-zum-kompilieren\">Tools zum Kompilieren</h4>\n<ul>\n<li><a href=\"http://koala-app.com\">Koala (Win, Mac, Linux)</a></li>\n<li><a href=\"https://codekitapp.com\">CodeKit (Mac)</a></li>\n<li><a href=\"https://prepros.io\">Prepros (Win, Mac, Linux)</a></li>\n</ul>"
-          },
-          {
-            "permalink": "/podcast/s01e07-layouten-mit-sandboxen.html",
-            "date": "2017-01-31T00:00:00.000Z",
-            "title": "Layouten mit Sandboxen",
-            "subtitle": "Die Qual der Wahl der Tools",
-            "shortId": "S01E07",
-            "imageDir": "s01e07",
-            "mp3": "s01e07-layouten-mit-sandboxen.mp3",
-            "duration": "00:34:19",
-            "description": "<p>\n  Layouten in Sandboxen: Was? Nicht in Photoshop oder Sketch? Und was sind überhaupt Sandboxen?\n  Sandkisten? Wir sprechen in dieser Episode über den Prozess des Layoutens, und wie und wann\n  welche Tools für die Designarbeit sinnvoll sind.\n</p>\n"
-          }
-        ]
-      },
-      "id": "prototype/homepage",
-      "title": "Homepage",
-      "isTitleFromHeading": true,
-      "path": "prototype/homepage",
-      "sourcePath": "src/uiengine/pages/prototype/homepage",
-      "sourceFile": "src/uiengine/pages/prototype/homepage/page.config.js",
-      "readmeFile": "src/uiengine/pages/prototype/homepage/README.md",
-      "type": "template",
-      "content": "<h1 id=\"homepage\">Homepage</h1>\n<p>Die Startseite</p>"
     }
   },
   "components": {
@@ -1479,15 +1479,6 @@
       "type": "template",
       "title": "Episode"
     },
-    "prototype/podcast": {
-      "nextSiblingId": "prototype/episode",
-      "parentId": "prototype",
-      "id": "prototype/podcast",
-      "itemId": "prototype/podcast",
-      "path": "/prototype/podcast/",
-      "type": "template",
-      "title": "Podcast"
-    },
     "prototype/homepage": {
       "nextSiblingId": "prototype/podcast",
       "parentId": "prototype",
@@ -1496,6 +1487,15 @@
       "path": "/prototype/homepage/",
       "type": "template",
       "title": "Homepage"
+    },
+    "prototype/podcast": {
+      "nextSiblingId": "prototype/episode",
+      "parentId": "prototype",
+      "id": "prototype/podcast",
+      "itemId": "prototype/podcast",
+      "path": "/prototype/podcast/",
+      "type": "template",
+      "title": "Podcast"
     }
   }
 }

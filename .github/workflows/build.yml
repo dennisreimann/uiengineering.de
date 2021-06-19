@@ -30,14 +30,15 @@ jobs:
         # gh-pages-spa
         sed '7i\'$'\n''<script src="/gh-pages-spa.js"></script>'$'\n' dist/patterns/index.html > dist/patterns/index-modified.html
         mv dist/patterns/index{-modified,}.html
-        # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
-        touch dist/.nojekyll
-        # https://help.github.com/en/articles/managing-a-custom-domain-for-your-github-pages-site
-        echo uiengineering.de > dist/CNAME
       env:
         CI: true
-    - name: GitHub Pages Deploy
-      uses: maxheld83/ghpages@v0.2.1
-      env:
-        BUILD_DIR: dist/
-        GH_PAT: ${{ secrets.GH_PAT }}
+    - name: Deploy
+      if: success() && github.ref == 'refs/heads/master'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        publish_dir: ./dist
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        cname: uiengineering.de
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+

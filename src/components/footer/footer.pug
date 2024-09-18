@@ -6,30 +6,11 @@ mixin footer()
   footer.footer
     +wrap()
       +container()
-        +block().footer__block
-          :markdown-it(html linkify typographer)
-            [Jan Persiel](https://persiel.com/)<br>
-            Persiel Designstudio<br>
-            c/- Ribbon, 3.OG<br>
-            Johannisbollwerk 19<br>
-            20459 Hamburg
-
-        +block().footer__block
-          :markdown-it(html linkify typographer)
-            [Dennis Reimann](https://dennisreimann.de/)<br>
-            Softwareentwickler<br>
-            Ottjen-Aldag-Str. 32<br>
-            28277 Bremen
-
       .footer__legal
         :markdown-it(html linkify typographer)
-          Zusammen setzen wir uns für die enge Zusammenarbeit von Design und
+          Zusammen setzen [wir](/kontakt.html) uns für die enge Zusammenarbeit von Design und
           Entwicklung ein. Wir betreiben kein gemeinsames Unternehmen und sind
-          auch im Rahmen dieser Initiative als Einzelunternehmer tätig.
-          Bei Anfragen für Workshop, Schulungen und Projekte
-          [erreichen Sie uns](/kontakt.html) gerne über unsere jeweiligen Websites.
+          auch im Rahmen dieser Initiative nicht gewerblich tätig.
 
       .footer__imprint
-        a(href="/impressum.html") Impressum
-        = " und "
         a(href="/datenschutz.html") Datenschutzerklärung

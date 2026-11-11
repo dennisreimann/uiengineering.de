@@ -1,3 +1,3 @@
-import convert from '../../../lib/convertTokens'
+const convert = require('../../../lib/convertTokens')
 
 module.exports = convert('breakpoints.yml')

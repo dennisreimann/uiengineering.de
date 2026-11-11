@@ -117,7 +117,7 @@ const feedWithTemplate = (template, folder) =>
 
 const resizePodcastImages = (size) => {
   const baseDir = 'src/images/podcast'
-  return src(`${baseDir}/**/3000.png`)
+  return src(`${baseDir}/**/3000.png`, { encoding: false })
     .pipe(rename({ basename: size }))
     .pipe(newer(baseDir))
     .pipe(imageResize({ width: size }))
@@ -146,13 +146,13 @@ task('images:resize', () => mergeStream([640, 320, 160].map(resizePodcastImages)
 
 task('images:optimize', () => {
   const targetDir = 'src'
-  return src(['src/{images,svgs}/**/*', '!src/images/podcast/**/3000.png'])
+  return src(['src/{images,svgs}/**/*', '!src/images/podcast/**/3000.png'], { encoding: false })
     .pipe(imagemin())
     .pipe(dest(targetDir))
 })
 
 task('copy', () =>
-  src(paths.copy)
+  src(paths.copy, { encoding: false })
     .pipe(dist())
 )
 
@@ -178,7 +178,7 @@ task('scripts', () =>
 )
 
 task('revAssets', () =>
-  src(paths.rev)
+  src(paths.rev, { encoding: false })
     .pipe(rev({ prefix: assetUrl }))
     .pipe(revCssUrl())
     .pipe(revDeleteOriginal())

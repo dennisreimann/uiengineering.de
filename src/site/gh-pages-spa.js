@@ -11,9 +11,9 @@
 // the single page app to route accordingly.
 (function (l) {
   if (l.search) {
-    var q = {}
+    const q = {}
     l.search.slice(1).split('&').forEach(function (v) {
-      var a = v.split('=')
+      const a = v.split('=')
       q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&')
     })
     if (q.p !== undefined) {

@@ -11,8 +11,8 @@
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <language>de-DE</language>
     <copyright>Jan Persiel und Dennis Reimann</copyright>
-    <lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
-    <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+    <lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
     <description>Wir, das sind Dennis Reimann und Jan Persiel, setzen uns dafür ein, durch die enge Zusammenarbeit von Design und Entwicklung schneller bessere und nachhaltigere Ergebnisse zu erzielen. Im UI engineering Podcast geht es um Best Practices, Workflows und Tools die zu einem besseren Miteinander von Design und Entwicklung beitragen. Impressum: https://uiengineering.de/kontakt.html</description>
     <managingEditor>mail@uiengineering.de (Jan Persiel und Dennis Reimann)</managingEditor>
     <webMaster>mail@uiengineering.de (Jan Persiel und Dennis Reimann)</webMaster>
@@ -31,6 +31,25 @@
       <itunes:email>mail@uiengineering.de</itunes:email>
     </itunes:owner>
     <itunes:image href="/images/podcast/cover/3000-98b1a293dc.png"></itunes:image>
+    <item>
+      <guid isPermaLink="false">Special</guid>
+      <title>[Special] Alles OkAI</title>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      <enclosure url="/mp3s/allesokai.mp3" length="2057400" type="audio/mpeg"></enclosure>
+      <description><![CDATA[<p>Jan und Dennis haben einen neuen Podcast gestartet: Bei <a href="https://allesokai.de">Alles OkAI</a> gibt es wie vorher auch hier Gespräche und Interviews — nun aber  zum Thema Künstliche Intelligenz. KI/AI ist eine extreme Veränderung für Arbeit, Wirtschaft, Gesellschaft. Alles OkAI bringt Erfahrungsberichte zum Thema und hilft diesen technologischen Wandel zu verstehen.</p>
+<div id="more"></div>
+<p>Alles weitere auf <a href="https://allesokai.de">AllesOkAI.de</a>!</p>
+]]></description>
+      <media:thumbnail url="/images/podcast/allesokai/640-fbc3ae7c0e.png" width="640" height="640"></media:thumbnail>
+      <itunes:summary><![CDATA[<p>Jan und Dennis haben einen neuen Podcast gestartet: Bei <a href="https://allesokai.de">Alles OkAI</a> gibt es wie vorher auch hier Gespräche und Interviews — nun aber  zum Thema Künstliche Intelligenz. KI/AI ist eine extreme Veränderung für Arbeit, Wirtschaft, Gesellschaft. Alles OkAI bringt Erfahrungsberichte zum Thema und hilft diesen technologischen Wandel zu verstehen.</p>
+<div id="more"></div>
+<p>Alles weitere auf <a href="https://allesokai.de">AllesOkAI.de</a>!</p>
+]]></itunes:summary>
+      <itunes:image href="/images/podcast/allesokai/3000-abe303b80d.png"></itunes:image>
+      <itunes:duration>00:02:42</itunes:duration>
+      <itunes:subtitle>Unser neuer Podcast über AI/KI</itunes:subtitle>
+      <itunes:keywords>podcast,ki,ai</itunes:keywords>
+    </item>
     <item>
       <guid isPermaLink="false">S03E03</guid>
       <title>[S03E03] Micro Frontends</title>

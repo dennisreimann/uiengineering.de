@@ -2,7 +2,7 @@
   "config": {
     "name": "UIengineering",
     "version": "1.0.0",
-    "update": 1794392092279,
+    "update": 1794503718530,
     "copyright": "Copyright © Jan Persiel, Dennis Reimann. Generiert mit der <a href=\"https://github.com/dennisreimann/uiengine\">UIengine</a>.",
     "source": {
       "components": [
@@ -91,20 +91,6 @@
       "type": "documentation",
       "content": "<h1 id=\"home\" tabindex=\"-1\">Home</h1>\n<p>Die Component Library für <a href=\"http://UIengineering.de\">UIengineering.de</a>.</p>"
     },
-    "documentation": {
-      "childIds": [
-        "documentation/setup-tasks"
-      ],
-      "id": "documentation",
-      "title": "Dokumentation",
-      "isTitleFromHeading": true,
-      "path": "documentation",
-      "sourcePath": "src/uiengine/pages/documentation",
-      "sourceFile": "src/uiengine/pages/documentation/page.config.js",
-      "readmeFile": "src/uiengine/pages/documentation/README.md",
-      "type": "documentation",
-      "content": "<h1 id=\"dokumentation\" tabindex=\"-1\">Dokumentation</h1>"
-    },
     "basics": {
       "childIds": [
         "basics/colors",
@@ -119,6 +105,20 @@
       "readmeFile": "src/uiengine/pages/basics/README.md",
       "type": "documentation",
       "content": "<h1 id=\"basics\" tabindex=\"-1\">Basics</h1>\n<p>Unsere Design Tokens: Farben, Schriften, Icons, etc.</p>"
+    },
+    "documentation": {
+      "childIds": [
+        "documentation/setup-tasks"
+      ],
+      "id": "documentation",
+      "title": "Dokumentation",
+      "isTitleFromHeading": true,
+      "path": "documentation",
+      "sourcePath": "src/uiengine/pages/documentation",
+      "sourceFile": "src/uiengine/pages/documentation/page.config.js",
+      "readmeFile": "src/uiengine/pages/documentation/README.md",
+      "type": "documentation",
+      "content": "<h1 id=\"dokumentation\" tabindex=\"-1\">Dokumentation</h1>"
     },
     "elements": {
       "childIds": [],
@@ -173,17 +173,6 @@
       "readmeFile": "src/uiengine/pages/prototype/README.md",
       "type": "documentation",
       "content": "<h1 id=\"prototyp\" tabindex=\"-1\">Prototyp</h1>\n<p>Prototypische Seiten, aufgebaut aus Beispieldaten.\nDer Prototyp dient der Veranschaulichung und zum Testen.</p>"
-    },
-    "documentation/setup-tasks": {
-      "childIds": [],
-      "id": "documentation/setup-tasks",
-      "title": "UIengineering Website",
-      "isTitleFromHeading": true,
-      "path": "documentation/setup-tasks",
-      "sourcePath": "src/uiengine/pages/documentation/setup-tasks",
-      "readmeFile": "src/uiengine/pages/documentation/setup-tasks/README.md",
-      "type": "documentation",
-      "content": "<h1 id=\"uiengineering-website\" tabindex=\"-1\">UIengineering Website</h1>\n<figure><a href=\"http://standardjs.com/\"><img src=\"https://img.shields.io/badge/code%20style-standard-brightgreen.svg\" alt=\"Standard - JavaScript Style Guide\"></a></figure>\n<h2 id=\"%F0%9F%93%A6-wie-setze-ich-das-projekt-auf%3F\" tabindex=\"-1\">📦 Wie setze ich das Projekt auf?</h2>\n<p>Abhängigkeiten installieren:</p>\n<pre class=\"hljs lang-bash\"><code>$ npm install\n</code></pre>\n<h2 id=\"%F0%9F%91%B7-wie-baue-ich-das-projekt%3F\" tabindex=\"-1\">👷 Wie baue ich das Projekt?</h2>\n<p>Mit folgendem Task genutzt werden Änderungen kontinuierlich gebaut:</p>\n<pre class=\"hljs lang-bash\"><code>$ npm start\n</code></pre>\n<p>Der Befehl startet einen lokalen Entwicklungs-Server unter <a href=\"http://localhost:3000/\"><code>http://localhost:3000/</code></a></p>\n<h2 id=\"%F0%9F%8E%99-wie-f%C3%BCge-ich-eine-neue-episode-hinzu%3F\" tabindex=\"-1\">🎙 Wie füge ich eine neue Episode hinzu?</h2>\n<ul>\n<li>Die MP3-Datei wird unter <code>src/mp3s</code> abgelegt</li>\n<li>In <code>src/podcast</code> legt man auf Basis einer bestehenden Markdown Datei eine neue an (Datum und Name anpassen)</li>\n<li>Das Bild der Episode wird in der Größe 3000 bereits optimiert unter <code>src/images/podcast</code> in einem Ordner mit dem Episoden-Bezeichner abgelegt. Der Ordnername wird als <code>imageDir</code> in den Metadaten im Markdown referenziert.</li>\n<li>Der Bild-Generierungstask (siehe nächster Punkt) wird gestartet.</li>\n</ul>\n<h2 id=\"%F0%9F%96%BC-wie-generiere-ich-die-passenden-bildgr%C3%B6%C3%9Fen-f%C3%BCr-die-episoden%3F\" tabindex=\"-1\">🖼 Wie generiere ich die passenden Bildgrößen für die Episoden?</h2>\n<p>Für das Skalieren der Bilder werden ImageMagick und GraphicsMagick benötigt:</p>\n<pre class=\"hljs lang-bash\"><code>$ brew install imagemagick\n$ brew install graphicsmagick\n</code></pre>\n<p>Damit kann man nun mit folgendem Task aus einem 3000er-Vorlagebild alle entsprechenden Größen generieren:</p>\n<pre class=\"hljs lang-bash\"><code>$ npm run images\n</code></pre>\n<p>Dieser Task muss manuell ausgeführt werden und ist nicht Bestandteil des normalen Buildprozess, da die generierten Bilder im <code>src</code>-Verzeichnis abgelegt werden und dieser Schritt nur einmal erfolgen sollte.</p>\n<h2 id=\"%F0%9F%96%BC-wie-exportiere-ich-die-komponenten-f%C3%BCr-sketch%3F\" tabindex=\"-1\">🖼 Wie exportiere ich die Komponenten für Sketch?</h2>\n<p>Der Sketch Library Export kann mit foilgendem Befehl generiert werden:</p>\n<pre class=\"hljs lang-bash\"><code>$ npm run sketch\n</code></pre>\n<p>Daraufhin liegen im Ordner <code>sketch</code> die Dateien, die in Sketch über das <a href=\"https://github.com/brainly/html-sketchapp#create-asketch-files\">asketch-Plugin</a> importiert werden können.</p>\n<h2 id=\"%F0%9F%9A%80-wie-deploye-ich-das-projekt%3F\" tabindex=\"-1\">🚀 Wie deploye ich das Projekt?</h2>\n<p>Einfach zu GitHub pushen :)</p>"
     },
     "basics/colors": {
       "childIds": [],
@@ -517,6 +506,17 @@
       "sourcePath": "src/uiengine/pages/basics/values",
       "sourceFile": "src/uiengine/pages/basics/values/page.config.js",
       "type": "tokens"
+    },
+    "documentation/setup-tasks": {
+      "childIds": [],
+      "id": "documentation/setup-tasks",
+      "title": "UIengineering Website",
+      "isTitleFromHeading": true,
+      "path": "documentation/setup-tasks",
+      "sourcePath": "src/uiengine/pages/documentation/setup-tasks",
+      "readmeFile": "src/uiengine/pages/documentation/setup-tasks/README.md",
+      "type": "documentation",
+      "content": "<h1 id=\"uiengineering-website\" tabindex=\"-1\">UIengineering Website</h1>\n<figure><a href=\"http://standardjs.com/\"><img src=\"https://img.shields.io/badge/code%20style-standard-brightgreen.svg\" alt=\"Standard - JavaScript Style Guide\"></a></figure>\n<h2 id=\"%F0%9F%93%A6-wie-setze-ich-das-projekt-auf%3F\" tabindex=\"-1\">📦 Wie setze ich das Projekt auf?</h2>\n<p>Abhängigkeiten installieren:</p>\n<pre class=\"hljs lang-bash\"><code>$ npm install\n</code></pre>\n<h2 id=\"%F0%9F%91%B7-wie-baue-ich-das-projekt%3F\" tabindex=\"-1\">👷 Wie baue ich das Projekt?</h2>\n<p>Mit folgendem Task genutzt werden Änderungen kontinuierlich gebaut:</p>\n<pre class=\"hljs lang-bash\"><code>$ npm start\n</code></pre>\n<p>Der Befehl startet einen lokalen Entwicklungs-Server unter <a href=\"http://localhost:3000/\"><code>http://localhost:3000/</code></a></p>\n<h2 id=\"%F0%9F%8E%99-wie-f%C3%BCge-ich-eine-neue-episode-hinzu%3F\" tabindex=\"-1\">🎙 Wie füge ich eine neue Episode hinzu?</h2>\n<ul>\n<li>Die MP3-Datei wird unter <code>src/mp3s</code> abgelegt</li>\n<li>In <code>src/podcast</code> legt man auf Basis einer bestehenden Markdown Datei eine neue an (Datum und Name anpassen)</li>\n<li>Das Bild der Episode wird in der Größe 3000 bereits optimiert unter <code>src/images/podcast</code> in einem Ordner mit dem Episoden-Bezeichner abgelegt. Der Ordnername wird als <code>imageDir</code> in den Metadaten im Markdown referenziert.</li>\n<li>Der Bild-Generierungstask (siehe nächster Punkt) wird gestartet.</li>\n</ul>\n<h2 id=\"%F0%9F%96%BC-wie-generiere-ich-die-passenden-bildgr%C3%B6%C3%9Fen-f%C3%BCr-die-episoden%3F\" tabindex=\"-1\">🖼 Wie generiere ich die passenden Bildgrößen für die Episoden?</h2>\n<p>Für das Skalieren der Bilder werden ImageMagick und GraphicsMagick benötigt:</p>\n<pre class=\"hljs lang-bash\"><code>$ brew install imagemagick\n$ brew install graphicsmagick\n</code></pre>\n<p>Damit kann man nun mit folgendem Task aus einem 3000er-Vorlagebild alle entsprechenden Größen generieren:</p>\n<pre class=\"hljs lang-bash\"><code>$ npm run images\n</code></pre>\n<p>Dieser Task muss manuell ausgeführt werden und ist nicht Bestandteil des normalen Buildprozess, da die generierten Bilder im <code>src</code>-Verzeichnis abgelegt werden und dieser Schritt nur einmal erfolgen sollte.</p>\n<h2 id=\"%F0%9F%96%BC-wie-exportiere-ich-die-komponenten-f%C3%BCr-sketch%3F\" tabindex=\"-1\">🖼 Wie exportiere ich die Komponenten für Sketch?</h2>\n<p>Der Sketch Library Export kann mit foilgendem Befehl generiert werden:</p>\n<pre class=\"hljs lang-bash\"><code>$ npm run sketch\n</code></pre>\n<p>Daraufhin liegen im Ordner <code>sketch</code> die Dateien, die in Sketch über das <a href=\"https://github.com/brainly/html-sketchapp#create-asketch-files\">asketch-Plugin</a> importiert werden können.</p>\n<h2 id=\"%F0%9F%9A%80-wie-deploye-ich-das-projekt%3F\" tabindex=\"-1\">🚀 Wie deploye ich das Projekt?</h2>\n<p>Einfach zu GitHub pushen :)</p>"
     },
     "prototype/episode": {
       "childIds": [],
@@ -1219,19 +1219,6 @@
       "type": "documentation",
       "title": "Home"
     },
-    "documentation": {
-      "nextSiblingId": "basics",
-      "childIds": [
-        "documentation/setup-tasks"
-      ],
-      "parentId": "index",
-      "id": "documentation",
-      "itemId": "documentation",
-      "isStructural": true,
-      "path": "/documentation/",
-      "type": "documentation",
-      "title": "Dokumentation"
-    },
     "basics": {
       "prevSiblingId": "documentation",
       "nextSiblingId": "elements",
@@ -1246,6 +1233,19 @@
       "path": "/basics/",
       "type": "documentation",
       "title": "Basics"
+    },
+    "documentation": {
+      "nextSiblingId": "basics",
+      "childIds": [
+        "documentation/setup-tasks"
+      ],
+      "parentId": "index",
+      "id": "documentation",
+      "itemId": "documentation",
+      "isStructural": true,
+      "path": "/documentation/",
+      "type": "documentation",
+      "title": "Dokumentation"
     },
     "elements": {
       "prevSiblingId": "basics",
@@ -1434,14 +1434,6 @@
       "type": "documentation",
       "title": "Prototyp"
     },
-    "documentation/setup-tasks": {
-      "parentId": "documentation",
-      "id": "documentation/setup-tasks",
-      "itemId": "documentation/setup-tasks",
-      "path": "/documentation/setup-tasks/",
-      "type": "documentation",
-      "title": "UIengineering Website"
-    },
     "basics/colors": {
       "nextSiblingId": "basics/typography",
       "parentId": "basics",
@@ -1469,6 +1461,14 @@
       "path": "/basics/values/",
       "type": "tokens",
       "title": "Werte und Einheiten"
+    },
+    "documentation/setup-tasks": {
+      "parentId": "documentation",
+      "id": "documentation/setup-tasks",
+      "itemId": "documentation/setup-tasks",
+      "path": "/documentation/setup-tasks/",
+      "type": "documentation",
+      "title": "UIengineering Website"
     },
     "prototype/episode": {
       "prevSiblingId": "prototype/podcast",
